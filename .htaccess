@@ -1,0 +1,81 @@
+ErrorDocument 404 http://localhost/pisciculturaProject/error404
+
+Options -Indexes
+ErrorDocument 403 http://localhost/pisciculturaProject/error403
+
+ErrorDocument 401 http://localhost/pisciculturaProject/error401
+
+ErrorDocument 500 http://localhost/pisciculturaProject/error500
+
+
+
+
+RewriteEngine On
+
+# LOGIN
+RewriteRule ^login/?$ index.php
+
+# LOGOUT
+RewriteRule ^logout/?$ view/Logout/logout.php
+
+
+
+
+
+# RESET PASSWORD
+RewriteRule ^reset-password/?$ view/ResetPassword/index.php
+
+# CODIGO REST PASSWORD
+RewriteRule ^cod-reset/?$ view/CodigoRestPassword/index.php
+
+# CODIGO REST PASSWORD
+RewriteRule ^new-password/?$ view/NewPassword/index.php
+
+# NUEVO USUARIO
+RewriteRule ^new-user/?$ view/NuevoUsuario/index.php
+
+
+
+
+
+# HOME
+RewriteRule ^inicio/?$ view/Home/index.php
+
+# NUEVO CULTIVO
+RewriteRule ^nuevo-cultivo/?$ view/NuevoCultivo/index.php
+
+# CONSULTAR CULTIVO
+RewriteRule ^consultar-cultivo/?$ view/ConsultarCultivo/index.php
+
+# NUEVO CHAT
+RewriteRule ^crear-chat/?$ view/NuevoChat/index.php
+
+# CONSULTAR CHATS
+RewriteRule ^consultar-chat/?$ view/ConsultarChat/index.php
+
+# DETALLE CHAT
+RewriteRule ^detalle-chat/?$ view/DetalleChat/index.php
+
+# USUARIOS
+RewriteRule ^usuarios/?$ view/Usuario/index.php
+
+# PERFIL
+RewriteRule ^perfil/?$ view/Perfil/index.php
+
+# NOVEDADES Y MORTALIDAD
+RewriteRule ^novedades-mortalidad/?$ view/NovedadesMortalidad/index.php
+
+
+
+
+# ERROR 401
+RewriteRule ^error401/?$ view/Error/401.php
+
+# ERROR 403
+RewriteRule ^error403/?$ view/Error/403.php
+
+# ERROR 404
+RewriteRule ^error404/?$ view/Error/404.php
+
+# ERROR 500
+RewriteRule ^error500/?$ view/Error/500.php
