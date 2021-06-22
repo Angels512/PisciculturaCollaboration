@@ -17,7 +17,7 @@
             <!-- CONTENIDO -->
             <div class="page-content">
                 <div class="container-fluid">
-                    Blank Page.
+                    Bienvenido.
                 </div><!--Contenedor-->
             </div><!--Contenido Principal-->
 
