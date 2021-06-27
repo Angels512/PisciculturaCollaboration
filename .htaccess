@@ -79,3 +79,22 @@ RewriteRule ^error404/?$ view/Error/404.php
 
 # ERROR 500
 RewriteRule ^error500/?$ view/Error/500.php
+
+
+
+#MARIANA----------------------------------------------------------------------------------------------------------
+
+# CONSULTAR FORMATOS
+RewriteRule ^consultar-formatos/?$ view/ConsultarFormatos/index.php
+
+# BIOCRECIMIENTO
+RewriteRule ^biocrecimiento/?$ view/MntBiocrecimiento/index.php
+
+# GESTIONAR PRODUCTOS
+RewriteRule ^producto/?$ view/MntProducto/index.php
+
+# TABLA ALIMENTACION
+RewriteRule ^tbl-alimentacion/?$ view/MntTblAlimentacion/index.php
+
+# GESTIONAR ESTANQUES Y RESPONSABLES
+RewriteRule ^estanq-respon/?$ view/Estanques-Responsables/index.php

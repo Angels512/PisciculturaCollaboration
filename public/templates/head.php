@@ -38,3 +38,27 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <link rel="stylesheet" href="public/css/lib/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="public/css/main.css">
+
+
+
+<!--MARIANA-->
+
+<!--Estilos de toda la pagina-->
+<link rel="stylesheet" href="public/css/lib/font-awesome/font-awesome.min.css">
+<link rel="stylesheet" href="public/css/lib/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="public/css/main.css">
+
+
+	<!--Reloj y Calendario-->
+	<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-datetimepicker.min.css">
+	
+
+	<!--Sliders-->
+	<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.css">
+	<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.skinHTML5.css">
+
+
+	<!--Calendar-->
+	<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-daterangepicker.min.css">
+
+	
