@@ -168,7 +168,8 @@ setInterval('cierreCultivoVencido()',82400000); // Se ejecutara cada 12 horas pa
 // Redirige a las propiedades del cultivo con su ID por URL
 function ver(id_cultivo)
 {
-    window.location.href = "inicio?ID="+ id_cultivo +"";
+    window.location.href = "consultar-formatos?ID="+ id_cultivo +"";
+
 }
 
 function verNovedades(id_cultivo)

@@ -27,6 +27,31 @@
                     </li>
 
                     <li class="blue-dirty">
+                                    <a href="consultar-formatos">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <span class="lbl">Consultar Formatos</span>
+                                    </a>
+                    </li>
+
+                    <li class="magenta with-sub">
+                            <span>
+                                <i class="font-icon font-icon-notebook"></i>
+                                <span class="lbl">Crear Formatos</span>
+                            </span>
+                            <ul>
+                                <li><a href="biocrecimiento"><span class="lbl">Biocrecimiento</span></a></li>
+                                <li><a href="tbl-alimentacion"><span class="lbl">Tabla de Alimentación</span></a></li>
+                            </ul>
+                    </li>
+
+                    <li class="green with-sub">
+                                    <a href="producto">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        <span class="lbl">Productos</span>
+                                    </a>
+                    </li>
+
+                    <li class="blue-dirty">
                         <a href="consultar-chat">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                             <span class="lbl">Consultar Chat's</span>
@@ -39,7 +64,12 @@
                             <span class="lbl">Usuarios</span>
                         </a>
                     </li>
-
+                    <li class="red">
+                        <a href="estanq-respon">
+                            <i class="font-icon font-icon-contacts" aria-hidden="true"></i>
+                            <span class="lbl">Estanques/Responsables</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         <?php
@@ -61,6 +91,23 @@
                             <span class="lbl">Cultivos</span>
                         </a>
                     </li>
+                    <li class="blue-dirty">
+                                    <a href="../../view/ConsultarFormatos/">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <span class="lbl">Consultar Formatos</span>
+                                    </a>
+                    </li>
+
+                    <li class="magenta with-sub">
+                            <span>
+                                <i class="font-icon font-icon-notebook"></i>
+                                <span class="lbl">Crear Formatos</span>
+                            </span>
+                            <ul>
+                                <li><a href="../MntBiocrecimiento/"><span class="lbl">Biocrecimiento</span></a></li>
+                                <li><a href="../MntTblAlimentacion/"><span class="lbl">Tabla de Alimentación</span></a></li>
+                            </ul>
+                    </li>
                     <div class="consultarChat">
                         <li class="blue-dirty">
                             <a href="crear-chat">
@@ -75,7 +122,6 @@
                             <span class="lbl">Consultar Chat's</span>
                         </a>
                     </li>
-
                 </ul>
             </nav>
         <?php
