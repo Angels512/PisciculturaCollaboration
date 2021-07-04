@@ -1,3 +1,19 @@
+const inputs = document.querySelectorAll('#formUsuario input');
+
+const expresiones = {
+    nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
+    apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
+    documento: /^\d{7,10}$/, // 7 a 10 numeros.
+    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
+};
+
+inputs.forEach((input) =>
+{
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
+});
+
+
 
 function init()
 {
@@ -76,15 +92,56 @@ $(document).ready(function()
 });
 
 
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'nombre_usu':
+            validateData(expresiones.nombre, e.target, 'Nombre')
+        break;
+
+        case 'apellido_usu':
+            validateData(expresiones.apellido, e.target, 'Apellido')
+        break;
+
+        case 'documento_usu':
+            validateData(expresiones.documento, e.target, 'Documento')
+        break;
+
+        case 'correo_usu':
+            validateData(expresiones.correo, e.target, 'Correo')
+        break;
+
+        default:
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#usu'+campo).removeClass('form-control-danger');
+        $('#icon'+campo).removeClass('text-danger');
+        $('#usu'+campo).addClass('form-control-success');
+        $('#icon'+campo).addClass('text-success');
+        $('#alert'+campo).prop('hidden', true);
+    }else {
+        $('#usu'+campo).addClass('form-control-danger');
+        $('#icon'+campo).addClass('text-danger');
+        $('#alert'+campo).prop('hidden', false);
+    }
+}
+
+
 // Guardar o Editar un usuario
 function getData(e)
 {
     e.preventDefault();
 
-    var nombre_usu = $('#nombre_usu').val();
-    var apellido_usu = $('#apellido_usu').val();
-    var documento_usu = $('#documento_usu').val();
-    var correo_usu = $('#correo_usu').val();
+    var nombre_usu = $('#usuNombre').val();
+    var apellido_usu = $('#usuApellido').val();
+    var documento_usu = $('#usuDocumento').val();
+    var correo_usu = $('#usuCorreo').val();
 
 
     if (nombre_usu=='' || apellido_usu=='' || documento_usu=='' || correo_usu=='')
@@ -126,6 +183,8 @@ function createUpdate()
         processData: false,
         success: function(datos) // Cuando haya finalizado el proceso de creacion del chat
         {
+            console.log(datos);
+
             $('#formUsuario')[0].reset(); // Vaciamos los campos del formulario
             $('#id_usu').val('');
             $('#modalUsuarios').modal('hide'); // Escondemos el modal
@@ -170,12 +229,12 @@ function editar(id_usu)
 
         // Cambiamos los datos del formulario por los que estan en la base de datos
         $('#id_usu').val(data.id_usu);
-        $('#nombre_usu').val(data.nombre_usu);
-        $('#apellido_usu').val(data.apellido_usu);
+        $('#usuNombre').val(data.nombre_usu);
+        $('#usuApellido').val(data.apellido_usu);
         $('#direccion_usu').val(data.direccion_usu);
         $('#telefono_usu').val(data.telefono_usu);
-        $('#documento_usu').val(data.documento_usu);
-        $('#correo_usu').val(data.correo_usu);
+        $('#usuDocumento').val(data.documento_usu);
+        $('#usuCorreo').val(data.correo_usu);
         $('#id_rol').val(data.id_rol).trigger('change');
     });
 

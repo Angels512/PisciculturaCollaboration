@@ -32,9 +32,10 @@
             <div class="page-center-in">
                 <div class="container-fluid">
                     <form id="formRest" class="sign-box reset-password-box">
-                        <header class="sign-title">Restablecer Contraseña</header>
+                        <header class="sign-title semibold">Restablecer Contraseña</header>
                         <div class="form-group">
-                            <input type="text" id="documento_usu" class="form-control" placeholder="Numero de documento"/>
+                            <label class="form-label" for="exampleInput">Numero de documento:</label>
+                            <input type="text" id="documento_usu" class="form-control" placeholder="Ingrese su documento"/>
                         </div>
                         &nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-rounded">Restablecer</button>
                         o <a href="login">Iniciar Sesion</a>

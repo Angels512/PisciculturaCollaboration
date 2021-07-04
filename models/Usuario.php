@@ -90,7 +90,7 @@
                                 <div style'text-align: center; background-color: #ccc;'>
                                     <p>Restablecer clave</p>
                                     <h3>$codigo</h3>
-                                    <p>Para crear tu nueva clave da <a href='http://localhost/pisciculturaProject/cod-reset?token=$token_final&user=$id_usu'>click aqui</a></p>
+                                    <p>Para crear tu nueva clave da <a href='http://localhost/Piscicultura/cod-reset?token=$token_final&user=$id_usu'>click aqui</a></p>
                                     <p><small>Si usted no solicito este codigo por favor omitir...</small></p>
                                 </div>
                             </body>
