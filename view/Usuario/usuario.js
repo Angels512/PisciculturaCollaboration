@@ -1,5 +1,9 @@
+// Variables globales: Inputs, iconos y mensajes
 const inputs = document.querySelectorAll('#formUsuario input');
+const iconForm = document.querySelectorAll('#formUsuario i');
+const smallForm = document.querySelectorAll('#formUsuario small');
 
+// Expresiones regulares para validacion
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
     apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
@@ -7,6 +11,7 @@ const expresiones = {
     correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 };
 
+// Por cada input va a realizar la validacion
 inputs.forEach((input) =>
 {
     input.addEventListener('keyup', validateForm);
@@ -212,6 +217,9 @@ $(document).on('click', '#btnAgregar', function()
     $('#mdlTitulo').html('Agregar Usuario');
     $('#direccion').hide();
     $('#telefono').hide();
+
+    cleanValidation();
+
     $('#modalUsuarios').modal('show');
 });
 
@@ -240,6 +248,8 @@ function editar(id_usu)
 
     $('#direccion').show();
     $('#telefono').show();
+
+    cleanValidation();
 
     $('#mdlTitulo').html('Editar Usuario'); // Cambia el titulo del modal por EDITAR
     $('#modalUsuarios').modal('show'); // Muestra el MODAL
@@ -278,6 +288,32 @@ function eliminar(id_usu)
                 confirmButtonClass: "btn-success"
             });
         }
+    });
+}
+
+
+
+// Limpia todas las validaciones realizadas
+function cleanValidation()
+{
+    // Esconder borde de inputs
+    inputs.forEach((input) =>
+    {
+        input.classList.remove('form-control-danger');
+        input.classList.remove('form-control-success');
+    });
+
+    // Esconder color de iconos
+    iconForm.forEach((icon) =>
+    {
+        icon.classList.remove('text-danger');
+        icon.classList.remove('text-success');
+    });
+
+    // Esconder mensajes de advertencia
+    smallForm.forEach((small) =>
+    {
+        small.hidden = true;
     });
 }
 
