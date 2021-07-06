@@ -20,17 +20,15 @@
                         <!-- NOMBRE -->
                         <label class="form-label semibold" for="nombre_usu">Nombre:</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" placeholder="Ingrese el/los nombre(s) del empleado" id="usuNombre" name="nombre_usu">
-                            <i class="fa fa-user" id="iconNombre"></i>
-                            <small class="text-muted text-danger alerta" id="alertNombre" hidden>El nombre debe tener entre 3 y 20 letras y no puede llevar numeros.</small>
+                            <input type="text" class="form-control" placeholder="Ingrese el/los nombre(s) del empleado" id="nombre_usu" name="nombre_usu">
+                            <i class="fa fa-user"></i>
                         </div><br>
 
                         <!-- APELLIDO -->
-                        <label class="form-label semibold" for="apellido_usu">Apellidos:</label>
+                        <label class="form-label semibold" for="apellido_usu">Apellido:</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" placeholder="Ingrese los apellidos del empleado" id="usuApellido" name="apellido_usu">
-                            <i class="fa fa-user-o" id="iconApellido"></i>
-                            <small class="text-muted text-danger alerta" id="alertApellido" hidden>El apellido debe tener entre 3 y 20 letras y no puede llevar numeros.</small>
+                            <input type="text" class="form-control" placeholder="Ingrese los apellido del empleado" id="apellido_usu" name="apellido_usu">
+                            <i class="fa fa-user-o"></i>
                         </div><br>
 
                         <!-- DIRECCION -->
@@ -54,17 +52,15 @@
                         <!-- DOCUMENTO -->
                         <label class="form-label semibold" for="documento_usu">Numero de documento:</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="usuDocumento" name="documento_usu">
-                            <i class="fa fa-address-card" id="iconDocumento" aria-hidden="true"></i>
-                            <small class="text-muted text-danger alerta" id="alertDocumento" hidden>El numero de documento debe tener entre 7 y 10 numeros y no puede llevar letras.</small>
+                            <input type="number" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="documento_usu" name="documento_usu">
+                            <i class="fa fa-address-card" aria-hidden="true"></i>
                         </div><br>
 
-                        <!-- CORREO ELECTRONICO -->
+                        <!-- PASSWORD -->
                         <label class="form-label semibold" for="pass_usu">Correo electronico:</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="email" class="form-control" placeholder="example@gmail.com" id="usuCorreo" name="correo_usu">
-                            <i class="fa fa-envelope" id="iconCorreo" aria-hidden="true"></i>
-                            <small class="text-muted text-danger alerta" id="alertCorreo" hidden>El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</small>
+                            <input type="email" class="form-control" placeholder="example@gmail.com" id="correo_usu" name="correo_usu">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
                         </div><br>
 
                         <label class="form-label semibold" for="id_rol">Cargo:</label>

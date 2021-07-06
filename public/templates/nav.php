@@ -26,36 +26,29 @@
                         </ul>
                     </li>
 
-                    <li class="magenta with-sub">
-                        <span>
-                            <i class="font-icon font-icon-notebook"></i>
-                            <span class="lbl">Crear Formatos</span>
-                        </span>
-                        <ul>
-                            <li><a href="biocrecimiento"><span class="lbl">Biocrecimiento</span></a></li>
-                            <li><a href="tbl-alimentacion"><span class="lbl">Tabla de Alimentación</span></a></li>
-                        </ul>
+                    <li class="blue-dirty">
+                                    <a href="consultar-formatos">
+                                        <span class="glyphicon glyphicon-list-alt"></span>
+                                        <span class="lbl">Consultar Formatos</span>
+                                    </a>
                     </li>
 
-                    <!-- <li class="blue-dirty">
-                        <a href="consultar-formatos">
-                            <span class="glyphicon glyphicon-list-alt"></span>
-                            <span class="lbl">Consultar Formatos</span>
-                        </a>
-                    </li> -->
-
-                    <li class="red">
-                        <a href="estanq-respon">
-                            <i class="font-icon font-icon-contacts" aria-hidden="true"></i>
-                            <span class="lbl">Estanques/Responsables</span>
-                        </a>
+                    <li class="magenta with-sub">
+                            <span>
+                                <i class="font-icon font-icon-notebook"></i>
+                                <span class="lbl">Crear Formatos</span>
+                            </span>
+                            <ul>
+                                <li><a href="biocrecimiento"><span class="lbl">Biocrecimiento</span></a></li>
+                                <li><a href="tbl-alimentacion"><span class="lbl">Tabla de Alimentación</span></a></li>
+                            </ul>
                     </li>
 
                     <li class="green with-sub">
-                        <a href="producto">
-                            <span class="glyphicon glyphicon-shopping-cart"></span>
-                            <span class="lbl">Productos</span>
-                        </a>
+                                    <a href="producto">
+                                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                                        <span class="lbl">Productos</span>
+                                    </a>
                     </li>
 
                     <li class="blue-dirty">
@@ -69,6 +62,12 @@
                         <a href="usuarios">
                             <i class="fa fa-users" aria-hidden="true"></i>
                             <span class="lbl">Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="red">
+                        <a href="estanq-respon">
+                            <i class="font-icon font-icon-contacts" aria-hidden="true"></i>
+                            <span class="lbl">Estanques/Responsables</span>
                         </a>
                     </li>
                 </ul>
@@ -166,3 +165,4 @@
         <?php
     }
 ?>
+
