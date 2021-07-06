@@ -45,16 +45,14 @@
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box reset-password-box" id="restPassForm">
-                    <header class="sign-title semibold">Restablecer Contraseña</header>
+                    <header class="sign-title">Nueva Contraseña</header>
                     <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $user ?>">
 
                     <div class="form-group">
-                        <label class="form-label" for="exampleInput">Nueva Contraseña:</label>
-                        <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Ingrese su contraseña"/>
+                        <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Nueva Contraseña"/>
                     </div>
                     <div class="form-group">
-                        <label class="form-label" for="exampleInput">Confirme su Contraseña:</label>
-                        <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Ingrese nuevamente su contraseña"/>
+                        <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Confirme su Contraseña"/>
                     </div>
                     <button type="submit" class="btn btn-rounded btn-block">Guardar</button>
                 </form>
