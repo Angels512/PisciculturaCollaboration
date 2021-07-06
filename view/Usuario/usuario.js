@@ -148,6 +148,11 @@ function getData(e)
     var documento_usu = $('#usuDocumento').val();
     var correo_usu = $('#usuCorreo').val();
 
+    var nombreValidate = $('#usuNombre').hasClass('form-control-danger');
+    var apellidoValidate = $('#usuApellido').hasClass('form-control-danger');
+    var documentoValidate = $('#usuDocumento').hasClass('form-control-danger');
+    var correoValidate = $('#usuCorreo').hasClass('form-control-danger');
+
 
     if (nombre_usu=='' || apellido_usu=='' || documento_usu=='' || correo_usu=='')
     {
@@ -168,7 +173,26 @@ function getData(e)
         });
 
     }else {
-        createUpdate();
+        if (nombreValidate || apellidoValidate || documentoValidate || correoValidate)
+        {
+            $('#modalUsuarios').modal('hide'); // Escondemos el modal
+            swal({
+                title: "Advertencia!",
+                text: "Por favor, cambie los campos invalidos...",
+                type: "error",
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "OK"
+            },
+            function(isConfirm)
+            {
+                if (isConfirm)
+                {
+                    $('#modalUsuarios').modal('show');
+                }
+            });
+        }else {
+            createUpdate();
+        }
     }
 
 }
@@ -188,8 +212,6 @@ function createUpdate()
         processData: false,
         success: function(datos) // Cuando haya finalizado el proceso de creacion del chat
         {
-            console.log(datos);
-
             $('#formUsuario')[0].reset(); // Vaciamos los campos del formulario
             $('#id_usu').val('');
             $('#modalUsuarios').modal('hide'); // Escondemos el modal
@@ -208,6 +230,7 @@ function createUpdate()
 }
 
 
+
 // Crear Usuario
 $(document).on('click', '#btnAgregar', function()
 {
@@ -222,7 +245,6 @@ $(document).on('click', '#btnAgregar', function()
 
     $('#modalUsuarios').modal('show');
 });
-
 
 // Editar Usuario
 function editar(id_usu)
@@ -254,7 +276,6 @@ function editar(id_usu)
     $('#mdlTitulo').html('Editar Usuario'); // Cambia el titulo del modal por EDITAR
     $('#modalUsuarios').modal('show'); // Muestra el MODAL
 }
-
 
 // Eliminar Usuario
 function eliminar(id_usu)
