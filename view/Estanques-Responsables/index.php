@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
+	<title>Estanques y Responsables</title>
 
 	<?php require_once("../../public/templates/head.php"); ?>
 </head>
@@ -25,7 +25,7 @@
 									<h2>Gestionar Estanques y Responsables</h2>
 									<ol class="breadcrumb breadcrumb-simple">
 										<li><a href="#">Inicio</a></li>
-										<li class="active">Estanques/Responsables</li>
+										<li class="active">Estanques y Responsables</li>
 									</ol>
 								</div>
 							</div>
@@ -53,13 +53,13 @@
 									</span>
 								</a>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div><!--.tabs-section-nav-->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="biometrias">
-					
+
 						<!--Aqui va el Formato de Responsables-->
 
 					</div><!--.tab-pane-->
@@ -69,11 +69,11 @@
 							<div>
 								<h5><strong>Ingrese los Datos</strong></h5>
 							</div>
-							<br>	
+							<br>
 							<div class="form-group">
 								<label class="form-label" for="nombre_respon">Nombre Responsable</label>
 								<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
-							</div>			
+							</div>
 							<div class="form-group">
 								<label class="form-label" for="prod_numl">Apellido Responsable</label>
 								<input type="text" class="form-control" id="prod_numl" name="prod_numl" placeholder="Ingrese Apellido" required>
@@ -87,7 +87,6 @@
 							</div>
 						</form>
 					</div><!--.tab-pane-->
-					
 				</div><!--.tab-content-->
 
 			</section><!--.tabs-section-->
