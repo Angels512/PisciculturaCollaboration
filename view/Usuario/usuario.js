@@ -1,4 +1,4 @@
-// Variables globales: Inputs, iconos y mensajes
+// Variables globales: Inputs, iconos y mensajes.
 const inputs = document.querySelectorAll('#formUsuario input');
 const iconForm = document.querySelectorAll('#formUsuario i');
 const smallForm = document.querySelectorAll('#formUsuario small');
