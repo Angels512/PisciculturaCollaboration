@@ -338,5 +338,4 @@ function cleanValidation()
     });
 }
 
-
 init();
