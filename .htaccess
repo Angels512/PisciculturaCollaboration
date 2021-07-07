@@ -1,11 +1,11 @@
-ErrorDocument 404 http://localhost/Piscicultura/error404
+ErrorDocument 404 http://localhost/pisciculturaProject/error404
 
 Options -Indexes
-ErrorDocument 403 http://localhost/Piscicultura/error403
+ErrorDocument 403 http://localhost/pisciculturaProject/error403
 
-ErrorDocument 401 http://localhost/Piscicultura/error401
+ErrorDocument 401 http://localhost/pisciculturaProject/error401
 
-ErrorDocument 500 http://localhost/Piscicultura/error500
+ErrorDocument 500 http://localhost/pisciculturaProject/error500
 
 
 
