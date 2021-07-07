@@ -47,9 +47,9 @@
                         <input type="hidden" name="id_rol" id="id_rol" value="1"> <!--Recoge el Rol del Usuario-->
 
                         <div class="sign-avatar">
-                            <img src="public/img/logo.png" id="imgRol" alt="">
+                            <img src="public/img/1.jpg" id="imgRol" alt="">
                         </div>
-                        <header class="sign-title semibold" id="lblTitulo">Inicio de Sesion</header>
+                        <header class="sign-title" id="lblTitulo">Inicio de Sesion</header>
 
                         <!-- Alertas por errores -->
                         <?php
@@ -86,12 +86,10 @@
                         ?><!--Fin de PHP con alertas-->
 
                         <div class="form-group">
-                            <label class="form-label" for="exampleInput">Numero de documento:</label>
-                            <input type="text" id="documento_usu" name="documento_usu" class="form-control" placeholder="Ingrese su documento"/>
+                            <input type="text" id="documento_usu" name="documento_usu" class="form-control" placeholder="Numero de documento"/>
                         </div>
                         <div class="form-group">
-                            <label class="form-label" for="exampleInput">Contraseña:</label>
-                            <input type="password" id="pass_usu" name="pass_usu" class="form-control" placeholder="Ingrese su contraseña"/>
+                            <input type="password" id="pass_usu" name="pass_usu" class="form-control" placeholder="Contraseña"/>
                         </div>
 
                         <!-- Este input es el que e solicita al comienzo del documento, enviar con el valor si -->

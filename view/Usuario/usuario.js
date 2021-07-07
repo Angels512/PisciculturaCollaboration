@@ -1,3 +1,4 @@
+
 // Variables globales: Inputs, iconos y mensajes.
 const inputs = document.querySelectorAll('#formUsuario input');
 const iconForm = document.querySelectorAll('#formUsuario i');
@@ -97,61 +98,15 @@ $(document).ready(function()
 });
 
 
-function validateForm(e)
-{
-    switch (e.target.name) {
-        case 'nombre_usu':
-            validateData(expresiones.nombre, e.target, 'Nombre')
-        break;
-
-        case 'apellido_usu':
-            validateData(expresiones.apellido, e.target, 'Apellido')
-        break;
-
-        case 'documento_usu':
-            validateData(expresiones.documento, e.target, 'Documento')
-        break;
-
-        case 'correo_usu':
-            validateData(expresiones.correo, e.target, 'Correo')
-        break;
-
-        default:
-        break;
-    }
-}
-
-function validateData(expresion, input, campo)
-{
-    if (expresion.test(input.value))
-    {
-        $('#usu'+campo).removeClass('form-control-danger');
-        $('#icon'+campo).removeClass('text-danger');
-        $('#usu'+campo).addClass('form-control-success');
-        $('#icon'+campo).addClass('text-success');
-        $('#alert'+campo).prop('hidden', true);
-    }else {
-        $('#usu'+campo).addClass('form-control-danger');
-        $('#icon'+campo).addClass('text-danger');
-        $('#alert'+campo).prop('hidden', false);
-    }
-}
-
-
 // Guardar o Editar un usuario
 function getData(e)
 {
     e.preventDefault();
 
-    var nombre_usu = $('#usuNombre').val();
-    var apellido_usu = $('#usuApellido').val();
-    var documento_usu = $('#usuDocumento').val();
-    var correo_usu = $('#usuCorreo').val();
-
-    var nombreValidate = $('#usuNombre').hasClass('form-control-danger');
-    var apellidoValidate = $('#usuApellido').hasClass('form-control-danger');
-    var documentoValidate = $('#usuDocumento').hasClass('form-control-danger');
-    var correoValidate = $('#usuCorreo').hasClass('form-control-danger');
+    var nombre_usu = $('#nombre_usu').val();
+    var apellido_usu = $('#apellido_usu').val();
+    var documento_usu = $('#documento_usu').val();
+    var correo_usu = $('#correo_usu').val();
 
 
     if (nombre_usu=='' || apellido_usu=='' || documento_usu=='' || correo_usu=='')
@@ -173,26 +128,7 @@ function getData(e)
         });
 
     }else {
-        if (nombreValidate || apellidoValidate || documentoValidate || correoValidate)
-        {
-            $('#modalUsuarios').modal('hide'); // Escondemos el modal
-            swal({
-                title: "Advertencia!",
-                text: "Por favor, cambie los campos invalidos...",
-                type: "error",
-                confirmButtonClass: "btn-danger",
-                confirmButtonText: "OK"
-            },
-            function(isConfirm)
-            {
-                if (isConfirm)
-                {
-                    $('#modalUsuarios').modal('show');
-                }
-            });
-        }else {
-            createUpdate();
-        }
+        createUpdate();
     }
 
 }
@@ -230,7 +166,6 @@ function createUpdate()
 }
 
 
-
 // Crear Usuario
 $(document).on('click', '#btnAgregar', function()
 {
@@ -240,11 +175,9 @@ $(document).on('click', '#btnAgregar', function()
     $('#mdlTitulo').html('Agregar Usuario');
     $('#direccion').hide();
     $('#telefono').hide();
-
-    cleanValidation();
-
     $('#modalUsuarios').modal('show');
 });
+
 
 // Editar Usuario
 function editar(id_usu)
@@ -259,23 +192,22 @@ function editar(id_usu)
 
         // Cambiamos los datos del formulario por los que estan en la base de datos
         $('#id_usu').val(data.id_usu);
-        $('#usuNombre').val(data.nombre_usu);
-        $('#usuApellido').val(data.apellido_usu);
+        $('#nombre_usu').val(data.nombre_usu);
+        $('#apellido_usu').val(data.apellido_usu);
         $('#direccion_usu').val(data.direccion_usu);
         $('#telefono_usu').val(data.telefono_usu);
-        $('#usuDocumento').val(data.documento_usu);
-        $('#usuCorreo').val(data.correo_usu);
+        $('#documento_usu').val(data.documento_usu);
+        $('#correo_usu').val(data.correo_usu);
         $('#id_rol').val(data.id_rol).trigger('change');
     });
 
     $('#direccion').show();
     $('#telefono').show();
 
-    cleanValidation();
-
     $('#mdlTitulo').html('Editar Usuario'); // Cambia el titulo del modal por EDITAR
     $('#modalUsuarios').modal('show'); // Muestra el MODAL
 }
+
 
 // Eliminar Usuario
 function eliminar(id_usu)
@@ -311,6 +243,7 @@ function eliminar(id_usu)
         }
     });
 }
+
 
 
 
