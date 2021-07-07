@@ -17,7 +17,7 @@
             <!-- CONTENIDO -->
             <div class="page-content">
                 <div class="container-fluid">
-                    Bienvenido al Home.
+                    Este es el home de los usuarios!
                 </div><!--Contenedor-->
             </div><!--Contenido Principal-->
 
