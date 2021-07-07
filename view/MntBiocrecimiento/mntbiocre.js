@@ -1,14 +1,7 @@
+
 /*Sliders Rangos*/ 
 $(document).ready(function(){
 
-    /*
-    $("#peso_on").ionRangeSlider({
-        values: peso_organismo,
-        from: peso_organismo[0],
-        grid: true,
-        //grid_num: 10,
-        hide_min_max: true
-    });*/
 
     $("#peso_organ").ionRangeSlider({
         min: 0.8,
@@ -37,5 +30,4 @@ $(document).ready(function(){
         grid: true,
         hide_min_max: true
     });
-   
 });
