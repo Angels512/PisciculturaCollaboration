@@ -1,26 +1,4 @@
 
-// Variables globales: Inputs, iconos y mensajes.
-const inputs = document.querySelectorAll('#formUsuario input');
-const iconForm = document.querySelectorAll('#formUsuario i');
-const smallForm = document.querySelectorAll('#formUsuario small');
-
-// Expresiones regulares para validacion
-const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
-    apellido: /^[a-zA-ZÀ-ÿ\s]{3,20}$/, // Letras y espacios, pueden llevar acentos.
-    documento: /^\d{7,10}$/, // 7 a 10 numeros.
-    correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
-};
-
-// Por cada input va a realizar la validacion
-inputs.forEach((input) =>
-{
-    input.addEventListener('keyup', validateForm);
-    input.addEventListener('blur', validateForm);
-});
-
-
-
 function init()
 {
     $('#formUsuario').on('submit', function(e)
