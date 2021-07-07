@@ -223,30 +223,4 @@ function eliminar(id_usu)
 }
 
 
-
-
-// Limpia todas las validaciones realizadas
-function cleanValidation()
-{
-    // Esconder borde de inputs
-    inputs.forEach((input) =>
-    {
-        input.classList.remove('form-control-danger');
-        input.classList.remove('form-control-success');
-    });
-
-    // Esconder color de iconos
-    iconForm.forEach((icon) =>
-    {
-        icon.classList.remove('text-danger');
-        icon.classList.remove('text-success');
-    });
-
-    // Esconder mensajes de advertencia
-    smallForm.forEach((small) =>
-    {
-        small.hidden = true;
-    });
-}
-
 init();
