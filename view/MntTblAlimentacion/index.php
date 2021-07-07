@@ -33,18 +33,34 @@
 					</div>
 				</header>
 				</div>
-				<div class="col-lg-5">
+
 				<div>
-					<input type="button" name="action" id="newmortandad" value="Agregar Mortandad" class="btn btn-rounded btn-primary">	
-					<input type="button" name="action" id="newnovedad" value="Agregar Novedad" class="btn btn-rounded btn-primary">
-				</div>
+					<input style="margin: 3px" type="button" name="action" id="newmortandad" value="Agregar Mortandad" class="btn btn-inline btn-primary float-right mg-top ">	
+					<input style="margin: 3px" type="button" name="action" id="newnovedad" value="Agregar Novedad" class="btn btn-inline btn-primary float-right mg-top">
 				</div>
 			</div>
 
-		<section class="box-typical box-typical-padding">
+		<section class="box-typical box-typical-padding" style="margin-top: 8px">
 			<form method="post" id="tabla_alim">
 				<div>
                     <h5><strong>Ingrese los Datos</strong></h5>
+				</div>
+				<br>
+				<div class="row">
+				<div class="col-md-6">
+						<label class="form-label semibold" for="cant_siembra">Número de Organismos</label>
+						<div class="form-control-wrapper form-control-icon-right">
+							<input type="text" class="form-control" id="cant_siembra" name="cant_siembra" disabled>	
+                            <i class="font-icon font-icon-archive"></i>
+                        </div>
+					</div>
+					<div class="col-md-6">
+						<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+						<div class="form-control-wrapper form-control-icon-right">
+							<input type="text" class="form-control" id="fecha" name="fecha" disabled>
+                            <i class="font-icon font-icon-calend"></i>
+                        </div>
+					</div>
 				</div>
 				<br>
 				<div class="row">

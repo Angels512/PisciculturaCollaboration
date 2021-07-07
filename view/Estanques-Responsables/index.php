@@ -70,13 +70,26 @@
 								<h5><strong>Ingrese los Datos</strong></h5>
 							</div>
 							<br>	
+							<div class="form-group"> 
+                    	    	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
+									<i class="font-icon font-icon-calend"></i>
+								</div>
+                    		</div>
 							<div class="form-group">
-								<label class="form-label" for="nombre_respon">Nombre Responsable</label>
-								<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
+								<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
+                            		<i class="fa fa-user"></i>
+                        		</div>
 							</div>			
 							<div class="form-group">
-								<label class="form-label" for="prod_numl">Apellido Responsable</label>
-								<input type="text" class="form-control" id="prod_numl" name="prod_numl" placeholder="Ingrese Apellido" required>
+								<label class="form-label semibold" for="prod_numl">Apellido Responsable</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="prod_numl" name="prod_numl" placeholder="Ingrese Apellido" required>
+                            		<i class="fa fa-user-o"></i>
+                        		</div>
 							</div>
 							<br>
 							<div>

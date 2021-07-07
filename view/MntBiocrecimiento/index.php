@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>PCDCB</title>
 	<?php require_once("../../public/templates/head.php"); ?>
 </head>
 <body class="with-side-menu">
@@ -29,9 +33,27 @@
 				<div>
                     <h5><strong>Ingrese los Datos</strong></h5>
 				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-6">
+						<label class="form-label semibold" for="cant_siembra">Número de Organismos</label>
+						<div class="form-control-wrapper form-control-icon-right">
+							<input type="text" class="form-control" id="cant_siembra" name="cant_siembra" disabled>	
+                            <i class="font-icon font-icon-archive"></i>
+                        </div>
+					</div>
+					<div class="col-md-6">
+						<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+						<div class="form-control-wrapper form-control-icon-right">
+							<input type="text" class="form-control" id="fecha" name="fecha" disabled>
+                            <i class="font-icon font-icon-calend"></i>
+                        </div>
+					</div>
+				</div>
+				<br>
 				<div class="row">
 					<div class="col-lg-7">
-						<label for="exampleSelect" class="form-label semibold">Etapa Organismos</label>
+						<label for="exampleSelect" class="form-label semibold">Etápa Organismos</label>
 						<div class="col-sm-10">
 							<select id="exampleSelect" class="form-control">
 								<option>Alevin</option>
@@ -121,7 +143,6 @@
 				</div>
 				<br>
 				<div>
-            	    <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
             	    <button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-primary">Guardar</button>
             	</div>
             </form>

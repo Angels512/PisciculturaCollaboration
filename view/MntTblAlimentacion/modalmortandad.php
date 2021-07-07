@@ -9,7 +9,10 @@
                 <div class="modal-body">
                    <div class="form-group">
                         <label class="form-label" for="reg_mortan">Registro de Mortandad</label>
-                        <input type="text" class="form-control" id="reg_mortan" name="reg_mortan" placeholder="Ingrese la Mortandad" required>
+                        <div class="form-control-wrapper form-control-icon-right">							
+                            <input type="text" class="form-control" id="reg_mortan" name="reg_mortan" placeholder="Ingrese la Mortandad" required>
+                            <i class="fa fa-anchor"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -20,4 +23,5 @@
         </div>
     </div>
 </div>
+
 

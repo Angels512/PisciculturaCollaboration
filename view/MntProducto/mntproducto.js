@@ -8,3 +8,4 @@ $('#daterange3').daterangepicker({
     showDropdowns: true
 });
 
+
