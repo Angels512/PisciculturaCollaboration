@@ -90,7 +90,7 @@
                                 <div style'text-align: center; background-color: #ccc;'>
                                     <p>Restablecer clave</p>
                                     <h3>$codigo</h3>
-                                    <p>Para crear tu nueva clave da <a href='http://localhost/Piscicultura/cod-reset?token=$token_final&user=$id_usu'>click aqui</a></p>
+                                    <p>Para crear tu nueva clave da <a href='http://localhost/PisciculturaProject/cod-reset?token=$token_final&user=$id_usu'>click aqui</a></p>
                                     <p><small>Si usted no solicito este codigo por favor omitir...</small></p>
                                 </div>
                             </body>
@@ -168,7 +168,7 @@
                                 <h1>Proyectos Colombianos del Campo Bolivar</h1>
                                 <p>Hola $nombre_usu $apellido_usu, se ha establecido como numero de documento $documento_usu.</p>
                                 <div style'text-align: center; background-color: #ccc;'>
-                                    <h3>Para crear una nueva contraseña en el sistema de <a href='http://localhost/pisciculturaProject/new-user?token=$password&user=$documento_usu'>click aqui</a></h3>
+                                    <h3>Para crear una nueva contraseña en el sistema de <a href='http://localhost/PisciculturaProject/new-user?token=$password&user=$documento_usu'>click aqui</a></h3>
                                 </div>
                             </body>
                         </html>";

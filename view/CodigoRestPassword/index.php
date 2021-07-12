@@ -45,9 +45,10 @@
         <div class="page-center-in">
             <div class="container-fluid">
                 <form class="sign-box reset-password-box" id="codigoForm">
-                    <header class="sign-title">Ingrese su Codigo</header>
+                    <header class="sign-title semibold">Restablecer Contraseña</header>
                     <div class="form-group">
-                        <input type="number" id="codigo" name="codigo" class="form-control" placeholder="Numero de Codigo"/>
+                        <label class="form-label" for="exampleInput">Codigo de seguridad:</label>
+                        <input type="number" id="codigo" name="codigo" class="form-control" placeholder="Ingrese su numero de codigo"/>
                     </div>
 
                     <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $user; ?>"/>

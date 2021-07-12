@@ -50,16 +50,20 @@
                     <input type="hidden" id="temporalPassword" name="temporalPassword" value="<?php echo $token ?>">
 
                     <div class="form-group">
-                        <input type="text" id="direccion_usu" name="direccion_usu" class="form-control" placeholder="Direccion"/>
+                        <label class="form-label" for="exampleInput">Direccion:</label>
+                        <input type="text" id="direccion_usu" name="direccion_usu" class="form-control" placeholder="Ingrese su direccion"/>
                     </div>
                     <div class="form-group">
-                        <input type="number" id="telefono_usu" name="telefono_usu" class="form-control" placeholder="Numero de telefono"/>
+                        <label class="form-label" for="exampleInput">Numero de telefono:</label>
+                        <input type="number" id="telefono_usu" name="telefono_usu" class="form-control" placeholder="Ingrese un numero de celular"/>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Nueva Contraseña"/>
+                        <label class="form-label" for="exampleInput">Nueva Contraseña:</label>
+                        <input type="password" id="pass1" name="pass1" class="form-control" placeholder="Ingrese su contraseña"/>
                     </div>
                     <div class="form-group">
-                        <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Confirme su Contraseña"/>
+                        <label class="form-label" for="exampleInput">Confirme su Contraseña:</label>
+                        <input type="password" id="pass2" name="pass2" class="form-control" placeholder="Ingrese nuevamente su contraseña"/>
                     </div>
                     <button type="submit" class="btn btn-rounded btn-block">Guardar</button>
                 </form>
