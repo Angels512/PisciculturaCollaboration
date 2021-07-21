@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="es-419">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,29 +16,24 @@
 
 	<div class="page-content">
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-10">
-					<header class="section-header">
-						<div class="tbl">
-							<div class="tbl-row">
-								<div class="tbl-cell">
-									<h2>Gestionar Productos</h2>
-									<ol class="breadcrumb breadcrumb-simple">
-										<li><a href="#">Inicio</a></li>
-										<li class="active">Productos</li>
-									</ol>
-								</div>
-							</div>
+			<header class="section-header">
+				<div class="tbl">
+					<div class="tbl-row">
+						<div class="tbl-cell">
+							<h2>Gestionar Productos</h2>
+							<ol class="breadcrumb breadcrumb-simple">
+								<li><a href="#">Inicio</a></li>
+								<li class="active">Productos</li>
+							</ol>
 						</div>
-					</header>
-				</div>
-				<div class="col-lg-2">
-					<div>
-						<input type="button" name="action" id="newproveedor" value="Nuevo Proveedor" class="btn btn-inline btn-primary float-right mg-top">
+						<div class="tbl-cell tbl-cell-action">
+					   	 	<a id="newproveedor" class="btn btn-inline btn-primary float-right mg-top">Nuevo Proveedor</a>
+				    	</div>
 					</div>
 				</div>
-			</div>
-			<section class="box-typical box-typical-padding" style="margin-top: 8px">
+			</header>
+	
+			<section class="box-typical box-typical-padding">
 				<form method="post" id="product_form">
 					<div>
 						<h5><strong>Ingrese los Datos</strong></h5>
@@ -52,18 +47,15 @@
 							</div>
                     	</div>
 						<div class="form-group">
-							<label class="form-label semibold" for="prod_nom">Nombre Porducto</label>
-							<select id="nom_tip_produ" class="form-control">
-									<option>Mojarra 34% - Polvo</option>
-									<option>Mojarra 24% - Granulado</option>
-									<option>Mojarra 14% - Pepa</option>
+							<label class="form-label semibold" for="id_clase">Nombre Porducto</label>
+							<select id="id_clase" name="id_clase" class="form-control">
 							</select>
 						</div>
 						<div class="form-group">
 							<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento</label>
 							<div class="form-group">
 							<div class='input-group date'>
-								<input id="daterange3" type="text" value="10/24/2020" class="form-control">
+								<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3">
 								<span class="input-group-addon">
 									<i class="font-icon font-icon-calend"></i>
 								</span>
@@ -71,35 +63,33 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="form-label semibold"  for="prod_numl">Número de Lote</label>
+							<label class="form-label semibold"  for="num_lote">Número de Lote</label>
 							<div class="form-control-wrapper form-control-icon-right">
-								<input type="text" class="form-control" id="prod_numl" name="prod_numl" placeholder="Ingrese Número" required>
+								<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número" required>
                         		<i class="glyphicon glyphicon-barcode"></i>
                         	</div>
 						</div>
 						<div class="form-group">
-							<label class="form-label semibold"  for="prove">Proveedor</label>
-							<select id="prove" class="form-control">
-									<option>Carlos S.A</option>
-									<option>FishFood</option>
-									<option>Tilapia Company</option>
+							<label class="form-label semibold"  for="id_prove">Proveedor</label>
+							<select id="id_prove" name="id_prove" class="form-control">
 							</select>
 						</div>
 					<div class="modal-footer">
-						<button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+						<button type="button" name="action" id="inser_produ" class="btn btn-rounded btn-primary">Guardar</button>
 						<button type="button" name="action" id="consul_produ" value="add" class="btn btn-rounded btn-primary">Consultar</button>
 						<button type="button" name="action" id="modi_produ" value="add" class="btn btn-rounded btn-primary">Modificar</button>
 						<button type="button" name="action" id="elim_produ" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
-					</div>                   						</div>
+					</div>                   						
             	</form>
 			</section>
         </div>
     </div>
 
-	<?php require_once("../MntProveedor/modalproveedor.php");?>
+	<?php require_once("../MntProveedor/modalproveedor.php");?> 
 	<?php require_once("../../public/templates/js.php"); ?>
 
 	<script src="view/MntProducto/mntproducto.js"></script>
+	<script src="view/MntProveedor/mntproveedor.js"></script>
 
 </body>
 </html>

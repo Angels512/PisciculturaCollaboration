@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
+<head lang="es-419">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -38,7 +38,7 @@
 					<div class="tbl">
 						<ul class="nav" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" href="#biometrias" role="tab" data-toggle="tab">
+								<a class="nav-link active" href="#estanques" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<i class="glyphicon glyphicon-oil"></i>
 										Estanques
@@ -46,7 +46,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+								<a class="nav-link" href="#responsables" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-users"></span>
 										Responsables
@@ -58,13 +58,13 @@
 					</div>
 				</div><!--.tabs-section-nav-->
 				<div class="tab-content">
-					<div role="tabpanel" class="tab-pane fade in active" id="biometrias">
+					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
 					
-						<!--Aqui va el Formato de Responsables-->
+						<!--Aqui va el Formato de Estanques-->
 
 					</div><!--.tab-pane-->
 
-					<div role="tabpanel" class="tab-pane fade" id="tbl_alim">
+					<div role="tabpanel" class="tab-pane fade" id="responsables">
 						<form method="post" id="responsable_form">
 							<div>
 								<h5><strong>Ingrese los Datos</strong></h5>
@@ -85,15 +85,15 @@
                         		</div>
 							</div>			
 							<div class="form-group">
-								<label class="form-label semibold" for="prod_numl">Apellido Responsable</label>
+								<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
 								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="prod_numl" name="prod_numl" placeholder="Ingrese Apellido" required>
+									<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido" required>
                             		<i class="fa fa-user-o"></i>
                         		</div>
 							</div>
 							<br>
 							<div>
-								<button type="submit" name="action" id="#" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+								<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Guardar</button>
 								<button type="button" name="action" id="consul_respon" value="add" class="btn btn-rounded btn-primary">Consultar</button>
 								<button type="button" name="action" id="modi_respon" value="add" class="btn btn-rounded btn-primary">Modificar</button>
 								<button type="button" name="action" id="elim_respon" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 

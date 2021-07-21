@@ -122,6 +122,21 @@
 
             return $resultado = $sql->fetchAll();
         }
+
+
+
+        // creamos el metodo getCultivo para obtener los cultivos que estan activos y llenar los select
+        public function getCultivo(){
+
+            $conectar = parent::Conexion();
+            parent::setNames();
+
+            $sql = "SELECT id_cultivo, num_tanque, num_lote FROM cultivo INNER JOIN estanque on cultivo.id_tanque = estanque.id_tanque WHERE cultivo.est = 1;";
+            $sql = $conectar->prepare($sql);
+            $sql->execute();
+
+            return $resultado = $sql->fetchAll();
+        }
     }
 
 ?>
