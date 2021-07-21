@@ -98,3 +98,4 @@ RewriteRule ^tbl-alimentacion/?$ view/MntTblAlimentacion/index.php
 
 # GESTIONAR ESTANQUES Y RESPONSABLES
 RewriteRule ^estanq-respon/?$ view/Estanques-Responsables/index.php
+

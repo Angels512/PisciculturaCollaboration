@@ -95,5 +95,24 @@
         case 'deleteVencido':
             $cultivo->deleteCultivoVencido($_POST['id_cultivo']);
         break;
+
+
+        // Para llenar los select con los cultivos activos
+        case "cultivoselect":
+
+            // Llamamos el metodo getCultivo del model
+            $datos = $cultivo->getCultivo();
+            
+            // verificamos si datos es un array y si sus datos no son igual a 0
+            if(is_array($datos)==true and count($datos)>0){
+
+                //llenamos el select con un option, por cada fila del arreglo
+                foreach($datos as $row)
+                {
+                    $html.= "<option value='".$row['id_cultivo']."'>Estanque:  ".$row['num_tanque']." - Lote:  ".$row['num_lote']."</option>";
+                }
+                echo $html;
+            }
+        break;
     }
 ?>
