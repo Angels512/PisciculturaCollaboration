@@ -14,6 +14,7 @@
 <script src="public/js/lib/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
 
 <!-- JS para SweetAlert (Libreria de Alertas) -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="public/js/lib/bootstrap-sweetalert/sweetalert.min.js"></script>
 
 <!-- JS para TABLAS (Libreria de DataTables) -->
