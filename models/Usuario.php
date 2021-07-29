@@ -64,8 +64,6 @@
         // Se envia el EMAIL con el enlace y codigo para restablecer la clave
         public function sendMail($id_usu, $nombre_usu, $apellido_usu, $correo_usu)
         {
-            $destinatario = $correo_usu;
-            $asunto = 'RESTABLECER CONTRASEÑA - PISCICULTURA';
             $token = random_bytes(100);
             $token_final = bin2hex($token);
             $codigo = rand(1000, 9999);
@@ -80,28 +78,23 @@
             $sql->bindValue(3, $codigo);
             $sql->execute();
 
-            $mensaje = "<html>
-                            <head>
-                                <title>Restablece tu Contraseña</title>
-                            </head>
-                            <body>
-                                <h1>Proyectos Colombianos del Campo Bolivar</h1>
-                                <p>Hola $nombre_usu $apellido_usu</p>
-                                <div style'text-align: center; background-color: #ccc;'>
-                                    <p>Restablecer clave</p>
-                                    <h3>$codigo</h3>
-                                    <p>Para crear tu nueva clave da <a href='http://localhost/PisciculturaProject/cod-reset?token=$token_final&user=$id_usu'>click aqui</a></p>
-                                    <p><small>Si usted no solicito este codigo por favor omitir...</small></p>
-                                </div>
-                            </body>
-                        </html>";
+
+            // ENVIAR EMAIL
+            $destinatario = $correo_usu;
+            $asunto = 'Restablece tu Contraseña - Piscicultura PCCB';
+
+            $mensaje = file_get_contents('../public/mails/RestPassword.html');
+            $mensaje = str_replace('lblNom', $nombre_usu. ' ' .$apellido_usu, $mensaje);
+            $mensaje = str_replace('lblCode', $codigo, $mensaje);
+
+            $url = "http://localhost/PisciculturaProject/cod-reset?token=$token_final&user=$id_usu";
+
+            $mensaje = str_replace('lblUrl', $url, $mensaje);
 
             $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
             $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
 
             mail($destinatario, $asunto, $mensaje, $cabeceras);
-
-            return $resultado = $sql->fetchAll();
         }
 
         // Se verifica que el token de la persona sea el mismo que esta en la base de datos para realizar el cambio
@@ -131,8 +124,6 @@
             $sql->bindValue(1, hash('sha512', $pass_usu));
             $sql->bindValue(2, $id_usu);
             $sql->execute();
-
-            return $resultado = $sql->fetchAll();
         }
 
 
@@ -159,26 +150,6 @@
             $sql->bindValue(7, $correo_usu);
             $sql->bindValue(8, $password);
             $sql->execute();
-
-            $mensaje = "<html>
-                            <head>
-                                <title>Se ha creado una cuenta para ti en el sistema de informacion PCCB</title>
-                            </head>
-                            <body>
-                                <h1>Proyectos Colombianos del Campo Bolivar</h1>
-                                <p>Hola $nombre_usu $apellido_usu, se ha establecido como numero de documento $documento_usu.</p>
-                                <div style'text-align: center; background-color: #ccc;'>
-                                    <h3>Para crear una nueva contraseña en el sistema de <a href='http://localhost/PisciculturaProject/new-user?token=$password&user=$documento_usu'>click aqui</a></h3>
-                                </div>
-                            </body>
-                        </html>";
-
-            $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
-            $cabeceras .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-
-            mail($destinatario, $asunto, $mensaje, $cabeceras);
-
-            return $resultado = $sql->fetchAll();
         }
 
         // Revisaremos que el token de la persona y su documento coinciden con la BD para ejecutar el siguiente metodo

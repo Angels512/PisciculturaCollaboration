@@ -61,26 +61,54 @@ function searchUser(documento_usu)
 
 function sendMail(id_usu, nombre_usu, apellido_usu, correo_usu)
 {
-    // Ejecutamos el envio del correo electronico
-    $.post('controller/usuario.php?op=sendMail', {id_usu:id_usu, nombre_usu:nombre_usu, apellido_usu:apellido_usu, correo_usu:correo_usu}, function(data)
+    let timerInterval;
+    Swal.fire({
+    title: 'Enviando correo de recuperación!',
+    html: 'Se cerrara automaticamente en <b></b>.',
+    timer: 2000,
+    timerProgressBar: true,
+    didOpen: () =>
     {
-    });
-
-    // Mostramos alerta notificando el correo y redorigiendolo nuevamente al login
-    swal({
-        title: "Correcto!",
-        text: "Por favor revise su correo",
-        type: "success",
-        confirmButtonClass: "btn-success",
-        confirmButtonText: "OK"
-    },
-    function(isConfirm)
-    {
-        if (isConfirm)
+        // Ejecutamos el envio del correo electronico
+        $.post('controller/usuario.php?op=sendMail', {id_usu:id_usu, nombre_usu:nombre_usu, apellido_usu:apellido_usu, correo_usu:correo_usu}, function(data)
         {
-            window.location.href = "login";
+        });
+
+        Swal.showLoading()
+        timerInterval = setInterval(() => {
+        const content = Swal.getHtmlContainer()
+        if (content) {
+            const b = content.querySelector('b')
+            if (b) {
+            b.textContent = Swal.getTimerLeft()
+            }
         }
-    });
+        }, 100)
+    },
+    willClose: () => {
+        clearInterval(timerInterval)
+    }
+    }).then((result) =>
+    {
+        if (result.dismiss === Swal.DismissReason.timer)
+        {
+            // Mostramos alerta notificando el correo y redorigiendolo nuevamente al login
+            swal({
+                title: "Correcto!",
+                text: "Por favor revise su correo",
+                type: "success",
+                confirmButtonClass: "btn-success",
+                confirmButtonText: "OK"
+            },
+            function(isConfirm)
+            {
+                if (isConfirm)
+                {
+                    window.location.href = "login";
+                }
+            });
+        }
+    })
 }
 
 
