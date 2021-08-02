@@ -3,7 +3,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <!-- FAVICON DE TIBURON -->
-<link rel="icon" type="image/vnd.microsoft.icon" href="public/img/fav.ico" sizes="32x32">
+<link rel="shortcut icon" href="public/img/fav.png" type="image/x-icon">
 
 <!-- Utiles para SELECT (Libreria Select2) -->
 <link rel="stylesheet" href="public/css/separate/vendor/tags_editor.min.css">
@@ -49,17 +49,14 @@
 <link rel="stylesheet" href="public/css/main.css">
 
 
-	<!--Reloj y Calendario-->
-	<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-datetimepicker.min.css">
-	
-
-	<!--Sliders-->
-	<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.css">
-	<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.skinHTML5.css">
+<!--Reloj y Calendario-->
+<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-datetimepicker.min.css">
 
 
-	<!--Calendar-->
-	<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-daterangepicker.min.css">
+<!--Sliders-->
+<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.css">
+<link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.skinHTML5.css">
 
 
-	
+<!--Calendar-->
+<link rel="stylesheet" href="public/css/separate/vendor/bootstrap-daterangepicker.min.css">
