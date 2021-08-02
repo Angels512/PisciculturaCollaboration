@@ -9,7 +9,7 @@
             <div class="container-fluid">
 
                 <a href="inicio" class="site-logo">
-                    <img class="hidden-md-down" src="public/img/logo.svg" alt="">
+                    <img class="hidden-md-down" src="public/img/logo.png" alt="logo">
                     <!-- <img class="hidden-lg-up" src="../../public/img/logo-2-mob.png" alt=""> -->
                 </a>
 

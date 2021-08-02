@@ -12,8 +12,15 @@ ErrorDocument 500 http://localhost/PisciculturaProject/error500
 
 RewriteEngine On
 
+# INDEX
+RewriteRule ^home/?$ index.php
+
+
+
+
+
 # LOGIN
-RewriteRule ^login/?$ index.php
+RewriteRule ^login/?$ view/Autenticacion/Login/index.php
 
 # LOGOUT
 RewriteRule ^logout/?$ view/Logout/logout.php
