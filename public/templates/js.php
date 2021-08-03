@@ -30,13 +30,12 @@
 
 <!--MARIANA-->
 
-	<!--Sliders-->
-	<script src="public/js/lib/ion-range-slider/ion.rangeSlider.js"></script>
+<!--Sliders-->
+<script src="public/js/lib/ion-range-slider/ion.rangeSlider.js"></script>
 
-	<!--Reloj-->
-	<script type="text/javascript" src="public/js/lib/moment/moment-with-locales.min.js"></script>
-	<script type="text/javascript" src="public/js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<!--Reloj-->
+<script type="text/javascript" src="public/js/lib/moment/moment-with-locales.min.js"></script>
+<script type="text/javascript" src="public/js/lib/eonasdan-bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
 
-	<!--Calendar-->
-	<script src="public/js/lib/daterangepicker/daterangepicker.js"></script>
-	
+<!--Calendar-->
+<script src="public/js/lib/daterangepicker/daterangepicker.js"></script>
