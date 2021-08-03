@@ -5,7 +5,7 @@
         public function createUser($nombre_usu, $documento_usu, $correo_usu, $pass_usu)
         {
             $destinatario = $correo_usu;
-            $asunto = 'Usuario Registrado - Piscicultura PCCB';
+            $asunto = "Usuario Registrado - A'ttia";
 
             $mensaje = file_get_contents('../public/mails/CreateUser.html');
             $mensaje = str_replace('lblNom', $nombre_usu, $mensaje);
