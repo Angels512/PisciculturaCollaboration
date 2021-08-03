@@ -26,12 +26,12 @@
                         </ul>
                     </li>
 
-                    <li class="blue-dirty">
+                    <!-- <li class="blue-dirty">
                         <a href="consultar-formatos">
                             <span class="glyphicon glyphicon-list-alt"></span>
                             <span class="lbl">Consultar Formatos</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="magenta with-sub">
                         <span>

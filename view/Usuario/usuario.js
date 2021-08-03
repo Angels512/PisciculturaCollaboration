@@ -201,6 +201,7 @@ function createUpdate()
 {
     $('#telefono_usu').prop('disabled', false);
     $('#direccion_usu').prop('disabled', false);
+    $('#usuCorreo').prop('disabled', false);
     let id_usu = $('#id_usu').val();
 
     var formData = new FormData($('#formUsuario')[0]);
@@ -314,6 +315,7 @@ function editar(id_usu)
 {
     $('#direccion_usu').prop('disabled', true);
     $('#telefono_usu').prop('disabled', true);
+    $('#usuCorreo').prop('disabled', true);
 
     // Ejecutamos el post del controlador llenar los datos del formulario del MODAL
     $.post("controller/usuario.php?op=listarDatosUsu", { id_usu:id_usu }, function(data)
