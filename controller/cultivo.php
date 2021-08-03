@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="card-user-photo">
-                            <img src="public/img/fish<?php echo $row['num_tanque']; ?>.png" alt="">
+                            <img src="public/img/fish<?php echo $row['num_tanque']; ?>.jpg" alt="">
                         </div>
                         <div class="card-user-name">Cultivo <?php echo $row['num_lote']; ?></div>
                         <div class="card-user-status">Estanque #<?php echo $row['num_tanque']; ?></div>
@@ -102,7 +102,7 @@
 
             // Llamamos el metodo getCultivo del model
             $datos = $cultivo->getCultivo();
-            
+
             // verificamos si datos es un array y si sus datos no son igual a 0
             if(is_array($datos)==true and count($datos)>0){
 

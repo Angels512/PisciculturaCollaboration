@@ -30,16 +30,16 @@ RewriteRule ^logout/?$ view/Logout/logout.php
 
 
 # RESET PASSWORD
-RewriteRule ^reset-password/?$ view/ResetPassword/index.php
+RewriteRule ^reset-password/?$ view/Autenticacion/ResetPassword/index.php
 
 # CODIGO REST PASSWORD
-RewriteRule ^cod-reset/?$ view/CodigoRestPassword/index.php
+RewriteRule ^cod-reset/?$ view/Autenticacion/CodigoRestPassword/index.php
 
-# CODIGO REST PASSWORD
-RewriteRule ^new-password/?$ view/NewPassword/index.php
+# NUEVA CONTRASEÑA
+RewriteRule ^new-password/?$ view/Autenticacion/NewPassword/index.php
 
 # NUEVO USUARIO
-RewriteRule ^new-user/?$ view/NuevoUsuario/index.php
+RewriteRule ^new-user/?$ view/Autenticacion/NuevoUsuario/index.php
 
 
 

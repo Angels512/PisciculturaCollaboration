@@ -81,7 +81,7 @@
 
             // ENVIAR EMAIL
             $destinatario = $correo_usu;
-            $asunto = 'Restablece tu Contraseña - Piscicultura PCCB';
+            $asunto = "Restablece tu Contraseña - A'ttia";
 
             $mensaje = file_get_contents('../public/mails/RestPassword.html');
             $mensaje = str_replace('lblNom', $nombre_usu. ' ' .$apellido_usu, $mensaje);

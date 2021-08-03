@@ -18,7 +18,7 @@
             <div class="circle"></div>
 
             <header>
-                <a href="index.html"><img src="public/img/home/logo.png" class="logo"></a>
+                <img src="public/img/home/logo.png" class="logo">
                 <div class="toggle" onclick="toggleMenu()"></div>
                 <!-- <ul class="navigation">
                     <li><a href="#">Inicio</a></li>
