@@ -138,10 +138,10 @@
 						<div class="col-sm-12">
 							<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo</label>
 							<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Textarea"></textarea>
-						</div>
+						</div><br>
 
 						<div class="col-lg-12">
-							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary mt-10">Guardar</button>
 						</div>
 					</form>
 				</div>

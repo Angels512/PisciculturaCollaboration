@@ -32,14 +32,14 @@
 					</div>
 				</div>
 			</header>
-	
+
 			<section class="box-typical box-typical-padding">
 				<form method="post" id="product_form">
 					<div>
 						<h5><strong>Ingrese los Datos</strong></h5>
 					</div>
-					<br>	
-						<div class="form-group"> 
+					<br>
+						<div class="form-group">
                     	    <label class="form-label semibold" for="fecha">Fecha de Creación</label>
 							<div class="form-control-wrapper form-control-icon-right">
 								<input type="text" class="form-control" id="fecha" name="fecha" disabled>
@@ -47,7 +47,7 @@
 							</div>
                     	</div>
 						<div class="form-group">
-							<label class="form-label semibold" for="id_clase">Nombre Porducto</label>
+							<label class="form-label semibold" for="id_clase">Nombre Producto</label>
 							<select id="id_clase" name="id_clase" class="form-control">
 							</select>
 						</div>
@@ -79,13 +79,13 @@
 						<button type="button" name="action" id="consul_produ" value="add" class="btn btn-rounded btn-primary">Consultar</button>
 						<button type="button" name="action" id="modi_produ" value="add" class="btn btn-rounded btn-primary">Modificar</button>
 						<button type="button" name="action" id="elim_produ" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
-					</div>                   						
+					</div>
             	</form>
 			</section>
         </div>
     </div>
 
-	<?php require_once("../MntProveedor/modalproveedor.php");?> 
+	<?php require_once("../MntProveedor/modalproveedor.php");?>
 	<?php require_once("../../public/templates/js.php"); ?>
 
 	<script src="view/MntProducto/mntproducto.js"></script>
