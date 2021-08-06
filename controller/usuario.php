@@ -2,8 +2,10 @@
 
     require_once('../config/conexion.php');
     require_once('../models/Usuario.php');
+    require_once('../models/Email.php');
 
     $usuario = new Usuario();
+    $email = new Email();
 
     switch ($_GET['op'])
     {
@@ -54,16 +56,23 @@
 
 
 
-        // Vamos a crear o actualizar a un usuario
-        case 'create_update':
-            // En el caso de que el ID del usuario venga vacio quiere decir que no existe, por lo cual se ejecutara la
-            // opcion de registrar usuario, en el caso de que el ID si exista lo actualizara.
-            if (empty($_POST['id_usu']))
+        // Vamos a crear un usuario
+        case 'create':
+            $usuario->createUser($_POST['id_rol'], $_POST['nombre_usu'], $_POST['apellido_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['documento_usu'], $_POST['correo_usu']);
+
+            $datos = $usuario->seletUserReset($_POST['documento_usu']);
+            if (is_array($datos) == true AND count($datos)>0)
             {
-                $usuario->createUser($_POST['id_rol'], $_POST['nombre_usu'], $_POST['apellido_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['documento_usu'], $_POST['correo_usu']);
-            }else {
-                $usuario->updateUser($_POST['id_rol'], $_POST['nombre_usu'], $_POST['apellido_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['documento_usu'], $_POST['correo_usu'], $_POST['id_usu']);
+                foreach ($datos as $row)
+                {
+                    $nombre_usu = $row["nombre_usu"]. ' ' .$row["apellido_usu"];
+                    $documento_usu = $row["documento_usu"];
+                    $correo_usu = $row["correo_usu"];
+                    $pass_usu = $row["pass_usu"];
+                }
             }
+
+            $email->createUser($nombre_usu, $documento_usu, $correo_usu, $pass_usu);
         break;
 
         // Verificamos el documento y el token en la base de datos
@@ -84,6 +93,11 @@
         // Vamos a crear o actualizar a un usuario
         case 'addDataUser':
             $usuario->addDataUser($_POST['documento_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['pass_usu']);
+        break;
+
+        // Vamos a actualizar un usuario
+        case 'update':
+            $usuario->updateUser($_POST['id_rol'], $_POST['nombre_usu'], $_POST['apellido_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['documento_usu'], $_POST['correo_usu'], $_POST['id_usu']);
         break;
 
 

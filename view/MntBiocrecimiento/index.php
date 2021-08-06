@@ -44,6 +44,7 @@
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="num_organ">Número de Organismos</label>
 								<div class="form-control-wrapper form-control-icon-right">
+
 									<input type="text" class="form-control" id="num_organ" name="num_organ"  value="2000" readonly>	
 									<i class="font-icon font-icon-archive"></i>
 								</div>

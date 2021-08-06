@@ -36,6 +36,7 @@
 				</div>
 			</header>
 
+
 			<section class="widget top-tabs widget-tabs-compact">
 				<div class="widget-tabs-nav bordered">
 					<ul class="tbl-row" role="tablist">
@@ -114,12 +115,11 @@
 						</section>
 					</div>
 				</div>
-			</section>
-
+      </section>
 		
     </div>
 
-	<?php require_once("../MntProveedor/modalproveedor.php");?> 
+	<?php require_once("../MntProveedor/modalproveedor.php");?>
 	<?php require_once("../../public/templates/js.php"); ?>
 
 	<script src="view/MntProducto/mntproducto.js"></script>

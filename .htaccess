@@ -12,27 +12,34 @@ ErrorDocument 500 http://localhost/PisciculturaProject/error500
 
 RewriteEngine On
 
+# INDEX
+RewriteRule ^home/?$ index.php
+
+
+
+
+
 # LOGIN
-RewriteRule ^login/?$ index.php
+RewriteRule ^login/?$ view/Autenticacion/Login/index.php
 
 # LOGOUT
-RewriteRule ^logout/?$ view/Logout/logout.php
+RewriteRule ^logout/?$ view/Autenticacion/Logout/logout.php
 
 
 
 
 
 # RESET PASSWORD
-RewriteRule ^reset-password/?$ view/ResetPassword/index.php
+RewriteRule ^reset-password/?$ view/Autenticacion/ResetPassword/index.php
 
 # CODIGO REST PASSWORD
-RewriteRule ^cod-reset/?$ view/CodigoRestPassword/index.php
+RewriteRule ^cod-reset/?$ view/Autenticacion/CodigoRestPassword/index.php
 
-# CODIGO REST PASSWORD
-RewriteRule ^new-password/?$ view/NewPassword/index.php
+# NUEVA CONTRASEÑA
+RewriteRule ^new-password/?$ view/Autenticacion/NewPassword/index.php
 
 # NUEVO USUARIO
-RewriteRule ^new-user/?$ view/NuevoUsuario/index.php
+RewriteRule ^new-user/?$ view/Autenticacion/NuevoUsuario/index.php
 
 
 
@@ -69,16 +76,16 @@ RewriteRule ^novedades-mortalidad/?$ view/NovedadesMortalidad/index.php
 
 
 # ERROR 401
-RewriteRule ^error401/?$ view/Error/401.php
+RewriteRule ^error401/?$ view/Autenticacion/Error/401.php
 
 # ERROR 403
-RewriteRule ^error403/?$ view/Error/403.php
+RewriteRule ^error403/?$ view/Autenticacion/Error/403.php
 
 # ERROR 404
-RewriteRule ^error404/?$ view/Error/404.php
+RewriteRule ^error404/?$ view/Autenticacion/Error/404.php
 
 # ERROR 500
-RewriteRule ^error500/?$ view/Error/500.php
+RewriteRule ^error500/?$ view/Autenticacion/Error/500.php
 
 
 
