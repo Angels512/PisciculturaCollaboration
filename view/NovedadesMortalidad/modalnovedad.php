@@ -19,7 +19,7 @@
                 </div> 
                 <div class="form-group">
                     <label class="form-label semibold" for="medidad_prev">Medidas Preventivas</label>
-					<textarea rows="6" class="form-control" id="medidad_prev" name="medidad_prev" placeholder="Escriba las medidas preventivas" required></textarea>
+					<textarea rows="4" class="form-control" id="medidad_prev" name="medidad_prev" placeholder="Escriba las medidas preventivas" required></textarea>
                 </div> 
                 <div class="modal-footer">
                     <button type="submit" name="action1" value="add" class="btn btn-rounded btn-primary">Guardar</button>

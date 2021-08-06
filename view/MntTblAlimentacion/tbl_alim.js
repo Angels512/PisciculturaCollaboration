@@ -1,5 +1,10 @@
 function init(){
 
+    // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del formato de Tabla de Alimentación
+    $("#tabla_alim").on("submit",function(e){
+        guardaryeditar(e); 
+   })
+
 }
 
 
@@ -39,8 +44,28 @@ $(document).on("click","#newnovedad",function(){
 
     $('#modalnovedad').modal('show');
 });
-    
 
-
-    
+// creamos la funcion guardaryeditar para insertar una nueva tabla de alimentación y vaciar los campos del formulario
+function guardaryeditar(e){
+    e.preventDefault();
+ 
+     /* var variable = $('#obser_gen_cult').val();
+    console.log(variable);   */ 
+     
+     var formData = new FormData($('#tabla_alim')[0]);
+ 
+    $.ajax({
+        url: "controller/tblalimentacion.php?op=inserttblalim",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(datos){   
+             $("#tabla_alim")[0].reset();
+ 
+            swal("correcto!","Registrado Correctamente","success");
+        }
+    });  
+ }
+      
 init(); 

@@ -8,7 +8,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;";
+            $sql = "SELECT id_produ, nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;";
             $sql = $conectar->prepare($sql);
             $sql->execute();
 

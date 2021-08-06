@@ -49,6 +49,10 @@ $(document).ready(function() {
         $('#id_prove').html(data);
     });
 
+     /* Esto es para llenar el select del Producto a Consultar */
+     $.post("controller/producto.php?op=productos",function(data, status){
+        $('#id_produ').html(data);
+    });
 });
 
 

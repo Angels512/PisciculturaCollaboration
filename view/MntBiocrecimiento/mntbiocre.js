@@ -21,14 +21,14 @@ $(document).ready(function(){
 
     /*Sliders Rangos*/
     $("#peso_organ").ionRangeSlider({
-        min: 0.8,
+        min: 1,
         max: 500,
         grid: true,
         hide_min_max: true
     });
 
     $("#peso_biomasa").ionRangeSlider({
-        min: 0.8,
+        min: 1,
         max: 500,
         grid: true,
         hide_min_max: true
@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
 
     $("#crecimiento_organ").ionRangeSlider({
-        min: 0.5,
+        min: 1,
         max: 35,
         grid: true,
         hide_min_max: true
@@ -53,19 +53,20 @@ $(document).ready(function(){
 function guardaryeditar(e){
    e.preventDefault();
 
-   /* var variable = $('#obser_adic').val();
-   console.log(variable); */
+    /* var variable = $('#num_organ').val();
+    console.log(variable);   */
+    
    var formData = new FormData($('#biocre_form')[0]);
-   
+
    $.ajax({
-       url: "controller/biocrecimiento.php?op=insertBiocre",
+       url: "controller/biocrecimiento.php?op=insertbiocre",
        type: "POST",
        data: formData,
        contentType: false,
        processData: false,
-       success: function(datos){
-           $('#obser_adic').val('');
-          
+       success: function(datos){   
+            $("#biocre_form")[0].reset();
+
            swal("correcto!","Registrado Correctamente","success");
        }
    }); 
