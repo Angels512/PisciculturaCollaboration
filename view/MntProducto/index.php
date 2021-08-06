@@ -14,6 +14,9 @@
 
 	<?php require_once("../../public/templates/nav.php"); ?>
 
+
+	
+
 	<div class="page-content">
 		<div class="container-fluid">
 			<header class="section-header">
@@ -33,56 +36,87 @@
 				</div>
 			</header>
 
-			<section class="box-typical box-typical-padding">
-				<form method="post" id="product_form">
-					<div>
-						<h5><strong>Ingrese los Datos</strong></h5>
+
+			<section class="widget top-tabs widget-tabs-compact">
+				<div class="widget-tabs-nav bordered">
+					<ul class="tbl-row" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#w-3-tab-2" role="tab">
+								<i class="font-icon font-icon-users-two"></i>
+								Nuevo Producto
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#w-3-tab-3" role="tab">
+								<i class="font-icon font-icon-eye"></i>
+								Gestionar Producto
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="tab-content widget-tabs-content">
+					<div class="tab-pane" id="w-3-tab-2" role="tabpanel">
+						<section class="box-typical box-typical-padding">
+							<form method="post" id="product_form">
+								<div>
+									<h5>Ingrese los Datos</h5>
+								</div>
+								
+								<div class="form-group">
+										<label class="form-label semibold" for="id_clase">Nombre Porducto</label>
+										<select id="id_clase" name="id_clase" class="form-control">
+										</select>
+								</div>
+
+								<div class="form-group">
+									<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento</label>
+									<div class="form-group">
+										<div class='input-group date'>
+											<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3">
+											<span class="input-group-addon">
+												<i class="font-icon font-icon-calend"></i>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="form-label semibold"  for="num_lote">Número de Lote</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número" required>
+										<i class="glyphicon glyphicon-barcode"></i>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="form-label semibold"  for="id_prove">Proveedor</label>
+									<select id="id_prove" name="id_prove" class="form-control">
+									</select>
+								</div>
+								
+								<div>
+									<button type="button" name="action" id="inser_produ" class="btn btn-rounded btn-primary">Guardar</button>
+								</div>                   						
+							</form>
+						</section>
 					</div>
-					<br>
-						<div class="form-group">
-                    	    <label class="form-label semibold" for="fecha">Fecha de Creación</label>
-							<div class="form-control-wrapper form-control-icon-right">
-								<input type="text" class="form-control" id="fecha" name="fecha" disabled>
-								<i class="font-icon font-icon-calend"></i>
+					<div class="tab-pane" id="w-3-tab-3" role="tabpanel">
+						<section>
+							<h4>Consultar Producto</h4>
+
+							<div class="row">
+								<div class="col-lg-7">
+									<label for="id_produ" class="form-label semibold">Producto</label>
+									<div class="col-sm-10">
+										<select id="id_produ" name="id_produ" class="form-control">
+										</select>
+									</div>
+								</div>
 							</div>
-                    	</div>
-						<div class="form-group">
-							<label class="form-label semibold" for="id_clase">Nombre Producto</label>
-							<select id="id_clase" name="id_clase" class="form-control">
-							</select>
-						</div>
-						<div class="form-group">
-							<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento</label>
-							<div class="form-group">
-							<div class='input-group date'>
-								<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3">
-								<span class="input-group-addon">
-									<i class="font-icon font-icon-calend"></i>
-								</span>
-							</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<label class="form-label semibold"  for="num_lote">Número de Lote</label>
-							<div class="form-control-wrapper form-control-icon-right">
-								<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número" required>
-                        		<i class="glyphicon glyphicon-barcode"></i>
-                        	</div>
-						</div>
-						<div class="form-group">
-							<label class="form-label semibold"  for="id_prove">Proveedor</label>
-							<select id="id_prove" name="id_prove" class="form-control">
-							</select>
-						</div>
-					<div class="modal-footer">
-						<button type="button" name="action" id="inser_produ" class="btn btn-rounded btn-primary">Guardar</button>
-						<button type="button" name="action" id="consul_produ" value="add" class="btn btn-rounded btn-primary">Consultar</button>
-						<button type="button" name="action" id="modi_produ" value="add" class="btn btn-rounded btn-primary">Modificar</button>
-						<button type="button" name="action" id="elim_produ" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
+							<br>
+						</section>
 					</div>
-            	</form>
-			</section>
-        </div>
+				</div>
+      </section>
+		
     </div>
 
 	<?php require_once("../MntProveedor/modalproveedor.php");?>

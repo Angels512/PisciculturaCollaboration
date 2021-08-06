@@ -3,7 +3,7 @@
 class Biocrecimiento extends Conectar
 {
     // creamos el metodo insertBiocre para hacer un nuevo registro de Biocrecimiento
-    public function insertBiocre($id_etapa,$id_cultivo,$id_usu,$num_organ,$peso_organ,$peso_biomasa,$edad_organ,$color_organ,$escamas_organ,$ojos_organ,$compor_organ,$crecimiento_organ,$obser_adic)
+    public function insertBiocre($id_etapa ,$id_cultivo,$id_usu,$num_organ,$peso_organ,$peso_biomasa,$edad_organ,$color_organ,$escamas_organ,$ojos_organ,$compor_organ,$crecimiento_organ,$obser_adic )
     {
         $conectar = parent::Conexion();
         parent::setNames();
@@ -27,7 +27,7 @@ class Biocrecimiento extends Conectar
             fecha_elim, 
             est) 
             VALUES 
-            (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,now(),NULL,'1');";
+            (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_etapa);
             $sql->bindValue(2, $id_cultivo);
@@ -41,7 +41,7 @@ class Biocrecimiento extends Conectar
             $sql->bindValue(10, $ojos_organ);
             $sql->bindValue(11, $compor_organ);
             $sql->bindValue(12, $crecimiento_organ);
-            $sql->bindValue(13, $obser_adic);
+            $sql->bindValue(13, $obser_adic); 
             $sql->execute();
         
         return $resultado=$sql->fetchAll();
