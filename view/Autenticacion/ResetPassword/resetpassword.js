@@ -32,7 +32,7 @@ function resetPassword(e)
 function searchUser(documento_usu)
 {
     // Ejecutamos el controlador para llamar al usuario que necesita el cambio de clave
-    $.post('controller/usuario.php?op=selectUserReset', {documento_usu:documento_usu}, function(data)
+    $.post('controller/usuario.php?op=selectUserReset', {documento_usu:documento_usu, correo_usu:'N-A'}, function(data)
     {
         // Verificamos que el usuario si exista en la base de datos
         if (data.length>0)

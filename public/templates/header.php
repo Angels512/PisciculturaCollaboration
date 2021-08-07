@@ -5,6 +5,11 @@
     if (isset($_SESSION["id_usu"]))
     {
     ?>
+
+        <style>
+            @media (max-width: 560px){.nombreSession,.rolSession{display: none;}} @media (max-width: 1920) and (min-width: 300px){.profileCard{width: 100%!important;}} @media (max-width: 1056px) and (min-width: 300px){.side-menu{left: -250px;}}
+        </style>
+
         <header class="site-header">
             <div class="container-fluid">
 
