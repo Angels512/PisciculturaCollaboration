@@ -202,70 +202,90 @@ function createUpdate()
     $('#telefono_usu').prop('disabled', false);
     $('#direccion_usu').prop('disabled', false);
     $('#usuCorreo').prop('disabled', false);
-    let id_usu = $('#id_usu').val();
 
-    var formData = new FormData($('#formUsuario')[0]);
+    let id_usu = $('#id_usu').val();
+    let documento_usu = $('#usuDocumento').val();
+    let correo_usu = $('#usuCorreo').val();
 
     if (id_usu == '')
     {
-        let timerInterval;
-        Swal.fire({
-            title: 'Creando el usuario!',
-            html: 'Se cerrara automaticamente en <b></b>.',
-            timer: 4000,
-            timerProgressBar: true,
-            didOpen: () =>
+        $.post('controller/usuario.php?op=selectUserReset', {documento_usu:documento_usu, correo_usu:correo_usu}, (data) =>
+        {
+            if (data.length > 0)
             {
                 $('#modalUsuarios').modal('hide'); // Escondemos el modal
-
-                $.ajax({
-                    url: "controller/usuario.php?op=create", // La ubicacion exacta del controlador con su op
-                    type: "POST", // Es de tipo POST el envio
-                    data: formData, // Los datos los extrae de la variable que creamos arriba, esta contiene lo ingresado en el Formulario
-                    contentType: false,
-                    processData: false,
-                    success: function(datos) // Cuando haya finalizado el proceso de creacion del chat
-                    {
-                        $('#usuarioData').DataTable().ajax.reload();
-                    }
-                });
-
-                Swal.showLoading()
-                timerInterval = setInterval(() => {
-                const content = Swal.getHtmlContainer()
-                if (content) {
-                    const b = content.querySelector('b')
-                    if (b) {
-                    b.textContent = Swal.getTimerLeft()
-                    }
-                }
-                }, 100)
-            },
-            willClose: () => {
-                clearInterval(timerInterval)
-            }
-        }).then((result) =>
-        {
-            if (result.dismiss === Swal.DismissReason.timer)
-            {
-                // Muestra alerta de SweetAlert
                 swal({
-                    title: "Correcto!",
-                    text: "Se ha guardado el usuario exitosamente.",
-                    type: "success",
-                    confirmButtonClass: "btn-success",
+                    title: "Advertencia!",
+                    text: "Este usuario ya existe, verifique los datos.",
+                    type: "warning",
+                    confirmButtonClass: "btn-warning",
                     confirmButtonText: "OK"
+                },
+                function(isConfirm)
+                {
+                    if (isConfirm)
+                    {
+                        $('#modalUsuarios').modal('show');
+                    }
                 });
+            } else {
+                var formData = new FormData($('#formUsuario')[0]);
 
-                $('#formUsuario')[0].reset(); // Vaciamos los campos del formulario
-                $('#id_usu').val('');
+                let timerInterval;
+                Swal.fire({
+                    title: 'Creando el usuario!',
+                    html: 'Se cerrara automaticamente en <b></b>.',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: () =>
+                    {
+                        $('#modalUsuarios').modal('hide'); // Escondemos el modal
+
+                        $.ajax({
+                            url: "controller/usuario.php?op=create", // La ubicacion exacta del controlador con su op
+                            type: "POST", // Es de tipo POST el envio
+                            data: formData, // Los datos los extrae de la variable que creamos arriba, esta contiene lo ingresado en el Formulario
+                            contentType: false,
+                            processData: false,
+                            success: function(datos) // Cuando haya finalizado el proceso de creacion del chat
+                            {
+                                $('#usuarioData').DataTable().ajax.reload();
+                            }
+                        });
+
+                        Swal.showLoading()
+                        timerInterval = setInterval(() => {
+                        const content = Swal.getHtmlContainer()
+                        if (content) {
+                            const b = content.querySelector('b')
+                            if (b) {
+                            b.textContent = Swal.getTimerLeft()
+                            }
+                        }
+                        }, 100)
+                    },
+                    willClose: () => {
+                        clearInterval(timerInterval)
+                    }
+                }).then((result) =>
+                {
+                    if (result.dismiss === Swal.DismissReason.timer)
+                    {
+                        // Muestra alerta de SweetAlert
+                        swal({
+                            title: "Correcto!",
+                            text: "Se ha guardado el usuario exitosamente.",
+                            type: "success",
+                            confirmButtonClass: "btn-success",
+                            confirmButtonText: "OK"
+                        });
+
+                        $('#formUsuario')[0].reset(); // Vaciamos los campos del formulario
+                        $('#id_usu').val('');
+                    }
+                })
             }
-        })
-
-
-
-
-        
+        });
     }else {
         $.ajax({
             url: "controller/usuario.php?op=update", // La ubicacion exacta del controlador con su op

@@ -48,14 +48,15 @@
 
 
         // Selecciona los datos del usuario que se llamo por el documento para restablecer la clave
-        public function seletUserReset($documento_usu)
+        public function seletUserReset($documento_usu, $correo_usu)
         {
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'SELECT * FROM usuario WHERE documento_usu=? AND est=1';
+            $sql = 'SELECT * FROM usuario WHERE documento_usu=? OR correo_usu=? AND est=1';
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $documento_usu);
+            $sql->bindValue(2, $correo_usu);
             $sql->execute();
 
             return $resultado = $sql->fetchAll();
