@@ -63,6 +63,11 @@
                             if ($_SESSION['id_rol'] == 2 || $_SESSION['id_rol'] == 3)
                             {
                                 ?>
+
+                                <style>
+                                    @media (max-width: 560px){.nombreSession,.rolSession{display: none;} .messages{display: none;}.consultarChat{display: block;}} @media (max-width: 1920) and (min-width: 300px){.profileCard{width: 100%!important;}}.btnHeader{float: right !important;}.tab-pane active, .jspScrollable{height: 400px !important; overflow-x: hidden !important;}.tab-content{overflow-x: hidden !important;}.jspTrack{display:none;}
+                                </style>
+
                                 <!-- CHAT -->
                                 <div class="dropdown dropdown-notification messages">
                                     <a href="#"
