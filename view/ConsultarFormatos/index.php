@@ -23,7 +23,7 @@
 					</div>
 				</div>
 			</header>
-			
+
 			<section class="tabs-section">
 				<div class="tabs-section-nav tabs-section-nav-icons">
 					<div class="tbl">
@@ -44,7 +44,6 @@
 									</span>
 								</a>
 							</li>
-							
 						</ul>
 					</div>
 				</div><!--.tabs-section-nav-->
