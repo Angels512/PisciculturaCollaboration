@@ -39,6 +39,30 @@ class Tblalimentacion extends Conectar
         
         return $resultado=$sql->fetchAll();
     }
+
+    public function listar_tblalim_x_cult($id_cultivo)
+    {
+        $conectar = parent::Conexion();
+        parent::setNames();
+        $sql="SELECT 
+        id_tbl_alim, 
+        nombre_usu, 
+        apellido_usu,
+        cant_siembra,
+        obser_gen_cult, 
+        tblalimentacion.fecha,
+        tblalimentacion.est
+        FROM 
+        tblalimentacion
+        INNER join usuario on tblalimentacion.id_usu = usuario.id_usu
+        WHERE
+        tblalimentacion.est = 1
+        AND id_cultivo=?";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
 }
 
 ?>

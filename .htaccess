@@ -100,6 +100,9 @@ RewriteRule ^biocrecimiento/?$ view/MntBiocrecimiento/index.php
 # GESTIONAR PRODUCTOS
 RewriteRule ^producto/?$ view/MntProducto/index.php
 
+# GESTIONAR PRODUCTOS
+RewriteRule ^proveedor/?$ view/MntProveedor/index.php
+
 # TABLA ALIMENTACION
 RewriteRule ^tbl-alimentacion/?$ view/MntTblAlimentacion/index.php
 
