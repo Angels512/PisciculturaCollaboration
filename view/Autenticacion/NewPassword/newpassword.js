@@ -1,4 +1,21 @@
 
+const inputs = document.querySelectorAll('#restPassForm input');
+// const labels = document.querySelectorAll('#restPassForm label');
+// const messages = document.querySelectorAll('#restPassForm')
+
+// Expresiones regulares
+const expresiones = {
+    pass: /^.{8,12}$/
+};
+
+inputs.forEach((input) =>
+{
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
+});
+
+
+
 function init()
 {
     $('#restPassForm').on('submit', function(e)
@@ -6,6 +23,67 @@ function init()
         getData(e);
     });
 }
+
+
+function validateForm(e)
+{
+    switch (e.target.name)
+    {
+        case 'pass1':
+            validateData(expresiones.pass, e.target, 'Pass1');
+            validatePass2();
+        break;
+
+        case 'pass2':
+            validatePass2();
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#div'+campo).removeClass('is-invalid');
+        $('#div'+campo).addClass('is-valid');
+        $('#alert'+campo).prop('hidden', true);
+    }else {
+        $('#div'+campo).addClass('is-invalid');
+        $('#div'+campo).removeClass('is-valid');
+        $('#alert'+campo).prop('hidden', false);
+    }
+}
+
+function validatePass2(e)
+{
+    const pass1 = $('#pass1').val();
+    const pass2 = $('#pass2').val();
+
+    if (pass2.length>0)
+    {
+        if (pass1 !== pass2)
+        {
+            $('#divPass2').addClass('is-invalid');
+            $('#divPass2').removeClass('is-valid');
+            $('#alertPass2').prop('hidden', false);
+        } else{
+            $('#divPass2').removeClass('is-invalid');
+            $('#divPass2').addClass('is-valid');
+            $('#alertPass2').prop('hidden', true);
+        }
+    }else if (pass2.length == 0) {
+        $('#divPass2').removeClass('is-invalid');
+        $('#divPass2').removeClass('is-valid');
+        $('#alertPass2').prop('hidden', true);
+    }
+
+    if (pass1.length == 0) {
+        $('#divPass1').removeClass('is-invalid');
+        $('#divPass1').removeClass('is-valid');
+        $('#alertPass1').prop('hidden', true);
+    }
+}
+
 
 
 function getData(e)
@@ -18,6 +96,9 @@ function getData(e)
 
     id_usu = $('#id_usu').val(); // El id_usu lo toma PHP por metodo GET de la URL
 
+    let validate_pass1 = $('#divPass1').hasClass('is-invalid');
+    let validate_pass2 = $('#divPass2').hasClass('is-invalid');
+
     // Verificamos que no esten vacios
     if (pass_usu == '' || pass2 == '')
     {
@@ -26,6 +107,14 @@ function getData(e)
             text: "Complete todos los campos...",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if(validate_pass1 || validate_pass2) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else {
