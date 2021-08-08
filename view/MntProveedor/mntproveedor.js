@@ -3,6 +3,15 @@ $(document).on("click","#inser_prove",function(e){
     
      guardaryeditar(e); 
 });
+
+$(document).ready(function() {
+
+    /* Esto es para llenar el select del Nombre del Proveedor */
+    $.post("controller/producto.php?op=nom_proveedores",function(data, status){
+        $('#id_prove').html(data);
+    });
+
+});
     
 // creamos la funcion guardaryeditar para insertar un proveedor y vaciar los campos del formulario
 function guardaryeditar(e){

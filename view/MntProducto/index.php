@@ -29,9 +29,6 @@
 								<li class="active">Productos</li>
 							</ol>
 						</div>
-						<div class="tbl-cell tbl-cell-action">
-					   	 	<a id="newproveedor" class="btn btn-inline btn-primary float-right mg-top">Nuevo Proveedor</a>
-				    	</div>
 					</div>
 				</div>
 			</header>
@@ -119,11 +116,9 @@
 		
     </div>
 
-	<?php require_once("../MntProveedor/modalproveedor.php");?>
 	<?php require_once("../../public/templates/js.php"); ?>
 
 	<script src="view/MntProducto/mntproducto.js"></script>
-	<script src="view/MntProveedor/mntproveedor.js"></script>
 
 </body>
 </html>

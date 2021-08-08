@@ -6,7 +6,6 @@ function init(){
     });
 }
 
-
 // creamos la funcion guardaryeditar para insertar un responsable y vaciar los campos del formulario
 function guardaryeditar(e){
     e.preventDefault();
@@ -27,6 +26,11 @@ function guardaryeditar(e){
 }
 
 
+$(document).on("click","#newrespon",function(){
+
+    /* Para mostrar el modal del empleado una vez se de click al boton newempleado*/
+    $('#modalresponsable').modal('show');
+});
 
 
 init();

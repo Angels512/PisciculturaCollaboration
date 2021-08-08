@@ -58,6 +58,12 @@
                         </a>
                     </li>
                   
+                    <li class="with-sub">
+                        <a href="proveedor">
+                            <span class="fa fa-bus"></span>
+                            <span class="lbl">Proveedores</span>
+                        </a>
+                    </li>
 
                     <li class="blue-dirty">
                         <a href="consultar-chat">

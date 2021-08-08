@@ -65,42 +65,61 @@
 					</div><!--.tab-pane-->
 
 					<div role="tabpanel" class="tab-pane fade" id="responsables">
-						<form method="post" id="responsable_form">
+					<section class="widget widget-tasks">
+							<header class="widget-header">
+								<div class="tbl-cell tbl-cell-action">
+					   	 			<a id="newrespon" class="btn btn-inline btn-primary float-right mg-top">Nuevo Responsable</a>
+				    			</div>
+							</header>
 							<div>
-								<h5>Ingrese los Datos</h5>
-							</div>
-								
-							<div class="form-group"> 
-                    	    	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
-									<i class="font-icon font-icon-calend"></i>
+								<div class="widget-tasks-item">
+									<div class="user-card-row">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-photo">
+												<a href="#">
+													<img src="public/img/1.jpg"  alt="">
+												</a>
+											</div>
+											<div class="tbl-cell">
+												<p class="user-card-row-name"><a href="#">Laura Molina</a></p>	
+											</div>
+										</div>
+									</div>
+									<div class="btn-group widget-menu">
+										<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="font-icon glyphicon glyphicon-option-vertical"></i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#">Actualizar</a>
+											<a class="dropdown-item" href="#">Eliminar</a>
+										</div>
+									</div>
 								</div>
-                    		</div>
-
-							<div class="form-group">
-								<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
-                            		<i class="fa fa-user"></i>
-                        		</div>
-							</div>	
-
-							<div class="form-group">
-								<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido" required>
-                            		<i class="fa fa-user-o"></i>
-                        		</div>
+								<div class="widget-tasks-item">
+									<div class="user-card-row">
+										<div class="tbl-row">
+											<div class="tbl-cell tbl-cell-photo">
+												<a href="#">
+													<img src="public/img/1.jpg" alt="">
+												</a>
+											</div>
+											<div class="tbl-cell">
+												<p class="user-card-row-name"><a href="#">Cristian Cruz</a></p>
+											</div>
+										</div>
+									</div>
+									<div class="btn-group widget-menu">
+										<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<i class="font-icon glyphicon glyphicon-option-vertical"></i>
+										</button>
+										<div class="dropdown-menu dropdown-menu-right">
+											<a class="dropdown-item" href="#">Actualizar</a>
+											<a class="dropdown-item" href="#">Eliminar</a>
+										</div>
+									</div>
+								</div>
 							</div>
-							
-							<div>
-								<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Guardar</button>
-								<button type="button" name="action" id="consul_respon" value="add" class="btn btn-rounded btn-primary">Consultar</button>
-								<button type="button" name="action" id="modi_respon" value="add" class="btn btn-rounded btn-primary">Modificar</button>
-								<button type="button" name="action" id="elim_respon" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
-							</div>
-						</form>
+						</section>
 					</div><!--.tab-pane-->
 					
 				</div><!--.tab-content-->
@@ -110,6 +129,7 @@
     </div>
 
 	<?php require_once("../../public/templates/js.php"); ?>
+	<?php require_once("modalresponsable.php"); ?>
 
 	<script src="view/Estanques-Responsables/responsables.js"></script>
 

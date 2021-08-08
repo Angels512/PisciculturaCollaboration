@@ -46,6 +46,31 @@ class Biocrecimiento extends Conectar
         
         return $resultado=$sql->fetchAll();
     }
+
+    public function listar_biocre_x_cult($id_cultivo)
+    {
+        $conectar = parent::Conexion();
+        parent::setNames();
+        $sql="SELECT 
+        id_biocre, 
+        nombre_usu, 
+        apellido_usu,
+        num_organ,
+        compor_organ, 
+        biocrecimiento.fecha,
+        biocrecimiento.est
+        FROM 
+        biocrecimiento
+        INNER join usuario on biocrecimiento.id_usu = usuario.id_usu
+        WHERE
+        biocrecimiento.est = 1
+        AND id_cultivo=?";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
+
 }
 
 ?>

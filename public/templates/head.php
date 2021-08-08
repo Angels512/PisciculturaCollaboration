@@ -62,3 +62,6 @@
 
 <!-- widgets -->
 <link rel="stylesheet" href="public/css/separate/pages/widgets.min.css">
+
+<!--datatables-->
+<link rel="stylesheet" href="public/css/lib/bootstrap-table/bootstrap-table.min.css">
