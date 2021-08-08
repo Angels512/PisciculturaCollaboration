@@ -60,21 +60,23 @@
                                 <form class="px-30" method="post" id="restPassForm">
                                     <input type="hidden" id="id_usu" name="id_usu" value="<?php echo $user ?>">
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divPass1">
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="password" class="form-control" id="pass1" name="pass1">
                                                 <label for="pass1">Nueva contraseña</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertPass1">La contraseña debe tener entre 8 y 12 caracteres.</div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divPass2">
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="password" class="form-control" id="pass2" name="pass2">
                                                 <label for="pass2">Confirme su contraseña</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertPass2">Las contraseñas no son iguales.</div>
                                         </div>
                                     </div>
 
