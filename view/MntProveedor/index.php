@@ -83,7 +83,7 @@
 											<i class="fa fa-envelope"></i>
 										</div>
 									</div>
-									<button type="button" name="action" id="inser_prove" class="btn btn-rounded btn-primary">Guardar</button>
+									<button type="submit" class="btn btn-rounded btn-primary">Guardar</button>
 								<div>								                  						
 							</form>
 						</section>
@@ -92,14 +92,44 @@
 						<section>
 							<h4>Consultar Proveedor</h4>
 
+							<p><em>Elija el proveedor que desea consultar:</em></p>
+
 							<div class="row">
-								<div class="col-lg-6">
-									<label class="form-label semibold"  for="id_prove">Proveedor</label>
-										<select id="id_prove" name="id_prove" class="form-control">
-										</select>
-								</div>
+								<fieldset class="form-group">
+									<div class="col-lg-8">
+											<select id="id_prove" class="form-control">
+											</select>
+									</div>
+									<div class="col-lg-4">
+										<button type="button" name="action" id="consul_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm mg-top">Consultar</button>											
+									</div>
+								</fieldset>
 							</div>
-							<br>
+							
+							<div id="infoproveedor">
+								<section class="box-typical col-lg-12">
+										<header class="box-typical-header-sm bordered">Información</header>
+										<div class="box-typical-inner">
+											<ul class="profile-links-list">
+												<li class="nowrap">
+													<p><i class="fa fa-user" aria-hidden="true"></i><b>&nbsp&nbsp Nombre:</b> <span id="nombre"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="fa fa-home" aria-hidden="true"></i><b>&nbsp&nbsp Dirección:</b> <span id="direccion"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="fa fa-phone"></i><b>&nbsp&nbsp Teléfono:</b> <span id="numeroTelefono"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="fa fa-envelope"></i><b>&nbsp&nbsp Correo:</b> <span id="email"></span></p>
+												</li>
+											</ul>
+										</div>
+								</section>
+									<button type="button" name="action" id="modi_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
+									<button type="button" name="action" id="elim_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
+							</div>
+							
 						</section>
 					</div>
 				</div>
@@ -108,6 +138,7 @@
     </div>
 
 	<?php require_once("../../public/templates/js.php"); ?>
+	<?php require_once("modalproveedor.php"); ?>
 
 	<script src="view/MntProveedor/mntproveedor.js"></script>
 

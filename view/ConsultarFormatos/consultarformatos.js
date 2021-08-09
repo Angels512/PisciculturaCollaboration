@@ -8,7 +8,7 @@ $(function() {
 
 
 $(document).ready(function(){
-    let id_cultivo =  getUrlParameter('ID'); 
+    var id_cultivo =  getUrlParameter('ID'); 
  
     //para llenar el datatable de biocrecimiento 
     tabla=$('#dt_biometrias').dataTable({
@@ -63,8 +63,8 @@ $(document).ready(function(){
             }     
         }).DataTable(); 
 
-        //para llenar el datatable de la tabla de alimentación
-        tabla=$('#dt_tbl_alim').dataTable({
+    //para llenar el datatable de la tabla de alimentación
+    tabla=$('#dt_tbl_alim').dataTable({
             "aProcessing": true,
             "aServerSide": true,
             dom: 'Bfrtip',
