@@ -1,4 +1,20 @@
 
+const inputs = document.querySelectorAll('#newUserForm input');
+
+// Expresiones regulares
+const expresiones = {
+    direccion_usu: /^.{1,25}$/,
+    telefono_usu: /^\d{7,10}$/,
+    pass: /^.{8,12}$/
+}
+
+inputs.forEach((input) =>
+{
+    input.addEventListener('keyup', validateForm);
+    input.addEventListener('blur', validateForm);
+});
+
+
 function init()
 {
     $('#newUserForm').on('submit', function(e)
@@ -8,15 +24,97 @@ function init()
 }
 
 
+
+function validateForm(e)
+{
+    switch (e.target.name)
+    {
+        case 'direccion_usu':
+            validateData(expresiones.direccion_usu, e.target, 'Direccion');
+            validateEmpty(e.target.id, 'Direccion');
+        break;
+
+        case 'telefono_usu':
+            validateData(expresiones.telefono_usu, e.target, 'Telefono');
+            validateEmpty(e.target.id, 'Telefono');
+        break;
+
+        case 'pass1':
+            validateData(expresiones.pass, e.target, 'Pass1');
+            validatePass2();
+            validateEmpty(e.target.id, 'Pass1');
+        break;
+
+        case 'pass2':
+            validatePass2();
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#div'+campo).removeClass('is-invalid');
+        $('#div'+campo).addClass('is-valid');
+        $('#alert'+campo).prop('hidden', true);
+    }else {
+        $('#div'+campo).addClass('is-invalid');
+        $('#div'+campo).removeClass('is-valid');
+        $('#alert'+campo).prop('hidden', false);
+    }
+}
+
+function validatePass2(e)
+{
+    const pass1 = $('#pass1').val();
+    const pass2 = $('#pass2').val();
+
+    if (pass2.length>0)
+    {
+        if (pass1 !== pass2)
+        {
+            $('#divPass2').addClass('is-invalid');
+            $('#divPass2').removeClass('is-valid');
+            $('#alertPass2').prop('hidden', false);
+        } else{
+            $('#divPass2').removeClass('is-invalid');
+            $('#divPass2').addClass('is-valid');
+            $('#alertPass2').prop('hidden', true);
+        }
+    }else if (pass2.length == 0) {
+        $('#divPass2').removeClass('is-invalid');
+        $('#divPass2').removeClass('is-valid');
+        $('#alertPass2').prop('hidden', true);
+    }
+}
+
+function validateEmpty(input, campo)
+{
+    if ($('#'+input).val().length == 0)
+    {
+        $('#div'+campo).removeClass('is-invalid');
+        $('#div'+campo).removeClass('is-valid');
+        $('#alert'+campo).prop('hidden', true);
+    }
+}
+
+
+
 function getData(e)
 {
     e.preventDefault();
 
     // Recogemos los datos del formulario
-    var direccion_usu = $('#direccion_usu').val();
-    var telefono_usu = $('#telefono_usu').val();
-    var pass_usu = $('#pass1').val();
-    var pass2 = $('#pass2').val();
+    let direccion_usu = $('#direccion_usu').val();
+    let telefono_usu = $('#telefono_usu').val();
+    let pass_usu = $('#pass1').val();
+    let pass2 = $('#pass2').val();
+
+    let validate_direccion = $('#divDireccion').hasClass('is-invalid');
+    let validate_telefono = $('#divTelefono').hasClass('is-invalid');
+    let validate_pass1 = $('#divPass1').hasClass('is-invalid');
+    let validate_pass2 = $('#divPass2').hasClass('is-invalid');
 
     // Verificamos que no esten vacios
     if (direccion_usu == '' || telefono_usu == '' || pass_usu == '' || pass2 == '')
@@ -26,6 +124,14 @@ function getData(e)
             text: "Complete todos los campos...",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (validate_direccion || validate_telefono || validate_pass1 || validate_pass2) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else {

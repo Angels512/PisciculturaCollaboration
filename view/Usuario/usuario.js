@@ -28,7 +28,6 @@ function init()
     });
 }
 
-
 // Inicio de la pagina
 $(document).ready(function()
 {
@@ -97,26 +96,28 @@ $(document).ready(function()
 });
 
 
+
 function validateForm(e)
 {
     switch (e.target.name) {
         case 'nombre_usu':
-            validateData(expresiones.nombre, e.target, 'Nombre')
+            validateData(expresiones.nombre, e.target, 'Nombre');
+            validateEmpty(e.target.id, 'Nombre');
         break;
 
         case 'apellido_usu':
             validateData(expresiones.apellido, e.target, 'Apellido')
+            validateEmpty(e.target.id, 'Apellido');
         break;
 
         case 'documento_usu':
             validateData(expresiones.documento, e.target, 'Documento')
+            validateEmpty(e.target.id, 'Documento');
         break;
 
         case 'correo_usu':
             validateData(expresiones.correo, e.target, 'Correo')
-        break;
-
-        default:
+            validateEmpty(e.target.id, 'Correo');
         break;
     }
 }
@@ -136,6 +137,19 @@ function validateData(expresion, input, campo)
         $('#alert'+campo).prop('hidden', false);
     }
 }
+
+function validateEmpty(input, campo)
+{
+    if ($('#'+input).val().length == 0)
+    {
+        $('#usu'+campo).removeClass('form-control-danger');
+        $('#icon'+campo).removeClass('text-danger');
+        $('#usu'+campo).removeClass('form-control-success');
+        $('#icon'+campo).removeClass('text-success');
+        $('#alert'+campo).prop('hidden', true);
+    }
+}
+
 
 
 // Guardar o Editar un usuario
@@ -319,6 +333,7 @@ function createUpdate()
 $(document).on('click', '#btnAgregar', function()
 {
     $('#formUsuario')[0].reset();
+    $('#usuCorreo').prop('disabled', false);
     $('#id_usu').val('');
 
     $('#mdlTitulo').html('Agregar Usuario');

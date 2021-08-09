@@ -61,39 +61,43 @@
                                     <input type="hidden" id="documento_usu" name="documento_usu" value="<?php echo $user ?>">
                                     <input type="hidden" id="temporalPassword" name="temporalPassword" value="<?php echo $token ?>">
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divDireccion">
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="text" class="form-control" id="direccion_usu" name="direccion_usu">
                                                 <label for="direccion_usu">Direccion</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertDireccion">La direccion debe tener 25 caracteres maximo.</div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divTelefono">
                                         <div class="col-12">
                                             <div class="form-material floating">
-                                                <input type="number" class="form-control" id="telefono_usu" name="telefono_usu">
+                                                <input type="text" class="form-control" id="telefono_usu" name="telefono_usu">
                                                 <label for="telefono_usu">Numero de celular</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertTelefono">El telefono debe tener entre 7 y 10 numeros.</div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divPass1">
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="password" class="form-control" id="pass1" name="pass1">
                                                 <label for="pass1">Nueva contraseña</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertPass1">La contraseña debe tener entre 8 y 12 caracteres.</div>
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
+                                    <div class="form-group row" id="divPass2">
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="password" class="form-control" id="pass2" name="pass2">
                                                 <label for="pass2">Confirme su contraseña</label>
                                             </div>
+                                            <div class="invalid-feedback" id="alertPass2">Las contraseñas no son iguales.</div>
                                         </div>
                                     </div>
 
