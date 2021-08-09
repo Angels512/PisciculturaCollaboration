@@ -76,20 +76,21 @@
 						<section class="card">
 							<div class="card-block">
 								<table id="dt_tbl_alim" class="display table table-striped table-bordered">
-									<thead>
-										<tr>
-											<th>#</th>
-											<th>Nombre del Empleado</th>
-											<th>Fecha de creación</th>
-											<th>Observaciones</th>
-											<th>Cant_Siembra</th>
-											<th></th>
-											<th></th>
-											<th></th>
-										</tr>
-									</thead>
-									<tbody>
-									</tbody>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>Nombre del Empleado</th>
+										<th>Fecha de creación</th>
+										<th>Observación</th>
+										<th>Cant_Siembra</th>
+										<th></th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+
+								</tbody>
 								</table>
 							</div>
 						</section>

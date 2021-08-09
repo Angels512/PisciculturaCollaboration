@@ -90,25 +90,54 @@
 								</div>
 								
 								<div>
-									<button type="button" name="action" id="inser_produ" class="btn btn-rounded btn-primary">Guardar</button>
+									<button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
 								</div>                   						
 							</form>
-						</section>
-					</div>
+						</section> 
+					</div> 
+					
 					<div class="tab-pane" id="w-3-tab-3" role="tabpanel">
 						<section>
 							<h4>Consultar Producto</h4>
 
+							<p><em>Elija el producto que desea consultar:</em></p>
+
 							<div class="row">
-								<div class="col-lg-7">
-									<label for="id_produ" class="form-label semibold">Producto</label>
-									<div class="col-sm-10">
-										<select id="id_produ" name="id_produ" class="form-control">
-										</select>
+								<fieldset class="form-group">
+										<div class="col-lg-8">
+											<select id="id_produ" class="form-control">
+											</select>
+										</div>
+										<div class="col-lg-4">
+											<button type="button" name="action" id="consul_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm mg-top">Consultar</button>											
+										</div>
 									</div>
+								</fieldset>
+
+								<div id="infoproducto">
+								<section class="box-typical col-lg-12">
+										<header class="box-typical-header-sm bordered">Información</header>
+										<div class="box-typical-inner">
+											<ul class="profile-links-list">
+												<li class="nowrap">
+													<p><i class="font-icon-cart" aria-hidden="true"></i><b>&nbsp&nbsp Nombre Producto:</b> <span id="nombreprodu"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><b>&nbsp&nbsp Fecha de Vencimiento:</b> <span id="fechavenc"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="glyphicon glyphicon-barcode"></i><b>&nbsp&nbsp Número de Lote:</b> <span id="numeroLote"></span></p>
+												</li>
+												<li class="nowrap">
+													<p><i class="fa fa-bus"></i><b>&nbsp&nbsp Proveedor:</b> <span id="proveedor"></span></p>
+												</li>
+											</ul>
+										</div>
+								</section>
+									<button type="button" name="action" id="modi_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
+									<button type="button" name="action" id="elim_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
 								</div>
 							</div>
-							<br>
 						</section>
 					</div>
 				</div>
@@ -117,6 +146,7 @@
     </div>
 
 	<?php require_once("../../public/templates/js.php"); ?>
+	<?php require_once("modalproducto.php"); ?>
 
 	<script src="view/MntProducto/mntproducto.js"></script>
 

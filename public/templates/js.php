@@ -40,7 +40,4 @@
 <!--Calendar-->
 <script src="public/js/lib/daterangepicker/daterangepicker.js"></script>
 
-<!--datatables-->
-<script src="public/js/lib/bootstrap-table/bootstrap-table.js"></script>
-<script src="public/js/lib/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-<script src="public/js/lib/bootstrap-table/bootstrap-table-mobile-init.js"></script>
+
