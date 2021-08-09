@@ -18,18 +18,14 @@
                         <input type="hidden" id="id_usu" name="id_usu" value="">
 
                         <!-- NOMBRE -->
-                        <label class="form-label semibold" for="nombre_usu">Nombre:</label>
+                        <label class="form-label semibold" for="nombre_usu">Nombre completo:</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese el/los nombre(s) del empleado" id="nombre_usu" name="nombre_usu">
                             <i class="fa fa-user"></i>
                         </div><br>
 
                         <!-- APELLIDO -->
-                        <label class="form-label semibold" for="apellido_usu">Apellido:</label>
-                        <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" placeholder="Ingrese los apellido del empleado" id="apellido_usu" name="apellido_usu">
-                            <i class="fa fa-user-o"></i>
-                        </div><br>
+                        <input type="hidden" class="form-control" placeholder="Ingrese los apellido del empleado" id="apellido_usu" name="apellido_usu">
 
                         <!-- DOCUMENTO -->
                         <label class="form-label semibold" for="documento_usu">Numero de documento:</label>
@@ -50,7 +46,8 @@
                             <label class="form-label semibold" for="direccion_usu">Direccion:</label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese la direccion del empleado" id="direccion_usu" name="direccion_usu">
-                                <i class="fa fa-home"></i>
+                                <i class="fa fa-home" id="direccion_icon"></i>
+                                <small class="text-muted text-danger alerta" id="direccion_alert" hidden>La direccion debe tener 25 caracteres maximo.</small>
                             </div><br>
                         </div>
 
@@ -59,7 +56,8 @@
                             <label class="form-label semibold" for="telefono_usu">Telefono:</label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese el telefono del empleado" id="telefono_usu" name="telefono_usu">
-                                <i class="fa fa-phone"></i>
+                                <i class="fa fa-phone" id="telefono_icon"></i>
+                                <small class="text-muted text-danger alerta" id="telefono_alert" hidden>El telefono debe tener entre 7 y 10 numeros.</small>
                             </div><br>
                         </div>
 
@@ -67,14 +65,16 @@
                         <label class="form-label semibold" for="pass_usu">Contraseña:</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="password" class="form-control" placeholder="••••••••••••" id="pass_usu" name="pass_usu">
-                            <i class="fa fa-key" aria-hidden="true"></i>
+                            <i class="fa fa-key" id="pass_icon" aria-hidden="true"></i>
+                            <small class="text-muted text-danger alerta" id="pass_alert" hidden>La contraseña debe tener entre 8 y 12 caracteres.</small>
                         </div><br>
 
                         <!-- PASSWORD 2 -->
                         <label class="form-label semibold" for="pass_usu">Repita la contraseña:</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="password" class="form-control" placeholder="••••••••••••" id="pass2" name="correo_usu">
-                            <i class="fa fa-key" aria-hidden="true"></i>
+                            <input type="password" class="form-control" placeholder="••••••••••••" id="pass2" name="pass2">
+                            <i class="fa fa-key" id="pass2_icon" aria-hidden="true"></i>
+                            <small class="text-muted text-danger alerta" id="pass2_alert" hidden>Las contraseñas no son iguales.</small>
                         </div><br>
                     </div>
                 </div>

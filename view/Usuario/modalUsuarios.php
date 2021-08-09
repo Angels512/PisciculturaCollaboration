@@ -33,6 +33,14 @@
                             <small class="text-muted text-danger alerta" id="alertApellido" hidden>El apellido debe tener entre 3 y 20 letras y no puede llevar numeros.</small>
                         </div><br>
 
+                        <!-- DOCUMENTO -->
+                        <label class="form-label semibold" for="documento_usu">Numero de documento:</label>
+                        <div class="form-control-wrapper form-control-icon-right">
+                            <input type="text" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="usuDocumento" name="documento_usu">
+                            <i class="fa fa-address-card" id="iconDocumento" aria-hidden="true"></i>
+                            <small class="text-muted text-danger alerta" id="alertDocumento" hidden>El numero de documento debe tener entre 7 y 10 numeros y no puede llevar letras.</small>
+                        </div><br>
+
                         <!-- DIRECCION -->
                         <div id="direccion">
                             <label class="form-label semibold" for="direccion_usu">Direccion:</label>
@@ -50,14 +58,6 @@
                                 <i class="fa fa-phone"></i>
                             </div><br>
                         </div>
-
-                        <!-- DOCUMENTO -->
-                        <label class="form-label semibold" for="documento_usu">Numero de documento:</label>
-                        <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="usuDocumento" name="documento_usu">
-                            <i class="fa fa-address-card" id="iconDocumento" aria-hidden="true"></i>
-                            <small class="text-muted text-danger alerta" id="alertDocumento" hidden>El numero de documento debe tener entre 7 y 10 numeros y no puede llevar letras.</small>
-                        </div><br>
 
                         <!-- CORREO ELECTRONICO -->
                         <label class="form-label semibold" for="pass_usu">Correo electronico:</label>

@@ -1,7 +1,5 @@
 
 const inputs = document.querySelectorAll('#restPassForm input');
-// const labels = document.querySelectorAll('#restPassForm label');
-// const messages = document.querySelectorAll('#restPassForm')
 
 // Expresiones regulares
 const expresiones = {
@@ -23,6 +21,7 @@ function init()
         getData(e);
     });
 }
+
 
 
 function validateForm(e)
@@ -77,7 +76,8 @@ function validatePass2(e)
         $('#alertPass2').prop('hidden', true);
     }
 
-    if (pass1.length == 0) {
+    if (pass1.length == 0)
+    {
         $('#divPass1').removeClass('is-invalid');
         $('#divPass1').removeClass('is-valid');
         $('#alertPass1').prop('hidden', true);
@@ -109,7 +109,7 @@ function getData(e)
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
-    }else if(validate_pass1 || validate_pass2) {
+    }else if (validate_pass1 || validate_pass2) {
         swal({
             title: "Advertencia!",
             text: "Los campos son invalidos...",
