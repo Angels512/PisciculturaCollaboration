@@ -4,20 +4,13 @@
        <div class="modal-content">
            <form method="post" id="responsable_form">
                <div class="modal-header">
-                   <h4><strong>Nuevo Responsable</strong></h4>
+                   <h4 id="titulores"><strong>Nuevo Responsable</strong></h4>
                </div>
                <div class="modal-body">
                     <div>
 						<h5>Ingrese los Datos</h5>
 					</div>
-								
-					    <div class="form-group"> 
-                        	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
-					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<input type="text" class="form-control" id="fecha" name="fecha" disabled>
-					    		<i class="font-icon font-icon-calend"></i>
-					    	</div>
-                        </div>   
+						<input type="hidden" name="id_respon" id="id_respon">		   
 					    <div class="form-group">
 					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
 					    	<div class="form-control-wrapper form-control-icon-right">

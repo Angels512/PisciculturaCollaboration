@@ -65,59 +65,14 @@
 					</div><!--.tab-pane-->
 
 					<div role="tabpanel" class="tab-pane fade" id="responsables">
-					<section class="widget widget-tasks">
+						<section class="widget widget-tasks">
 							<header class="widget-header">
 								<div class="tbl-cell tbl-cell-action">
-					   	 			<a id="newrespon" class="btn btn-inline btn-primary float-right mg-top">Nuevo Responsable</a>
-				    			</div>
+									<a id="newrespon" class="btn btn-inline btn-primary float-right mg-top">Nuevo Responsable</a>
+								</div>
 							</header>
-							<div>
-								<div class="widget-tasks-item">
-									<div class="user-card-row">
-										<div class="tbl-row">
-											<div class="tbl-cell tbl-cell-photo">
-												<a href="#">
-													<img src="public/img/1.jpg"  alt="">
-												</a>
-											</div>
-											<div class="tbl-cell">
-												<p class="user-card-row-name"><a href="#">Laura Molina</a></p>	
-											</div>
-										</div>
-									</div>
-									<div class="btn-group widget-menu">
-										<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="font-icon glyphicon glyphicon-option-vertical"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right">
-											<a class="dropdown-item" href="#">Actualizar</a>
-											<a class="dropdown-item" href="#">Eliminar</a>
-										</div>
-									</div>
-								</div>
-								<div class="widget-tasks-item">
-									<div class="user-card-row">
-										<div class="tbl-row">
-											<div class="tbl-cell tbl-cell-photo">
-												<a href="#">
-													<img src="public/img/1.jpg" alt="">
-												</a>
-											</div>
-											<div class="tbl-cell">
-												<p class="user-card-row-name"><a href="#">Cristian Cruz</a></p>
-											</div>
-										</div>
-									</div>
-									<div class="btn-group widget-menu">
-										<button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											<i class="font-icon glyphicon glyphicon-option-vertical"></i>
-										</button>
-										<div class="dropdown-menu dropdown-menu-right">
-											<a class="dropdown-item" href="#">Actualizar</a>
-											<a class="dropdown-item" href="#">Eliminar</a>
-										</div>
-									</div>
-								</div>
+							<div id="listaresponsables" >
+								
 							</div>
 						</section>
 					</div><!--.tab-pane-->

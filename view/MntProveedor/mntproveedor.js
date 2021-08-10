@@ -160,7 +160,7 @@ function eliminar(id_prove){
             });  
 
             swal({
-                title: "A'ttia!",
+                title: "Correcto!",
                 text: " Registro Eliminado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
