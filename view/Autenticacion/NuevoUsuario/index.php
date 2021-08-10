@@ -26,7 +26,7 @@
 <html>
     <head lang="es-419">
         <?php require_once('../../../public/templates/autenticacion/head.php'); ?> <!-- HEAD -->
-        <title>Nuevo Usuario</title>
+        <title>Nuevo Usuario - A'ttia</title>
     </head>
 
     <body style="overflow-y: hidden;">
