@@ -207,7 +207,7 @@ function eliminar(id_produ){
             });  
 
             swal({
-                title: "A'ttia!",
+                title: "Correcto!",
                 text: " Registro Eliminado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
