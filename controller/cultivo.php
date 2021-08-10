@@ -110,10 +110,9 @@
                 //llenamos el select con un option, por cada fila del arreglo
                 foreach($datos as $row)
                 {
-                    $html.= "<option value='".$row['id_cultivo']."'>Estanque:  ".$row['num_tanque']." - Lote:  ".$row['num_lote']."</option>";
+                    $html.= "<option value='".$row['id_cultivo']."'>Lote:  ".$row['num_lote']." (Estanque ".$row['num_lote'].")</option>";
                 }
                 echo $html;
             }
-        break;
     }
 ?>

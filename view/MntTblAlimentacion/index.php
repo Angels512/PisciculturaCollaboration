@@ -132,7 +132,7 @@
 							</fieldset>
 						</div>
 
-						<div class="col-lg-6">
+						<div class="col-lg-12">
 							<fieldset class="form-group">
 								<label for="id_produ" class="form-label semibold">Producto Suministrado</label>
 								<div>
@@ -142,17 +142,17 @@
 							</fieldset>
 						</div>
 				
-						<div class="col-sm-11">
+						<div class="col-sm-12">
 							<fieldset class="form-group">
-								<label for="obser_atmo" class="form-label semibold">Observaciones atmosférisa</label>
-								<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Textarea"></textarea>
+								<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
+								<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas"></textarea>
 							</fieldset>
 						</div>
 			
-						<div class="col-sm-11">
+						<div class="col-sm-12">
 							<fieldset class="form-group">
-								<label class="form-label semibold" for="obser_gen_cult">Observaciones generales cultivo</label>
-								<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Textarea"></textarea>
+								<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
+								<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo"></textarea>
 							</fieldset>
 						</div>
 			
