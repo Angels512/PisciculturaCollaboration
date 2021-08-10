@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
+<head lang="es">
 	<?php require_once('../../../public/templates/head.php') ?>
     <link rel="stylesheet" href="public/css/separate/pages/error.min.css">
-	<title>Error 404</title>
+	<title>Error 404 - A'ttia</title>
 </head>
 <body>
 
