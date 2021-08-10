@@ -29,8 +29,8 @@
         // Para insertar y actulizar los responsables //
         case "guardaryeditar":
 
-            if(empty($_POST["id_respon"])){       
-                $responsable->insertResponsable($_POST["nombre_respon"],$_POST["apellido_respon"]);    
+            if(empty($_POST["id_respon"])){
+                $responsable->insertResponsable($_POST["nombre_respon"],$_POST["apellido_respon"]);
             }
             else {
                 $responsable->updateResponsable($_POST["id_respon"],$_POST["nombre_respon"],$_POST["apellido_respon"]);
@@ -47,12 +47,10 @@
                     <div class="user-card-row">
                         <div class="tbl-row">
                             <div class="tbl-cell tbl-cell-photo">
-                                <a href="#">
-                                    <img src="public/img/3.jpg"  alt="foto usuario">
-                                </a>
+                                <img src="public/img/3.jpg"  alt="foto usuario">
                             </div>
                             <div class="tbl-cell">
-                                <p class="user-card-row-name"><?php echo $row['nombre_respon'].' '.$row['apellido_respon']; ?></p>	
+                                <p class="user-card-row-name"><?php echo $row['nombre_respon'].' '.$row['apellido_respon']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +63,7 @@
                             <a class="dropdown-item" onClick="deleteRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>" >Eliminar</a>
                         </div>
                     </div>
-                </div>              
+                </div>
             <?php
             }
         break;

@@ -53,13 +53,13 @@
 									</span>
 								</a>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div><!--.tabs-section-nav-->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
-					
+
 						<!--Aqui va el Formato de Estanques-->
 
 					</div><!--.tab-pane-->
@@ -68,7 +68,7 @@
 						<section class="widget widget-tasks">
 							<header class="widget-header">
 								<div class="tbl-cell tbl-cell-action">
-									<a id="newrespon" class="btn btn-inline btn-primary float-right mg-top">Nuevo Responsable</a>
+									<a id="newrespon" class="btn btn-inline btn-primary float-right">Nuevo Responsable</a>
 								</div>
 							</header>
 							<div id="listaresponsables" >
