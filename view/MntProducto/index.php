@@ -89,8 +89,8 @@
 									</select>
 								</div>
 								
-								<div>
-									<button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
+								<div class="col-lg-12">
+									<button type="submit" name="action" class="btn btn-rounded float-right btn-primary">Guardar</button>
 								</div>                   						
 							</form>
 						</section> 
