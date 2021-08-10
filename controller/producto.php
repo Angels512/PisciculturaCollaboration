@@ -59,7 +59,7 @@
                     $output["id_clase"] = $row["id_clase"];
                     $output["id_prove"] = $row["id_prove"];
                     $output["nombre_clase"] = $row["nombre_clase"];
-                    $output["fech_venc"] = $row["fech_venc"];
+                    $output["fech_venc"] = date('d/m/Y', strtotime($row["fech_venc"]));
                     $output["num_lote"] = $row["num_lote"];
                     $output["nombre_emp"] = $row["nombre_emp"];
                 }
