@@ -68,13 +68,11 @@
 								</div>
 							</header>
 							<div id="listaresponsables" >
-								
+
 							</div>
 						</section>
 					</div><!--.tab-pane-->
-					
 				</div><!--.tab-content-->
-
 			</section><!--.tabs-section-->
         </div>
     </div>

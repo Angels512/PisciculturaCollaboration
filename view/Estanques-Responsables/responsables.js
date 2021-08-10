@@ -6,10 +6,12 @@ function init(){
     });
 }
 
+
 $(document).ready(function()
 {
     listarResponsables();
 });
+
 
 // creamos la funcion guardaryeditar para insertar y actualizar un responsable y vaciar los campos del formulario
 function guardaryeditar(e){
@@ -25,6 +27,7 @@ function guardaryeditar(e){
         success: function(datos){
             $("#modalresponsable").modal('hide');
 
+            listarResponsables();
             swal("Correcto!","Registrado Correctamente","success");
         }
     });
@@ -38,6 +41,7 @@ $(document).on("click","#newrespon",function(){
     $('#modalresponsable').modal('show');
 });
 
+
 // LLevar toda la lista de responsables a la vista
 function listarResponsables()
 {
@@ -48,6 +52,7 @@ function listarResponsables()
     });
 }
 
+
 function modalRespon(id_respon)
 {
     $('#titulores').html('Modificar Responsable');
@@ -56,9 +61,9 @@ function modalRespon(id_respon)
 }
 
 
-//para llenar el modal con datos del responsable 
+//para llenar el modal con datos del responsable
 function MostrarDatos(id_respon)
-{   
+{
 
     $.post('controller/responsable.php?op=listarDatosRespon', {id_respon:id_respon}, function(data)
     {
@@ -67,8 +72,8 @@ function MostrarDatos(id_respon)
         $('#id_respon').val(data.id_respon);
         $('#nombre_respon').val(data.nombre_respon);
         $('#apellido_respon').val(data.apellido_respon);
-        
-    });  
+
+    });
 
     //para mostrar el modal donde se muestra la información del responsable
     $('#modalresponsable').modal('show'); 
@@ -77,7 +82,6 @@ function MostrarDatos(id_respon)
 // Eliminar cultivo
 function deleteRespon(id_respon)
 {
-
     swal({
         title: "Advertencia!",
         text: "Esta seguro de Eliminar el Responsable?",
@@ -90,11 +94,10 @@ function deleteRespon(id_respon)
     },
     function(isConfirm) {
         if (isConfirm) {
-             
-            $.post("controller/responsable.php?op=eliminar", { id_respon:id_respon }, function (data) {
 
-            });  
+            $.post("controller/responsable.php?op=eliminar", { id_respon:id_respon }, function (data) {});
 
+            listarResponsables();
             swal({
                 title: "Correcto!",
                 text: " Registro Eliminado.",

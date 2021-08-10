@@ -51,8 +51,8 @@
 				<div class="tab-content widget-tabs-content">
 					<div class="tab-pane" id="w-3-tab-2" role="tabpanel">
 						<section class="box-typical box-typical-padding">
-							<form method="post" id="proveedor_form"> 
-									<div class="form-group"> 
+							<form method="post" id="proveedor_form">
+									<div class="form-group">
 										<label  class="form-label semibold" for="nombre_emp">Nombre Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre" required>
@@ -93,9 +93,8 @@
 
 							<div class="row">
 								<fieldset class="form-group">
-									<div class="col-lg-10">
-											<select id="id_prove" class="form-control">
-											</select>
+									<div class="col-lg-11">
+										<select id="id_prove" class="form-control"></select>
 									</div>
 									<div class="col-lg-1">
 										<button type="button" name="action" id="consul_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
@@ -123,15 +122,14 @@
 											</ul>
 										</div>
 								</section>
-									<button type="button" name="action" id="modi_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
-									<button type="button" name="action" id="elim_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
+								<button type="button" name="action" id="modi_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
+								<button type="button" name="action" id="elim_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
 							</div>
-							
 						</section>
 					</div>
 				</div>
-      </section>
-		
+      		</section>
+		</div>
     </div>
 
 	<?php require_once("../../public/templates/js.php"); ?>
