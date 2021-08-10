@@ -24,9 +24,9 @@
 
 <!DOCTYPE html>
 <html>
-    <head lang="es-419">
+    <head lang="es">
         <?php require_once('../../../public/templates/autenticacion/head.php'); ?> <!-- HEAD -->
-        <title>Restablecer Contraseña</title>
+        <title>Restablecer Contraseña - A'ttia</title>
     </head>
 
     <body style="overflow-y: hidden;">

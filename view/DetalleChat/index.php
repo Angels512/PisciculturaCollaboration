@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <head lang="es-419">
+    <head lang="es">
         <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Detalle del Chat - Piscicultura</title>
+        <title>Detalle del Chat - A'ttia</title>
     </head>
 
     <body class="with-side-menu">

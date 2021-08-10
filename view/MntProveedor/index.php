@@ -7,15 +7,16 @@
 	<title>PCDCB</title>
 
 	<?php require_once("../../public/templates/head.php"); ?>
+
+	<style>
+		.box-typical.box-typical-padding{padding: 20px 15px 50px;};
+	</style>
 </head>
 <body class="with-side-menu">
 
     <?php require_once("../../public/templates/header.php"); ?>
-
 	<?php require_once("../../public/templates/nav.php"); ?>
 
-
-	
 
 	<div class="page-content">
 		<div class="container-fluid">
@@ -83,8 +84,8 @@
 											<i class="fa fa-envelope"></i>
 										</div>
 									</div>
-									<button type="submit" class="btn btn-rounded btn-primary">Guardar</button>
-								<div>								                  						
+									<button type="submit" class="btn btn-rounded btn-primary float-right">Guardar</button>
+								<div>
 							</form>
 						</section>
 					</div>
@@ -96,16 +97,16 @@
 
 							<div class="row">
 								<fieldset class="form-group">
-									<div class="col-lg-8">
+									<div class="col-lg-10">
 											<select id="id_prove" class="form-control">
 											</select>
 									</div>
-									<div class="col-lg-4">
-										<button type="button" name="action" id="consul_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm mg-top">Consultar</button>											
+									<div class="col-lg-1">
+										<button type="button" name="action" id="consul_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
 									</div>
 								</fieldset>
 							</div>
-							
+
 							<div id="infoproveedor">
 								<section class="box-typical col-lg-12">
 										<header class="box-typical-header-sm bordered">Información</header>

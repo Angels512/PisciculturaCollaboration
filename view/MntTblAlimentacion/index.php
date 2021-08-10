@@ -47,14 +47,13 @@
 
 				<div class="row">
 					<form method="post" id="tabla_alim">
-					
 						<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
 
 						<div class="col-md-6">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="cant_siembra">Número de Organismos</label>
 								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="cant_siembra" name="cant_siembra" value="2000" readonly>	
+									<input type="text" class="form-control" id="cant_siembra" name="cant_siembra" value="2000" readonly>
 									<i class="font-icon font-icon-archive"></i>
 								</div>
 							</fieldset>
@@ -69,7 +68,6 @@
 								</div>
 							</fieldset>
 						</div>
-			
 
 						<div class="col-lg-6">
 							<fieldset class="form-group">
@@ -94,8 +92,7 @@
 								</div>
 							</fieldset>
 						</div>
-			
-					
+
 						<div class="col-md-4">
 							<fieldset class="form-group">
 								<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
@@ -113,9 +110,9 @@
 								<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
 									<div class='input-group date hora'>
 										<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:00 AM" readonly/>
-									<span class="input-group-addon">
-										<i class="font-icon font-icon-clock"></i>
-									</span>
+										<span class="input-group-addon">
+											<i class="font-icon font-icon-clock"></i>
+										</span>
 									</div>
 							</fieldset>
 						</div>
@@ -141,23 +138,23 @@
 								</div>
 							</fieldset>
 						</div>
-				
+
 						<div class="col-sm-12">
 							<fieldset class="form-group">
 								<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
 								<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas"></textarea>
 							</fieldset>
 						</div>
-			
+
 						<div class="col-sm-12">
 							<fieldset class="form-group">
 								<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
 								<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo"></textarea>
 							</fieldset>
 						</div>
-			
+
 						<div class="col-lg-12">
-							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right">Guardar</button>
 						</div>
 					</form>
 				</div>
@@ -170,9 +167,7 @@
 	<?php require_once("../NovedadesMortalidad/modalmortalidad.php"); ?>
 	<?php require_once("../NovedadesMortalidad/modalnovedad.php"); ?>
 
-	
 	<script src="view/MntTblAlimentacion/tbl_alim.js"></script>
 	<script src="view/NovedadesMortalidad/novedadesmortalidad.js"></script>
-	
 </body>
 </html>

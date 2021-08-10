@@ -23,7 +23,7 @@
 <html lang="es-419" class="no-focus">
     <head>
         <?php require_once('../../../public/templates/autenticacion/head.php'); ?> <!-- HEAD -->
-        <title>Login - Piscicultura</title>
+        <title>Login - A'ttia</title>
     </head>
 
     <body>

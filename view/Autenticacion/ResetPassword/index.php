@@ -13,7 +13,7 @@
 <html>
     <head lang="es-419">
         <?php require_once('../../../public/templates/autenticacion/head.php'); ?> <!-- HEAD -->
-        <title>Restablecer Contraseña</title>
+        <title>Restablecer Contraseña - A'ttia</title>
     </head>
 
     <body style="overflow-y: hidden;">
