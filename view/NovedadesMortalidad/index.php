@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head lang="es-419">
-        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Novedades y Mortandad - Piscicultura</title>
+    <head lang="es">
+            <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+            <title>Novedades y Mortalidad - A'ttia</title>
     </head>
 
-    <body class="with-side-menu">
-
-
-        <?php require_once('../../public/templates/header.php'); ?> <!--HEADER-->
-        <div class="mobile-menu-left-overlay"></div>
-        <?php require_once('../../public/templates/nav.php') ?> <!--NAV-->
+    <?php require_once('../../public/templates/header.php'); ?> <!--HEADER-->
+    <div class="mobile-menu-left-overlay"></div>
+    <?php require_once('../../public/templates/nav.php') ?> <!--NAV-->
 
 
 

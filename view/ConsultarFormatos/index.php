@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-	<?php require_once('../../public/templates/head.php'); ?>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Consultar cultivo - A'ttia</title>
 </head>
 <body class="with-side-menu">
 

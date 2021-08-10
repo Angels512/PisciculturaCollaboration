@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
 
-	<?php require_once("../../public/templates/head.php"); ?>
-
-	<style>
-		.box-typical.box-typical-padding{padding: 20px 15px 50px;};
-	</style>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Proveedores - A'ttia</title>
+      <style>
+        .box-typical.box-typical-padding{padding: 20px 15px 50px;};
+      </style>
 </head>
 <body class="with-side-menu">
 
