@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
-
-	<?php require_once("../../public/templates/head.php"); ?>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Estanques y Responsables - A'ttia</title>
 </head>
 <body class="with-side-menu">
 

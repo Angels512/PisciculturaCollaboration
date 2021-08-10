@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
-
-	<?php require_once("../../public/templates/head.php"); ?>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Productos - A'ttia</title>
 </head>
 <body class="with-side-menu">
 
@@ -90,7 +86,7 @@
 								</div>
 								
 								<div class="col-lg-12">
-									<button type="submit" name="action" class="btn btn-rounded float-right btn-primary">Guardar</button>
+									<button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
 								</div>                   						
 							</form>
 						</section> 
@@ -141,7 +137,7 @@
 						</section>
 					</div>
 				</div>
-      </section>
+      		</section>
 		
     </div>
 
