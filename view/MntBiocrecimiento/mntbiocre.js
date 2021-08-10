@@ -67,7 +67,7 @@ function guardaryeditar(e){
        success: function(datos){   
             $("#biocre_form")[0].reset();
 
-           swal("correcto!","Registrado Correctamente","success");
+           swal("Correcto!","Registrado Correctamente","success");
        }
    }); 
 }
