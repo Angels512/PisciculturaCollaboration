@@ -168,7 +168,7 @@
 							</fieldset>
 						</div>
 						<div class="col-lg-12">
-							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary mt-10">Guardar</button>
+							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right mt-10">Guardar</button>
 						</div>
 					</form>
 				</div>

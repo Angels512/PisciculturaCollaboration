@@ -3,13 +3,14 @@
    <div class="modal-dialog">
        <div class="modal-content">
            <form method="post" id="responsable_form">
-               <div class="modal-header">
-                   <h4 id="titulores"><strong>Nuevo Responsable</strong></h4>
-               </div>
+		   		<div class="modal-header">
+                    <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
+                        <i class="font-icon-close-2"></i>
+                    </button>
+                    <h4 class="modal-title" id="titulores"></h4>
+                </div>
+
                <div class="modal-body">
-                    <div>
-						<h5>Ingrese los Datos</h5>
-					</div>
 						<input type="hidden" name="id_respon" id="id_respon">		   
 					    <div class="form-group">
 					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
@@ -28,8 +29,8 @@
 					    </div>		
                 </div>
                <div class="modal-footer">
-                   <button type="submit" name="action"  class="btn btn-rounded btn-primary">Guardar</button>
                    <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
+				   <button type="submit" name="action"  class="btn btn-rounded btn-primary">Guardar</button>
                </div>
            </form>
        </div>

@@ -25,7 +25,7 @@ function guardaryeditar(e){
         success: function(datos){
             $("#modalresponsable").modal('hide');
 
-            swal("correcto!","Registrado Correctamente","success");
+            swal("Correcto!","Registrado Correctamente","success");
         }
     });
 }
@@ -79,7 +79,7 @@ function deleteRespon(id_respon)
 {
 
     swal({
-        title: "HelpDesk",
+        title: "Advertencia!",
         text: "Esta seguro de Eliminar el Responsable?",
         type: "error",
         showCancelButton: true,
