@@ -93,7 +93,7 @@
 
 							<div class="row">
 								<fieldset class="form-group">
-									<div class="col-lg-11">
+									<div class="col-lg-10">
 										<select id="id_prove" class="form-control"></select>
 									</div>
 									<div class="col-lg-1">
