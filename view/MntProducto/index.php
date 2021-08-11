@@ -101,36 +101,36 @@
 
 							<div class="row">
 								<fieldset>
-										<div class="col-lg-11 form-group">
-											<select id="id_produ" class="form-control">
-											</select>
-										</div>
+									<div class="col-lg-10 form-group">
+										<select id="id_produ" class="form-control">
+										</select>
+									</div>
 
-										<div class="col-lg-1 form-group">
-											<button type="button" name="action" id="consul_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
-										</div>
+									<div class="col-lg-1 form-group">
+										<button type="button" name="action" id="consul_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
+									</div>
 								</fieldset>
 							</div>
 
 							<div id="infoproducto">
 								<section class="box-typical col-lg-12">
-										<header class="box-typical-header-sm bordered">Información</header>
-										<div class="box-typical-inner">
-											<ul class="profile-links-list">
-												<li class="nowrap">
-													<p><i class="font-icon-cart" aria-hidden="true"></i><b>&nbsp&nbsp Nombre Producto:</b> <span id="nombreprodu"></span></p>
-												</li>
-												<li class="nowrap">
-													<p><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><b>&nbsp&nbsp Fecha de Vencimiento:</b> <span id="fechavenc"></span></p>
-												</li>
-												<li class="nowrap">
-													<p><i class="glyphicon glyphicon-barcode"></i><b>&nbsp&nbsp Número de Lote:</b> <span id="numeroLote"></span></p>
-												</li>
-												<li class="nowrap">
-													<p><i class="fa fa-bus"></i><b>&nbsp&nbsp Proveedor:</b> <span id="proveedor"></span></p>
-												</li>
-											</ul>
-										</div>
+									<header class="box-typical-header-sm bordered">Información</header>
+									<div class="box-typical-inner">
+										<ul class="profile-links-list">
+											<li class="nowrap">
+												<p><i class="font-icon-cart" aria-hidden="true"></i><b>&nbsp&nbsp Nombre Producto:</b> <span id="nombreprodu"></span></p>
+											</li>
+											<li class="nowrap">
+												<p><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><b>&nbsp&nbsp Fecha de Vencimiento:</b> <span id="fechavenc"></span></p>
+											</li>
+											<li class="nowrap">
+												<p><i class="glyphicon glyphicon-barcode"></i><b>&nbsp&nbsp Número de Lote:</b> <span id="numeroLote"></span></p>
+											</li>
+											<li class="nowrap">
+												<p><i class="fa fa-bus"></i><b>&nbsp&nbsp Proveedor:</b> <span id="proveedor"></span></p>
+											</li>
+										</ul>
+									</div>
 								</section>
 
 								<button type="button" name="action" id="modi_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
