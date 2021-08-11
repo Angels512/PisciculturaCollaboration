@@ -6,7 +6,7 @@
         <title>Productos - A'ttia</title>
         <style>
 		      .box-typical.box-typical-padding{padding: 20px 15px 50px;};
-	      </style>
+	    </style>
 </head>
 <body class="with-side-menu">
 

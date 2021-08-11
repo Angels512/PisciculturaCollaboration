@@ -2,7 +2,7 @@
 <html>
 <head lang="es">
         <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>TblAlimentación - A'ttia</title>
+        <title>Tabla de Alimentación - A'ttia</title>
 </head>
 <body class="with-side-menu">
 

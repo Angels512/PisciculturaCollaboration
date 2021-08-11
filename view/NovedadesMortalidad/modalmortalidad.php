@@ -31,7 +31,6 @@
                 </div>
 
 
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
                     <button type="submit" name="action" value="add" class="btn btn-rounded btn-primary">Guardar</button>
