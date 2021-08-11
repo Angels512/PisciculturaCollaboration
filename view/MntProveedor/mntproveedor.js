@@ -37,20 +37,17 @@ $(document).on("click","#elim_prove",function(e){
 
 $(document).ready(function() {
 
-    /* Esto es para llenar el select del Nombre del Proveedor */
-    $.post("controller/producto.php?op=nom_proveedores",function(data, status){
-        $('#id_prove').html(data);
-    });
+    listarSelectProve();
 
     //para ocultar la sección donde se muestra la información del proveedor
     $("#infoproveedor").hide();
 
 });
-    
+
 // creamos la funcion guardar para insertar un proveedor y vaciar los campos del formulario
 function guardar(e){
     e.preventDefault();
-    
+
     var formData = new FormData($("#proveedor_form")[0]);
 
         $.ajax({
@@ -59,9 +56,10 @@ function guardar(e){
             data: formData,
             contentType: false,
             processData: false,
-            success: function(datos){ 
-                console.log(datos); 
+            success: function(datos){
+                console.log(datos);
                 $('#proveedor_form')[0].reset();
+                listarSelectProve();
 
                 swal({
                     title: "HelpDesk!",
@@ -69,14 +67,14 @@ function guardar(e){
                     type: "success",
                     confirmButtonClass: "btn-success"
                 });
-            }  
-        }); 
+            }
+        });
 }
 
 // creamos la funcion editar para actualizar un proveedor
 function editar(e){
     e.preventDefault();
-    
+
     var formData = new FormData($("#proveedor_edit")[0]);
 
         $.ajax({
@@ -85,9 +83,11 @@ function editar(e){
             data: formData,
             contentType: false,
             processData: false,
-            success: function(datos){ 
+            success: function(datos){
                 console.log(datos);
                 $("#modalproveedor").modal('hide');
+                listarDatos();
+                listarSelectProve();
 
                 swal({
                     title: "A'ttia!",
@@ -95,14 +95,14 @@ function editar(e){
                     type: "success",
                     confirmButtonClass: "btn-success"
                 });
-            }  
-        }); 
+            }
+        });
 }
 
-//para consultar y listar datos del proveedor 
+//para consultar y listar datos del proveedor
 function listarDatos()
 {
-    
+
     var id_prove = $('#id_prove').val();
 
     $.post('controller/proveedor.php?op=listarDatosProve', {id_prove:id_prove}, function(data)
@@ -113,15 +113,24 @@ function listarDatos()
         $('#direccion').html(data.direccion_emp);
         $('#numeroTelefono').html(data.telefono_emp);
         $('#email').html(data.correo_emp);
-    }); 
+    });
 
     //para mostrar la sección donde se muestra la información del proveedor
     $("#infoproveedor").show();
 }
 
-//para llenar el modal con datos del proveedor 
+function listarSelectProve(){
+
+    /* Esto es para llenar el select del Nombre del Proveedor */
+    $.post("controller/producto.php?op=nom_proveedores",function(data, status){
+        $('#id_prove').html(data);
+    });
+
+}
+
+//para llenar el modal con datos del proveedor
 function MostrarDatos()
-{   
+{
     var id_prove = $('#id_prove').val();
 
     $.post('controller/proveedor.php?op=listarDatosProve', {id_prove:id_prove}, function(data)
@@ -132,18 +141,18 @@ function MostrarDatos()
         $('#nombre_emp1').val(data.nombre_emp);
         $('#direccion_emp1').val(data.direccion_emp);
         $('#telefono_emp1').val(data.telefono_emp);
-        $('#correo_emp1').val(data.correo_emp); 
-    }); 
+        $('#correo_emp1').val(data.correo_emp);
+    });
 
     //para mostrar la sección donde se muestra la información del proveedor
-    $('#modalproveedor').modal('show'); 
+    $('#modalproveedor').modal('show');
 }
 
 //para eliminar un proveedor
 function eliminar(id_prove){
 
     swal({
-        title: "HelpDesk",
+        title: "Advertencia!",
         text: "Esta seguro de Eliminar el Proveedor?",
         type: "error",
         showCancelButton: true,
@@ -154,10 +163,13 @@ function eliminar(id_prove){
     },
     function(isConfirm) {
         if (isConfirm) {
-             
+
             $.post("controller/proveedor.php?op=eliminar", { id_prove:id_prove }, function (data) {
 
-            });  
+            });
+
+            listarDatos();
+            listarSelectProve();
 
             swal({
                 title: "Correcto!",
@@ -168,5 +180,4 @@ function eliminar(id_prove){
         }
     });
 }
-    
-init(); 
+init();
