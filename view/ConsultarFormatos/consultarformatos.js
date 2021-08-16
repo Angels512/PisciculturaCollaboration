@@ -8,9 +8,9 @@ $(function() {
 
 
 $(document).ready(function(){
-    var id_cultivo =  getUrlParameter('ID'); 
- 
-    //para llenar el datatable de biocrecimiento 
+    var id_cultivo =  getUrlParameter('ID');
+
+    //para llenar el datatable de biocrecimiento
     tabla=$('#dt_biometrias').dataTable({
             "aProcessing": true,
             "aServerSide": true,
@@ -18,7 +18,7 @@ $(document).ready(function(){
             "searching": true,
             lengthChange: false,
             colReorder: true,
-            buttons: [		          
+            buttons: [
                     'copyHtml5',
                     'excelHtml5',
                     'pdfHtml5'
@@ -26,10 +26,10 @@ $(document).ready(function(){
             "ajax":{
                 url: "controller/biocrecimiento.php?op=listar_x_cult",
                 type: "post",
-                dataType : "json",	
-                data:{ id_cultivo : id_cultivo },						
+                dataType : "json",
+                data:{ id_cultivo : id_cultivo },
                 error: function(e){
-                    console.log(e.responseText);	
+                    console.log(e.responseText);
                 }
             },
             "bDestroy": true,
@@ -60,8 +60,8 @@ $(document).ready(function(){
                     "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                     "sSortDescending": ": Activar para ordenar la columna de manera descendente"
                 }
-            }     
-        }).DataTable(); 
+            }
+        }).DataTable();
 
     //para llenar el datatable de la tabla de alimentación
     tabla=$('#dt_tbl_alim').dataTable({
@@ -71,7 +71,7 @@ $(document).ready(function(){
             "searching": true,
             lengthChange: false,
             colReorder: true,
-            buttons: [		          
+            buttons: [
                     'copyHtml5',
                     'excelHtml5',
                     'pdfHtml5'
@@ -79,10 +79,10 @@ $(document).ready(function(){
             "ajax":{
                 url: "controller/tblalimentacion.php?op=listar_x_cult",
                 type: "post",
-                dataType : "json",	
-                data:{ id_cultivo : id_cultivo },						
+                dataType : "json",
+                data:{ id_cultivo : id_cultivo },
                 error: function(e){
-                    console.log(e.responseText);	
+                    console.log(e.responseText);
                 }
             },
             "bDestroy": true,
@@ -113,77 +113,12 @@ $(document).ready(function(){
                     "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
                     "sSortDescending": ": Activar para ordenar la columna de manera descendente"
                 }
-            }     
-        }).DataTable(); 
+            }
+        }).DataTable();
 });
 
 
-$(document).on("click","#consultarbio",function(){
 
-    location.href ='biocrecimiento';
-});
-
-
-$(document).on("click","#editarbio",function(){
-
-    location.href ='biocrecimiento';
-});
-
-$(document).on("click","#eliminarbio",function(e){
-    e.preventDefault();
-    swal({
-                title: "¿Está seguro?",
-                text: "Desea eliminar este registro?",
-                type: "warning",
-                showCancelButton: true,
-                cancelButtonClass: "btn-default",
-                confirmButtonClass: "btn-warning",
-                confirmButtonText: "Eliminar",
-                closeOnConfirm: false
-            },
-            function(){
-                swal({
-                    title: "Eliminado!",
-                    text: "El registro se ha eliminado exitosamente.",
-                    type: "success",
-                    confirmButtonClass: "btn-success"
-                });
-            });
-});
-
-$(document).on("click","#consultar",function(){
-
-    location.href ='tbl-alimentacion';
-});
-
-
-$(document).on("click","#editar",function(){
-
-    location.href ='tbl-alimentacion';
-});
-
-
-$(document).on("click","#eliminar",function(e){
-    e.preventDefault();
-    swal({
-        title: "¿Está seguro?",
-        text: "Desea eliminar este registro?",
-        type: "warning",
-        showCancelButton: true,
-        cancelButtonClass: "btn-default",
-        confirmButtonClass: "btn-warning",
-        confirmButtonText: "Eliminar",
-        closeOnConfirm: false
-    },
-    function(){
-        swal({
-            title: "Eliminado!",
-            text: "El registro se ha eliminado exitosamente.",
-            type: "success",
-            confirmButtonClass: "btn-success"
-        });
-    });
-});
 
 //funcion con la que capturamos el id que llega por la url
 var getUrlParameter = function getUrlParameter(sParam) {
@@ -200,3 +135,83 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+//para ir al formato de biocrecimiento pasando el ID por url segun el boton presionado
+function consultar(id_biocre){
+    window.location.href = "biocrecimiento?ID="+ id_biocre +"";
+}
+
+function editar(id_biocre){
+    window.location.href = "biocrecimiento?EDIT="+ id_biocre +"";
+}
+
+//para eliminar un formato de biocrecimiento
+function eliminar(id_biocre){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/biocrecimiento.php?op=eliminar", { id_biocre:id_biocre }, function (data) {
+            });
+
+            $('#dt_biometrias').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
+//para ir al formato de tabla de alimentacion pasando el ID por url segun el boton presionado
+function consultartbal(id_tbl_alim){
+    window.location.href = "tbl-alimentacion?ID="+ id_tbl_alim +"";
+}
+
+function editartbal(id_tbl_alim){
+    window.location.href = "tbl-alimentacion?EDIT="+ id_tbl_alim +"";
+}
+
+//para eliminar un formato de tbl alimentacion
+function eliminartbal(id_tbl_alim){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/tblalimentacion.php?op=eliminar", { id_tbl_alim:id_tbl_alim }, function (data) {
+            });
+
+            $('#dt_tbl_alim').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}

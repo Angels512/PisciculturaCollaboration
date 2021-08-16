@@ -57,7 +57,7 @@
                             <span class="lbl">Productos</span>
                         </a>
                     </li>
-                  
+
                     <li class="with-sub">
                         <a href="proveedor">
                             <span class="fa fa-bus"></span>

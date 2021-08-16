@@ -21,8 +21,8 @@
                 $sub_array = array();
                 $sub_array[] = $row["id_mortalidad"];
                 $sub_array[] = 'Hubo reporte de '.$row["reg_mortandad"].' peces muertos.';
-                $sub_array[] = $row["fecha"];
-                
+                $sub_array[] = date('d/m/Y', strtotime($row["fecha"]));
+
                 $data[] = $sub_array;
             }
 

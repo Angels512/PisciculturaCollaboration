@@ -8,7 +8,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'SELECT * FROM estanque WHERE est=1;';
+            $sql = 'SELECT * FROM estanque WHERE est=1 ORDER BY id_tanque ASC;';
             $sql = $conectar->prepare($sql);
             $sql->execute();
 
