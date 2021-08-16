@@ -90,8 +90,6 @@
         }
 
 
-
-
         // Selecciona un cultivo que ya cumplio su tiempo de 6 meses
         public function getCultivoVencido()
         {
@@ -131,7 +129,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT id_cultivo, num_tanque, num_lote FROM cultivo INNER JOIN estanque on cultivo.id_tanque = estanque.id_tanque WHERE cultivo.est = 1;";
+            $sql = "SELECT id_cultivo, num_tanque, num_lote FROM cultivo INNER JOIN estanque on cultivo.id_tanque = estanque.id_tanque WHERE cultivo.est = 1 ORDER BY id_cultivo ASC;;";
             $sql = $conectar->prepare($sql);
             $sql->execute();
 

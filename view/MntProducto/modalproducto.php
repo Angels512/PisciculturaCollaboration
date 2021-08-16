@@ -10,7 +10,7 @@
 			<form method="post" id="product_edit">
 				<div class="modal-body">
 						<input type="hidden" class="form-control" id="id_produ1" name="id_produ">
-						
+
 						<div class="form-group">
 							<label class="form-label semibold" for="id_clase">Nombre Porducto</label>
 							<select id="id_clase1" name="id_clase" class="form-control">
@@ -40,12 +40,12 @@
 							<select id="id_prove1" name="id_prove" class="form-control">
 							</select>
 						</div>
-				</div>	 
+				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
 					<button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
 				</div>
-			</form> 
+			</form>
         </div>
     </div>
 </div>

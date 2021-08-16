@@ -8,7 +8,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT id_produ, nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;";
+            $sql = "SELECT id_produ, nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1 ORDER BY id_produ ASC;";
             $sql = $conectar->prepare($sql);
             $sql->execute();
 
@@ -22,7 +22,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT * FROM proveedor WHERE est = 1;";
+            $sql = "SELECT * FROM proveedor WHERE est = 1 ORDER BY id_prove ASC;";
             $sql = $conectar->prepare($sql);
             $sql->execute();
 
@@ -35,19 +35,19 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT 
+            $sql = "SELECT
             id_produ,
             producto.id_clase,
             producto.id_prove,
             nombre_clase,
             fech_venc,
             num_lote,
-            nombre_emp 
-            FROM 
+            nombre_emp
+            FROM
             producto
-            INNER JOIN claseproducto ON producto.id_clase=claseproducto.id_clase 
+            INNER JOIN claseproducto ON producto.id_clase=claseproducto.id_clase
             INNER JOIN proveedor ON producto.id_prove=proveedor.id_prove
-            WHERE 
+            WHERE
             id_produ=?;";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_produ);

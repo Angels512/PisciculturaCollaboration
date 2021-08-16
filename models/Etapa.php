@@ -1,4 +1,4 @@
-<?php 
+<?php
     class Etapa extends Conectar
     {
         // creamos el metodo getEtapa para obtener las etapas
@@ -7,7 +7,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "SELECT * FROM etapa;";
+            $sql = "SELECT * FROM etapa ORDER BY id_etapa ASC;";
             $sql = $conectar->prepare($sql);
             $sql->execute();
 

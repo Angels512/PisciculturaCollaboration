@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once('../config/conexion.php');
     require_once('../models/ClaseProducto.php');
     $claseproducto = new ClaseProducto();
@@ -10,7 +10,7 @@
 
             // Llamamos el metodo getClaseProducto del model
             $datos = $claseproducto->getClaseProducto();
-            
+
             // verificamos si datos es un array y si sus datos no son igual a 0
             if(is_array($datos)==true and count($datos)>0){
 

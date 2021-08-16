@@ -58,12 +58,12 @@ $(document).ready(function() {
         $('#id_prove').html(data);
     });
 
-    /* Esto es para llenar el select del Nombre del Producto */
+    /* Esto es para llenar el select del Nombre del Producto del modal modificar*/
     $.post("controller/claseProducto.php?op=clases",function(data, status){
         $('#id_clase1').html(data);
     });
 
-    /* Esto es para llenar el select del Nombre del Proveedor */
+    /* Esto es para llenar el select del Nombre del Proveedor del modal modificar*/
     $.post("controller/producto.php?op=nom_proveedores",function(data, status){
         $('#id_prove1').html(data);
     });
@@ -184,7 +184,7 @@ function MostrarDatos()
 
         $('#id_produ1').val(data.id_produ);
         $('#id_clase1').val(data.id_clase).trigger('change');
-       $('#fech_venc1').val(data.fech_venc);
+        $('#fech_venc1').val(data.fech_venc);
         $('#num_lote1').val(data.num_lote);
         $("#id_prove1").val(data.id_prove).trigger('change');
     });
@@ -198,7 +198,7 @@ function eliminar(id_produ){
 
     console.log(id_produ);
     swal({
-        title: "HelpDesk",
+        title: "Advertencia",
         text: "Esta seguro de Eliminar el Producto?",
         type: "error",
         showCancelButton: true,

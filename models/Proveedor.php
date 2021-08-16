@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Proveedor extends Conectar
 {
@@ -15,7 +15,7 @@ class Proveedor extends Conectar
             $sql->bindValue(3, $telefono_emp);
             $sql->bindValue(4, $correo_emp);
             $sql->execute();
-        
+
         return $resultado=$sql->fetchAll();
     }
 
@@ -41,15 +41,15 @@ class Proveedor extends Conectar
         nombre_emp = ?,
         direccion_emp = ?,
         telefono_emp = ?,
-        correo_emp =? 
+        correo_emp =?
         WHERE
         id_prove = ?;";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $nombre_emp);
         $sql->bindValue(2, $direccion_emp);
         $sql->bindValue(3, $telefono_emp);
-        $sql->bindValue(4, $correo_emp); 
-        $sql->bindValue(5, $id_prove); 
+        $sql->bindValue(4, $correo_emp);
+        $sql->bindValue(5, $id_prove);
         $sql->execute();
 
         return $resultado=$sql->fetchAll();
