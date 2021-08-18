@@ -109,3 +109,18 @@ RewriteRule ^tbl-alimentacion/?$ view/MntTblAlimentacion/index.php
 # GESTIONAR ESTANQUES Y RESPONSABLES
 RewriteRule ^estanq-respon/?$ view/Estanques-Responsables/index.php
 
+
+
+#JULIAN----------------------------------------------------------------------------------------------------------
+
+# PARAMETROS FQ
+RewriteRule ^parafq/?$ view/FmtParametrosFQ/index.php
+
+# TEMPERATURA AGUA
+RewriteRule ^tempagua/?$ view/FmtTemperaturaAgua/index.php
+
+# TEMPERATURA AMBIENTE
+RewriteRule ^tempamb/?$ view/FmtTemperaturaAmbiente/index.php
+
+# ESTADO ACUICULTURA
+RewriteRule ^estacui/?$ view/FmtEstadoAcuicultura/index.php
