@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
-
-	<?php require_once("../../public/templates/head.php"); ?>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Estanques y Responsables - A'ttia</title>
 </head>
 <body class="with-side-menu">
 
@@ -53,12 +49,13 @@
 									</span>
 								</a>
 							</li>
-							
+
 						</ul>
 					</div>
 				</div><!--.tabs-section-nav-->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
+
 					<form method="post" id="responsable_form">
 							<div>
 								<h5><strong>Ingrese los Datos</strong></h5>
@@ -109,52 +106,29 @@
 
 						</form>
 
+						<!--Aqui va el Formato de Estanques-->
+
 					</div><!--.tab-pane-->
 
 					<div role="tabpanel" class="tab-pane fade" id="responsables">
-						<form method="post" id="responsable_form">
-							<div>
-								<h5><strong>Ingrese los Datos</strong></h5>
-							</div>
-							<br>	
-							<div class="form-group"> 
-                    	    	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
-									<i class="font-icon font-icon-calend"></i>
+						<section class="widget widget-tasks">
+							<header class="widget-header">
+								<div class="tbl-cell tbl-cell-action">
+									<a id="newrespon" class="btn btn-inline btn-primary float-right">Nuevo Responsable</a>
 								</div>
-                    		</div>
-							<div class="form-group">
-								<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
-                            		<i class="fa fa-user"></i>
-                        		</div>
-							</div>			
-							<div class="form-group">
-								<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido" required>
-                            		<i class="fa fa-user-o"></i>
-                        		</div>
-							</div>
-							<br>
-							<div>
-								<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Guardar</button>
-								<button type="button" name="action" id="consul_respon" value="add" class="btn btn-rounded btn-primary">Consultar</button>
-								<button type="button" name="action" id="modi_respon" value="add" class="btn btn-rounded btn-primary">Modificar</button>
-								<button type="button" name="action" id="elim_respon" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
-							</div>
-						</form>
-					</div><!--.tab-pane-->
-					
-				</div><!--.tab-content-->
+							</header>
+							<div id="listaresponsables" >
 
+							</div>
+						</section>
+					</div><!--.tab-pane-->
+				</div><!--.tab-content-->
 			</section><!--.tabs-section-->
         </div>
     </div>
 
 	<?php require_once("../../public/templates/js.php"); ?>
+	<?php require_once("modalresponsable.php"); ?>
 
 	<script src="view/Estanques-Responsables/responsables.js"></script>
 

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-    <head lang="es-419">
-        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Novedades y Mortandad - Piscicultura</title>
+    <head lang="es">
+            <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+            <title>Novedades y Mortalidad - A'ttia</title>
     </head>
 
-    <body class="with-side-menu">
-
-
-        <?php require_once('../../public/templates/header.php'); ?> <!--HEADER-->
-        <div class="mobile-menu-left-overlay"></div>
-        <?php require_once('../../public/templates/nav.php') ?> <!--NAV-->
+    <?php require_once('../../public/templates/header.php'); ?> <!--HEADER-->
+    <div class="mobile-menu-left-overlay"></div>
+    <?php require_once('../../public/templates/nav.php') ?> <!--NAV-->
 
 
 
@@ -61,70 +58,41 @@
 
                             <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane fade in active" id="tabs-1-tab-1">
-                                    <section class="box-typical">
-                                        <div class="box-typical-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th style="width: 1%;">#</th>
-                                                            <th style="width: 10%;">Empleado</th>
-                                                            <th style="width: 79%;">Descripcion</th>
-                                                            <th style="width: 10%;">Fecha</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><b>1</b></td>
-                                                            <td>Miguel Cuellar</td>
-                                                            <td>Daños exteriores.</td>
-                                                            <td>02/06/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><b>2</b></td>
-                                                            <td>Julian Gonzalez</td>
-                                                            <td>Daños interiores Daños interioresDaños interiores.</td>
-                                                            <td>02/8/2021</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div><!--.box-typical-body-->
-                                    </section><!--.box-typical-->
+                                    <section class="card">
+                                        <div class="card-block">
+                                            <table id="dt_novedad" class="display table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 5%;">#</th>
+                                                        <th style="width: 45%;">Medidas Preventivas</th>
+                                                        <th style="width: 25%;">Fecha</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
                                 </div><!--.tab-pane-->
 
-
                                 <div role="tabpanel" class="tab-pane fade" id="tabs-1-tab-2">
-                                <section class="box-typical">
-                                        <div class="box-typical-body">
-                                            <div class="table-responsive">
-                                                <table class="table table-hover">
-                                                    <thead>
-                                                        <tr>
-                                                            <th style="width: 5%;">#</th>
-                                                            <th style="width: 25%;">Empleado</th>
-                                                            <th style="width: 45%;">Cantidad de peces muertos</th>
-                                                            <th style="width: 25%;">Fecha</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td><b>1</b></td>
-                                                            <td>Miguel Cuellar</td>
-                                                            <td>Hubo reporte de <b>8</b> peces muertos.</td>
-                                                            <td>02/06/2021</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><b>2</b></td>
-                                                            <td>Julian Gonzalez</td>
-                                                            <td>Hubo reporte de <b>6</b> peces muertos.</td>
-                                                            <td>02/8/2021</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div><!--.box-typical-body-->
-                                    </section><!--.box-typical-->
+                                    <section class="card">
+                                        <div class="card-block">
+                                            <table id="dt_mortalidad" class="display table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 5%;">#</th>
+                                                        <th style="width: 45%;">Cantidad de peces muertos</th>
+                                                        <th style="width: 25%;">Fecha</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </section>
                                 </div><!--.tab-pane-->
                             </div><!--.tab-content-->
                         </section><!--.tabs-section-->

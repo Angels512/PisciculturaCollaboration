@@ -1,5 +1,6 @@
 CREATE DATABASE IF NOT EXISTS `si_piscicultura`;
 USE `si_piscicultura`;
+SET SQL_SAFE_UPDATES = 0;
 
 -- ///// CREATE TABLES /////
 
@@ -245,11 +246,13 @@ CREATE TABLE IF NOT EXISTS `claseproducto` (
   PRIMARY KEY (`id_clase`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
+SELECT * FROM claseproducto;
+
 CREATE TABLE IF NOT EXISTS `proveedor` (
   `id_prove` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_emp` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
   `direccion_emp` varchar(70) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `telefono_emp` bigint(20) NOT NULL,
+  `telefono_emp` varchar(10) NOT NULL,
   `correo_emp` varchar(70) COLLATE utf8_spanish_ci DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
   `fecha_elim` datetime DEFAULT NULL,
@@ -298,6 +301,7 @@ CREATE TABLE IF NOT EXISTS `tblalimentacion` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
+update cultivo set est = 1; 
 
 
 -- ///// INSERTS /////
@@ -315,10 +319,10 @@ INSERT INTO `categoria` (`id_cat`, `nombre_cat`) VALUES
 	(3, 'Peticion de servicio'),
 	(4, 'Otros');
 
--- Categoria
+-- Usuario
 INSERT INTO `usuario` (`id_usu`, `id_rol`, `nombre_usu`, `apellido_usu`, `direccion_usu`, `telefono_usu`, `documento_usu`, `correo_usu`, `pass_usu`, `fecha_edit`, `fecha_elim`, `fecha`, `est`) VALUES
 	(1, 1, 'Miguel', 'Cuellar', 'Cra 8 Este #37-71', '3168580636', '1021663015', 'miguelcolmatiz@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-09 17:06:34', 1),
-	(2, 2, 'Marcos', 'Lopez', 'Cra 8 Este #30-70 Sur', '3125623542', '1021663011', 'marcos@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-20 22:20:15', 1),
+	(2, 1, 'Mariana', 'Diaz', 'Cra 8 Este #30-70 Sur', '3125623542', '1003882513', 'mariana@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-20 22:20:15', 1),
 	(3, 3, 'Pepito', 'Perez', 'Cra 8 Este #37-70', '3194577113', '1021663012', 'pepito@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-20 22:20:35', 1),
 	(4, 2, 'Camila', 'Ramirez', 'Cra 8 Este #30-70 Sur', '3125623542', '1021663013', 'camilaramirez@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-22 23:57:08', 1),
 	(24, 2, 'Miguel', 'Angel', 'Cra 8 Este #30-70 Sur', '1234567891', '1021663029', 'miguelangels2468@gmail.com', '3043aa4a83b0934982956a90828140cb834869135b5f294938865de12e036de440a330e1e8529bec15ddd59f18d1161a97bfec110d2622680f2c714a737d7061', NULL, NULL, '2021-06-15 23:34:48', 1);
@@ -368,6 +372,8 @@ INSERT INTO `responsable` (`id_respon`, `nombre_respon`, `apellido_respon`, `fec
 	(3, 'Miguel Angel', 'Cuellar', NULL, '2021-05-27 18:20:28', 1),
 	(4, 'Sofia', 'Rodriguez', NULL, '2021-06-21 20:06:03', 1),
 	(5, 'Ajelandro', 'Sanabria', NULL, '2021-06-21 20:06:22', 1);
+    
+
 
 -- Estanque
 INSERT INTO `estanque` (`id_tanque`, `num_tanque`, `capacidad_tanque`, `desc_tanque`, `fehca_elim`, `fecha`, `est`) VALUES
@@ -379,11 +385,11 @@ INSERT INTO `estanque` (`id_tanque`, `num_tanque`, `capacidad_tanque`, `desc_tan
     
 -- Cultivo
 INSERT INTO `cultivo` (`id_cultivo`, `id_respon`, `id_tanque`, `num_lote`, `cant_siembra`, `fecha_cierre`, `fecha`, `est`) VALUES
-	(1, 1, 1, '0001', 2500, '2021-06-21', '2021-05-27 18:21:50', 0),
-	(2, 2, 2, '0002', 1750, '2021-06-21', '2021-04-24 18:21:55', 0),
-	(3, 3, 3, '0003', 1500, '2021-06-21', '2021-04-21 23:04:24', 0),
-	(4, 1, 1, '0004', 1250, '2021-06-21', '2021-05-28 12:21:50', 0),
-	(5, 2, 2, '0005', 1000, '2021-06-21', '2021-05-28 16:26:45', 0),
+	(1, 1, 1, '0001', 2500, '2021-11-21', '2021-05-27 18:21:50', 1),
+	(2, 2, 2, '0002', 1750, '2021-11-21', '2021-04-24 18:21:55', 1),
+	(3, 3, 3, '0003', 1500, '2021-11-21', '2021-04-21 23:04:24', 1),
+	(4, 1, 1, '0004', 1250, '2021-11-21', '2021-05-28 12:21:50', 1),
+	(5, 2, 2, '0005', 1000, '2021-11-21', '2021-05-28 16:26:45', 1),
 	(6, 2, 3, '0006', 400, '2021-06-21', '2021-06-01 22:20:09', 0),
 	(7, 1, 1, '0007', 500, '2021-06-21', '2021-06-01 22:20:50', 0),
 	(8, 2, 2, '0008', 400, '2021-06-21', '2021-06-02 22:34:26', 0),
@@ -462,7 +468,8 @@ INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 
 -- Proveedor
 INSERT INTO `proveedor` (`id_prove`, `nombre_emp`, `direccion_emp`, `telefono_emp`, `correo_emp`, `fecha`, `fecha_elim`, `est`) VALUES
-	(1, 'Italcol ', 'km 13 Vio occ Mosquera-Funza', '3164989248', 'contacto@italcol.com', '2021-06-24', NULL, 1);
+	(1, 'Italcol ', 'km 13 Vio occ Mosquera-Funza', '3164989248', 'contacto@italcol.com', '2021-06-24', NULL, 1),
+	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1);
 
 -- Producto
 INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lote`, `fecha`, `fecha_elim`, `est`) VALUES
@@ -471,6 +478,8 @@ INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lo
 	(3, 1, 3, '2022-06-22', 'R08763456', '2021-06-24', NULL, 1),
 	(4, 1, 2, '2022-03-30', 'R05676470', '2021-06-24', NULL, 1),
 	(5, 1, 2, '2022-02-08', 'R09876823', '2021-06-24', NULL, 1);
+    
+SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;
 
 -- Tabla de Alimentacion
 INSERT INTO `tblalimentacion` (`id_tbl_alim`, `id_produ`, `id_cultivo`, `id_usu`, `cant_siembra`, `porc_proteina`, `hora_sum_alim1`, `hora_sum_alim2`, `hora_sum_alim3`, `obser_atmo`, `obser_gen_cult`, `fecha`, `fecha_elim`, `est`) VALUES

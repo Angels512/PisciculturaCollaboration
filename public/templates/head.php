@@ -31,7 +31,6 @@
 <link rel="stylesheet" href="public/css/separate/pages/user.min.css">
 
 <!-- Utiles para la pagina de PERFIL -->
-<!-- <link rel="stylesheet" href="public/css/separate/vendor/slick.min.css"> -->
 <link rel="stylesheet" href="public/css/separate/pages/profile.min.css">
 
 <!-- Archivos CSS Basicos -->
@@ -60,3 +59,6 @@
 
 <!--Calendar-->
 <link rel="stylesheet" href="public/css/separate/vendor/bootstrap-daterangepicker.min.css">
+
+<!-- widgets -->
+<link rel="stylesheet" href="public/css/separate/pages/widgets.min.css">

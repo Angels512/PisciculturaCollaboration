@@ -22,14 +22,8 @@
 <!DOCTYPE html>
 <html lang="es-419" class="no-focus">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Login - Piscicultura</title>
-
-        <link rel="shortcut icon" href="public/img/fav.png" type="image/x-icon">
-
-        <link rel="stylesheet" id="css-main" href="public/css/separate/other.min.css">
+        <?php require_once('../../../public/templates/autenticacion/head.php'); ?> <!-- HEAD -->
+        <title>Login - A'ttia</title>
     </head>
 
     <body>
@@ -134,10 +128,6 @@
             </main>
         </div>
 
-        <script src="public/js/other/jquery.min.js"></script>
-        <script src="public/js/other/popper.min.js"></script>
-        <script src="public/js/other/jquery.scrollLock.min.js"></script>
-        <script src="public/js/other/jquery.appear.min.js"></script>
-        <script src="public/js/other/codebase.js"></script>
+        <?php require_once('../../../public/templates/autenticacion/js.php'); ?> <!-- ARCHIVOS JS Y LIBS -->
     </body>
 </html>

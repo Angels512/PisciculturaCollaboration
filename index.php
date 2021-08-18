@@ -18,7 +18,7 @@
             <div class="circle"></div>
 
             <header>
-                <a href="index.html"><img src="public/img/home/logo.png" class="logo"></a>
+                <img src="public/img/home/logo.png" class="logo">
                 <div class="toggle" onclick="toggleMenu()"></div>
                 <!-- <ul class="navigation">
                     <li><a href="#">Inicio</a></li>
@@ -34,8 +34,8 @@
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque maxime, soluta blanditiis veritatis et, aliquid delectus
                         eum quae, culpa eos non. Suscipit officiis, magni magnam vitae dolore itaque cumque unde recusandae cum, distinctio omnis
-                        hic rem inventore sed harum. Modi provident dolorem, eos sunt fuga sapiente obcaecati nemo in dolorum! Lorem ipsum dolor sit,
-                        amet consectetur adipisicing elit. Quos impedit culpa illum cumque ea veniam eveniet suscipit distinctio perspiciatis, 
+                        hic rem inventore sed harum. Modi provident dolorem, eos sunt fuga sapiente obcaecati nemo in dolorum! Lorem ipsum dolor
+                        sit, amet consectetur adipisicing elit. Quos impedit culpa illum cumque ea veniam eveniet suscipit distinctio perspiciatis,
                         possimus repellendus, cupiditate magni odio sapiente test.
                     </p>
                     <a href="login">Ingresar</a>

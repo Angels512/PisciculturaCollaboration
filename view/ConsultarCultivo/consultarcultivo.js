@@ -34,7 +34,7 @@ function modalUpdateCultivo(id_cultivo)
     {
         data = JSON.parse(data);
 
-        // // Cambiamos los datos del formulario por los que estan en la base de datos
+        // Cambiamos los datos del formulario por los que estan en la base de datos
         $('#cant_siembra').val(data.cant_siembra);
         $('#id_cultivo').val(data.id_cultivo);
         $('#id_respon').val(data.id_respon).trigger('change');
@@ -143,7 +143,7 @@ function cierreCultivoVencido()
         // Verificamos que exista un cultivo vencido
         if (data.length>0)
         {
-            // // Recogemos el ID del cultivo vencido
+            // Recogemos el ID del cultivo vencido
             data = JSON.parse(data);
             console.log(data);
 

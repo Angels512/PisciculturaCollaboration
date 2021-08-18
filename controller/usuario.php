@@ -11,7 +11,7 @@
     {
         // Selecciona los datos del usuario que se llamo por el documento para restablecer la clave
         case 'selectUserReset':
-            $datos = $usuario->seletUserReset($_POST['documento_usu']);
+            $datos = $usuario->seletUserReset($_POST['documento_usu'], $_POST['correo_usu']);
 
             if (is_array($datos) == true AND count($datos)>0)
             {
@@ -60,7 +60,7 @@
         case 'create':
             $usuario->createUser($_POST['id_rol'], $_POST['nombre_usu'], $_POST['apellido_usu'], $_POST['direccion_usu'], $_POST['telefono_usu'], $_POST['documento_usu'], $_POST['correo_usu']);
 
-            $datos = $usuario->seletUserReset($_POST['documento_usu']);
+            $datos = $usuario->seletUserReset($_POST['documento_usu'], $_POST['correo_usu']);
             if (is_array($datos) == true AND count($datos)>0)
             {
                 foreach ($datos as $row)

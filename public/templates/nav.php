@@ -26,12 +26,12 @@
                         </ul>
                     </li>
 
-                    <li class="blue-dirty">
+                    <!-- <li class="blue-dirty">
                         <a href="consultar-formatos">
                             <span class="glyphicon glyphicon-list-alt"></span>
                             <span class="lbl">Consultar Formatos</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="magenta with-sub">
                         <span>
@@ -59,6 +59,13 @@
                         <a href="producto">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                             <span class="lbl">Productos</span>
+                        </a>
+                    </li>
+
+                    <li class="with-sub">
+                        <a href="proveedor">
+                            <span class="fa fa-bus"></span>
+                            <span class="lbl">Proveedores</span>
                         </a>
                     </li>
 
