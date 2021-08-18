@@ -59,8 +59,55 @@
 				</div><!--.tabs-section-nav-->
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
-					
-						<!--Aqui va el Formato de Estanques-->
+					<form method="post" id="responsable_form">
+							<div>
+								<h5><strong>Ingrese los Datos</strong></h5>
+							</div>
+
+							<br>
+
+							<div class="form-group"> 
+                    	    	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
+									<i class="font-icon font-icon-calend"></i>
+								</div>
+                    		</div>
+								
+							<div class="form-group">
+								<label class="form-label semibold" for="num_lote">Número del Estanque</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="num_tanque" name="num_tanque" placeholder="Ingrese número de Estanque" required>
+                        			<i class="glyphicon glyphicon-barcode"></i>
+                        		</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label semibold" for="num_lote">Capacidad del Estanque (L)</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="capacidad_tanque" name="capacidad_tanque" placeholder="Ingrese la capacidad del Estanque en Litros" required>
+                        			<i class="glyphicon glyphicon-barcode"></i>
+                        		</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label semibold" for="apellido_respon">Descripción del Estanque</label>
+								<div class="form-control-wrapper form-control-icon-right">
+									<input type="text" class="form-control" id="desc_tanque" name="desc_tanque" placeholder="Ingrese una descripción del Estanque" required>
+                            		<i class="fa fa-user-o"></i>
+                        		</div>
+							</div>
+
+							<br>
+
+							<div>
+								<button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Guardar</button>
+								<button type="button" name="action" id="consul_respon" value="add" class="btn btn-rounded btn-primary">Consultar</button>
+								<button type="button" name="action" id="modi_respon" value="add" class="btn btn-rounded btn-primary">Modificar</button>
+								<button type="button" name="action" id="elim_respon" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
+							</div>
+
+						</form>
 
 					</div><!--.tab-pane-->
 

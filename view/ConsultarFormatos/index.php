@@ -36,11 +36,48 @@
 									</span>
 								</a>
 							</li>
+
 							<li class="nav-item">
 								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-notebook-bird"></span>
 										Tabla Alimentación
+									</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<span class="font-icon font-icon-notebook-bird"></span>
+										Parametros FQ
+									</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<span class="font-icon font-icon-notebook-bird"></span>
+										Temperatura Agua
+									</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<span class="font-icon font-icon-notebook-bird"></span>
+										Temperatura Ambiente
+									</span>
+								</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+									<span class="nav-link-in">
+										<span class="font-icon font-icon-notebook-bird"></span>
+										Estado Acuicultura
 									</span>
 								</a>
 							</li>
