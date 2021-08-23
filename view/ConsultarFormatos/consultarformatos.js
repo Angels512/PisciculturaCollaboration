@@ -142,7 +142,7 @@ function consultar(id_biocre){
 }
 
 function editar(id_biocre){
-    window.location.href = "biocrecimiento?EDIT="+ id_biocre +"";
+    window.location.href = "biocrecimiento?ID="+ id_biocre +"&EDIT=yes";
 }
 
 //para eliminar un formato de biocrecimiento
