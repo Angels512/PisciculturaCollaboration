@@ -298,11 +298,11 @@
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5 id="titulobio">Consultar Biocrecimiento</h5>
+						<h5>Actualizar Biocrecimiento</h5>
 					</div>
 
 					<div class="row">
-						<form method="post" id="biocre_edit">
+						<form method="post" id="biocre_form">
 							<input type="hidden" name="id_biocre" id="id_biocre">
 							<input type="hidden" name="id_usu" id="id_usu">
 
