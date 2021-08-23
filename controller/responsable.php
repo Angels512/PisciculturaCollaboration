@@ -59,8 +59,8 @@
                             <i class="font-icon glyphicon glyphicon-option-vertical"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" onClick="modalRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>" >Actualizar</a>
-                            <a class="dropdown-item" onClick="deleteRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>" >Eliminar</a>
+                            <a class="dropdown-item" onClick="modalRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Actualizar</a>
+                            <a class="dropdown-item" onClick="deleteRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
                         </div>
                     </div>
                 </div>
