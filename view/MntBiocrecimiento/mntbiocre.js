@@ -1,12 +1,8 @@
 function init(){
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Biometrias de Crecimiento
-    $("#biocre_form").on("submit",function(e){
-        guardar(e);
-    });
-
-    //nos lleva a la funcion editar una vez se presione guardar en el formulario de actualizar biocreciemiento
-    $("#biocre_edit").on("submit",function(e){
-        editar(e);
+    $("#biocre_form").on("submit",function(e)
+    {
+        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar(e) : guardar(e);
     });
 }
 
