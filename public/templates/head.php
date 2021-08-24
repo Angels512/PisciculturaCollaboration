@@ -3,7 +3,7 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
 <!-- FAVICON DE TIBURON -->
-<link rel="shortcut icon" href="public/img/fav.png" type="image/x-icon">
+<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 
 <!-- Utiles para SELECT (Libreria Select2) -->
 <link rel="stylesheet" href="public/css/separate/vendor/tags_editor.min.css">
