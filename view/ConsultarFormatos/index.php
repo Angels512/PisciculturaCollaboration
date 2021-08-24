@@ -28,7 +28,7 @@
 			<section class="tabs-section">
 				<div class="tabs-section-nav tabs-section-nav-icons">
 					<div class="tbl">
-						<ul class="nav" role="tablist">
+						<ul class="nav" id="list" role="tablist">
 							<li class="nav-item">
 								<a class="nav-link active" href="#biometrias" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
@@ -89,47 +89,47 @@
 
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="biometrias">
-					<section class="card">
-						<div class="card-block">
-							<table id="dt_biometrias" class="display table table-striped table-bordered">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>Nombre del Empleado</th>
-										<th>Fecha de creación</th>
-										<th>Comportamiento</th>
-										<th>Cant_Siembra</th>
-										<th></th>
-										<th></th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
+						<section class="card">
+							<div class="card-block">
+								<table id="biocrecimiento" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Comportamiento</th>
+											<th>Cant_Siembra</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
 
-								</tbody>
-							</table>
-						</div>
-					</section>
+									</tbody>
+								</table>
+							</div>
+						</section>
 					</div><!--.tab-pane-->
 					<div role="tabpanel" class="tab-pane fade" id="tbl_alim">
 						<section class="card">
 							<div class="card-block">
-								<table id="dt_tbl_alim" class="display table table-striped table-bordered">
-								<thead>
-									<tr>
-										<th>#</th>
-										<th>Nombre del Empleado</th>
-										<th>Fecha de creación</th>
-										<th>Observación</th>
-										<th>Cant_Siembra</th>
-										<th></th>
-										<th></th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
+								<table id="tblalimentacion" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Observación</th>
+											<th>Cant_Siembra</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
 
-								</tbody>
+									</tbody>
 								</table>
 							</div>
 						</section>

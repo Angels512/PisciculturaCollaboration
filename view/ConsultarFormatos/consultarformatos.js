@@ -1,122 +1,74 @@
-$(function() {
-    $('#dt_biometrias').DataTable();
-});
-
-$(function() {
-    $('#dt_tbl_alim').DataTable();
-});
-
 
 $(document).ready(function(){
-    var id_cultivo =  getUrlParameter('ID');
+    let tables = document.querySelectorAll('table');
 
-    //para llenar el datatable de biocrecimiento
-    tabla=$('#dt_biometrias').dataTable({
-            "aProcessing": true,
-            "aServerSide": true,
-            dom: 'Bfrtip',
-            "searching": true,
-            lengthChange: false,
-            colReorder: true,
-            buttons: [
-                    'copyHtml5',
-                    'excelHtml5',
-                    'pdfHtml5'
-                    ],
-            "ajax":{
-                url: "controller/biocrecimiento.php?op=listar_x_cult",
-                type: "post",
-                dataType : "json",
-                data:{ id_cultivo : id_cultivo },
-                error: function(e){
-                    console.log(e.responseText);
-                }
-            },
-            "bDestroy": true,
-            "responsive": true,
-            "bInfo":true,
-            "iDisplayLength": 5,
-            "autoWidth": false,
-            "language": {
-                "sProcessing":     "Procesando...",
-                "sLengthMenu":     "Mostrar _MENU_ registros",
-                "sZeroRecords":    "No se encontraron resultados",
-                "sEmptyTable":     "Ningún dato disponible en esta tabla",
-                "sInfo":           "Mostrando un total de _TOTAL_ registros",
-                "sInfoEmpty":      "Mostrando un total de 0 registros",
-                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-                "sInfoPostFix":    "",
-                "sSearch":         "Buscar:",
-                "sUrl":            "",
-                "sInfoThousands":  ",",
-                "sLoadingRecords": "Cargando...",
-                "oPaginate": {
-                    "sFirst":    "Primero",
-                    "sLast":     "Último",
-                    "sNext":     "Siguiente",
-                    "sPrevious": "Anterior"
-                },
-                "oAria": {
-                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                }
-            }
-        }).DataTable();
-
-    //para llenar el datatable de la tabla de alimentación
-    tabla=$('#dt_tbl_alim').dataTable({
-            "aProcessing": true,
-            "aServerSide": true,
-            dom: 'Bfrtip',
-            "searching": true,
-            lengthChange: false,
-            colReorder: true,
-            buttons: [
-                    'copyHtml5',
-                    'excelHtml5',
-                    'pdfHtml5'
-                    ],
-            "ajax":{
-                url: "controller/tblalimentacion.php?op=listar_x_cult",
-                type: "post",
-                dataType : "json",
-                data:{ id_cultivo : id_cultivo },
-                error: function(e){
-                    console.log(e.responseText);
-                }
-            },
-            "bDestroy": true,
-            "responsive": true,
-            "bInfo":true,
-            "iDisplayLength": 5,
-            "autoWidth": false,
-            "language": {
-                "sProcessing":     "Procesando...",
-                "sLengthMenu":     "Mostrar _MENU_ registros",
-                "sZeroRecords":    "No se encontraron resultados",
-                "sEmptyTable":     "Ningún dato disponible en esta tabla",
-                "sInfo":           "Mostrando un total de _TOTAL_ registros",
-                "sInfoEmpty":      "Mostrando un total de 0 registros",
-                "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
-                "sInfoPostFix":    "",
-                "sSearch":         "Buscar:",
-                "sUrl":            "",
-                "sInfoThousands":  ",",
-                "sLoadingRecords": "Cargando...",
-                "oPaginate": {
-                    "sFirst":    "Primero",
-                    "sLast":     "Último",
-                    "sNext":     "Siguiente",
-                    "sPrevious": "Anterior"
-                },
-                "oAria": {
-                    "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
-                    "sSortDescending": ": Activar para ordenar la columna de manera descendente"
-                }
-            }
-        }).DataTable();
+    tables.forEach((table) =>
+    {
+        listarDatatables(table.id)
+    });
 });
 
+
+
+function listarDatatables(controller)
+{
+    let id_cultivo =  getUrlParameter('ID');
+
+    //para llenar el datatable de la tabla de alimentación
+    $(`#${controller}`).dataTable({
+        "aProcessing": true,
+        "aServerSide": true,
+        dom: 'Bfrtip',
+        "searching": true,
+        lengthChange: false,
+        colReorder: true,
+        buttons: [
+                'copyHtml5',
+                'excelHtml5',
+                'pdfHtml5'
+                ],
+        "ajax":{
+            url: `controller/${controller}.php?op=listar_x_cult`,
+            type: "post",
+            dataType : "json",
+            data:{ id_cultivo : id_cultivo },
+            error: function(e){
+                console.log(e.responseText);
+            }
+        },
+        "bDestroy": true,
+        "responsive": true,
+        "bInfo":true,
+        "iDisplayLength": 5,
+        "autoWidth": false,
+        "language": {
+            "sProcessing":     "Procesando...",
+            "sLengthMenu":     "Mostrar _MENU_ registros",
+            "sZeroRecords":    "No se encontraron resultados",
+            "sEmptyTable":     "Ningún dato disponible en esta tabla",
+            "sInfo":           "Mostrando un total de _TOTAL_ registros",
+            "sInfoEmpty":      "Mostrando un total de 0 registros",
+            "sInfoFiltered":   "(filtrado de un total de _MAX_ registros)",
+            "sInfoPostFix":    "",
+            "sSearch":         "Buscar:",
+            "sUrl":            "",
+            "sInfoThousands":  ",",
+            "sLoadingRecords": "Cargando...",
+            "oPaginate": {
+                "sFirst":    "Primero",
+                "sLast":     "Último",
+                "sNext":     "Siguiente",
+                "sPrevious": "Anterior"
+            },
+            "oAria": {
+                "sSortAscending":  ": Activar para ordenar la columna de manera ascendente",
+                "sSortDescending": ": Activar para ordenar la columna de manera descendente"
+            }
+        }
+    }).DataTable();
+}
+
+$('#list').on('click', (e) => { setTimeout(() => { $('#tblalimentacion').DataTable().responsive.recalc(); }, 200); });
 
 
 
