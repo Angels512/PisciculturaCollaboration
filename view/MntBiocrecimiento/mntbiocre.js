@@ -2,7 +2,7 @@ function init(){
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Biometrias de Crecimiento
     $("#biocre_form").on("submit",function(e)
     {
-        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar(e) : guardar(e);
+        validarDatos(e);
     });
 }
 
@@ -57,7 +57,21 @@ $(document).ready(function(){
     }
 });
 
+function validarDatos(e){
+    e.preventDefault();
 
+    if($('#obser_adic').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar() : guardar();
+    }
+}
 
 //listar datos de biocrecimiento para consultar o actualizar
 function listarDatos()
@@ -87,9 +101,7 @@ function listarDatos()
 }
 
 // creamos la funcion guardar para insertar una nueva biometria y vaciar los campos del formulario
-function guardar(e){
-    e.preventDefault();
-
+function guardar(){
     var formData = new FormData($('#biocre_form')[0]);
 
     $.ajax({
@@ -114,9 +126,7 @@ function guardar(e){
 }
 
 // creamos la funcion editar para actualizar el formato
-function editar(e){
-    e.preventDefault();
-
+function editar(){
     var formData = new FormData($("#biocre_edit")[0]);
 
     $.ajax({
