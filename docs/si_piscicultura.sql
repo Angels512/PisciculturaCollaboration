@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `est` int(1) NOT NULL,
   PRIMARY KEY (`id_usu`),
   UNIQUE KEY `documento_usu` (`documento_usu`),
+  UNIQUE KEY `correo_usu` (`correo_usu`),
   KEY `id_rol` (`id_rol`),
   CONSTRAINT `FK_usuario_rol` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -108,6 +109,7 @@ CREATE TABLE IF NOT EXISTS `cultivo` (
   `fecha` datetime DEFAULT NULL,
   `est` int(1) DEFAULT NULL,
   PRIMARY KEY (`id_cultivo`),
+  UNIQUE KEY `num_lote` (`num_lote`),
   KEY `id_respon` (`id_respon`),
   KEY `id_tanque` (`id_tanque`),
   CONSTRAINT `FK_cultivo_estanque` FOREIGN KEY (`id_tanque`) REFERENCES `estanque` (`id_tanque`),
@@ -257,7 +259,10 @@ CREATE TABLE IF NOT EXISTS `proveedor` (
   `fecha` datetime DEFAULT NULL,
   `fecha_elim` datetime DEFAULT NULL,
   `est` int(11) NOT NULL,
-  PRIMARY KEY (`id_prove`)
+  PRIMARY KEY (`id_prove`),
+  UNIQUE KEY `nombre_emp` (`nombre_emp`),
+  UNIQUE KEY `correo_emp` (`correo_emp`),
+  UNIQUE KEY `telefono_emp` (`telefono_emp`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 CREATE TABLE IF NOT EXISTS `producto` (
@@ -272,6 +277,7 @@ CREATE TABLE IF NOT EXISTS `producto` (
   PRIMARY KEY (`id_produ`),
   KEY `id_prove` (`id_prove`),
   KEY `id_clase` (`id_clase`),
+  UNIQUE KEY `num_lote` (`num_lote`),
   CONSTRAINT `FK_id_clase` FOREIGN KEY (`id_clase`) REFERENCES `claseproducto` (`id_clase`),
   CONSTRAINT `FK_id_prove` FOREIGN KEY (`id_prove`) REFERENCES `proveedor` (`id_prove`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -301,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `tblalimentacion` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-update cultivo set est = 1; 
+update cultivo set est = 1;
 
 
 -- ///// INSERTS /////
@@ -319,7 +325,7 @@ INSERT INTO `categoria` (`id_cat`, `nombre_cat`) VALUES
 	(3, 'Peticion de servicio'),
 	(4, 'Otros');
 
--- Usuario
+-- Categoria
 INSERT INTO `usuario` (`id_usu`, `id_rol`, `nombre_usu`, `apellido_usu`, `direccion_usu`, `telefono_usu`, `documento_usu`, `correo_usu`, `pass_usu`, `fecha_edit`, `fecha_elim`, `fecha`, `est`) VALUES
 	(1, 1, 'Miguel', 'Cuellar', 'Cra 8 Este #37-71', '3168580636', '1021663015', 'miguelcolmatiz@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-09 17:06:34', 1),
 	(2, 1, 'Mariana', 'Diaz', 'Cra 8 Este #30-70 Sur', '3125623542', '1003882513', 'mariana@gmail.com', '3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2', NULL, NULL, '2021-05-20 22:20:15', 1),
@@ -483,9 +489,9 @@ SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto 
 
 -- Tabla de Alimentacion
 INSERT INTO `tblalimentacion` (`id_tbl_alim`, `id_produ`, `id_cultivo`, `id_usu`, `cant_siembra`, `porc_proteina`, `hora_sum_alim1`, `hora_sum_alim2`, `hora_sum_alim3`, `obser_atmo`, `obser_gen_cult`, `fecha`, `fecha_elim`, `est`) VALUES
-	(1, 3, 6, 2, 2000, 24, '06:30:00', NULL, NULL, 'Invernadero muy Frio ', 'Ninguno', '2021-06-24', NULL, 1),
-	(2, 5, 2, 1, 1980, 10, '06:30:00', NULL, NULL, 'Ideal', 'Peces Saludables', '2021-06-24', NULL, 1),
-	(3, 1, 1, 2, 1990, 36, '06:38:00', NULL, NULL, 'Ideal', 'Peces Sospechosos', '2021-06-24', NULL, 1),
-	(4, 4, 7, 4, 1899, 30, '06:00:00', NULL, NULL, 'Invernadero con una Temperatura Alta', 'Peces Enfermos', '2021-06-24', NULL, 1),
-	(5, 5, 4, 1, 2000, 10, '06:47:00', NULL, NULL, 'Ideal', 'Peces Saludables', '2021-06-24', NULL, 1);
+	(1, 3, 6, 2, 2000, 24, '06:30:00', '12:00:00', '02:00:00', 'Invernadero muy Frio ', 'Ninguno', '2021-06-24', NULL, 1),
+	(2, 5, 2, 1, 1980, 10, '06:30:00', '12:00:00', '02:00:00', 'Ideal', 'Peces Saludables', '2021-06-24', NULL, 1),
+	(3, 1, 1, 2, 1990, 36, '06:38:00', '12:00:00', '02:00:00', 'Ideal', 'Peces Sospechosos', '2021-06-24', NULL, 1),
+	(4, 4, 7, 4, 1899, 30, '06:00:00', '12:00:00', '02:00:00', 'Invernadero con una Temperatura Alta', 'Peces Enfermos', '2021-06-24', NULL, 1),
+	(5, 5, 4, 1, 2000, 10, '06:47:00', '12:00:00', '02:00:00', 'Ideal', 'Peces Saludables', '2021-06-24', NULL, 1);
     

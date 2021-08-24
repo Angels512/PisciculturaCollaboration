@@ -34,7 +34,7 @@
 	<body class="body-wrapper" data-spy="scroll" data-target=".privacy-nav">
 		<nav class="navbar main-nav main-nav-fixed navbar-expand-lg px-2 px-sm-0 py-2 py-lg-0">
 			<div class="container">
-				<a class="navbar-brand" href="index.html"></a><img src="public/img/home/logo.png" class="logo" alt="logo"></a>
+				<a class="navbar-brand" href="index.html"></a><img src="public/img/logo.png" class="logo" alt="logo"></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="ti-menu"></span>
