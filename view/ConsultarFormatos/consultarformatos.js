@@ -134,7 +134,7 @@ function consultartbal(id_tbl_alim){
 }
 
 function editartbal(id_tbl_alim){
-    window.location.href = "tbl-alimentacion?EDIT="+ id_tbl_alim +"";
+    window.location.href = "tbl-alimentacion?ID="+ id_tbl_alim +"&EDIT=yes";
 }
 
 //para eliminar un formato de tbl alimentacion
