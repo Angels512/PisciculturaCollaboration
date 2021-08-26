@@ -157,9 +157,7 @@
 							<!-- Feature Title -->
 							<h2>¿Que es A'ttia?</h2>
 							<!-- Feature Description -->
-							<p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-								labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-								aliquip ex ea commodo consequat.</p>
+							<p class="desc">A'ttia es un sistema de información para la gestión de la piscicultura, una página pensada para tener un total manejo, y mejor organización de todos los datos referentes a la empresa. Desde la información de los formatos, hasta los registros de los empleados, en A'ttia ¡Ningún dato se nos escapa!.</p>
 						</div>
 						<!-- Testimonial Quote -->
 						<div class="testimonial">
@@ -267,12 +265,11 @@
 							<!-- Heading -->
 							<h2>Ventajas del Sistema</h2>
 							<!-- Promotional Speech -->
-							<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur arcu erat, accumsan id imperdiet et,
-								porttitor at sem. Vivamus </p>
+							<p>Este sistema es un gran beneficio para la empresa, pues toda la información de la misma, se almacenará en de manera digital, quedando asegurada, facilitando la búsqueda de datos, evitando posibles pérdidas, y también se evitan los problemas del almacenamiento físico, como por ejemplo el daño de documentos debido a la humedad. <br><br>Finalmente, el sistema de chats hace que la comunicación entre los usuarios sea más eficaz</p>
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>	
 		</section>
 		<!--====  End of Video Promo  ====-->
 
@@ -297,10 +294,7 @@
 								<div class="block shadow">
 									<!-- Speech -->
 									<p>
-										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-										pretium ut lacinia in, elementum id enim.
+										Registro de empleados: Todos los datos de cada empleado deben ser guardados en el sistema, para así poder crear los perfiles de los mismos, y que puedan realizar sus debidas tareas en el sistema.
 									</p>
 									<!-- Person Thumb -->
 									<div class="image">
@@ -315,10 +309,7 @@
 								<div class="block shadow">
 									<!-- Speech -->
 									<p>
-										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-										pretium ut lacinia in, elementum id enim.
+										Manejo de perfiles: Utilizando los datos de los empleados, cada uno tendrá su respectivo perfil, con el cual pueden acceder al sistema, y realizar las tareas respectivas a su rol (Piscicultor, Acuicultor o Jefe de Producción).
 									</p>
 									<!-- Person Thumb -->
 									<div class="image">
@@ -333,10 +324,7 @@
 								<div class="block shadow">
 									<!-- Speech -->
 									<p>
-										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-										pretium ut lacinia in, elementum id enim.
+										Gestión de Formatos: Los formatos que se manejan en la empresa serán diligenciados y guardados directamente en el sistema. Luego, los formatos correctamente almacenados, pueden ser consultados, actualizados, eliminados o impresos.
 									</p>
 									<!-- Person Thumb -->
 									<div class="image">
@@ -351,10 +339,22 @@
 								<div class="block shadow">
 									<!-- Speech -->
 									<p>
-										Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Donec sollicitudin molestie malesuada.
-										Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Lorem ipsum dolor
-										sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Quisque velit nisi,
-										pretium ut lacinia in, elementum id enim.
+										Manejo de Chats: La página cuenta con un sistema de chats, con el cual, el piscicultor y el acuicultor pueden comunicarse directamente y de manera eficaz con el jefe de producción, para así resolver dudas, problemas y demás.
+									</p>
+									<!-- Person Thumb -->
+									<div class="image">
+										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
+									</div>
+									<!-- Name and Company -->
+									<cite>Abraham Linkon , Themefisher.com</cite>
+								</div>
+							</div>
+							<!-- Testimonial 01 -->
+							<div class="item">
+								<div class="block shadow">
+									<!-- Speech -->
+									<p>
+										Gestión de otros elementos: Así como con los formatos y los perfiles, todos los demás elementos: Estanques, Responsables, Productos y Proveedores, pueden ser debidamente registrados, consultados, actualizados o eliminados.
 									</p>
 									<!-- Person Thumb -->
 									<div class="image">
