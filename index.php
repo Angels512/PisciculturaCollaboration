@@ -16,7 +16,7 @@
 		<meta name="generator" content="Themefisher Small Apps Template v1.0">
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" type="image/x-icon" href="public/img/home/favicon.png" />
+		<link rel="shortcut icon" type="image/x-icon" href="public/img/favicon.png" />
 
 		<!-- public/plugins CSS STYLE -->
 		<link rel="stylesheet" href="public/plugins/bootstrap/bootstrap.min.css">
@@ -100,8 +100,8 @@
 				<div class="row align-items-center">
 					<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
 						<h1 class="text-white font-weight-bold mb-4">Sistema de información A'ttia</h1>
-						<p class="text-white mb-5">Besides its beautiful design. Laapp is an incredibly rich core framework for you to
-							showcase your App.</p>
+						<p class="text-white mb-5">Este es un sistema de información para llevar la gestión de los procesos de
+							piscicultura y acuicultura que requieran el almacenamiento de la información durante todo el proceso de cultivo.</p>
 						<a href="login" class="btn btn-main-md">Ingresar al sistema</a>
 					</div>
 					<div class="col-md-6 text-center order-1 order-md-2">
@@ -117,22 +117,23 @@
 				<div class="rounded shadow p-5 bg-white">
 					<div class="row">
 						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-							<i class="ti-paint-bucket h1" style="color: #4894ca;"></i>
-							<h3 class="mt-4 text-capitalize h5 ">themes made easy</h3>
-							<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-								tempore ipsam dignissimos molestias.</p>
+							<i class="ti-lock h1" style="color: #4894ca;"></i>
+							<h3 class="mt-4 text-capitalize h5 ">Seguridad</h3>
+							<p class="regular text-muted">El sistema permite un flujo de información amplio, por lo que cada uno de sus módulos
+								cuenta con seguridad de punta a punta que protege la integridad de los datos.
+							</p>
 						</div>
 						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
-							<i class="ti-shine h1" style="color: #4894ca;"></i>
-							<h3 class="mt-4 text-capitalize h5 ">powerful design</h3>
-							<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-								tempore ipsam dignissimos molestias.</p>
+							<i class="ti-timer h1" style="color: #4894ca;"></i>
+							<h3 class="mt-4 text-capitaliz h5 ">Optimización</h3>
+							<p class="regular text-muted">El sistema realiza funciones de manera eficiente y utiliza pocos recursos para la generación de diversas
+								tareas habituales del área.</p>
 						</div>
 						<div class="col-lg-4 col-md-12 mt-5 mt-lg-0 text-center">
-							<i class="ti-thought h1" style="color: #4894ca;"></i>
-							<h3 class="mt-4 text-capitalize h5 ">creative content</h3>
-							<p class="regular text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam non, recusandae
-								tempore ipsam dignissimos molestias.</p>
+							<i class="ti-palette h1" style="color: #4894ca;"></i>
+							<h3 class="mt-4 text-capitalize h5 ">Diseño</h3>
+							<p class="regular text-muted">A'ttia cuenta con un diseño acorde a el sector, además de tener vistas interactivas que ayudan
+								en el mejoramiento de las actividades que realizan a diario los empleados.</p>
 							</p>
 						</div>
 					</div>
@@ -189,7 +190,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Modulos de A'ttia</h2>
-							<p>Small Apps makes it easy to stay on top of your Life Style. No late tasks. No gimmicks.</p>
+							<p>Estos son algunos de los módulos con los que cuenta el sistema de información.</p>
 						</div>
 					</div>
 				</div>
@@ -207,44 +208,44 @@
 									<!-- Service 01 -->
 									<div class="service-item">
 										<!-- Icon -->
-										<i class="ti-bookmark"></i>
+										<i class="ti-anchor"></i>
 										<!-- Heading -->
-										<h3>Easy Prototyping</h3>
+										<h3>Cultivos</h3>
 										<!-- Description -->
-										<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
+										<p>Este módulo cuenta con formulario para la creación de nuevos cultivos y un espacio para el monitoreo y consulta de estos.</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-12">
 									<!-- Service 01 -->
 									<div class="service-item">
 										<!-- Icon -->
-										<i class="ti-pulse"></i>
+										<i class="ti-user"></i>
 										<!-- Heading -->
-										<h3>Sensor Bridge</h3>
+										<h3>Usuarios</h3>
 										<!-- Description -->
-										<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
+										<p>El sistema cuenta con un módulo completo de usuarios, en el que el administrador podrá acceder a cada uno de los empleados registrados.</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-12">
 									<!-- Service 01 -->
 									<div class="service-item">
 										<!-- Icon -->
-										<i class="ti-bar-chart"></i>
+										<i class="ti-clipboard"></i>
 										<!-- Heading -->
-										<h3>Strategist</h3>
+										<h3>Gestión de formatos</h3>
 										<!-- Description -->
-										<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
+										<p>Este es un módulo destinado a la creación de los formularios requeridos para llevar el registro de los procesos de piscicultura.</p>
 									</div>
 								</div>
 								<div class="col-md-6 col-xs-12">
 									<!-- Service 01 -->
 									<div class="service-item">
 										<!-- Icon -->
-										<i class="ti-panel"></i>
+										<i class="ti-comments"></i>
 										<!-- Heading -->
-										<h3>Art Direction</h3>
+										<h3>Chat</h3>
 										<!-- Description -->
-										<p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui</p>
+										<p>El sistema también cuenta con un chat, que ayudará a la comunicación eficaz e instantanea entre empleados y jefes de producción.</p>
 									</div>
 								</div>
 							</div>

@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<link rel="shortcut icon" href="public/img/fav.png" type="image/x-icon">
+<link rel="shortcut icon" href="public/img/favicon.png" type="image/x-icon">
 <link rel="stylesheet" id="css-main" href="public/css/separate/other.min.css">
 
 
