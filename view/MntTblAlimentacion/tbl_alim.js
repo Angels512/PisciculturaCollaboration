@@ -1,15 +1,5 @@
 function init(){
 
-    /* Esto es para llenar el select del Cultivo del formato consultar y actualizar*/
-    $.post("controller/cultivo.php?op=cultivoselect",function(data, status){
-        $('#id_cultivo1').html(data);
-    });
-
-    /* Esto es para llenar el select del Producto Suministrado del formato consultar y actualizar*/
-    $.post("controller/producto.php?op=productos",function(data, status){
-        $('#id_produ1').html(data);
-    });
-
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Tabla de Alimentación
     $("#tabla_alim").on("submit",function(e){
         guardar(e);
@@ -49,6 +39,7 @@ function init(){
         $("#guardar").show();
 
     }
+
 }
 
 
