@@ -372,11 +372,76 @@
 		</section>
 		<!--====  End of Testimonial  ====-->
 
-		<section class="call-to-action-app section bg-blue" id="contact">
+		<section class="section bg-blue" id="contact">
 			<div class="container">
 				<div class="row">
+					<div class="col-lg-12" style="margin-bottom: -40px;">
+						<div class="section-title">
+							<h2 style="color: #fff;">Contacto</h2>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
 					<div class="col-lg-12">
-						<h2>Contacto</h2>
+						<!-- Contact -->
+						<div class="contact-section">
+							<div class="row">
+								<div class="col-lg-8">
+									<div class="row">
+										<div class="col-lg-6">
+											<label for="nombreCompleto" class="label">Nombre Completo</label>
+											<input type="text" class="form-control" id="nombreCompleto">
+										</div>
+
+										<div class="col-lg-6">
+											<label for="email" class="label">Dirreción de Correo</label>
+											<input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+										</div>
+									</div>
+
+									<div class="row" style="margin-top: 30px;">
+										<div class="col-lg-12">
+											<label for="mensaje" class="label">Mensaje</label>
+											<textarea class="form-control" id="mensaje" rows="5"></textarea>
+										</div>
+									</div>
+
+									<div class="row" style="margin-top: 20px;">
+										<div class="col-lg-12">
+											<button type="button" class="btn-main-md" style="background-color: #fff; border: none; padding: 6px 38px; font-weight: 400; font-size: 1rem; float: right;">Enviar</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4" style="padding-top: 25px; text-align: center;">
+									<!-- Social Site Icons -->
+									<ul class="social-icon list-inline">
+										<li class="list-inline-item">
+											<a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
+										</li>
+										<li class="list-inline-item">
+											<a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
+										</li>
+										<li class="list-inline-item">
+											<a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
+										</li>
+									</ul>
+
+									<div class="row" style="padding: 15px 0 0 70px;">
+										<p style="color: rgb(216, 216, 216);"><b>Dirección:</b> Cra.46 45-54, Bogota</p>
+									</div>
+
+									<div class="row" style="padding: 15px 0 0 70px;">
+										<p style="color: rgb(216, 216, 216);"><b>Celular:</b> +57 312-5623542</p>
+									</div>
+
+									<div class="row" style="padding: 15px 0 0 70px;">
+										<p style="color: rgb(216, 216, 216);"><b>Email:</b> info@attia.com</p>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -390,21 +455,21 @@
 				<div class="container">
 				<div class="row">
 					<div class="col-lg-4 col-md-12 m-md-auto align-self-center">
-					<div class="block">
-						<a href="index.html"><img src="public/img/home/logo-alt.png" alt="footer-logo"></a>
-						<!-- Social Site Icons -->
-						<ul class="social-icon list-inline">
-						<li class="list-inline-item">
-							<a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
-						</li>
-						</ul>
-					</div>
+						<div class="block">
+							<a href="index.html"><img src="public/img/home/logo-alt.png" alt="footer-logo"></a>
+							<!-- Social Site Icons -->
+							<ul class="social-icon list-inline">
+							<li class="list-inline-item">
+								<a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
+							</li>
+							<li class="list-inline-item">
+								<a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
+							</li>
+							</ul>
+						</div>
 					</div>
 					<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
 					<div class="block-2">
