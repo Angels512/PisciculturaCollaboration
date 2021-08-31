@@ -1170,23 +1170,22 @@ button:focus,
 
 /* homepage 3 */
 .gradient-banner {
-  padding: 100px 0 170px;
+  padding: 100px 0 215px;
   position: relative;
   overflow: hidden;
+  background-image: url(../img/home/background/header.png);
+  /* background-size: cover; */
 }
 
-.gradient-banner::before {
-  position: absolute;
-  content: '';
-  bottom: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 200%;
-  height: 200%;
-  border-radius: 50%;
-  background-image: linear-gradient(45deg, #83b4d7 0%, #40749b 20%, #154568 50%);
-}
+/* @media (max-width: 1590px) {
+  .gradient-banner {
+    padding: 100px 0 170px;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../img/home/background/header.png);
+    background-size: cover;
+  }
+} */
 
 .pull-top {
   margin-top: -100px;
