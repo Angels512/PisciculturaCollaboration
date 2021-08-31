@@ -77,25 +77,6 @@
 		=            Hero Section              =
 		=====================================-->
 		<section class="section gradient-banner" id="home" style="padding-top: 170px;">
-			<div class="shapes-container">
-				<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
-				<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
-				<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
-				<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
-				<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-				<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
-				<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
-				<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
-				<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
-				<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
-				<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
-				<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
-				<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
-				<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
-				<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
-				<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
-			</div>
-
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
@@ -112,7 +93,7 @@
 		</section>
 		<!--====  End of Hero Section  ====-->
 
-		<section class="section pt-0 position-relative pull-top">
+		<section class="section pt-0 position-relative pull-top" style="margin-top: 100px;">
 			<div class="container">
 				<div class="rounded shadow p-5 bg-white">
 					<div class="row">
@@ -144,7 +125,7 @@
 		<!--==================================
 		=            Feature Grid            =
 		===================================-->
-		<section class="feature section pt-0" id="about">
+		<section class="feature section pt-0" id="about" style="margin: -50px 0;">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 ml-auto justify-content-center">
@@ -270,7 +251,7 @@
 						</div>
 					</div>
 				</div>
-			</div>	
+			</div>
 		</section>
 		<!--====  End of Video Promo  ====-->
 
@@ -451,79 +432,6 @@
 		=            Footer            =
 		=============================-->
 		<footer>
-			<div class="footer-main">
-				<div class="container">
-				<div class="row">
-					<div class="col-lg-4 col-md-12 m-md-auto align-self-center">
-						<div class="block">
-							<a href="index.html"><img src="public/img/home/logo-alt.png" alt="footer-logo"></a>
-							<!-- Social Site Icons -->
-							<ul class="social-icon list-inline">
-							<li class="list-inline-item">
-								<a href="https://www.facebook.com/themefisher"><i class="ti-facebook"></i></a>
-							</li>
-							<li class="list-inline-item">
-								<a href="https://twitter.com/themefisher"><i class="ti-twitter"></i></a>
-							</li>
-							<li class="list-inline-item">
-								<a href="https://www.instagram.com/themefisher/"><i class="ti-instagram"></i></a>
-							</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-					<div class="block-2">
-						<!-- heading -->
-						<h6>Product</h6>
-						<!-- links -->
-						<ul>
-						<li><a href="team.html">Teams</a></li>
-						<li><a href="blog.html">Blogs</a></li>
-						<li><a href="FAQ.html">FAQs</a></li>
-						</ul>
-					</div>
-					</div>
-					<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-					<div class="block-2">
-						<!-- heading -->
-						<h6>Resources</h6>
-						<!-- links -->
-						<ul>
-						<li><a href="sign-up.html">Singup</a></li>
-						<li><a href="sign-in.html">Login</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						</ul>
-					</div>
-					</div>
-					<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-					<div class="block-2">
-						<!-- heading -->
-						<h6>Company</h6>
-						<!-- links -->
-						<ul>
-						<li><a href="career.html">Career</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="team.html">Investor</a></li>
-						<li><a href="privacy.html">Terms</a></li>
-						</ul>
-					</div>
-					</div>
-					<div class="col-lg-2 col-md-3 col-6 mt-5 mt-lg-0">
-					<div class="block-2">
-						<!-- heading -->
-						<h6>Company</h6>
-						<!-- links -->
-						<ul>
-						<li><a href="about.html">About</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="team.html">Team</a></li>
-						<li><a href="privacy-policy.html">Privacy Policy</a></li>
-						</ul>
-					</div>
-					</div>
-				</div>
-				</div>
-			</div>
 			<div class="text-center bg-dark py-4">
 				<small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Diseñado &amp; Desarrollado por ADSI</small class="text-secondary">
 			</div>
