@@ -63,7 +63,7 @@
 							<a class="nav-link" href="#contact">Contacto</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="login">Ingresar</a>
+							<a class="nav-link login" href="login">Iniciar Sesión</a>
 						</li>
 					</ul>
 
@@ -80,9 +80,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
-						<h1 class="text-white font-weight-bold mb-4">Sistema de información A'ttia</h1>
-						<p class="text-white mb-5">Este es un sistema de información para llevar la gestión de los procesos de
-							piscicultura y acuicultura que requieran el almacenamiento de la información durante todo el proceso de cultivo.</p>
+						<h1 class="text-white font-weight-bold mb-4">Sistema de información A'ttia</h1><br><br><br>
 						<a href="login" class="btn btn-main-md">Ingresar al sistema</a>
 					</div>
 					<div class="col-md-6 text-center order-1 order-md-2">
@@ -94,7 +92,7 @@
 		<!--====  End of Hero Section  ====-->
 
 		<section class="section pt-0 position-relative pull-top" style="margin-top: 100px;">
-			<div class="container">
+			<div class="container" style="margin-top: -240px;">
 				<div class="rounded shadow p-5 bg-white">
 					<div class="row">
 						<div class="col-lg-4 col-md-6 mt-5 mt-md-0 text-center">
@@ -390,7 +388,7 @@
 
 									<div class="row" style="margin-top: 20px;">
 										<div class="col-lg-12">
-											<button type="button" class="btn-main-md" style="background-color: #fff; border: none; padding: 6px 38px; font-weight: 400; font-size: 1rem; float: right;">Enviar</button>
+											<button type="button" class="btn-main-md" style="background-color: #fff; border: none; padding: 6px 38px; font-weight: 400; font-size: 1rem; float: right; margin: 15px 0 -70px;">Enviar</button>
 										</div>
 									</div>
 								</div>
