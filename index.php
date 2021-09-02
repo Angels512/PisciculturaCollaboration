@@ -51,13 +51,13 @@
 							<a class="nav-link" href="#about">A'ttia</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#modules">Modulos</a>
+							<a class="nav-link" href="#modules">Módulos</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#advantage">Ventajas</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#functions">Funciones</a>
+							<a class="nav-link" href="#functions">Funcionalidades</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#contact">Contacto</a>
@@ -135,22 +135,9 @@
 					<div class="col-lg-6 mr-auto align-self-center">
 						<div class="feature-content">
 							<!-- Feature Title -->
-							<h2>¿Que es A'ttia?</h2>
+							<h2>¿Qué es A'ttia?</h2>
 							<!-- Feature Description -->
-							<p class="desc">A'ttia es un sistema de información para la gestión de la piscicultura, una página pensada para tener un total manejo, y mejor organización de todos los datos referentes a la empresa. Desde la información de los formatos, hasta los registros de los empleados, en A'ttia ¡Ningún dato se nos escapa!.</p>
-						</div>
-						<!-- Testimonial Quote -->
-						<div class="testimonial">
-							<p>
-								"InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one
-								place."
-							</p>
-							<ul class="list-inline meta">
-								<li class="list-inline-item">
-									<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="">
-								</li>
-								<li class="list-inline-item">Jonathon Andrew , Themefisher.com</li>
-							</ul>
+							<p class="desc">A'ttia es un sistema de información para la gestión de la piscicultura, una página pensada para tener un total manejo y mejor organización de todos los datos referentes a la empresa. Desde la información de los formatos, hasta los registros de los empleados, en A'ttia ¡Ningún dato se nos escapa!.</p>
 						</div>
 					</div>
 				</div>
@@ -166,7 +153,7 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Modulos de A'ttia</h2>
+							<h2>Módulos de A'ttia</h2>
 							<p>Estos son algunos de los módulos con los que cuenta el sistema de información.</p>
 						</div>
 					</div>
@@ -241,11 +228,27 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="content-block">
+						<div class="content-block" style="width: 90%">
 							<!-- Heading -->
 							<h2>Ventajas del Sistema</h2>
 							<!-- Promotional Speech -->
-							<p>Este sistema es un gran beneficio para la empresa, pues toda la información de la misma, se almacenará en de manera digital, quedando asegurada, facilitando la búsqueda de datos, evitando posibles pérdidas, y también se evitan los problemas del almacenamiento físico, como por ejemplo el daño de documentos debido a la humedad. <br><br>Finalmente, el sistema de chats hace que la comunicación entre los usuarios sea más eficaz</p>
+
+							<ul style="display: flex; justify-content: space-between; align-items:center;">
+								<div class="elements">
+									<li type="disc" class="lis">El sistema guardará toda la información de la empresa, de forma segura y efectiva permitiendo el acceso a ella en cualquier momento.</li>
+
+									<li type="disc" class="lis">El almacenamiento de información que brinda la página, ayudará a que el trabajo en la empresa sea más eficaz y de facil manejo.</li>
+
+									<li type="disc" class="lis">El uso del sistema evita en un mayor porcentaje posibles pérdidas de información, desde la más trivial hasta la más importante.</li>
+								</div>
+								<div class="elements">
+									<li type="disc" class="lis">La implementación del chat aumenta la velocidad de comunicación entre los usuarios, y así mismo, puede ayudar a dinamizar el trabajo.</li>
+
+									<li type="disc" class="lis">Mejora el ambiente de trabajo, pues no requiere de tanto espacio físico para almacenar la información, todo queda en la nube.</li>
+
+									<li type="disc" class="lis">El contar con un sistema de búsquedas en la página, hace que encontrar cualquier tipo de datos o un formato en específico sea más sencillo.</li>
+								</div>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -261,7 +264,7 @@
 				<div class="row">
 					<div class="col-lg-12" style="margin-bottom: -40px;">
 						<div class="section-title">
-							<h2>Funciones de A'ttia</h2>
+							<h2>Funcionalidades de A'ttia</h2>
 						</div>
 					</div>
 				</div>
@@ -277,11 +280,6 @@
 										Registro de empleados: Todos los datos de cada empleado deben ser guardados en el sistema, para así poder crear los perfiles de los mismos, y que puedan realizar sus debidas tareas en el sistema.
 									</p>
 									<!-- Person Thumb -->
-									<div class="image">
-										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
-									</div>
-									<!-- Name and Company -->
-									<cite>Abraham Linkon , Themefisher.com</cite>
 								</div>
 							</div>
 							<!-- Testimonial 01 -->
@@ -291,12 +289,6 @@
 									<p>
 										Manejo de perfiles: Utilizando los datos de los empleados, cada uno tendrá su respectivo perfil, con el cual pueden acceder al sistema, y realizar las tareas respectivas a su rol (Piscicultor, Acuicultor o Jefe de Producción).
 									</p>
-									<!-- Person Thumb -->
-									<div class="image">
-										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
-									</div>
-									<!-- Name and Company -->
-									<cite>Abraham Linkon , Themefisher.com</cite>
 								</div>
 							</div>
 							<!-- Testimonial 01 -->
@@ -306,12 +298,6 @@
 									<p>
 										Gestión de Formatos: Los formatos que se manejan en la empresa serán diligenciados y guardados directamente en el sistema. Luego, los formatos correctamente almacenados, pueden ser consultados, actualizados, eliminados o impresos.
 									</p>
-									<!-- Person Thumb -->
-									<div class="image">
-										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
-									</div>
-									<!-- Name and Company -->
-									<cite>Abraham Linkon , Themefisher.com</cite>
 								</div>
 							</div>
 							<!-- Testimonial 01 -->
@@ -321,12 +307,6 @@
 									<p>
 										Manejo de Chats: La página cuenta con un sistema de chats, con el cual, el piscicultor y el acuicultor pueden comunicarse directamente y de manera eficaz con el jefe de producción, para así resolver dudas, problemas y demás.
 									</p>
-									<!-- Person Thumb -->
-									<div class="image">
-										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
-									</div>
-									<!-- Name and Company -->
-									<cite>Abraham Linkon , Themefisher.com</cite>
 								</div>
 							</div>
 							<!-- Testimonial 01 -->
@@ -336,12 +316,6 @@
 									<p>
 										Gestión de otros elementos: Así como con los formatos y los perfiles, todos los demás elementos: Estanques, Responsables, Productos y Proveedores, pueden ser debidamente registrados, consultados, actualizados o eliminados.
 									</p>
-									<!-- Person Thumb -->
-									<div class="image">
-										<img src="public/img/home/testimonial/feature-testimonial-thumb.jpg" alt="image">
-									</div>
-									<!-- Name and Company -->
-									<cite>Abraham Linkon , Themefisher.com</cite>
 								</div>
 							</div>
 						</div>
@@ -431,7 +405,7 @@
 		=============================-->
 		<footer>
 			<div class="text-center bg-dark py-4">
-				<small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Diseñado &amp; Desarrollado por ADSI</small class="text-secondary">
+				<small class="text-secondary">Copyright &copy; <script>document.write(new Date().getFullYear())</script>. Software A'ttia. Todos los derechos reservados.</small class="text-secondary">
 			</div>
 		</footer>
 
