@@ -2228,4 +2228,14 @@ hr {
   }
 }
 
+.elements{
+  width: 45%;
+  margin: 0 20px;
+  margin-top: 20px;
+}
+
+.lis{
+  margin-bottom: 30px;
+}
+
 /*# sourceMappingURL=style.css.map */
