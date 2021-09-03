@@ -127,7 +127,7 @@ function guardar(){
 
 // creamos la funcion editar para actualizar el formato
 function editar(){
-    var formData = new FormData($("#biocre_edit")[0]);
+    var formData = new FormData($("#biocre_form")[0]);
 
     $.ajax({
         url: "controller/biocrecimiento.php?op=editar",

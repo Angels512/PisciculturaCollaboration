@@ -76,7 +76,7 @@ function MostrarDatos(id_respon)
     });
 
     //para mostrar el modal donde se muestra la información del responsable
-    $('#modalresponsable').modal('show'); 
+    $('#modalresponsable').modal('show');
 }
 
 // Eliminar cultivo
