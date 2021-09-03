@@ -10,7 +10,7 @@
     <?php require_once('../../public/templates/nav.php') ?> <!--NAV-->
 
 
-
+    <body class="with-side-menu">
         <!-- CONTENIDO -->
         <div class="page-content">
             <div class="container-fluid">
@@ -102,10 +102,7 @@
             </div><!--Contenedor-->
         </div><!--Contenido Principal-->
 
-
-
         <?php require_once('../../public/templates/js.php'); ?> <!-- ARCHIVOS JS Y LIBS -->
         <script src="view/NovedadesMortalidad/novedadesmortalidad.js"></script>
-
     </body>
 </html>
