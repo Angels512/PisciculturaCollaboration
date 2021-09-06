@@ -50,7 +50,7 @@ $(document).on("click","#newnovedad",function(){
 function validarDatos(e){
     e.preventDefault();
 
-    if($('#hora_sum_alim1').val()=='' || $('#obser_atmo').val()=='' || $('#obser_gen_cult').val()==''){
+    if($('#hora_sum_alim1').val()=='' ||$('#hora_sum_alim2').val()=='' || $('#hora_sum_alim3').val()=='' || $('#obser_atmo').val()=='' || $('#obser_gen_cult').val()==''){
         swal({
             title: "Advertencia!",
             text: "Campos vacios",

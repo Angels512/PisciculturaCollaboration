@@ -607,7 +607,7 @@ rol = $('#id_rol_x').val();
 
 if (rol == 1)
 {
-	$('#rol').html('Jefe de Produccion');
+	$('#rol').html('Jefe de Producción');
 }else if(rol == 2){
 	$('#rol').html('Piscicultor');
 }else {

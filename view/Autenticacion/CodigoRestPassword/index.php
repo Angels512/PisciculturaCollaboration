@@ -52,7 +52,7 @@
                                         <img src="public/img/logo.png" alt="logo" style="width: 250px;">
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">No te preocupes, te respaldamos.</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Por favor ingrese el codigo que estaba en el correo</h2>
+                                    <h2 class="h5 font-w400 text-muted mb-0">Por favor ingrese el código que fue enviado a su correo.</h2>
                                 </div>
                                 <!-- END Header -->
 
@@ -65,7 +65,7 @@
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="number" class="form-control" id="codigo" name="codigo">
-                                                <label for="codigo">Codigo de seguridad</label>
+                                                <label for="codigo">Código de seguridad</label>
                                             </div>
                                         </div>
                                     </div>

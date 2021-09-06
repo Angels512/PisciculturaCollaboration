@@ -123,13 +123,13 @@
 		<!--==================================
 		=            Feature Grid            =
 		===================================-->
-		<section class="feature section pt-0" id="about" style="margin: -50px 0;">
+		<section class="feature section pt-0" id="about" style="margin: -25px 0;">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 ml-auto justify-content-center">
 						<!-- Feature Mockup -->
 						<div class="image-content" data-aos="fade-right">
-							<img class="img-fluid" src="public/img/home/feature/feature-new-01.jpg" alt="iphone">
+							<img class="img-fluid" style="width:70%; margin: 5% 20%;" src="public/img/home/pezz.jpg" alt="pez">
 						</div>
 					</div>
 					<div class="col-lg-6 mr-auto align-self-center">
@@ -162,7 +162,7 @@
 					<div class="col-lg-6 align-self-center">
 						<!-- Feature Image -->
 						<div class="service-thumb left" data-aos="fade-right">
-							<img class="img-fluid" src="public/img/home/feature/iphone-ipad.jpg" alt="iphone-ipad">
+							<img class="img-fluid" src="public/img/home/modulos.jpg" alt="iphone-ipad">
 						</div>
 					</div>
 					<div class="col-lg-5 mr-auto align-self-center">

@@ -34,27 +34,27 @@
                                         <div class="tbl-row">
                                             <div class="tbl-cell">
                                                 <b id="fechaCreacion"></b>
-                                                Fecha de creacion
+                                                Fecha de creación
                                             </div>
                                             <div class="tbl-cell">
                                                 <b id="fechaAct"></b>
-                                                Ultima Actualizacion
+                                                Ultima Actualización
                                             </div>
                                         </div>
                                     </div>
 
                                     <ul class="profile-links-list">
                                         <li class="nowrap">
-                                            <p><i class="fa fa-address-card" aria-hidden="true"></i><b>&nbsp&nbsp Numero de documento:</b> <span id="numeroDocumento"></span></p>
+                                            <p><i class="fa fa-address-card" aria-hidden="true"></i><b>&nbsp&nbsp Número de documento:</b> <span id="numeroDocumento"></span></p>
                                         </li>
                                         <li class="nowrap">
-                                            <p><i class="fa fa-envelope" aria-hidden="true"></i><b>&nbsp&nbsp Correo electronico:</b> <span id="direccionCorreo"></span></p>
+                                            <p><i class="fa fa-envelope" aria-hidden="true"></i><b>&nbsp&nbsp Correo electrónico:</b> <span id="direccionCorreo"></span></p>
                                         </li>
                                         <li class="nowrap">
-                                            <p><i class="fa fa-home"></i><b>&nbsp&nbsp Direccion:</b> <span id="direccion"></span></p>
+                                            <p><i class="fa fa-home"></i><b>&nbsp&nbsp Dirección:</b> <span id="direccion"></span></p>
                                         </li>
                                         <li class="nowrap">
-                                            <p><i class="fa fa-phone"></i><b>&nbsp&nbsp Telefono:</b> <span id="numeroTelefono"></span></p>
+                                            <p><i class="fa fa-phone"></i><b>&nbsp&nbsp Teléfono:</b> <span id="numeroTelefono"></span></p>
                                         </li>
                                     </ul>
                                 </section><!--.box-typical-->

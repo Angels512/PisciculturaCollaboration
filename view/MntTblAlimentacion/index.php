@@ -88,7 +88,7 @@
 									<fieldset class="form-group">
 										<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
 											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:00 AM" readonly/>
+												<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2"/>
 												<span class="input-group-addon">
 													<i class="font-icon font-icon-clock"></i>
 												</span>
@@ -100,7 +100,7 @@
 									<fieldset class="form-group">
 										<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
 											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="14:00 PM" readonly/>
+												<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3"/>
 												<span class="input-group-addon">
 													<i class="font-icon font-icon-clock"></i>
 												</span>
