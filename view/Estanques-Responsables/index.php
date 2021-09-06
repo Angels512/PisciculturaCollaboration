@@ -56,21 +56,21 @@
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
 
-					<form method="post" id="responsable_form">
+						<form method="post" id="responsable_form">
 							<div>
 								<h5><strong>Ingrese los Datos</strong></h5>
 							</div>
 
 							<br>
 
-							<div class="form-group"> 
+							<div class="form-group">
                     	    	<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 								<div class="form-control-wrapper form-control-icon-right">
 									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
 									<i class="font-icon font-icon-calend"></i>
 								</div>
                     		</div>
-								
+
 							<div class="form-group">
 								<label class="form-label semibold" for="num_lote">Número del Estanque</label>
 								<div class="form-control-wrapper form-control-icon-right">
@@ -103,7 +103,6 @@
 								<button type="button" name="action" id="modi_respon" value="add" class="btn btn-rounded btn-primary">Modificar</button>
 								<button type="button" name="action" id="elim_respon" value="add" class="btn btn-rounded btn-primary">Eliminar</button> 
 							</div>
-
 						</form>
 
 						<!--Aqui va el Formato de Estanques-->
