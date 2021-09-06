@@ -307,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `tblalimentacion` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-update cultivo set est = 1;
+update cultivo set est = 1; 
 
 
 -- ///// INSERTS /////
@@ -475,7 +475,10 @@ INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 -- Proveedor
 INSERT INTO `proveedor` (`id_prove`, `nombre_emp`, `direccion_emp`, `telefono_emp`, `correo_emp`, `fecha`, `fecha_elim`, `est`) VALUES
 	(1, 'Italcol ', 'km 13 Vio occ Mosquera-Funza', '3164989248', 'contacto@italcol.com', '2021-06-24', NULL, 1),
-	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1);
+	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1),
+    (3, 'ComidaPez ', 'calle 45 sur N° 8-2', '8765665', 'comidapez@gmail.com', '2021-06-24', NULL, 1),
+    (4, 'alimentofish', 'carr 3 sur N° 4-5', '7655678', 'alimentofish@gmail.com', '2021-06-24', NULL, 1),
+    (5, 'pez Corporation', 'calle 76 N° 0-12', '3875634', 'pezcorporation@gmail.com', '2021-06-24', NULL, 1);
 
 -- Producto
 INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lote`, `fecha`, `fecha_elim`, `est`) VALUES
