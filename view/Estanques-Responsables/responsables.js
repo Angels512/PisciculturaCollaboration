@@ -1,7 +1,6 @@
 function init(){
-
     // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del formulario del responsable
-    $("#responsable_form").on("submit",function(e){
+    $("#responsable_form").on("submit", function(e){
         guardaryeditar(e);
     });
 }
@@ -35,7 +34,7 @@ function guardaryeditar(e){
 
 
 $(document).on("click","#newrespon",function(){
-
+    $('#responsable_form')[0].reset();
     $('#titulores').html('Nuevo Responsable');
     /* Para mostrar el modal del responsable una vez se de click al boton newresponsable*/
     $('#modalresponsable').modal('show');

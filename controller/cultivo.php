@@ -3,6 +3,7 @@
     require_once('../config/conexion.php');
     require_once('../models/Cultivo.php');
     $html = '';
+    $meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
     $cultivo = new Cultivo();
 
@@ -37,8 +38,17 @@
                         <div class="card-user-social">
                             <div class="card-user-mortalidad">Siembra: <?php echo $row['cant_siembra']; ?></div>
                             <div class="card-user-respon"><?php echo $row['nombre_respon']; ?> <?php echo $row['apellido_respon']; ?><hr class="lineCards"></div>
-                            <div class="card-user-respon">Fecha de siembra: <?php echo date("d/m/Y", strtotime($row["fecha"])); ?></div>
-                            <div class="card-user-fecha">Fecha de cierre: <?php echo date("d/m/Y", strtotime($row["fecha_cierre"])); ?></div>
+                            <?php
+                                $diaFecha = date('d', strtotime($row["fecha"]));
+                                $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                                $yearFecha = date('Y', strtotime($row["fecha"]));
+
+                                $diaFechaCierre = date('d', strtotime($row["fecha_cierre"]));
+                                $mesFechaCierre = date('m', strtotime($row["fecha_cierre"])) - 1;
+                                $yearFechaCierre = date('Y', strtotime($row["fecha_cierre"]));
+                            ?>
+                            <div class="card-user-respon">Fecha de siembra: <?php echo "$diaFecha/$meses[$mesFecha]/$yearFecha"; ?></div>
+                            <div class="card-user-fecha">Fecha de cierre: <?php echo "$diaFechaCierre/$meses[$mesFechaCierre]/$yearFechaCierre"; ?></div>
                         </div>
                     </article><!--.card-user-->
                 </div>
