@@ -75,7 +75,7 @@
 								<div class="form-group">
 									<label class="form-label semibold"  for="num_lote">Número de Lote</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número" required>
+										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número">
 										<i class="glyphicon glyphicon-barcode"></i>
 									</div>
 								</div>
