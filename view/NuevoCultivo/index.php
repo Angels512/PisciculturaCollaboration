@@ -33,14 +33,14 @@
 
 
                 <div class="box-typical box-typical-padding">
-                    <h5 class="with-border">Ingrese la Informacion</h5>
+                    <h5 class="with-border">Ingrese la Información</h5>
 
                     <div class="row">
 
                         <form action="" method="post" id="cultivoForm">
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="titulo_chat">Numero de lote</label>
+                                    <label class="form-label semibold" for="titulo_chat">Número de lote</label>
                                     <div class="form-control-wrapper form-control-icon-right">
                                         <input type="number" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese el numero de lote para el cultivo">
                                         <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
@@ -58,7 +58,7 @@
                                 <fieldset class="form-group">
 
                                     <!-- Estamos pasasando los option del select mediante JS -->
-                                    <label class="form-label semibold" for="exampleInput">Numero de estanque</label>
+                                    <label class="form-label semibold" for="exampleInput">Número de estanque</label>
                                     <select id="id_tanque" name="id_tanque" class="select2 manual select2-no-search-default select2-hidden-accessible"></select>
 
                                 </fieldset>

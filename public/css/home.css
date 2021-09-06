@@ -160,14 +160,8 @@ a:hover {
 }
 
 .bg-1 {
-  background: url(../img/home/background/promo-video-back.jpg) fixed no-repeat;
+  background: url(../img/home/fondonegro.jpg) fixed no-repeat;
   background-size: cover;
-}
-
-.bg-coming-soon {
-  background: url(../img/home/background/comming-soon.jpg) fixed no-repeat;
-  background-size: cover;
-  background-position: bottom;
 }
 
 .section {

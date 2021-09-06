@@ -49,7 +49,7 @@
                                         <img src="public/img/logo.png" alt="logo" style="width: 250px;">
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">Bienvenido</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Inicio sesion</h2>
+                                    <h2 class="h5 font-w400 text-muted mb-0">Inicio sesión</h2>
                                 </div>
                                 <!-- END Header -->
 
@@ -79,7 +79,7 @@
                                                             <br><div class="alert alert-danger" role="alert" style="margin-bottom: -15px;">
                                                                 <div class="d-flex align-items-center justify-content-start">
                                                                     <i class="icon ion-ios-checkmark alert-icon tx-32 mg-t-5 mg-xs-t-0"></i>
-                                                                    <span> Los campos estan vacios.</span>
+                                                                    <span> Los campos estan vacíos.</span>
                                                                 </div>
                                                             </div>
                                                         <?php
@@ -94,7 +94,7 @@
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="text" class="form-control" id="documento_usu" name="documento_usu">
-                                                <label for="documento_usu">Numero de documento</label>
+                                                <label for="documento_usu">Número de documento</label>
                                             </div>
                                         </div>
                                     </div>

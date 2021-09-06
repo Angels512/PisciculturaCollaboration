@@ -1,7 +1,7 @@
 function init(){
     // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del formulario del responsable
-    $("#responsable_form").on("submit", function(e){
-        guardaryeditar(e);
+    $("#responsable_form").on("submit",function(e){
+        validarDatos(e);
     });
 }
 
@@ -11,10 +11,25 @@ $(document).ready(function()
     listarResponsables();
 });
 
+function validarDatos(e){
+    e.preventDefault();
+
+    if($('#nombre_respon').val()=='' ||$('#apellido_respon').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        guardaryeditar();
+    }
+}
 
 // creamos la funcion guardaryeditar para insertar y actualizar un responsable y vaciar los campos del formulario
-function guardaryeditar(e){
-    e.preventDefault();
+function guardaryeditar(){
+
     var formData = new FormData($('#responsable_form')[0]);
 
     $.ajax({

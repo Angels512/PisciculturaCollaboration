@@ -34,16 +34,16 @@
                         </div><br>
 
                         <!-- DOCUMENTO -->
-                        <label class="form-label semibold" for="documento_usu">Numero de documento:</label>
+                        <label class="form-label semibold" for="documento_usu">Número de documento:</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="usuDocumento" name="documento_usu">
                             <i class="fa fa-address-card" id="iconDocumento" aria-hidden="true"></i>
-                            <small class="text-muted text-danger alerta" id="alertDocumento" hidden>El numero de documento debe tener entre 7 y 10 numeros y no puede llevar letras.</small>
+                            <small class="text-muted text-danger alerta" id="alertDocumento" hidden>El número de documento debe tener entre 7 y 10 numeros y no puede llevar letras.</small>
                         </div><br>
 
                         <!-- DIRECCION -->
                         <div id="direccion">
-                            <label class="form-label semibold" for="direccion_usu">Direccion:</label>
+                            <label class="form-label semibold" for="direccion_usu">Dirección:</label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese la direccion del empleado" id="direccion_usu" name="direccion_usu">
                                 <i class="fa fa-home"></i>
@@ -52,7 +52,7 @@
 
                         <!-- TELEFONO -->
                         <div id="telefono">
-                            <label class="form-label semibold" for="telefono_usu">Telefono:</label>
+                            <label class="form-label semibold" for="telefono_usu">Teléfono:</label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese el telefono del empleado" id="telefono_usu" name="telefono_usu">
                                 <i class="fa fa-phone"></i>
@@ -60,7 +60,7 @@
                         </div>
 
                         <!-- CORREO ELECTRONICO -->
-                        <label class="form-label semibold" for="pass_usu">Correo electronico:</label>
+                        <label class="form-label semibold" for="pass_usu">Correo electrónico:</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="email" class="form-control" placeholder="example@gmail.com" id="usuCorreo" name="correo_usu">
                             <i class="fa fa-envelope" id="iconCorreo" aria-hidden="true"></i>

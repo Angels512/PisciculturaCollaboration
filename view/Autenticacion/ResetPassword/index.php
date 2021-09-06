@@ -39,7 +39,7 @@
                                         <img src="public/img/logo.png" alt="logo" style="width: 250px;">
                                     </a>
                                     <h1 class="h3 font-w700 mt-30 mb-10">No te preocupes, te respaldamos.</h1>
-                                    <h2 class="h5 font-w400 text-muted mb-0">Por favor ingrese su numero de documento</h2>
+                                    <h2 class="h5 font-w400 text-muted mb-0">Por favor ingrese su número de documento</h2>
                                 </div>
                                 <!-- END Header -->
 
@@ -49,7 +49,7 @@
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="text" class="form-control" id="documento_usu" name="documento_usu">
-                                                <label for="documento_usu">Numero de documento</label>
+                                                <label for="documento_usu">Número de documento</label>
                                             </div>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                                         </button>
                                         <div class="mt-30">
                                             <a class="link-effect text-muted mr-10 mb-5 d-inline-block" href="login">
-                                                <i class="fa fa-user text-muted mr-5"></i> Iniciar sesion
+                                                <i class="fa fa-user text-muted mr-5"></i> Iniciar sesión
                                         </div>
                                     </div>
                                 </form>

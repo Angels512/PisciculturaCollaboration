@@ -42,13 +42,13 @@
                             <div class="col-lg-5">
                                 <fieldset class="form-group">
                                     <!-- Estamos pasasando los option del select mediante JS -->
-                                    <label class="form-label semibold" for="exampleInput">Categoria</label>
+                                    <label class="form-label semibold" for="exampleInput">Categoría</label>
                                     <input type="text" class="form-control" id="id_cat" name="id_cat" value="" readonly>
                                 </fieldset>
                             </div><!--Categoria-->
                             <div class="col-lg-5">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="titulo_chat">Titulo</label>
+                                    <label class="form-label semibold" for="titulo_chat">Título</label>
                                     <input type="text" class="form-control" id="titulo_chat" name="titulo_chat" value="" readonly>
                                 </fieldset>
                             </div><!--Titulo-->
@@ -56,7 +56,7 @@
                         <div class="centrarSummer">
                             <div class="col-lg-10">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="desc_chat">Descripcion</label>
+                                    <label class="form-label semibold" for="desc_chat">Descripción</label>
                                     <div class="summernote-theme-1">
                                         <textarea class="summernote" id="desc_chat" name="desc_chat"></textarea>
                                     </div>

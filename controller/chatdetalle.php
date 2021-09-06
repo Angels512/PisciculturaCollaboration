@@ -29,7 +29,7 @@
                                 <?php
                                     if ($row['id_rol'] == 1)
                                     {
-                                        echo 'Jefe de produccion';
+                                        echo 'Jefe de producción';
                                     }else if ($row['id_rol'] == 2) {
                                         echo 'Piscicultor';
                                     }else {

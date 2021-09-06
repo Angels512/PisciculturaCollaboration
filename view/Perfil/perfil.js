@@ -281,7 +281,7 @@ function listarDatos()
 
         if (data.id_rol == 1)
         {
-            $('#nombreRol').html('Jefe de Produccion');
+            $('#nombreRol').html('Jefe de Producción');
         }else if (data.id_rol == 2) {
             $('#nombreRol').html('Piscicultor');
         }else {

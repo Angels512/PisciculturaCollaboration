@@ -65,9 +65,9 @@
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="text" class="form-control" id="direccion_usu" name="direccion_usu">
-                                                <label for="direccion_usu">Direccion</label>
+                                                <label for="direccion_usu">Dirección</label>
                                             </div>
-                                            <div class="invalid-feedback" id="alertDireccion">La direccion debe tener 25 caracteres maximo.</div>
+                                            <div class="invalid-feedback" id="alertDireccion">La dirección debe tener 25 caracteres máximo.</div>
                                         </div>
                                     </div>
 
@@ -75,9 +75,9 @@
                                         <div class="col-12">
                                             <div class="form-material floating">
                                                 <input type="text" class="form-control" id="telefono_usu" name="telefono_usu">
-                                                <label for="telefono_usu">Numero de celular</label>
+                                                <label for="telefono_usu">Número de celular</label>
                                             </div>
-                                            <div class="invalid-feedback" id="alertTelefono">El telefono debe tener entre 7 y 10 numeros.</div>
+                                            <div class="invalid-feedback" id="alertTelefono">El teléfono debe tener entre 7 y 10 números.</div>
                                         </div>
                                     </div>
 

@@ -41,9 +41,9 @@
                                 <th class="d-none d-sm-table-cell" style="width: 15%;">Nombre</th>
                                 <th class="d-none d-sm-table-cell" style="width: 15%;">Apellido</th>
                                 <th class="d-none d-sm-table-cell" style="width: 10%;">Documento</th>
-                                <th class="d-none d-sm-table-cell" style="width: 10%;">Telefono</th>
-                                <th class="d-none d-sm-table-cell" style="width: 15%;">Direccion</th>
-                                <th class="d-none d-sm-table-cell" style="width: 15%;">Correo Electronico</th>
+                                <th class="d-none d-sm-table-cell" style="width: 10%;">Teléfono</th>
+                                <th class="d-none d-sm-table-cell" style="width: 15%;">Dirección</th>
+                                <th class="d-none d-sm-table-cell" style="width: 15%;">Correo Electrónico</th>
                                 <th class="d-none d-sm-table-cell" style="width: 10%;">Cargo</th>
                                 <th class="text-center" style="width: 5%;"></th>
                                 <th class="text-center" style="width: 5%;"></th>

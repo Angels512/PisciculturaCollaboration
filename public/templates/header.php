@@ -38,7 +38,7 @@
                                     <a class="dropdown-item" href="perfil"><span class="font-icon glyphicon glyphicon-user"></span>Perfil</a>
                                     <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Ayuda</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="logout"><span class="font-icon glyphicon glyphicon-log-out"></span>Cerrar Sesion</a>
+                                    <a class="dropdown-item" href="logout"><span class="font-icon glyphicon glyphicon-log-out"></span>Cerrar Sesión</a>
                                 </div>
                             </div>
                         </div>
@@ -110,20 +110,20 @@
                                                             <fieldset class="form-group">
 
                                                                 <!-- Estamos pasasando los option del select mediante JS -->
-                                                                <label class="form-label semibold" for="">Categoria</label>
+                                                                <label class="form-label semibold" for="">Categoría</label>
                                                                 <select id="id_catHeader" name="id_catHeader" class="select2 manual select2-no-search-default select2-hidden-accessible"></select>
 
                                                             </fieldset>
                                                         </div>
                                                         <div class="col-lg-12 input">
                                                             <fieldset class="form-group">
-                                                                <label class="form-label semibold" for="titulo_chatHeader">Titulo</label>
+                                                                <label class="form-label semibold" for="titulo_chatHeader">Título</label>
                                                                 <input type="text" class="form-control" id="titulo_chatHeader" name="titulo_chatHeader" placeholder="Ingrese un titulo">
                                                             </fieldset>
                                                         </div>
                                                         <div class="col-sm-12 input">
                                                             <fieldset class="form-group">
-                                                            <label class="form-label semibold" for="desc_chatHeader">Descripcion</label>
+                                                            <label class="form-label semibold" for="desc_chatHeader">Descripción</label>
                                                                 <textarea rows="4" class="form-control" id="desc_chatHeader" name="desc_chatHeader" placeholder="Escriba una breve descipcion"></textarea>
                                                             </fieldset>
                                                         </div>
