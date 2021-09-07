@@ -13,7 +13,7 @@
                         </a>
                     </li>
 
-                    <li class="aquamarine with-sub">
+                    <li class="brown with-sub">
                         <span>
                             <i class="fa fa-anchor" aria-hidden="true"></i>
                             <span class="lbl">Cultivos</span>
@@ -55,28 +55,28 @@
                         </a>
                     </li>
 
-                    <li class="green with-sub">
+                    <li class="gold">
                         <a href="producto">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
                             <span class="lbl">Productos</span>
                         </a>
                     </li>
 
-                    <li class="with-sub">
+                    <li class="blue-dirty">
                         <a href="proveedor">
                             <span class="fa fa-bus"></span>
                             <span class="lbl">Proveedores</span>
                         </a>
                     </li>
 
-                    <li class="blue-dirty">
+                    <li class="purple">
                         <a href="consultar-chat">
                             <i class="fa fa-comments" aria-hidden="true"></i>
                             <span class="lbl">Consultar Chat's</span>
                         </a>
                     </li>
 
-                    <li class="blue">
+                    <li class="aquamarine">
                         <a href="usuarios">
                             <i class="fa fa-users" aria-hidden="true"></i>
                             <span class="lbl">Usuarios</span>
