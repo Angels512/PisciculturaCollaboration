@@ -17,7 +17,7 @@
 						<div class="tbl-cell">
 							<h2>Consultar Formatos Piscicultura</h2>
 							<ol class="breadcrumb breadcrumb-simple">
-								<li><a href="#">Inicio</a></li>
+								<li><a href="inicio">Inicio</a></li>
 								<li class="active">Consultar Formatos</li>
 							</ol>
 						</div>
@@ -29,6 +29,7 @@
 				<div class="tabs-section-nav tabs-section-nav-icons">
 					<div class="tbl">
 						<ul class="nav" id="list" role="tablist">
+
 							<li class="nav-item">
 								<a class="nav-link active" href="#biometrias" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
@@ -48,7 +49,7 @@
 							</li>
 
 							<li class="nav-item">
-								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+								<a class="nav-link" href="#parafq" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-notebook-bird"></span>
 										Parametros FQ
@@ -57,7 +58,7 @@
 							</li>
 
 							<li class="nav-item">
-								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+								<a class="nav-link" href="#tempagua" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-notebook-bird"></span>
 										Temperatura Agua
@@ -66,7 +67,7 @@
 							</li>
 
 							<li class="nav-item">
-								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+								<a class="nav-link" href="#tempamb" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-notebook-bird"></span>
 										Temperatura Ambiente
@@ -75,7 +76,7 @@
 							</li>
 
 							<li class="nav-item">
-								<a class="nav-link" href="#tbl_alim" role="tab" data-toggle="tab">
+								<a class="nav-link" href="#estacui" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
 										<span class="font-icon font-icon-notebook-bird"></span>
 										Estado Acuicultura
@@ -85,7 +86,9 @@
 
 						</ul>
 					</div>
-				</div><!--.tabs-section-nav-->
+				</div>
+				
+				<!--.tabs-section-nav-->
 
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="biometrias">
@@ -110,7 +113,10 @@
 								</table>
 							</div>
 						</section>
-					</div><!--.tab-pane-->
+					</div>
+					
+					<!--.tab-pane-->
+
 					<div role="tabpanel" class="tab-pane fade" id="tbl_alim">
 						<section class="card">
 							<div class="card-block">
@@ -133,7 +139,108 @@
 								</table>
 							</div>
 						</section>
-					</div><!--.tab-pane-->
+					</div>
+					
+					<!--.tab-pane-->
+
+					<div role="tabpanel" class="tab-pane fade" id="´parafq">
+						<section class="card">
+							<div class="card-block">
+								<table id="parametrosfq" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Observación</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+
+					<div role="tabpanel" class="tab-pane fade" id="tempagua">
+						<section class="card">
+							<div class="card-block">
+								<table id="temperaturaagua" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Número de Día</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+					
+					<!--.tab-pane-->
+
+					<div role="tabpanel" class="tab-pane fade" id="tempamb">
+						<section class="card">
+							<div class="card-block">
+								<table id="temperaturaambiente" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Número de Día</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+					
+					<!--.tab-pane-->
+
+					<div role="tabpanel" class="tab-pane fade" id="estacui">
+						<section class="card">
+							<div class="card-block">
+								<table id="estacuicultura" class="display table table-striped table-bordered">
+									<thead>
+										<tr>
+											<th>#</th>
+											<th>Nombre del Empleado</th>
+											<th>Fecha de creación</th>
+											<th>Observación</th>
+											<th></th>
+											<th></th>
+											<th></th>
+										</tr>
+									</thead>
+									<tbody>
+
+									</tbody>
+								</table>
+							</div>
+						</section>
+					</div>
+					
+					<!--.tab-pane-->
+
 				</div><!--.tab-content-->
 			</section><!--.tabs-section-->
 

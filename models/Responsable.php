@@ -59,7 +59,7 @@
         }
 
         //Actualizamos el responsable en base de datos
-        public function updateResponsable( $id_respon , $nombre_respon ,$apellido_respon){
+        public function updateResponsable($nombre_respon,$apellido_respon,$id_respon){
             $conectar= parent::conexion();
             parent::setNames();
             $sql="UPDATE responsable set

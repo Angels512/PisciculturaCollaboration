@@ -167,3 +167,43 @@ function eliminartbal(id_tbl_alim){
         }
     });
 }
+
+//para ir al formato de estado acuicultura pasando el ID por url segun el boton presionado
+function consultarea(id_est_acui){
+    window.location.href = "estacuicultura?ID="+ id_est_acui +"";
+}
+
+function editarea(id_est_acui){
+    window.location.href = "estacuicultura?ID="+ id_est_acui +"&EDIT=yes";
+}
+
+//para eliminar un formato de biocrecimiento
+function eliminarea(id_est_acui){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/estadoacuicultura.php?op=eliminar", { id_est_acui:id_est_acui }, function (data) {
+            });
+
+            $('#dt_estacuicultura').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
