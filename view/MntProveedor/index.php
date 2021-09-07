@@ -55,28 +55,28 @@
 									<div class="form-group">
 										<label  class="form-label semibold" for="nombre_emp">Nombre Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
-											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre" required>
+											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre">
 											<i class="fa fa-user"></i>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="form-label semibold" for="direccion_emp">Dirección Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
-											<input type="text" class="form-control" id="direccion_emp" name="direccion_emp" placeholder="Ingrese Dirección" required>
+											<input type="text" class="form-control" id="direccion_emp" name="direccion_emp" placeholder="Ingrese Dirección">
 											<i class="fa fa-home"></i>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="form-label semibold" for="telefono_emp">Teléfono Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
-											<input type="text" class="form-control" id="telefono_emp" name="telefono_emp" placeholder="Ingrese Teléfono" required>
+											<input type="text" class="form-control" id="telefono_emp" name="telefono_emp" placeholder="Ingrese Teléfono">
 											<i class="fa fa-phone"></i>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="form-label semibold" for="correo_emp">Correo Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
-											<input type="text" class="form-control" id="correo_emp" name="correo_emp" placeholder="Ingrese Correo" required>
+											<input type="text" class="form-control" id="correo_emp" name="correo_emp" placeholder="Ingrese Correo">
 											<i class="fa fa-envelope"></i>
 										</div>
 									</div>
