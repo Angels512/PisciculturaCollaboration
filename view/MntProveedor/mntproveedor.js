@@ -62,7 +62,7 @@ function guardar(e){
                 listarSelectProve();
 
                 swal({
-                    title: "HelpDesk!",
+                    title: "Correcto!",
                     text: " Registro Guardado.",
                     type: "success",
                     confirmButtonClass: "btn-success"
@@ -165,11 +165,11 @@ function eliminar(id_prove){
         if (isConfirm) {
 
             $.post("controller/proveedor.php?op=eliminar", { id_prove:id_prove }, function (data) {
-
+                listarDatos();
+                listarSelectProve();
+                $("#infoproveedor").hide();
             });
 
-            listarDatos();
-            listarSelectProve();
 
             swal({
                 title: "Correcto!",

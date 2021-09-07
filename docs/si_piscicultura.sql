@@ -465,7 +465,7 @@ INSERT INTO `estacuicultura` (`id_est_acui`, `id_cultivo`, `id_usu`, `obser_gene
 	(3, 1, 3, 'Agua estable', '2021-06-21', NULL, 1),
 	(4, 1, 3, 'Agua sucia', '2021-06-21', NULL, 1),
 	(5, 1, 3, 'Ninguna', '2021-06-21', NULL, 1);
-    
+
 -- Clase de Producto
 INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 	(1, 'Mojarra 34%', 'Polvo'),
@@ -484,7 +484,7 @@ INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lo
 	(3, 1, 3, '2022-06-22', 'R08763456', '2021-06-24', NULL, 1),
 	(4, 1, 2, '2022-03-30', 'R05676470', '2021-06-24', NULL, 1),
 	(5, 1, 2, '2022-02-08', 'R09876823', '2021-06-24', NULL, 1);
-    
+
 SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;
 
 -- Tabla de Alimentacion

@@ -113,7 +113,7 @@ function guardar(e){
         success: function(datos){
             $('#num_lote').val('');
             listarSelectProduct();
-            swal("correcto!","Registrado Correctamente","success");
+            swal("Correcto!","Registrado Correctamente","success");
         }
     });
 }
@@ -211,7 +211,9 @@ function eliminar(id_produ){
         if (isConfirm) {
 
             $.post("controller/producto.php?op=eliminar", { id_produ:id_produ }, function (data) {
-
+                listarDatos();
+                listarSelectProduct();
+                $("#infoproducto").hide();
             });
 
             swal({
