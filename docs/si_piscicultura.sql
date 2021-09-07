@@ -307,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `tblalimentacion` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 
-update cultivo set est = 1;
+update cultivo set est = 1; 
 
 
 -- ///// INSERTS /////
@@ -465,7 +465,7 @@ INSERT INTO `estacuicultura` (`id_est_acui`, `id_cultivo`, `id_usu`, `obser_gene
 	(3, 1, 3, 'Agua estable', '2021-06-21', NULL, 1),
 	(4, 1, 3, 'Agua sucia', '2021-06-21', NULL, 1),
 	(5, 1, 3, 'Ninguna', '2021-06-21', NULL, 1);
-    
+
 -- Clase de Producto
 INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 	(1, 'Mojarra 34%', 'Polvo'),
@@ -475,7 +475,10 @@ INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 -- Proveedor
 INSERT INTO `proveedor` (`id_prove`, `nombre_emp`, `direccion_emp`, `telefono_emp`, `correo_emp`, `fecha`, `fecha_elim`, `est`) VALUES
 	(1, 'Italcol ', 'km 13 Vio occ Mosquera-Funza', '3164989248', 'contacto@italcol.com', '2021-06-24', NULL, 1),
-	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1);
+	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1),
+  (3, 'ComidaPez ', 'calle 45 sur N° 8-2', '8765665', 'comidapez@gmail.com', '2021-06-24', NULL, 1),
+  (4, 'alimentofish', 'carr 3 sur N° 4-5', '7655678', 'alimentofish@gmail.com', '2021-06-24', NULL, 1),
+  (5, 'pez Corporation', 'calle 76 N° 0-12', '3875634', 'pezcorporation@gmail.com', '2021-06-24', NULL, 1);
 
 -- Producto
 INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lote`, `fecha`, `fecha_elim`, `est`) VALUES
@@ -484,7 +487,7 @@ INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lo
 	(3, 1, 3, '2022-06-22', 'R08763456', '2021-06-24', NULL, 1),
 	(4, 1, 2, '2022-03-30', 'R05676470', '2021-06-24', NULL, 1),
 	(5, 1, 2, '2022-02-08', 'R09876823', '2021-06-24', NULL, 1);
-    
+
 SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;
 
 -- Tabla de Alimentacion

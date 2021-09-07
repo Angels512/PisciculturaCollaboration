@@ -41,9 +41,9 @@
                                     <thead>
                                         <tr>
                                             <th style="width: 5%;">Nro. Chat</th>
-                                            <th style="width: 10%;">Categoria</th>
-                                            <th class="d-none d-sm-table-cell" style="width: 30%;">Titulo</th>
-                                            <th class="d-none d-sm-table-cell" style="width: 10%;">Fecha de creacion</th>
+                                            <th style="width: 10%;">Categoría</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 30%;">Título</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 10%;">Fecha de creación</th>
                                             <th class="d-none d-sm-table-cell" style="width: 5%;">Estado</th>
                                             <th class="text-center" style="width: 3%;"></th>
                                         </tr>
@@ -62,9 +62,9 @@
                                             <th style="width: 8%;">Cargo</th>
                                             <th style="width: 15%;">Nombre</th>
                                             <th style="width: 15%;">Apellido</th>
-                                            <th class="d-none d-sm-table-cell" style="width: 21%;">Titulo</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 21%;">Título</th>
                                             <th style="width: 8%;">Categoria</th>
-                                            <th class="d-none d-sm-table-cell" style="width: 10%;">Fecha de creacion</th>
+                                            <th class="d-none d-sm-table-cell" style="width: 10%;">Fecha de creación</th>
                                             <th class="d-none d-sm-table-cell" style="width: 10%;">Estado</th>
                                             <th class="text-center" style="width: 5%;"></th>
                                         </tr>

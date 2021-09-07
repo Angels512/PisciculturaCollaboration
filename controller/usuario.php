@@ -4,6 +4,8 @@
     require_once('../models/Usuario.php');
     require_once('../models/Email.php');
 
+    $meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+
     $usuario = new Usuario();
     $email = new Email();
 
@@ -159,6 +161,14 @@
             {
                 foreach ($datos as $row)
                 {
+                    $diaFechaEdit = date('d', strtotime($row["fecha_edit"]));
+                    $mesFechaEdit = date('m', strtotime($row["fecha_edit"])) - 1;
+                    $yearFechaEdit = date('Y', strtotime($row["fecha_edit"]));
+
+                    $diaFecha = date('d', strtotime($row["fecha"]));
+                    $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                    $yearFecha = date('Y', strtotime($row["fecha"]));
+
                     $output["id_usu"] = $row["id_usu"];
                     $output["id_rol"] = $row["id_rol"];
                     $output["nombre_usu"] = $row["nombre_usu"];
@@ -168,8 +178,8 @@
                     $output["correo_usu"] = $row["correo_usu"];
                     $output["documento_usu"] = $row["documento_usu"];
                     $output["pass_usu"] = $row["pass_usu"];
-                    $output["fecha_edit"] = date('d/m/Y', strtotime($row["fecha_edit"]));
-                    $output["fecha"] = date('d/m/Y', strtotime($row["fecha"]));
+                    $output["fecha_edit"] = "$diaFechaEdit/$meses[$mesFechaEdit]/$yearFechaEdit";
+                    $output["fecha"] = "$diaFecha/$meses[$mesFecha]/$yearFecha";
                 }
                 echo json_encode($output);
             }

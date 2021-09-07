@@ -22,7 +22,7 @@ function getData(e)
     {
         swal({
             title: "Advertencia!",
-            text: "Ingrese su codigo de verificacion.",
+            text: "Ingrese su código de verificacion.",
             type: "warning",
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
@@ -44,7 +44,7 @@ function validacionData(id_usu, codigo, token)
             // y redirigira a donde podra colocar la nueva contraseña
             swal({
                 title: "Correcto!",
-                text: "Codigo ingresado exitosamente.",
+                text: "Código ingresado exitosamente.",
                 type: "success",
                 confirmButtonClass: "btn-success",
                 confirmButtonText: "OK"
@@ -59,7 +59,7 @@ function validacionData(id_usu, codigo, token)
         }else {
             swal({
                 title: "Advertencia!",
-                text: "El codigo no es correcto",
+                text: "El código no es correcto",
                 type: "warning",
                 confirmButtonClass: "btn-warning",
                 confirmButtonText: "OK"

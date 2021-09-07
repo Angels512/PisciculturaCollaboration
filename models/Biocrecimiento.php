@@ -9,24 +9,24 @@ class Biocrecimiento extends Conectar
         parent::setNames();
 
         $sql="INSERT INTO  biocrecimiento (
-            id_biocre, 
-            id_etapa, 
-            id_cultivo, 
-            id_usu, 
-            num_organ, 
-            peso_organ, 
-            peso_biomasa, 
-            edad_organ, 
-            color_organ, 
-            escamas_organ, 
-            ojos_organ, 
-            compor_organ, 
-            crecimiento_organ, 
-            obser_adic, 
-            fecha, 
-            fecha_elim, 
-            est) 
-            VALUES 
+            id_biocre,
+            id_etapa,
+            id_cultivo,
+            id_usu,
+            num_organ,
+            peso_organ,
+            peso_biomasa,
+            edad_organ,
+            color_organ,
+            escamas_organ,
+            ojos_organ,
+            compor_organ,
+            crecimiento_organ,
+            obser_adic,
+            fecha,
+            fecha_elim,
+            est)
+            VALUES
             (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_etapa);

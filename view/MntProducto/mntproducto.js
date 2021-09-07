@@ -2,12 +2,12 @@ function init(){
 
     //nos lleva a la funcion guardar una vez se presione guardar en el formulario de nuevo producto
     $("#product_form").on("submit",function(e){
-        guardar(e);
+        validarDatosReg(e);
    });
 
    //nos lleva a la funcion editar una vez se presione guardar en el modal del producto
     $("#product_edit").on("submit",function(e){
-         editar(e);
+        validarDatosMod(e);
     });
 
 }
@@ -98,9 +98,42 @@ $(document).on("click","#elim_produ",function(e){
 
 });
 
-// creamos la funcion guardaryeditar para insertar un proveedor y vaciar los campos del formulario
-function guardar(e){
+//para validacion de datos vacios
+function validarDatosReg(e){
     e.preventDefault();
+
+    if($('#num_lote').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        guardar();
+    }
+}
+
+//para validacion de datos vacios
+function validarDatosMod(e){
+    e.preventDefault();
+
+    if($('#num_lote1').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        editar();
+    }
+}
+
+// creamos la funcion guardaryeditar para insertar un proveedor y vaciar los campos del formulario
+function guardar(){
 
     var formData = new FormData($('#product_form')[0]);
 
@@ -113,14 +146,13 @@ function guardar(e){
         success: function(datos){
             $('#num_lote').val('');
             listarSelectProduct();
-            swal("correcto!","Registrado Correctamente","success");
+            swal("Correcto!","Registrado Correctamente","success");
         }
     });
 }
 
 // creamos la funcion editar para actualizar un producto
-function editar(e){
-    e.preventDefault();
+function editar(){
 
     var formData = new FormData($("#product_edit")[0]);
 
@@ -211,7 +243,9 @@ function eliminar(id_produ){
         if (isConfirm) {
 
             $.post("controller/producto.php?op=eliminar", { id_produ:id_produ }, function (data) {
-
+                listarDatos();
+                listarSelectProduct();
+                $("#infoproducto").hide();
             });
 
             swal({

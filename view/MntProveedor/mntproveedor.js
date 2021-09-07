@@ -2,12 +2,12 @@ function init(){
 
     //nos lleva a la funcion guardar una vez se presione guardar en el formulario de nuevo proveedor
     $("#proveedor_form").on("submit",function(e){
-        guardar(e);  
+        validarDatosReg(e);
    });
 
    //nos lleva a la funcion editar una vez se presione guardar en el modal del proveedor
     $("#proveedor_edit").on("submit",function(e){
-         editar(e);  
+        validarDatosMod(e);
     });
 
 }
@@ -20,14 +20,14 @@ $(document).on("click","#consul_prove",function(e){
 
 });
 
-//nos lleva a la funcion MostrarDatos una vez se de clic en el boton modificar 
+//nos lleva a la funcion MostrarDatos una vez se de clic en el boton modificar
 $(document).on("click","#modi_prove",function(e){
 
     MostrarDatos();
 
 });
 
-//nos lleva a la funcion MostrarDatos una vez se de clic en el boton modificar 
+//nos lleva a la funcion MostrarDatos una vez se de clic en el boton modificar
 $(document).on("click","#elim_prove",function(e){
 
     var id_prove = $('#id_prove').val();
@@ -44,9 +44,42 @@ $(document).ready(function() {
 
 });
 
-// creamos la funcion guardar para insertar un proveedor y vaciar los campos del formulario
-function guardar(e){
+//para validacion de datos vacios
+function validarDatosReg(e){
     e.preventDefault();
+
+    if($('#nombre_emp').val()=='' || $('#direccion_emp').val()=='' || $('#telefono_emp').val()=='' || $('#correo_emp').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        guardar();
+    }
+}
+
+//para validacion de datos vacios
+function validarDatosMod(e){
+    e.preventDefault();
+
+    if($('#nombre_emp1').val()=='' || $('#direccion_emp1').val()=='' || $('#telefono_emp1').val()=='' || $('#correo_emp1').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        editar();
+    }
+}
+
+// creamos la funcion guardar para insertar un proveedor y vaciar los campos del formulario
+function guardar(){
 
     var formData = new FormData($("#proveedor_form")[0]);
 
@@ -62,7 +95,7 @@ function guardar(e){
                 listarSelectProve();
 
                 swal({
-                    title: "HelpDesk!",
+                    title: "Correcto!",
                     text: " Registro Guardado.",
                     type: "success",
                     confirmButtonClass: "btn-success"
@@ -72,8 +105,7 @@ function guardar(e){
 }
 
 // creamos la funcion editar para actualizar un proveedor
-function editar(e){
-    e.preventDefault();
+function editar(){
 
     var formData = new FormData($("#proveedor_edit")[0]);
 
@@ -165,11 +197,11 @@ function eliminar(id_prove){
         if (isConfirm) {
 
             $.post("controller/proveedor.php?op=eliminar", { id_prove:id_prove }, function (data) {
-
+                listarDatos();
+                listarSelectProve();
+                $("#infoproveedor").hide();
             });
 
-            listarDatos();
-            listarSelectProve();
 
             swal({
                 title: "Correcto!",

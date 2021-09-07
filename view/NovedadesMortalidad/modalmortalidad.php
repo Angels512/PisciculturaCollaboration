@@ -24,7 +24,7 @@
                    <div class="form-group">
                         <label class="form-label" for="reg_mortandad">Registro de Mortalidad</label>
                         <div class="form-control-wrapper form-control-icon-right">
-                            <input type="text" class="form-control" id="reg_mortandad" name="reg_mortandad" placeholder="Ingrese la Mortalidad" required>
+                            <input type="text" class="form-control" id="reg_mortandad" name="reg_mortandad" placeholder="Ingrese la Mortalidad">
                             <i class="fa fa-anchor"></i>
                         </div>
                     </div>
