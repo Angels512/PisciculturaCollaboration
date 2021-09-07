@@ -1,11 +1,11 @@
 function init(){
 
-    // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del modal de mortalidad
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del modal de mortalidad
     $("#mortalidad_form").on("submit",function(e){
         validarDatosMort(e);
     })
 
-    // Nos dirige a la funcion guardaryeditarN una vez se le de clic al boton guardar del modal de novedad
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del modal de novedad
     $("#novedad_form").on("submit",function(e){
         validarDatosNov(e);
     })
@@ -74,8 +74,8 @@ $(document).ready(function(){
             }
         }).DataTable();
 
-        //para llenar el datatable de mortalidad
-        tabla=$('#dt_mortalidad').dataTable({
+    //para llenar el datatable de mortalidad
+    tabla=$('#dt_mortalidad').dataTable({
             "aProcessing": true,
             "aServerSide": true,
             dom: 'Bfrtip',
@@ -125,7 +125,7 @@ $(document).ready(function(){
                     "sSortDescending": ": Activar para ordenar la columna de manera descendente"
                 }
             }
-        }).DataTable();
+    }).DataTable();
 });
 
 //validar campos vacios
@@ -141,7 +141,7 @@ function validarDatosMort(e){
             confirmButtonText: "OK"
         });
     }else{
-        guardaryeditarMort();
+        guardarMort();
     }
 }
 
@@ -158,12 +158,12 @@ function validarDatosNov(e){
             confirmButtonText: "OK"
         });
     }else{
-        guardaryeditarNov();
+        guardarNov();
     }
 }
 
-// creamos la funcion guardaryeditar para insertar la mortalidad y vaciar los campos del formulario
-function guardaryeditarMort(){
+// creamos la funcion guardar para insertar la mortalidad y vaciar los campos del formulario
+function guardarMort(){
     var formData = new FormData($('#mortalidad_form')[0]);
 
     $.ajax({
@@ -173,15 +173,15 @@ function guardaryeditarMort(){
         contentType: false,
         processData: false,
         success: function(datos){
-
+            $('#modalmortalidad').modal('hide');
             $('#reg_mortandad').val('');
             swal("correcto!","Registrado Correctamente","success");
         }
     });
 }
 
-// creamos la funcion guardaryeditar para insertar una novedad y vaciar los campos del formulario
-function guardaryeditarNov(){
+// creamos la funcion guardar para insertar una novedad y vaciar los campos del formulario
+function guardarNov(){
     var formData = new FormData($('#novedad_form')[0]);
 
     $.ajax({
@@ -191,7 +191,7 @@ function guardaryeditarNov(){
         contentType: false,
         processData: false,
         success: function(datos){
-
+            $('#modalnovedad').modal('hide');
             $('#medidad_prev').val('');
             swal("correcto!","Registrado Correctamente","success");
         }

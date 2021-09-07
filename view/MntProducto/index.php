@@ -34,7 +34,7 @@
 				<div class="widget-tabs-nav bordered">
 					<ul class="tbl-row" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#w-3-tab-2" role="tab">
+							<a class="nav-link active" data-toggle="tab" href="#w-3-tab-2" role="tab">
 								<i class="font-icon font-icon-users-two"></i>
 								Nuevo Producto
 							</a>
@@ -48,7 +48,7 @@
 					</ul>
 				</div>
 				<div class="tab-content widget-tabs-content">
-					<div class="tab-pane" id="w-3-tab-2" role="tabpanel">
+					<div class="tab-pane active" id="w-3-tab-2" role="tabpanel">
 						<section class="box-typical box-typical-padding">
 							<form method="post" id="product_form">
 								<div>

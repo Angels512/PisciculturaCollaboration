@@ -35,7 +35,7 @@
 				<div class="widget-tabs-nav bordered">
 					<ul class="tbl-row" role="tablist">
 						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#w-3-tab-2" role="tab">
+							<a class="nav-link active" data-toggle="tab" href="#w-3-tab-2" role="tab">
 								<i class="font-icon font-icon-users-two"></i>
 								Nuevo Proveedor
 							</a>
@@ -49,13 +49,13 @@
 					</ul>
 				</div>
 				<div class="tab-content widget-tabs-content">
-					<div class="tab-pane" id="w-3-tab-2" role="tabpanel">
+					<div class="tab-pane active" id="w-3-tab-2" role="tabpanel">
 						<section class="box-typical box-typical-padding">
 							<form method="post" id="proveedor_form">
 									<div class="form-group">
 										<label  class="form-label semibold" for="nombre_emp">Nombre Proveedor</label>
 										<div class="form-control-wrapper form-control-icon-right">
-											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre">
+											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre" autofocus>
 											<i class="fa fa-user"></i>
 										</div>
 									</div>
