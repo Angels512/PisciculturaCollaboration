@@ -122,5 +122,4 @@ function deleteRespon(id_respon)
     });
 };
 
-
 init();

@@ -10,22 +10,31 @@
                 </div>
 
                <div class="modal-body">
-						<input type="hidden" name="id_respon" id="id_respon">
+						<input type="hidden" name="id_tanque" id="id_tanque">
 					    <div class="form-group">
-					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
+					    	<label class="form-label semibold" for="num_tanque">Numero de Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre" required>
+					    		<input type="number" class="form-control" id="num_tanque" name="num_tanque" placeholder="Ingrese el Numero de Estanque" required>
                         		<i class="fa fa-user"></i>
                         	</div>
 					    </div>
 
 					    <div class="form-group">
-					    	<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
+					    	<label class="form-label semibold" for="capacidad_tanque">Capacidad de Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido" required>
+					    		<input type="number" class="form-control" id="capacidad_tanque" name="capacidad_tanque" placeholder="Ingrese la capacidad del estanque" required>
                         		<i class="fa fa-user-o"></i>
                         	</div>
 					    </div>
+
+						<div class="form-group">
+					    	<label class="form-label semibold" for="desc_tanque">Descripción del Estanque</label>
+					    	<div class="form-control-wrapper form-control-icon-right">
+					    		<textarea class="form-control" id="desc_tanque" name="desc_tanque" placeholder="Ingrese la descripción" required></textarea>
+                        		<i class="fa fa-user-o"></i>
+                        	</div>
+					    </div>
+
                 </div>
                <div class="modal-footer">
                    <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
