@@ -1,64 +1,149 @@
 function init(){
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Temperatura del Ambiente
+    $("#tempamb_form").on("submit",function(e)
+    {
+        validarDatos(e);
+    });
+}
 
-    $("#tempamb_form").on("submit",function(e){
-         guardaryeditar(e); 
-    })
+function validarDatos(e){
+    e.preventDefault();
 
+    if($('#num_dia').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar() : guardar();
+    }
 }
 
 $(document).ready(function(){
-
     /* Esto es para llenar el select del Cultivo */
     $.post("controller/cultivo.php?op=cultivoselect",function(data, status){
         $('#id_cultivo').html(data);
     });
 
-    $("#grados1").ionRangeSlider({
-        min: 0.1,
-        max: 100,
-        grid: true,
-        hide_min_max: true
-    });
+    // Condición para saber si se va a consultar o modificar segun informacion que llegue de la url
+    getUrlParameter('ID') || getUrlParameter('EDIT') ? listarDatos() : console.log('Ok');
 
-    $("#grados2").ionRangeSlider({
-        min: 0.1,
-        max: 100,
-        grid: true,
-        hide_min_max: true
-    });
+    /*Sliders Rangos*/
+    if (!getUrlParameter('ID') && !getUrlParameter('EDIT'))
+    {
+        $("#grados1").ionRangeSlider({
+            min: 0,
+            max: 50,
+            from: 0,
+            grid: true,
+            hide_min_max: true
+        });
 
-    $("#grados3").ionRangeSlider({
-        min: 0.1,
-        max: 100,
-        grid: true,
-        hide_min_max: true
-    });
+        $("#grados2").ionRangeSlider({
+            min: 0,
+            max: 50,
+            from: 0,
+            grid: true,
+            hide_min_max: true
+        });
 
+        $("#grados3").ionRangeSlider({
+            min: 0,
+            max: 50,
+            from: 0,
+            grid: true,
+            hide_min_max: true
+        });
+
+        
+    }
 });
 
+//listar datos de temperatura ambiente para consultar o actualizar
+function listarDatos()
+{
+    let id_temp_amb = getUrlParameter('ID');
 
+    $.post('controller/temperaturaambiente.php?op=listarDatosTempamb', {id_temp_amb:id_temp_amb}, function(data)
+    {
+        data = JSON.parse(data);
 
-// creamos la funcion guardaryeditar para insertar y vaciar los campos del formulario
+        $('#id_temp_amb').val(data.id_temp_amb);
+        $('#id_usu').val(data.id_usu);
+        $('#fecha').val(data.fecha);
+        $("#id_cultivo").val(data.id_cultivo);
+        $("#grados1").val(data.peso_organ);
+        $("#grados2").val(data.peso_biomasa);
+        $("#grados3").val(data.edad_organ);
+    });
+}
 
-function guardaryeditar(e){
-    e.preventDefault();
- 
-    /* var variable = $('#obser_adic').val();
-    console.log(variable); */
+// creamos la funcion guardar para insertar una nueva biometria y vaciar los campos del formulario
+function guardar(){
     var formData = new FormData($('#tempamb_form')[0]);
-    
+
     $.ajax({
         url: "controller/temperaturaambiente.php?op=insertTempamb",
         type: "POST",
         data: formData,
         contentType: false,
         processData: false,
-        success: function(datos){
-            $('#obser_adic').val('');
-           
-            swal("correcto!","Registrado Correctamente","success");
+        success: (datos) =>
+        {
+            $("#tempamb_form")[0].reset();
+
+            document.querySelectorAll('.slider').forEach((slider) =>
+            {
+                let reset = $(`#${slider.id}`).data('ionRangeSlider');
+                reset.reset();
+            });
+
+            swal("Correcto!","Registrado Correctamente","success");
         }
-    }); 
- }
-   
-init(); 
+    });
+}
+
+// creamos la funcion editar para actualizar el formato
+function editar(){
+    var formData = new FormData($("#tempamb_form")[0]);
+
+    $.ajax({
+        url: "controller/temperaturaambiente.php?op=editar",
+        type: "POST",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function(datos){
+            swal({
+                title: "A'ttia!",
+                text: "Registro Guardado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
+
+
+// funcion con la que capturamos el id que llega por la url
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+init();
+
