@@ -114,7 +114,7 @@
 							</div>
 						</section>
 					</div>
-					
+
 					<!--.tab-pane-->
 
 					<div role="tabpanel" class="tab-pane fade" id="tbl_alim">
@@ -140,10 +140,10 @@
 							</div>
 						</section>
 					</div>
-					
+
 					<!--.tab-pane-->
 
-					<div role="tabpanel" class="tab-pane fade" id="´parafq">
+					<div role="tabpanel" class="tab-pane fade" id="parafq">
 						<section class="card">
 							<div class="card-block">
 								<table id="parametrosfq" class="display table table-striped table-bordered">
@@ -219,7 +219,7 @@
 					<div role="tabpanel" class="tab-pane fade" id="estacui">
 						<section class="card">
 							<div class="card-block">
-								<table id="estacuicultura" class="display table table-striped table-bordered">
+								<table id="estadoacuicultura" class="display table table-striped table-bordered">
 									<thead>
 										<tr>
 											<th>#</th>
