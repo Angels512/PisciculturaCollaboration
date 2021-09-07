@@ -65,7 +65,7 @@ class Parametrosfq extends Conectar
     }
 
     // Traemos los datos del Biocrecimiento desde base de datos
-    public function getParafq_id($id_biocre)
+    public function getParafq_id($id_par_fq)
     {
         $conectar = parent::Conexion();
         parent::setNames();
