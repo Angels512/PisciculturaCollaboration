@@ -2,7 +2,7 @@
 <html>
 <head lang="es">
         <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Biocrecimiento- A'ttia</title>
+        <title>Biocrecimiento - A'ttia</title>
 </head>
 <body class="with-side-menu">
 

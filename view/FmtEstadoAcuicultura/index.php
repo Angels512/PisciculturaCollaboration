@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head lang="es-419">
-<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>PCDCB</title>
-	<?php require_once("../../public/templates/head.php"); ?>
+<head lang="es">
+        <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
+        <title>Estado General de Acuicultura - A'ttia</title>
 </head>
 <body class="with-side-menu">
 
@@ -21,8 +18,8 @@
 							<h2>Formato Estado General de Acuicultura</h2>
 							<ol class="breadcrumb breadcrumb-simple">
 								<li><a href="inicio">Inicio</a></li>
-								<li><a href="#">Crear Formatos</a></li>
-								<li class="active">Estado Acuicultura</li>
+								<li><a href="#">Formatos</a></li>
+								<li class="active">Estado General de Acuicultura</li>
 							</ol>
 						</div>
 					</div>
@@ -30,43 +27,129 @@
 			</header>
 
 
-			<section class="box-typical box-typical-padding">
-				<div>
-					<h5><strong>Ingrese los Datos</strong></h5>
-				</div>
+			<?php
+				if (!isset($_GET['ID']) && !isset($_GET['EDIT'])){
+			?>
+				<section class="box-typical box-typical-padding">
+					<div>
+						<h5>Ingrese los Datos</h5>
+					</div>
 
-				<div class="row">
-					<form method="post" id="estacui_form">
+					<div class="row">
+						<form method="post" id="estacui_form">
 
-						<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
+							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
 
-						<div class="col-md-12">
-							<fieldset class="form-group">
-								<label class="form-label semibold" for="fecha">Fecha de Creación</label>
-								<div class="form-control-wrapper form-control-icon-right">
-									<input type="text" class="form-control" id="fecha" name="fecha" disabled>
-									<i class="font-icon font-icon-calend"></i>
-								</div>
-							</fieldset>
-						</div>
+							<input type="hidden" class="form-control" id="num_organ" name="num_organ"  value="2000" readonly>
 
-						<div class="col-sm-12">
-							<label class="form-label semibold" for="obser_adic">Observaciones Generales</label>
-							<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Añada las observaciones pertinentes"></textarea>
-						</div>
+							<div class="col-lg-12">
+								<fieldset class="form-group">
+									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
+									<div>
+										<select id="id_cultivo" name="id_cultivo" class="form-control">
+										</select>
+									</div>
+								</fieldset>
+							</div>
 
-						<div class="col-lg-12">
-							<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary">Guardar</button>
-						</div>
-					</form>
-				</div>
-			</section>
-		</div>
-	</div>
+							<div class="col-sm-12">
+								<fieldset class="form-group">
+									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
+								</fieldset>
+							</div>
+							
+							<div class="col-lg-12">
+								<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right mt-10">Guardar</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			<?php
+				} else if(isset($_GET['ID']) && !isset($_GET['EDIT'])) {
+			?>
+				<section class="box-typical box-typical-padding">
+					<div>
+						<h5>Consultar Estado de Acuicultura</h5>
+					</div>
 
-	<?php require_once("../../public/templates/js.php") ?>
-    <script src="view/FmtEstadoAcuicultura/fmtestacui.js"></script>
-	
+							<div class="col-lg-6">
+								<fieldset class="form-group">
+									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
+									<div>
+										<select id="id_cultivo" name="id_cultivo" class="form-control" disabled>
+										</select>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="col-sm-12">
+								<fieldset class="form-group">
+									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura" readonly></textarea>
+								</fieldset>
+							</div>
+
+							<div class="col-lg-12">
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
+							</div>
+						</form>
+					</div>
+				</section>
+			<?php
+				} else if(isset($_GET['ID']) && isset($_GET['EDIT'])) {
+			?>
+				<section class="box-typical box-typical-padding">
+					<div>
+						<h5>Actualizar Estado de Acuicultura</h5>
+					</div>
+
+					<div class="row">
+						<form method="post" id="estacui_form">
+							<input type="hidden" name="id_est_acui" id="id_est_acui">
+							<input type="hidden" name="id_usu" id="id_usu">
+
+							<div class="col-md-6">
+								<fieldset class="form-group">
+									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="fecha" name="fecha" readonly>
+										<i class="font-icon font-icon-calend"></i>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="col-lg-6">
+								<fieldset class="form-group">
+									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
+									<div>
+										<select id="id_cultivo" name="id_cultivo" class="form-control">
+										</select>
+									</div>
+								</fieldset>
+							</div>
+
+							<div class="col-sm-12">
+								<fieldset class="form-group">
+									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
+								</fieldset>
+							</div>
+							<div class="col-lg-12">
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
+								<button type="submit" name="action" value="add" id="guardar" class="btn btn-rounded btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+							</div>
+						</form>
+					</div>
+				</section>
+			<?php
+				}
+			?>
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+	<?php require_once("../../public/templates/js.php"); ?>
+	<script src="view/FmtEstadoAcuicultura/fmtestacui.js"></script>
 
 </body>
 </html>
