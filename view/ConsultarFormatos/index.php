@@ -51,7 +51,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#parafq" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-zigzag"></span>
 										Parametros FQ
 									</span>
 								</a>
@@ -60,7 +60,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#tempagua" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-speed"></span>
 										Temperatura Agua
 									</span>
 								</a>
@@ -69,7 +69,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#tempamb" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-speed"></span>
 										Temperatura Ambiente
 									</span>
 								</a>
@@ -78,7 +78,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#estacui" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon glyphicon glyphicon-tint"></span>
 										Estado Acuicultura
 									</span>
 								</a>
