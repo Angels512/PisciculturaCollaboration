@@ -104,8 +104,7 @@ function guardar(){
         contentType: false,
         processData: false,
         success: function(datos){
-             $("#tabla_alim")[0].reset();
-
+            $("#tabla_alim")[0].reset();
             swal("correcto!","Registrado Correctamente","success");
         }
     });

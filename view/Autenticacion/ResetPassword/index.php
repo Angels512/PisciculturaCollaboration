@@ -19,7 +19,7 @@
     <body style="overflow-y: hidden;">
         <div id="page-container" class="main-content-boxed">
             <main id="main-container">
-                <div class="bg-image" style="background-image: url('public/img/banner.jpg');">
+                <div class="bg-image" style="background-image: url('public/img/banner.png');">
                     <div class="row mx-0 bg-default-op">
                         <div class="hero-static col-md-6 col-xl-8 d-none d-md-flex align-items-md-end">
                             <div class="p-30 invisible" data-toggle="appear">
