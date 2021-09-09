@@ -54,10 +54,6 @@
 					</div>
 				</div><!--.tabs-section-nav-->
 
-
-
-
-
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
 						<section class="widget widget-tasks">
