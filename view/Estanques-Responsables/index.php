@@ -80,7 +80,6 @@
 								</div>
 							</header>
 							<div id="listaresponsables" >
-								
 							</div>
 						</section>
 					</div><!--.tab-pane-->

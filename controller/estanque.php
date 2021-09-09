@@ -86,7 +86,7 @@
             }
         break;
 
-        //para eliminar un estanque por su id 
+        //para eliminar un estanque por su id
         case "eliminar":
             $estanque->delete_estanque($_POST["id_tanque"]);
         break;

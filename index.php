@@ -382,7 +382,7 @@
 									</ul>
 
 									<div class="row" style="padding: 15px 0 0 70px;">
-										<p style="color: rgb(216, 216, 216);"><b>Dirección:</b> Cra.46 45-54, Bogota</p>
+										<p style="color: rgb(216, 216, 216);"><b>Dirección:</b> Cra.46 45-54, Bogotá</p>
 									</div>
 
 									<div class="row" style="padding: 15px 0 0 70px;">
