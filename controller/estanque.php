@@ -33,7 +33,8 @@
                 $estanque->insertEstanque($_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
             }
             else {
-                $estanque->updateEstanque($_POST["id_tanque"],$_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
+                $data = $estanque->updateEstanque($_POST["id_tanque"],$_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
+                echo $data;
             }
         break;
 
@@ -47,10 +48,10 @@
                     <div class="user-card-row">
                         <div class="tbl-row">
                             <div class="tbl-cell tbl-cell-photo">
-                                <img src="public/img/4.jpg"  alt="foto estanque">
+                                <img src="public/img/4.png"  alt="foto estanque">
                             </div>
                             <div class="tbl-cell">
-                                <p class="user-card-row-name"><?php echo $row['num_tanque']; ?></p>
+                                <p class="user-card-row-name"><?php echo 'Estanque #' . $row['num_tanque']; ?></p>
                             </div>
                         </div>
                     </div>
@@ -59,7 +60,7 @@
                             <i class="font-icon glyphicon glyphicon-option-vertical"></i>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" onClick="modaEstanque(<?php echo $row['id_tanque']; ?>);" id="<?php echo $row['id_tanque']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Actualizar</a>
+                            <a class="dropdown-item" onClick="modalEstanque(<?php echo $row['id_tanque']; ?>);" id="<?php echo $row['id_tanque']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Actualizar</a>
                             <a class="dropdown-item" onClick="deleteEstanque(<?php echo $row['id_tanque']; ?>);" id="<?php echo $row['id_tanque']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
                         </div>
                     </div>
@@ -85,7 +86,7 @@
             }
         break;
 
-        //para eliminar un estanque por su id 
+        //para eliminar un estanque por su id
         case "eliminar":
             $estanque->delete_estanque($_POST["id_tanque"]);
         break;

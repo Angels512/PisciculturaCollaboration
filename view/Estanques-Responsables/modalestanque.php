@@ -6,9 +6,8 @@
                     <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
                         <i class="font-icon-close-2"></i>
                     </button>
-                    <h4 class="modal-title" id="titulores"></h4>
+                    <h4 class="modal-title" id="tituloest"></h4>
                 </div>
-
                <div class="modal-body">
 						<input type="hidden" name="id_tanque" id="id_tanque">
 					    <div class="form-group">
@@ -18,7 +17,6 @@
                         		<i class="fa fa-user"></i>
                         	</div>
 					    </div>
-
 					    <div class="form-group">
 					    	<label class="form-label semibold" for="capacidad_tanque">Capacidad de Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
@@ -26,7 +24,6 @@
                         		<i class="fa fa-user-o"></i>
                         	</div>
 					    </div>
-
 						<div class="form-group">
 					    	<label class="form-label semibold" for="desc_tanque">Descripción del Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
@@ -34,7 +31,6 @@
                         		<i class="fa fa-user-o"></i>
                         	</div>
 					    </div>
-
                 </div>
                <div class="modal-footer">
                    <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
