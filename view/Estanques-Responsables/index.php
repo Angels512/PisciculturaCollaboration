@@ -53,15 +53,20 @@
 						</ul>
 					</div>
 				</div><!--.tabs-section-nav-->
+
+
+
+
+
 				<div class="tab-content">
 					<div role="tabpanel" class="tab-pane fade in active" id="estanques">
-					<section class="widget widget-tasks">
+						<section class="widget widget-tasks">
 							<header class="widget-header">
 								<div class="tbl-cell tbl-cell-action">
 									<a id="newestanque" class="btn btn-inline btn-primary float-right">Nuevo Estanque</a>
 								</div>
 							</header>
-							<div id="listaestanques" >
+							<div id="listarestanques" >
 
 							</div>
 						</section>
@@ -75,23 +80,20 @@
 								</div>
 							</header>
 							<div id="listaresponsables" >
-
+								
 							</div>
 						</section>
 					</div><!--.tab-pane-->
-
-
 				</div><!--.tab-content-->
 			</section><!--.tabs-section-->
         </div>
     </div>
 
-	<?php require_once("../../public/templates/js.php"); ?>
 	<?php require_once("modalestanque.php"); ?>
 	<?php require_once("modalresponsable.php"); ?>
 
+	<?php require_once("../../public/templates/js.php"); ?>
 	<script src="view/Estanques-Responsables/estanques.js"></script>
 	<script src="view/Estanques-Responsables/responsables.js"></script>
-
 </body>
 </html>

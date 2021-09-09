@@ -6,7 +6,7 @@
                     <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close">
                         <i class="font-icon-close-2"></i>
                     </button>
-                    <h4 class="modal-title" id="titulores"></h4>
+                    <h4 class="modal-title" id="tituloest"></h4>
                 </div>
 
                <div class="modal-body">
