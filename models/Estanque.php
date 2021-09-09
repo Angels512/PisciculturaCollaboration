@@ -76,7 +76,7 @@
             $sql->bindValue(4, $id_tanque); 
             $sql->execute();
 
-        return $resultado=$sql->fetchAll();
+            return $resultado=$sql->fetchAll();
         }
 
         //para eliminar un estanque en base de datos
