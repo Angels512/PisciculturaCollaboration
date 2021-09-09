@@ -51,7 +51,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#parafq" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-zigzag"></span>
 										Parametros FQ
 									</span>
 								</a>
@@ -60,7 +60,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#tempagua" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-speed"></span>
 										Temperatura Agua
 									</span>
 								</a>
@@ -69,7 +69,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#tempamb" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon font-icon-speed"></span>
 										Temperatura Ambiente
 									</span>
 								</a>
@@ -78,7 +78,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="#estacui" role="tab" data-toggle="tab">
 									<span class="nav-link-in">
-										<span class="font-icon font-icon-notebook-bird"></span>
+										<span class="font-icon glyphicon glyphicon-tint"></span>
 										Estado Acuicultura
 									</span>
 								</a>
@@ -114,7 +114,7 @@
 							</div>
 						</section>
 					</div>
-					
+
 					<!--.tab-pane-->
 
 					<div role="tabpanel" class="tab-pane fade" id="tbl_alim">
@@ -140,10 +140,10 @@
 							</div>
 						</section>
 					</div>
-					
+
 					<!--.tab-pane-->
 
-					<div role="tabpanel" class="tab-pane fade" id="´parafq">
+					<div role="tabpanel" class="tab-pane fade" id="parafq">
 						<section class="card">
 							<div class="card-block">
 								<table id="parametrosfq" class="display table table-striped table-bordered">
@@ -219,7 +219,7 @@
 					<div role="tabpanel" class="tab-pane fade" id="estacui">
 						<section class="card">
 							<div class="card-block">
-								<table id="estacuicultura" class="display table table-striped table-bordered">
+								<table id="estadoacuicultura" class="display table table-striped table-bordered">
 									<thead>
 										<tr>
 											<th>#</th>

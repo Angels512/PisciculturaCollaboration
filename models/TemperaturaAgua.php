@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Tempagua extends Conectar
 {
@@ -54,7 +54,7 @@ class Tempagua extends Conectar
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->execute();
-        return $resultado=$sql->fetchAll();
+        return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
     // Traemos los datos del Temperatura Agua desde base de datos

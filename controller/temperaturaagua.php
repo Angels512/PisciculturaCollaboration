@@ -1,4 +1,4 @@
-<?php 
+<?php
     require_once('../config/conexion.php');
     require_once('../models/TemperaturaAgua.php');
     $tempagua = new Tempagua();
@@ -13,27 +13,30 @@
         //para llenar el datatable de Temperatura Agua por cultivo
         case "listar_x_cult":
             $datos=$tempagua->listar_tempagua_x_cult($_POST["id_cultivo"]);
-            $data= Array();
+            $data= array();
+
             foreach($datos as $row){
                 $sub_array = array();
                 $sub_array[] = $row["id_temp_agua"];
                 $sub_array[] = $row["nombre_usu"].' '.$row["apellido_usu"];
                 $sub_array[] = date('d/m/Y', strtotime($row["fecha"]));
                 $sub_array[] = $row["num_dia"];
-                $sub_array[] = '<button type="button" onClick="consultar('.$row['id_temp_agua'].');"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
-                $sub_array[] = '<button type="button" onClick="editar('.$row['id_temp_agua'].');"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
-                $sub_array[] = '<button type="button" onClick="eliminar('.$row['id_temp_agua'].');" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="consultar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
+                $sub_array[] = '<button type="button" onClick="editar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="eliminar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
 
                 $data[] = $sub_array;
             }
 
-            $results = array(
+            $results = array
+            (
                 "sEcho"=>1,
                 "iTotalRecords"=>count($data),
                 "iTotalDisplayRecords"=>count($data),
-                "aaData"=>$data);
-            echo json_encode($results);
+                "aaData"=>$data
+            );
 
+            echo json_encode($results);
         break;
 
         // Extrae todos los datos del FORMATO Temperatura Agua para mostrarlos en su formulario
@@ -66,10 +69,6 @@
         case "eliminar":
             $tempagua->delete_tempagua($_POST["id_temp_agua"]);
         break;
-
-    }
-
-?>
 
     }
 

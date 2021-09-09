@@ -68,7 +68,7 @@ function listarDatatables(controller)
     }).DataTable();
 }
 
-$('#list').on('click', (e) => { setTimeout(() => { $('#tblalimentacion').DataTable().responsive.recalc(); }, 200); });
+// $('#list').on('click', (e) => { setTimeout(() => { $('#tblalimentacion').DataTable().responsive.recalc(); }, 200); });
 
 
 
