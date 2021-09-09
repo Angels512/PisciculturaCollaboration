@@ -12,7 +12,7 @@
 
         //para llenar el datatable de biocre por cultivo
         case "listar_x_cult":
-            $datos=$biocre->listar_parafq_x_cult($_POST["id_cultivo"]);
+            $datos=$parafq->listar_parafq_x_cult($_POST["id_cultivo"]);
             $data= Array();
             foreach($datos as $row){
                 $sub_array = array();
@@ -38,7 +38,7 @@
 
         // Extrae todos los datos del FORMATO BIOCRECIMIENTO para mostrarlos en su formulario
         case 'listarDatosParafq':
-            $datos = $biocre->getBiocre_id($_POST['id_par_fq']);
+            $datos = $parafq->getParafq_id($_POST['id_par_fq']);
 
             if (is_array($datos) == true AND count($datos)>0)
             {
@@ -67,7 +67,7 @@
 
         //para eliminar un formato de biocrecimiento por su id
         case "eliminar":
-            $biocre->delete_parafq($_POST["id_par_fq"]);
+            $parafq->delete_parafq($_POST["id_par_fq"]);
         break;
 
     }
