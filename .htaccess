@@ -106,8 +106,8 @@ RewriteRule ^proveedor/?$ view/MntProveedor/index.php
 # TABLA ALIMENTACION
 RewriteRule ^tbl-alimentacion/?$ view/MntTblAlimentacion/index.php
 
-# GESTIONAR ESTANQUES Y RESPONSABLES
-RewriteRule ^estanq-respon/?$ view/Estanques-Responsables/index.php
+# GESTIONAR RESPONSABLES
+RewriteRule ^responsables/?$ view/Responsables/index.php
 
 
 
@@ -124,3 +124,6 @@ RewriteRule ^tempamb/?$ view/FmtTemperaturaAmbiente/index.php
 
 # ESTADO ACUICULTURA
 RewriteRule ^estacui/?$ view/FmtEstadoAcuicultura/index.php
+
+# GESTIONAR ESTANQUES
+RewriteRule ^estanques/?$ view/Estanques/index.php

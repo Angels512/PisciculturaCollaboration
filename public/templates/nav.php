@@ -49,9 +49,16 @@
                     </li>
 
                     <li class="red">
-                        <a href="estanq-respon">
+                        <a href="estanques">
                             <i class="font-icon font-icon-contacts" aria-hidden="true"></i>
-                            <span class="lbl">Estanques/Responsables</span>
+                            <span class="lbl">Estanques</span>
+                        </a>
+                    </li>
+
+                    <li class="blue">
+                        <a href="responsables">
+                            <i class="font-icon font-icon-contacts" aria-hidden="true"></i>
+                            <span class="lbl">Responsables</span>
                         </a>
                     </li>
 

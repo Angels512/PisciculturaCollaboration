@@ -19,7 +19,7 @@ $(document).ready(function() {
       $('.daterange3').daterangepicker({
         singleDatePicker: true,
          "locale": {
-            "format": "YYYY-MM-DD",
+            "format": "DD-MM-YYYY",
             "separator": " - ",
             "daysOfWeek": [
                 "Do",

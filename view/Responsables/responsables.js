@@ -32,6 +32,9 @@ function guardaryeditar(){
 
     var formData = new FormData($('#responsable_form')[0]);
 
+    var idrespon = $('#id_respon').val();
+    console.log(idrespon);
+
     $.ajax({
         url: "controller/responsable.php?op=guardaryeditar",
         type: "POST",

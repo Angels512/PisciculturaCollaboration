@@ -84,7 +84,7 @@
             }
         break;
 
-        //para eliminar un responsable por su id 
+        //para eliminar un responsable por su id
         case "eliminar":
             $responsable->delete_respon($_POST["id_respon"]);
         break;
