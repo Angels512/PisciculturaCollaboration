@@ -20,44 +20,62 @@
                     <div class="row">
                         <div class="centrarSummer">
                             <div class="col-lg-10 col-lg-pull-10 col-md-10 col-sm-12">
-                                <section class="box-typical profileCard">
-                                    <div class="profile-card">
-                                        <div class="profile-card-photo">
-                                            <img src="public/img/<?php echo $_SESSION["id_rol"]; ?>.jpg" alt=""/>
+                                <section class="widget widget-user">
+                                    <div class="widget-user-bg" style="background-image: url('public/img/banner.png'); height: 175px;"></div>
+                                    <div class="widget-user-photo">
+                                        <img src="public/img/<?php echo $_SESSION["id_rol"]; ?>.jpg" alt="">
+                                    </div>
+                                    <div class="widget-user-name" id="nombreCompleto">
+                                        <i class="font-icon font-icon-award"></i>
+                                    </div>
+                                    <div id="nombreRol"></div>
+                                    <button type="button" id="btnPerfil" class="btn btn-rounded mt-1" style="margin-top: 12px;">Actualizar</button>
+                                    <div class="widget-user-stat">
+                                        <div class="item col-md-6 col-sm-12">
+                                            <div class="number" id="fechaCreacion" style="font-size: 1.1em;"></div>
+                                            <div class="caption">Fecha de creación</div>
                                         </div>
-                                        <div class="profile-card-name" id="nombreCompleto"></div>
-                                        <div class="profile-card-status" id="nombreRol"></div><br>
-                                        <button type="button" id="btnPerfil" class="btn btn-rounded">Actualizar</button>
-                                    </div><!--.profile-card-->
-
-                                    <div class="profile-statistic tbl">
-                                        <div class="tbl-row">
-                                            <div class="tbl-cell">
-                                                <b id="fechaCreacion"></b>
-                                                Fecha de creación
-                                            </div>
-                                            <div class="tbl-cell">
-                                                <b id="fechaAct"></b>
-                                                Ultima Actualización
-                                            </div>
+                                        <div class="item col-md-6 col-sm-12">
+                                            <div class="number" id="fechaAct" style="font-size: 1.1em;"></div>
+                                            <div class="caption">Última Actualización</div>
                                         </div>
                                     </div>
+                                </section><!--.widget-user-->
 
-                                    <ul class="profile-links-list">
-                                        <li class="nowrap">
-                                            <p><i class="fa fa-address-card" aria-hidden="true"></i><b>&nbsp&nbsp Número de documento:</b> <span id="numeroDocumento"></span></p>
-                                        </li>
-                                        <li class="nowrap">
-                                            <p><i class="fa fa-envelope" aria-hidden="true"></i><b>&nbsp&nbsp Correo electrónico:</b> <span id="direccionCorreo"></span></p>
-                                        </li>
-                                        <li class="nowrap">
-                                            <p><i class="fa fa-home"></i><b>&nbsp&nbsp Dirección:</b> <span id="direccion"></span></p>
-                                        </li>
-                                        <li class="nowrap">
-                                            <p><i class="fa fa-phone"></i><b>&nbsp&nbsp Teléfono:</b> <span id="numeroTelefono"></span></p>
-                                        </li>
-                                    </ul>
-                                </section><!--.box-typical-->
+                                <section class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <section class="widget widget-simple-sm">
+                                            <div class="widget-simple-sm-statistic">
+                                                <div class="number" id="numeroDocumento" style="font-size: 1.1em;"></div>
+                                                <div class="caption color-blue"><i class="fa fa-address-card" aria-hidden="true"></i>&nbsp&nbsp Número de documento</div>
+                                            </div>
+                                        </section><!--.widget-simple-sm-->
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <section class="widget widget-simple-sm">
+                                            <div class="widget-simple-sm-statistic">
+                                                <div class="number" id="direccionCorreo" style="font-size: 1.1em;"></div>
+                                                <div class="caption color-purple"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp&nbsp Correo electrónico</div>
+                                            </div>
+                                        </section><!--.widget-simple-sm-->
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <section class="widget widget-simple-sm">
+                                            <div class="widget-simple-sm-statistic">
+                                                <div class="number" id="direccion" style="font-size: 1.1em;"></div>
+                                                <div class="caption color-red"><i class="fa fa-home"></i>&nbsp&nbsp Dirección</div>
+                                            </div>
+                                        </section><!--.widget-simple-sm-->
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <section class="widget widget-simple-sm">
+                                            <div class="widget-simple-sm-statistic">
+                                                <div class="number" id="numeroTelefono" style="font-size: 1.1em;"></div>
+                                                <div class="caption color-green"><i class="fa fa-phone"></i>&nbsp&nbsp Teléfono</div>
+                                            </div>
+                                        </section><!--.widget-simple-sm-->
+                                    </div>
+                                </section>
                             </div><!--.col- -->
                         </div>
                     </div><!--.row-->
