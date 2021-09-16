@@ -43,7 +43,7 @@
 
         // Para insertar productos //
         case "insertproducts":
-            $producto->insertProducts($_POST["id_prove"],$_POST["id_clase"],$_POST["fech_venc"],$_POST["num_lote"]);
+            $producto->insertProducts($_POST["id_prove"],$_POST["id_clase"],date('Y/m/d', strtotime($_POST["fech_venc"])),$_POST["num_lote"]);
         break;
 
 
@@ -69,7 +69,7 @@
 
         // Para actualizar los productos por su id
         case "editar":
-            $producto->updateProducto( $_POST["id_produ"] ,$_POST["id_clase"] ,$_POST["fech_venc"],$_POST["num_lote"],$_POST["id_prove"]); 
+            $producto->updateProducto( $_POST["id_produ"] ,$_POST["id_clase"] ,date('Y/m/d', strtotime($_POST["fech_venc"])),$_POST["num_lote"],$_POST["id_prove"]); 
         break;
 
         //para eliminar un producto por su id
