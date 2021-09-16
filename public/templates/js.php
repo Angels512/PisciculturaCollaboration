@@ -40,4 +40,6 @@
 <!--Calendar-->
 <script src="public/js/lib/daterangepicker/daterangepicker.js"></script>
 
-
+<!--Tables-->
+<script src="public/js/lib/peity/jquery.peity.min.js"></script>
+<script src="public/js/lib/table-edit/jquery.tabledit.min.js"></script>
