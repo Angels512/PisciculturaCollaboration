@@ -43,27 +43,29 @@
 
             foreach ($datos as $row) {
             ?>
-                <div class="widget-tasks-item">
-                    <div class="user-card-row">
-                        <div class="tbl-row">
-                            <div class="tbl-cell tbl-cell-photo">
+                <section class="box-typical">
+					<header class="box-typical-header">
+						<div class="tbl-row">
+							<div class="tbl-cell tbl-cell-title">
+                                <div class="tbl-cell tbl-cell-photo">
                                 <img src="public/img/3.jpg"  alt="foto usuario">
                             </div>
                             <div class="tbl-cell">
                                 <p class="user-card-row-name"><?php echo $row['nombre_respon'].' '.$row['apellido_respon']; ?></p>
                             </div>
-                        </div>
-                    </div>
-                    <div class="btn-group widget-menu">
-                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="font-icon glyphicon glyphicon-option-vertical"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" onClick="modalRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Actualizar</a>
-                            <a class="dropdown-item" onClick="deleteRespon(<?php echo $row['id_respon']; ?>);" id="<?php echo $row['id_respon']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </div>
-                    </div>
-                </div>
+							</div>
+							<div class="tbl-cell tbl-cell-action-bordered">
+								<button type="button" class="action-btn"><i class="font-icon font-icon-pencil"></i></button>
+							</div>
+							<div class="tbl-cell tbl-cell-action-bordered">
+								<button type="button" class="action-btn"><i class="font-icon font-icon-re"></i></button>
+							</div>
+							<div class="tbl-cell tbl-cell-action-bordered">
+								<button type="button" class="action-btn"><i class="font-icon font-icon-trash"></i></button>
+							</div>
+						</div>
+					</header>
+				</section>
             <?php
             }
         break;
