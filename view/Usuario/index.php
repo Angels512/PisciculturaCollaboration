@@ -28,7 +28,7 @@
                                 </ol>
                             </div>
                             <div class="tbl-cell tbl-cell-action">
-							    <a id="btnAgregar" class="btn btn-inline btn-primary float-right mg-top">Agregar Usuario</a>
+							    <a id="btnAgregar" class="btn btn-inline btn-primary azul float-right mg-top">Agregar Usuario</a>
 						    </div>
                         </div>
                     </div>
