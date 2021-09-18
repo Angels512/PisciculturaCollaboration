@@ -88,6 +88,23 @@
 
 
 
+        case 'cultivoExistente':
+            $data = $cultivo->validarEstanque($_POST['num_lote']);
+            echo json_encode($data);
+        break;
+
+        case 'validateEstanque':
+            $data = $cultivo->validarEstanque($_POST['id_tanque']);
+            echo json_encode($data);
+        break;
+
+        case 'validateResponsable':
+            $data = $cultivo->validarResponsable($_POST['id_respon']);
+            echo json_encode($data);
+        break;
+
+
+
         case 'getCultivoVencido':
             $datos = $cultivo->getCultivoVencido();
 

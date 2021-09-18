@@ -90,6 +90,52 @@
         }
 
 
+
+        // VALIDACION
+        // Verifica que el cultivo no exista
+        public function cultivoExistente($num_lote)
+        {
+            $conectar = parent::Conexion();
+            parent::setNames();
+
+            $sql = 'SELECT * FROM cultivo WHERE num_lote=? AND est=1;';
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1, $num_lote);
+            $sql->execute();
+
+            return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        // Verifica que los estanques no se repitan en los cultivos
+        public function validarEstanque($id_tanque)
+        {
+            $conectar = parent::Conexion();
+            parent::setNames();
+
+            $sql = 'SELECT * FROM cultivo WHERE id_tanque=? AND est=1;';
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1, $id_tanque);
+            $sql->execute();
+
+            return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        // Verifica que los responsables no se repitan en los cultivos mas de 3 veces
+        public function validarResponsable($id_respon)
+        {
+            $conectar = parent::Conexion();
+            parent::setNames();
+
+            $sql = 'SELECT * FROM cultivo WHERE id_respon=? AND est=1;';
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1, $id_respon);
+            $sql->execute();
+
+            return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+
+
         // Selecciona un cultivo que ya cumplio su tiempo de 6 meses
         public function getCultivoVencido()
         {
