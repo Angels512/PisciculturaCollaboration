@@ -54,10 +54,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group widget-menu">
+                    <div class="btn-group widget-menu" style="top: 40%;">
                         <div>
-                            <button type="button" onClick="modalRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>"  class="btn btn-inline btn-warning btn-sm ladda-button" style="margin-right: 10px;"><div><i class="fa fa-edit"></i></div></button>
-                            <button type="button" onClick="deleteRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>
+                            <button type="button" onClick="modalRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>"  class="btn btn-inline btn-warning btn-sm ladda-button" style="margin-right: 10px;"><div><i class="fa fa-edit" style="padding: 0.3rem .45rem;"></i></div></button>
+                            <button type="button" onClick="deleteRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash" style="padding: 0.3rem .45rem;"></i></div></button>
                         </div>
                     </div>
                 </div>
