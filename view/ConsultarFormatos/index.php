@@ -87,7 +87,6 @@
 						</ul>
 					</div>
 				</div>
-				
 				<!--.tabs-section-nav-->
 
 				<div class="tab-content">
