@@ -40,7 +40,7 @@
                         <form action="" method="post" id="cultivoForm">
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="titulo_chat">Número de lote</label>
+                                    <label class="form-label semibold" for="num_lote">Número de lote</label>
                                     <div class="form-control-wrapper form-control-icon-right">
                                         <input type="number" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese el numero de lote para el cultivo">
                                         <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="exampleInput">Cantidad de siembra</label>
+                                    <label class="form-label semibold" for="cant_siembra">Cantidad de siembra</label>
                                     <input id="cant_siembra" name="cant_siembra" type="text" value="0" name="demo_vertical2">
                                 </fieldset>
                             </div>
@@ -58,7 +58,7 @@
                                 <fieldset class="form-group">
 
                                     <!-- Estamos pasasando los option del select mediante JS -->
-                                    <label class="form-label semibold" for="exampleInput">Número de estanque</label>
+                                    <label class="form-label semibold" for="id_tanque">Número de estanque</label>
                                     <select id="id_tanque" name="id_tanque" class="select2 manual select2-no-search-default select2-hidden-accessible"></select>
 
                                 </fieldset>
@@ -67,7 +67,7 @@
                                 <fieldset class="form-group">
 
                                     <!-- Estamos pasasando los option del select mediante JS -->
-                                    <label class="form-label semibold" for="exampleInput">Nombre del responsable</label>
+                                    <label class="form-label semibold" for="id_respon">Nombre del responsable</label>
                                     <select id="id_respon" name="id_respon" class="select2 manual select2-no-search-default select2-hidden-accessible"></select>
 
                                 </fieldset>
