@@ -43,29 +43,24 @@
 
             foreach ($datos as $row) {
             ?>
-                <section class="box-typical">
-					<header class="box-typical-header">
-						<div class="tbl-row">
-							<div class="tbl-cell tbl-cell-title">
-                                <div class="tbl-cell tbl-cell-photo">
-                                <img src="public/img/3.jpg"  alt="foto usuario">
+                <div class="widget-tasks-item">
+                    <div class="user-card-row">
+                        <div class="tbl-row">
+                            <div class="tbl-cell tbl-cell-photo">
+                                <img src="public/img/responsable.jpg"  alt="foto usuario" style="width: 40px; height: 40px;">
                             </div>
                             <div class="tbl-cell">
                                 <p class="user-card-row-name"><?php echo $row['nombre_respon'].' '.$row['apellido_respon']; ?></p>
                             </div>
-							</div>
-							<div class="tbl-cell tbl-cell-action-bordered">
-								<button type="button" class="action-btn"><i class="font-icon font-icon-pencil"></i></button>
-							</div>
-							<div class="tbl-cell tbl-cell-action-bordered">
-								<button type="button" class="action-btn"><i class="font-icon font-icon-re"></i></button>
-							</div>
-							<div class="tbl-cell tbl-cell-action-bordered">
-								<button type="button" class="action-btn"><i class="font-icon font-icon-trash"></i></button>
-							</div>
-						</div>
-					</header>
-				</section>
+                        </div>
+                    </div>
+                    <div class="btn-group widget-menu">
+                        <div>
+                            <button type="button" onClick="modalRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>"  class="btn btn-inline btn-warning btn-sm ladda-button" style="margin-right: 10px;"><div><i class="fa fa-edit"></i></div></button>
+                            <button type="button" onClick="deleteRespon(<?php echo $row['id_respon'] ?>);" id="<?php echo $row['id_respon'] ?>" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>
+                        </div>
+                    </div>
+                </div>
             <?php
             }
         break;
