@@ -75,7 +75,7 @@
                     <form action="">
                         <div class="row">
                             <div class="col-lg-12">
-                                <fieldset class="form-group">
+                                <fieldset class="form-group" style="margin-bottom: 0;">
                                     <div class="summernote-theme-1">
                                         <textarea class="summernote" id="desc_chatd" name="desc_chatd"></textarea>
                                     </div>
@@ -83,11 +83,11 @@
                             </div><!--Descripcion-->
 
                             <div class="col-lg-12">
-                                <button type="button" id="btnenviar" class="btn btn-rounded btn-inline btn-primary">Enviar Mensaje</button>
-                                <button type="button" id="btncerrar" class="btn btn-rounded btn-inline btn-danger">Terminar</button>
+                                <button type="button" id="btnenviar" class="btn btn-inline btn-primary float-right" style="padding: 7px 25px; margin-left: 8px;">Enviar Mensaje</button>
+                                <button type="button" id="btncerrar" class="btn btn-inline btn-danger float-right" style="padding: 7px 25px;">Terminar</button>
                             </div>
+                        </div><!--.row-->
                     </form>
-                    </div><!--.row-->
                 </div><!--Contenedor Blanco-->
 
             </div><!--Contenedor-->

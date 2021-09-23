@@ -34,7 +34,7 @@
                         </div>
                         <div class="card-user-name">Cultivo <?php echo $row['num_lote']; ?></div>
                         <div class="card-user-status">Estanque #<?php echo $row['num_tanque']; ?></div>
-                        <button type="button" onClick="ver(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>" class="btn btn-rounded">Consultar</button>
+                        <button type="button" onClick="ver(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>" class="btn btn-inline azul" style="padding: 8px 25px;"><i class="fa fa-eye"></i> &nbspConsultar</button>
                         <div class="card-user-social">
                             <div class="card-user-mortalidad">Siembra: <?php echo $row['cant_siembra']; ?></div>
                             <div class="card-user-respon"><?php echo $row['nombre_respon']; ?> <?php echo $row['apellido_respon']; ?><hr class="lineCards"></div>

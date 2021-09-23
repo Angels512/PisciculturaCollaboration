@@ -33,7 +33,7 @@
 				<section class="widget widget-tasks">
 					<header class="widget-header">
 						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
-							<a id="newrespon" class="btn btn-inline btn-primary float-right">Nuevo Responsable</a>
+							<a id="newrespon" class="btn btn-inline btn-primary azul float-right"><i class="fa fa-plus-circle"></i> &nbspNuevo Responsable</a>
 						</div>
 					</header>
 					<div id="listaresponsables">

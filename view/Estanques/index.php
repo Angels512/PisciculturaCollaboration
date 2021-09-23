@@ -33,7 +33,7 @@
 				<section class="widget widget-tasks">
 					<header class="widget-header">
 						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
-							<a id="newestanque" class="btn btn-inline btn-primary">Nuevo Estanque</a>
+							<a id="newestanque" class="btn btn-inline azul" style="color: #fff;"><i class="fa fa-plus-circle"></i> &nbspNuevo Estanque</a>
 						</div>
 					</header>
 					<div id="listarestanques" >

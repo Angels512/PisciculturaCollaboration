@@ -221,6 +221,8 @@ function createUpdate()
     let documento_usu = $('#usuDocumento').val();
     let correo_usu = $('#usuCorreo').val();
 
+    let formData = new FormData($('#formUsuario')[0]);
+
     if (id_usu == '')
     {
         $.post('controller/usuario.php?op=selectUserReset', {documento_usu:documento_usu, correo_usu:correo_usu}, (data) =>
@@ -243,8 +245,6 @@ function createUpdate()
                     }
                 });
             } else {
-                var formData = new FormData($('#formUsuario')[0]);
-
                 let timerInterval;
                 Swal.fire({
                     title: 'Creando el usuario!',

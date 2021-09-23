@@ -29,7 +29,7 @@
                                         <i class="font-icon font-icon-award"></i>
                                     </div>
                                     <div id="nombreRol"></div>
-                                    <button type="button" id="btnPerfil" class="btn btn-rounded mt-1" style="margin-top: 12px;">Actualizar</button>
+                                    <button type="button" id="btnPerfil" class="btn azul mt-1" style="margin-top: 12px;"><i class="fa fa-pencil-square-o"></i> &nbspActualizar</button>
                                     <div class="widget-user-stat">
                                         <div class="item col-md-6 col-sm-12">
                                             <div class="number" id="fechaCreacion" style="font-size: 1.1em;"></div>
