@@ -80,7 +80,7 @@
 											<i class="fa fa-envelope"></i>
 										</div>
 									</div>
-									<button type="submit" class="btn btn-rounded btn-primary float-right">Guardar</button>
+									<button type="submit" class="btn btn-inline btn-primary float-right">Guardar</button>
 								<div>
 							</form>
 						</section>
@@ -97,7 +97,7 @@
 										<select id="id_prove" class="form-control"></select>
 									</div>
 									<div class="col-lg-1">
-										<button type="button" name="action" id="consul_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
+										<button type="button" name="action" id="consul_prove" class="btn btn-inline btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
 									</div>
 								</fieldset>
 							</div>
@@ -122,8 +122,8 @@
 											</ul>
 										</div>
 								</section>
-								<button type="button" name="action" id="modi_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
-								<button type="button" name="action" id="elim_prove" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
+								<button type="button" name="action" id="modi_prove" class="btn btn-inline btn-inline btn-primary-outline btn-sm">Modificar</button>
+								<button type="button" name="action" id="elim_prove" class="btn btn-inline btn-inline btn-primary-outline btn-sm">Eliminar</button>
 							</div>
 						</section>
 					</div>

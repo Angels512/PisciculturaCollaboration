@@ -58,9 +58,8 @@
 									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
 								</fieldset>
 							</div>
-							
 							<div class="col-lg-12">
-								<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right mt-10">Guardar</button>
+								<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right mt-10">Guardar</button>
 							</div>
 						</form>
 					</div>
@@ -91,7 +90,7 @@
 							</div>
 
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 							</div>
 						</form>
 					</div>
@@ -136,8 +135,8 @@
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
-								<button type="submit" name="action" value="add" id="guardar" class="btn btn-rounded btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
 							</div>
 						</form>
 					</div>

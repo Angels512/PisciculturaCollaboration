@@ -31,8 +31,8 @@
 				</div>
 
 				<div>
-					<button style="margin: 40px 15px 0 0" name="action" id="newmortalidad" class="btn btn-inline btn-primary float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspMortalidad</button>
-					<button style="margin: 40px 15px 0 0" name="action" id="newnovedad" class="btn btn-inline btn-primary float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspNovedad</button>
+					<button style="margin: 40px 15px 0 0" name="action" id="newmortalidad" class="btn azul float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspMortalidad</button>
+					<button style="margin: 40px 15px 0 0" name="action" id="newnovedad" class="btn azul float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspNovedad</button>
 				</div>
 			</div>
 			<?php
@@ -133,7 +133,7 @@
 								</div>
 
 								<div class="col-lg-12">
-									<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right">Guardar</button>
+									<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right">Guardar</button>
 								</div>
 							</form>
 						</div>
@@ -254,7 +254,7 @@
 								</div>
 
 								<div class="col-lg-12">
-										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
+										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 								</div>
 							</form>
 						</div>
@@ -377,8 +377,8 @@
 								</div>
 
 								<div class="col-lg-12">
-										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
-										<button type="submit" name="action" value="add" id="guardar" class="btn btn-rounded btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+										<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
 								</div>
 							</form>
 						</div>
