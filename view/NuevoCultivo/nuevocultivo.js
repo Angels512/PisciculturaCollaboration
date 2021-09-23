@@ -45,7 +45,7 @@ function createCultivo(e)
             {
                 swal({
                     title: "Advertencia!",
-                    text: "El numero de lote ya se asigno a otro cultivo.",
+                    text: "El número de lote ya se asigno a otro cultivo.",
                     type: "error",
                     confirmButtonClass: "btn-danger",
                     confirmButtonText: "OK"
@@ -73,7 +73,7 @@ function createCultivo(e)
                             {
                                 swal({
                                     title: "Advertencia!",
-                                    text: "El responsable ya solo puede asignarse a 3 cultivos maximo.",
+                                    text: "El responsable solo se puede asignar a 3 cultivos como máximo.",
                                     type: "warning",
                                     confirmButtonClass: "btn-warning",
                                     confirmButtonText: "OK"
