@@ -31,8 +31,8 @@
 				</div>
 
 				<div>
-					<input style="margin: 40px 15px 0 0" type="button" name="action" id="newmortalidad" value="Agregar Mortalidad" class="btn btn-inline btn-primary float-right mg-top">
-					<input style="margin: 40px 15px 0 0" type="button" name="action" id="newnovedad" value="Agregar Novedad" class="btn btn-inline btn-primary float-right mg-top">
+					<button style="margin: 40px 15px 0 0" name="action" id="newmortalidad" class="btn btn-inline btn-primary float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspMortalidad</button>
+					<button style="margin: 40px 15px 0 0" name="action" id="newnovedad" class="btn btn-inline btn-primary float-right mg-top"><i class="fa fa-plus-circle"></i> &nbspNovedad</button>
 				</div>
 			</div>
 			<?php
