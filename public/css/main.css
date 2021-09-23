@@ -2,12 +2,13 @@
 
 .azul
 {
-    background-color: #407299 !important;
-    border-color: #407299 !important;
+    background: rgb(28,60,128);
+    background: linear-gradient(90deg, rgb(28, 80, 128) 0%, rgb(23, 131, 194) 100%);
+    border: none;
+    transition: all 300ms ease;
 }
 
 .azul:hover
 {
-    background-color: #3a6b91 !important;
-    border-color: #3a6b91 !important;
+    opacity: .9;
 }

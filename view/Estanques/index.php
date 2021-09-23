@@ -32,8 +32,8 @@
 			<div>
 				<section class="widget widget-tasks">
 					<header class="widget-header">
-						<div class="tbl-cell tbl-cell-action">
-							<a id="newestanque" class="btn btn-inline btn-primary float-right">Nuevo Estanque</a>
+						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
+							<a id="newestanque" class="btn btn-inline btn-primary">Nuevo Estanque</a>
 						</div>
 					</header>
 					<div id="listarestanques" >
