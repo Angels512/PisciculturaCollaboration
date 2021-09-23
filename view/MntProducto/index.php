@@ -86,7 +86,7 @@
 								</div>
 
 								<div class="form-group">
-									<button type="submit" name="action" class="btn btn-rounded float-right btn-primary">Guardar</button>
+									<button type="submit" name="action" class="btn btn-inline float-right btn-primary">Guardar</button>
 								</div>
 
 							</form>
@@ -107,7 +107,7 @@
 									</div>
 
 									<div class="col-lg-1 form-group">
-										<button type="button" name="action" id="consul_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
+										<button type="button" name="action" id="consul_produ" class="btn btn-inline btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
 									</div>
 								</fieldset>
 							</div>
@@ -133,8 +133,8 @@
 									</div>
 								</section>
 
-								<button type="button" name="action" id="modi_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Modificar</button>
-								<button type="button" name="action" id="elim_produ" class="btn btn-rounded btn-inline btn-primary-outline btn-sm">Eliminar</button>
+								<button type="button" name="action" id="modi_produ" class="btn btn-inline btn-inline btn-primary-outline btn-sm">Modificar</button>
+								<button type="button" name="action" id="elim_produ" class="btn btn-inline btn-inline btn-primary-outline btn-sm">Eliminar</button>
 							</div>
 						</section>
 					</div>

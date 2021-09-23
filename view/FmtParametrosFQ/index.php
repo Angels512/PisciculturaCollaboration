@@ -15,11 +15,11 @@
 				<div class="tbl">
 					<div class="tbl-row">
 						<div class="tbl-cell">
-							<h2>Formato Parametros Fisico Quimicos</h2>
+							<h2>Formato Parámetros Físico Químicos</h2>
 							<ol class="breadcrumb breadcrumb-simple">
 								<li><a href="inicio">Inicio</a></li>
 								<li><a href="#">Formatos</a></li>
-								<li class="active">Parametros Fisico Quimicos</li>
+								<li class="active">Parámetros Físico Químicos</li>
 							</ol>
 						</div>
 					</div>
@@ -108,13 +108,13 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="observaciones">Observaciones de los Parametros</label>
-									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones de los parametros"></textarea>
+									<label class="form-label semibold" for="observaciones">Observaciones de los Parámetros</label>
+									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones de los parámetros"></textarea>
 								</fieldset>
 							</div>
 
 							<div class="col-lg-12">
-								<button type="submit" name="action" value="add" class="btn btn-rounded btn-primary float-right mt-10">Guardar</button>
+								<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right mt-10">Guardar</button>
 							</div>
 						</form>
 					</div>
@@ -212,7 +212,7 @@
 							</div>
 
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 							</div>
 						</form>
 					</div>
@@ -312,8 +312,8 @@
 							</div>
 
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-rounded btn-secondary float-right mt-10">Atrás</a>
-								<button type="submit" name="action" value="add" id="guardar" class="btn btn-rounded btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
 							</div>
 						</form>
 					</div>
