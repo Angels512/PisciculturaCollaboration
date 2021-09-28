@@ -124,13 +124,13 @@
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5>Consultar Biocrecimiento</h5>
+						<h5>Consultar Parametros Fisico-Quimicos</h5>
 					</div>
 
 					<div class="row">
 						<form method="post">
 
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 									<div class="form-control-wrapper form-control-icon-right">
@@ -144,7 +144,7 @@
 								<fieldset class="form-group">
 									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
 									<div>
-										<select id="id_cultivo" name="id_cultivo" class="form-control" readonly>
+										<select id="id_cultivo" name="id_cultivo" class="form-control" disabled>
 										</select>
 									</div>
 								</fieldset>
@@ -152,54 +152,60 @@
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_amonio" class="form-label semibold">Rango de Amonio:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="rango_amonio" name="rango_amonio" readonly/>
+									<label class="form-label semibold" for="rango_amonio">Rango de Amonio:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_amonio" name="rango_amonio" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_nitrito" class="form-label semibold">Rango de Nitrito:</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="rango_nitrito" name="rango_nitrito" readonly>
+									<label class="form-label semibold" for="rango_nitrito">Rango de Nitrito:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_nitrito" name="rango_nitrito" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_nitrato" class="form-label semibold">Rango de Nitrato:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="rango_nitrato" name="rango_nitrato" readonly>
+									<label class="form-label semibold" for="rango_nitrato">Rango de Nitrato:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_nitrato" name="rango_nitrato" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_ph" class="form-label semibold">Rango de PH:</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="rango_ph" name="rango_ph" readonly>
+									<label class="form-label semibold" for="rango_ph">Rango de PH:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_ph" name="rango_ph" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="cant_melaza" class="form-label semibold">Cantidad de Melaza:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="cant_melaza" name="cant_melaza" readonly>
+									<label class="form-label semibold" for="cant_melaza">Cantidad de Melaza:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="cant_melaza" name="cant_melaza" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="porc_agua" class="form-label semibold">Porcentaje de Agua (%):</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="porc_agua" name="porc_agua" readonly>
+									<label class="form-label semibold" for="porc_agua">Porcentaje de Agua (%):</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="porc_agua" name="porc_agua" readonly>
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
@@ -222,15 +228,15 @@
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5>Actualizar Biocrecimiento</h5>
+						<h5>Actualizar Parametros Fisico-Quimicos</h5>
 					</div>
 
 					<div class="row">
-						<form method="post" id="biocre_form">
-							<input type="hidden" name="id_biocre" id="id_biocre">
+						<form method="post" id="parafq_form">
+							<input type="hidden" name="id_par_fq" id="id_par_fq">
 							<input type="hidden" name="id_usu" id="id_usu">
 
-							<div class="col-md-6">
+							<div class="col-md-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 									<div class="form-control-wrapper form-control-icon-right">
@@ -252,54 +258,60 @@
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_amonio" class="form-label semibold">Rango de Amonio:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="rango_amonio" name="rango_amonio">
+									<label class="form-label semibold" for="rango_amonio">Rango de Amonio:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_amonio" name="rango_amonio">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_nitrito" class="form-label semibold">Rango de Nitrito:</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="rango_nitrito" name="rango_nitrito">
+									<label class="form-label semibold" for="rango_nitrito">Rango de Nitrito:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_nitrito" name="rango_nitrito">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_nitrato" class="form-label semibold">Rango de Nitrato:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="rango_nitrato" name="rango_nitrato">
+									<label class="form-label semibold" for="rango_nitrato">Rango de Nitrato:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_nitrato" name="rango_nitrato">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="rango_ph" class="form-label semibold">Rango de PH:</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="rango_ph" name="rango_ph">
+									<label class="form-label semibold" for="rango_ph">Rango de PH:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="rango_ph" name="rango_ph">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="cant_melaza" class="form-label semibold">Cantidad de Melaza:</label>
-									<div class="form-group range-slider-red">
-										<input type="text" class="slider" id="cant_melaza" name="cant_melaza">
+									<label class="form-label semibold" for="cant_melaza">Cantidad de Melaza:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="cant_melaza" name="cant_melaza">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="porc_agua" class="form-label semibold">Porcentaje de Agua (%):</label>
-									<div class="form-group range-slider-blue">
-										<input type="text" class="slider" id="porc_agua" name="porc_agua">
+									<label class="form-label semibold" for="porc_agua">Porcentaje de Agua (%):</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="porc_agua" name="porc_agua">
+										<i class="font-icon glyphicon glyphicon-scale"></i>
 									</div>
 								</fieldset>
 							</div>

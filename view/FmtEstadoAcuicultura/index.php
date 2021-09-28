@@ -69,8 +69,23 @@
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5>Consultar Estado de Acuicultura</h5>
+						<h5>Consultar Estado General de la Acuicultura</h5>
 					</div>
+
+					<div class="row">
+						<form method="post" id="estacui_form">
+
+							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
+
+							<div class="col-md-6">
+								<fieldset class="form-group">
+									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="fecha" name="fecha" readonly>
+										<i class="font-icon font-icon-calend"></i>
+									</div>
+								</fieldset>
+							</div>
 
 							<div class="col-lg-6">
 								<fieldset class="form-group">
@@ -84,29 +99,31 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura" readonly></textarea>
+									<label class="form-label semibold" for="observaciones">Observaciones Generales</label>
+									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones del area de Acuicultura" readonly></textarea>
 								</fieldset>
 							</div>
 
 							<div class="col-lg-12">
 								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 							</div>
+
 						</form>
 					</div>
 				</section>
+
 			<?php
 				} else if(isset($_GET['ID']) && isset($_GET['EDIT'])) {
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5>Actualizar Estado de Acuicultura</h5>
+						<h5>Consultar Estado General de la Acuicultura</h5>
 					</div>
 
 					<div class="row">
 						<form method="post" id="estacui_form">
-							<input type="hidden" name="id_est_acui" id="id_est_acui">
-							<input type="hidden" name="id_usu" id="id_usu">
+
+							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
@@ -130,14 +147,15 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
+									<label class="form-label semibold" for="observaciones">Observaciones Generales</label>
+									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones del area de Acuicultura"></textarea>
 								</fieldset>
 							</div>
+
 							<div class="col-lg-12">
 								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
-								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
 							</div>
+
 						</form>
 					</div>
 				</section>

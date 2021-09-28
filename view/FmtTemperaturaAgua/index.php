@@ -40,9 +40,6 @@
 
 							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
 
-							<input type="hidden" class="form-control" id="num_organ" name="num_organ"  value="2000" readonly>
-
-
 							<div class="col-lg-6">
 								<fieldset class="form-group">
 									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
@@ -132,36 +129,41 @@
 							<div class="col-lg-6">
 								<label class="form-label semibold" for="num_dia">Número de Día</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="num_dia" name="num_dia" placeholder="Ingrese Número" required>
+										<input type="text" class="form-control" id="num_dia" name="num_dia" placeholder="Ingrese Número" readonly>
                         				<i class="glyphicon glyphicon-barcode"></i>
                         			</div>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_uno" class="form-label semibold">Grados 1:</label>
-									<div class="form-group">
-										<input type="text" class="slider" id="grados_uno" name="grados_uno" readonly>
+									<label class="form-label semibold" for="grados1">Grados 1:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados1" name="grados1" readonly>
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_dos" class="form-label semibold">Grados 2:</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="grados_dos" name="grados_dos" readonly>
+									<label class="form-label semibold" for="grados2">Grados 2:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados2" name="grados2" readonly>
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
+
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_tres" class="form-label semibold">Grados 3:</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="grados_tres" name="grados_tres" readonly>
+									<label class="form-label semibold" for="grados3">Grados 3:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados3" name="grados3" readonly>
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
+
 
 							<div class="col-lg-12">
 								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
@@ -174,19 +176,17 @@
 			?>
 				<section class="box-typical box-typical-padding">
 					<div>
-						<h5>Actualizar Temperatura Agua</h5>
+						<h5>Actualizar Temperatura del Agua</h5>
 					</div>
 
 					<div class="row">
 						<form method="post" id="tempagua_form">
-							<input type="hidden" name="id_temp_agua" id="id_temp_agua">
-							<input type="hidden" name="id_usu" id="id_usu">
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="fecha" name="fecha">
+										<input type="text" class="form-control" id="fecha" name="fecha" readonly>
 										<i class="font-icon font-icon-calend"></i>
 									</div>
 								</fieldset>
@@ -196,7 +196,7 @@
 								<fieldset class="form-group">
 									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
 									<div>
-										<select id="id_cultivo" name="id_cultivo" class="form-control" disabled>
+										<select id="id_cultivo" name="id_cultivo" class="form-control">
 										</select>
 									</div>
 								</fieldset>
@@ -205,36 +205,42 @@
 							<div class="col-lg-6">
 								<label class="form-label semibold" for="num_dia">Número de Día</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="num_dia" name="num_dia" placeholder="Ingrese Número" required>
+										<input type="text" class="form-control" id="num_dia" name="num_dia" placeholder="Ingrese Número">
                         				<i class="glyphicon glyphicon-barcode"></i>
                         			</div>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_uno" class="form-label semibold">Grados 1:</label>
-									<div class="form-group">
-										<input type="text" class="slider" id="grados_uno" name="grados_uno">
+									<label class="form-label semibold" for="grados1">Grados 1:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados1" name="grados1">
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_dos" class="form-label semibold">Grados 2:</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="grados_dos" name="grados_dos">
+									<label class="form-label semibold" for="grados2">Grados 2:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados2" name="grados2">
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
+
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label for="grados_tres" class="form-label semibold">Grados 3:</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="grados_tres" name="grados_tres">
+									<label class="form-label semibold" for="grados3">Grados 3:</label>
+									<div class="form-control-wrapper form-control-icon-right">
+										<input type="text" class="form-control" id="grados3" name="grados3">
+										<i class="font-icon font-icon-speed"></i>
 									</div>
 								</fieldset>
 							</div>
+
+
 							<div class="col-lg-12">
 								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
