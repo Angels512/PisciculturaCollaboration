@@ -20,9 +20,9 @@
                 $sub_array[] = $row["nombre_usu"].' '.$row["apellido_usu"];
                 $sub_array[] = date('d/m/Y', strtotime($row["fecha"]));
                 $sub_array[] = $row["observaciones"];
-                $sub_array[] = '<button type="button" onClick="consultarparafq('.$row['id_par_fq'].');"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
-                $sub_array[] = '<button type="button" onClick="editarparafq('.$row['id_par_fq'].');"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
-                $sub_array[] = '<button type="button" onClick="eliminarparafq('.$row['id_par_fq'].');" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="consultar('.$row['id_par_fq'].');"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
+                $sub_array[] = '<button type="button" onClick="editar('.$row['id_par_fq'].');"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="eliminar('.$row['id_par_fq'].');" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
 
                 $data[] = $sub_array;
             }
