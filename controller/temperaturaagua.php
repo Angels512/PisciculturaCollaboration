@@ -21,9 +21,9 @@
                 $sub_array[] = $row["nombre_usu"].' '.$row["apellido_usu"];
                 $sub_array[] = date('d/m/Y', strtotime($row["fecha"]));
                 $sub_array[] = $row["num_dia"];
-                $sub_array[] = '<button type="button" onClick="consultartempagua('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
-                $sub_array[] = '<button type="button" onClick="editartempagua('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
-                $sub_array[] = '<button type="button" onClick="eliminartempagua('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="consultar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-primary btn-sm ladda-button"><i class="fa fa-eye"></i></button>';
+                $sub_array[] = '<button type="button" onClick="editar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'"  class="btn btn-inline btn-warning btn-sm ladda-button"><div><i class="fa fa-edit"></i></div></button>';
+                $sub_array[] = '<button type="button" onClick="eliminar('.$row['id_temp_agua'].');" id="'.$row['id_temp_agua'].'" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash"></i></div></button>';
 
                 $data[] = $sub_array;
             }
