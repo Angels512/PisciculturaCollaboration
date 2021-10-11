@@ -73,7 +73,7 @@
 							<div class="col-md-6">
 								<fieldset class="form-group">
 									<label for="grados2" class="form-label semibold">Grados 2:</label>
-									<div class="form-group range-slider-green">
+									<div class="form-group range-slider">
 										<input type="text" class="slider" id="grados2" name="grados2" value=""/>
 									</div>
 								</fieldset>
@@ -81,7 +81,7 @@
 							<div class="col-md-6">
 								<fieldset class="form-group">
 									<label for="grados3" class="form-label semibold">Grados 3:</label>
-									<div class="form-group range-slider-green">
+									<div class="form-group range-slider">
 										<input type="text" class="slider" id="grados3" name="grados3" value=""/>
 									</div>
 								</fieldset>

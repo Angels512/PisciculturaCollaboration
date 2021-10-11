@@ -1,25 +1,9 @@
 function init(){
-    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Temperatura del Ambiente
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Temperatura Ambiente
     $("#tempamb_form").on("submit",function(e)
     {
         validarDatos(e);
     });
-}
-
-function validarDatos(e){
-    e.preventDefault();
-
-    if($('#num_dia').val()==''){
-        swal({
-            title: "Advertencia!",
-            text: "Campos vacios",
-            type: "warning",
-            confirmButtonClass: "btn-warning",
-            confirmButtonText: "OK"
-        });
-    }else{
-        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar() : guardar();
-    }
 }
 
 $(document).ready(function(){
@@ -60,7 +44,24 @@ $(document).ready(function(){
 
         
     }
+
 });
+
+function validarDatos(e){
+    e.preventDefault();
+
+    if($('#num_dia').val()=='' ||$('#grados1').val()=='' || $('#grados2').val()=='' || $('#grados3').val()==''){
+        swal({
+            title: "Advertencia!",
+            text: "Campos vacios",
+            type: "warning",
+            confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else{
+        getUrlParameter('ID') && getUrlParameter('EDIT') ? editar() : guardar();
+    }
+}
 
 //listar datos de temperatura ambiente para consultar o actualizar
 function listarDatos()
@@ -75,13 +76,14 @@ function listarDatos()
         $('#id_usu').val(data.id_usu);
         $('#fecha').val(data.fecha);
         $("#id_cultivo").val(data.id_cultivo);
-        $("#grados1").val(data.peso_organ);
-        $("#grados2").val(data.peso_biomasa);
-        $("#grados3").val(data.edad_organ);
+        $("#num_dia").val(data.num_dia);
+        $("#grados1").val(data.grados1);
+        $("#grados2").val(data.grados2);
+        $("#grados3").val(data.grados3);
     });
 }
 
-// creamos la funcion guardar para insertar una nueva biometria y vaciar los campos del formulario
+// creamos la funcion guardar para insertar un nuevo temperatura ambiente y vaciar los campos del formulario
 function guardar(){
     var formData = new FormData($('#tempamb_form')[0]);
 
@@ -119,14 +121,13 @@ function editar(){
         success: function(datos){
             swal({
                 title: "A'ttia!",
-                text: "Registro Guardado.",
+                text: " Registro Guardado.",
                 type: "success",
                 confirmButtonClass: "btn-success"
             });
         }
     });
 }
-
 
 
 // funcion con la que capturamos el id que llega por la url
@@ -146,4 +147,3 @@ var getUrlParameter = function getUrlParameter(sParam) {
 };
 
 init();
-
