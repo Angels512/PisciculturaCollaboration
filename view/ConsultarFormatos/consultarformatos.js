@@ -168,6 +168,126 @@ function eliminartbal(id_tbl_alim){
     });
 }
 
+//para ir al formato de parametros fq pasando el ID por url segun el boton presionado
+function consultarparafq(id_par_fq){
+    window.location.href = "parafq?ID="+ id_par_fq +"";
+}
+
+function editarparafq(id_par_fq){
+    window.location.href = "parafq?ID="+ id_par_fq +"&EDIT=yes";
+}
+
+//para eliminar un formato de parametros fq
+function eliminarparafq(id_par_fq){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/parametrosfq.php?op=eliminar", { id_par_fq:id_par_fq }, function (data) {
+            });
+
+            $('#parametrosfq').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
+//para ir al formato de temperatura agua pasando el ID por url segun el boton presionado
+function consultartempagua(id_temp_agua){
+    window.location.href = "tempagua?ID="+ id_temp_agua +"";
+}
+
+function editartempagua(id_temp_agua){
+    window.location.href = "tempagua?ID="+ id_temp_agua +"&EDIT=yes";
+}
+
+//para eliminar un formato de temperatura agua
+function eliminartempagua(id_temp_agua){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/temperaturaagua.php?op=eliminar", { id_temp_agua:id_temp_agua }, function (data) {
+            });
+
+            $('#temperaturaagua').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
+//para ir al formato de temperatura ambiente pasando el ID por url segun el boton presionado
+function consultartempamb(id_temp_amb){
+    window.location.href = "tempamb?ID="+ id_temp_amb +"";
+}
+
+function editartempamb(id_temp_amb){
+    window.location.href = "tempamb?ID="+ id_temp_amb +"&EDIT=yes";
+}
+
+//para eliminar un formato de temperatura ambiente
+function eliminartempamb(id_temp_amb){
+
+    swal({
+        title: "Advertencia",
+        text: "Esta seguro de Eliminar el Formato?",
+        type: "error",
+        showCancelButton: true,
+        confirmButtonClass: "btn-danger",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+        closeOnConfirm: false
+    },
+    function(isConfirm) {
+        if (isConfirm) {
+
+            $.post("controller/temperaturaambiente.php?op=eliminar", { id_temp_amb:id_temp_amb }, function (data) {
+            });
+
+            $('#temperaturaambiente').DataTable().ajax.reload();
+
+            swal({
+                title: "Correcto!",
+                text: " Registro Eliminado.",
+                type: "success",
+                confirmButtonClass: "btn-success"
+            });
+        }
+    });
+}
+
 //para ir al formato de estado acuicultura pasando el ID por url segun el boton presionado
 function consultarestacui(id_est_acui){
     window.location.href = "estacui?ID="+ id_est_acui +"";

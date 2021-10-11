@@ -33,7 +33,7 @@ function validarDatos(e){
     }
 }
 
-//listar datos de biocrecimiento para consultar o actualizar
+//listar datos de estado acuicultura para consultar o actualizar
 function listarDatos()
 {
     let id_est_acui = getUrlParameter('ID');
@@ -46,7 +46,6 @@ function listarDatos()
         $('#id_usu').val(data.id_usu);
         $('#fecha').val(data.fecha);
         $("#id_cultivo").val(data.id_cultivo);
-        $("#id_etapa").val(data.id_etapa);
         $("#obser_gene").val(data.obser_gene);
     });
 }
