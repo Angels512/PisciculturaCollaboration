@@ -2,28 +2,27 @@
 
 class Parametrosfq extends Conectar
 {
-    // creamos el metodo insertParafq para hacer un nuevo registro de ParametrosFQ
-
+    // creamos el metodo insertParafq para hacer un nuevo registro de Parametros FQ
     public function insertParafq($id_cultivo,$id_usu,$rango_amonio,$rango_nitrito,$rango_nitrato,$rango_ph,$cant_melaza,$porc_agua,$observaciones)
     {
         $conectar = parent::Conexion();
         parent::setNames();
 
         $sql="INSERT INTO  parametrosfq (
-            id_par_fq,  
-            id_cultivo, 
-            id_usu, 
-            rango_amonio, 
-            rango_nitrito, 
-            rango_nitrato, 
-            rango_ph, 
-            cant_melaza, 
-            porc_agua, 
-            observaciones, 
-            fecha, 
-            fecha_elim, 
-            est) 
-            VALUES 
+            id_par_fq,
+            id_cultivo,
+            id_usu,
+            rango_amonio,
+            rango_nitrito,
+            rango_nitrato,
+            rango_ph,
+            cant_melaza,
+            porc_agua,
+            observaciones,
+            fecha,
+            fecha_elim,
+            est)
+            VALUES
             (NULL,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
@@ -64,7 +63,7 @@ class Parametrosfq extends Conectar
         return $resultado=$sql->fetchAll();
     }
 
-    // Traemos los datos del Biocrecimiento desde base de datos
+    // Traemos los datos de la Parametros FQ desde base de datos
     public function getParafq_id($id_par_fq)
     {
         $conectar = parent::Conexion();
@@ -94,7 +93,7 @@ class Parametrosfq extends Conectar
     }
 
     //Actualizamos el formato en base de datos
-    public function updateParafq($id_par_fq,$id_cultivo,$id_usu,$rango_amonio,$rango_nitrito,$rango_nitrato,$rango_ph,$cant_melaza,$porc_agua,$observaciones){
+    public function updateParafq($id_par_fq,$id_cultivo,$id_usu,$rango_amonio,$rango_nitrito,$rango_nitrato,$rango_ph,$cant_melaza,$porc_agua,$observaciones ){
         $conectar= parent::conexion();
         parent::setNames();
         $sql="UPDATE parametrosfq set
@@ -106,7 +105,7 @@ class Parametrosfq extends Conectar
         rango_ph=?,
         cant_melaza=?,
         porc_agua=?,
-        observaciones=?,
+        observaciones=?
         WHERE
         id_par_fq = ?;";
         $sql=$conectar->prepare($sql);
@@ -119,6 +118,7 @@ class Parametrosfq extends Conectar
         $sql->bindValue(7, $cant_melaza);
         $sql->bindValue(8, $porc_agua);
         $sql->bindValue(9, $observaciones);
+        $sql->bindValue(10, $id_par_fq);
         $sql->execute();
 
         return $resultado=$sql->fetchAll();

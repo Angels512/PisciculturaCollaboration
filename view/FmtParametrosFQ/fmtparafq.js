@@ -1,5 +1,5 @@
 function init(){
-    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Parametros Fisico Quimicos
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Parametros FQ
     $("#parafq_form").on("submit",function(e)
     {
         validarDatos(e);
@@ -20,7 +20,7 @@ $(document).ready(function(){
     {
         $("#rango_amonio").ionRangeSlider({
             min: 0.1,
-            max: 100,
+            max: 5,
             from: 0,
             grid: true,
             hide_min_max: true
@@ -28,7 +28,7 @@ $(document).ready(function(){
 
         $("#rango_nitrito").ionRangeSlider({
             min: 0.1,
-            max: 100,
+            max: 5,
             from: 0,
             grid: true,
             hide_min_max: true
@@ -36,7 +36,7 @@ $(document).ready(function(){
 
         $("#rango_nitrato").ionRangeSlider({
             min: 0.1,
-            max: 100,
+            max: 5,
             from: 0,
             grid: true,
             hide_min_max: true
@@ -44,7 +44,7 @@ $(document).ready(function(){
 
         $("#rango_ph").ionRangeSlider({
             min: 0.1,
-            max: 100,
+            max: 5,
             from: 0,
             grid: true,
             hide_min_max: true
@@ -52,26 +52,27 @@ $(document).ready(function(){
 
         $("#cant_melaza").ionRangeSlider({
             min: 0.1,
-            max: 100,
+            max: 5,
             from: 0,
             grid: true,
             hide_min_max: true
         });
 
         $("#porc_agua").ionRangeSlider({
-            min: 0.1,
+            min: 0,
             max: 100,
             from: 0,
             grid: true,
             hide_min_max: true
         });
     }
+
 });
 
 function validarDatos(e){
     e.preventDefault();
 
-    if($('#observaciones').val()==''){
+    if($('#rango_amonio').val()=='' ||$('#rango_nitrito').val()=='' || $('#rango_nitrato').val()=='' || $('#rango_ph').val()=='' || $('#cant_melaza').val()=='' || $('#porc_agua').val()=='' || $('#observaciones').val()==''){
         swal({
             title: "Advertencia!",
             text: "Campos vacios",
@@ -84,7 +85,7 @@ function validarDatos(e){
     }
 }
 
-//listar datos de parametrosfq para consultar o actualizar
+//listar datos de temperatura agua para consultar o actualizar
 function listarDatos()
 {
     let id_par_fq = getUrlParameter('ID');
@@ -107,12 +108,12 @@ function listarDatos()
     });
 }
 
-// creamos la funcion guardar para insertar un nuevo registro y vaciar los campos del formulario
+// creamos la funcion guardar para insertar un nuevo temperatura agua y vaciar los campos del formulario
 function guardar(){
     var formData = new FormData($('#parafq_form')[0]);
 
     $.ajax({
-        url: "controller/parametrosfq.php?op=insertparafq",
+        url: "controller/parametrosfq.php?op=insertParafq",
         type: "POST",
         data: formData,
         contentType: false,
@@ -152,7 +153,6 @@ function editar(){
         }
     });
 }
-
 
 
 // funcion con la que capturamos el id que llega por la url
