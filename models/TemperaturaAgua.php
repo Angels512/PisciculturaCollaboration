@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 class Tempagua extends Conectar
 {
@@ -9,17 +9,17 @@ class Tempagua extends Conectar
         parent::setNames();
 
         $sql="INSERT INTO  tempagua (
-            id_temp_agua,  
-            id_cultivo, 
-            id_usu, 
-            num_dia, 
-            grados1, 
-            grados2, 
-            grados3,  
-            fecha, 
-            fecha_elim, 
-            est) 
-            VALUES 
+            id_temp_agua,
+            id_cultivo,
+            id_usu,
+            num_dia,
+            grados1,
+            grados2,
+            grados3,
+            fecha,
+            fecha_elim,
+            est)
+            VALUES
             (NULL,?,?,?,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
@@ -54,10 +54,10 @@ class Tempagua extends Conectar
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->execute();
-        return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+        return $resultado=$sql->fetchAll();
     }
 
-    // Traemos los datos del Temperatura Agua desde base de datos
+    // Traemos los datos de la Temperatura Agua desde base de datos
     public function getTempagua_id($id_temp_agua)
     {
         $conectar = parent::Conexion();
@@ -84,7 +84,7 @@ class Tempagua extends Conectar
     }
 
     //Actualizamos el formato en base de datos
-    public function updateTempagua( $id_temp_agua,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3){
+    public function updateTempagua($id_temp_agua,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3 ){
         $conectar= parent::conexion();
         parent::setNames();
         $sql="UPDATE tempagua set
@@ -93,7 +93,7 @@ class Tempagua extends Conectar
         num_dia=?,
         grados1=?,
         grados2=?,
-        grados3=?,
+        grados3=?
         WHERE
         id_temp_agua = ?;";
         $sql=$conectar->prepare($sql);
@@ -103,14 +103,14 @@ class Tempagua extends Conectar
         $sql->bindValue(4, $grados1);
         $sql->bindValue(5, $grados2);
         $sql->bindValue(6, $grados3);
+        $sql->bindValue(7, $id_temp_agua);
         $sql->execute();
 
         return $resultado=$sql->fetchAll();
     }
 
     //para eliminar un formato en base de datos
-    
-    public function delete_Tempagua($id_temp_agua){
+    public function delete_tempagua($id_temp_agua){
         $conectar= parent::conexion();
         parent::setNames();
         $sql="UPDATE tempagua SET est=0, fecha_elim=now() where id_temp_agua = ?;";
