@@ -1,5 +1,5 @@
 function init(){
-    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Estado General de Acuicultura
+    // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Estado Acuicultura
     $("#estacui_form").on("submit",function(e)
     {
         validarDatos(e);
@@ -33,7 +33,7 @@ function validarDatos(e){
     }
 }
 
-//listar datos de Estado de Acucultura para consultar o actualizar
+//listar datos de biocrecimiento para consultar o actualizar
 function listarDatos()
 {
     let id_est_acui = getUrlParameter('ID');
@@ -46,33 +46,27 @@ function listarDatos()
         $('#id_usu').val(data.id_usu);
         $('#fecha').val(data.fecha);
         $("#id_cultivo").val(data.id_cultivo);
+        $("#id_etapa").val(data.id_etapa);
         $("#obser_gene").val(data.obser_gene);
     });
 }
 
-// creamos la funcion guardar para insertar un nuevo registro y vaciar los campos del formulario
+// creamos la funcion guardar para insertar un nuevo estado de acuicultura y vaciar los campos del formulario
 function guardar(){
+
     var formData = new FormData($('#estacui_form')[0]);
 
-    $.ajax({
-        url: "controller/estadoacuicultura.php?op=insertEstacui",
-        type: "POST",
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: (datos) =>
-        {
-            $("#estacui_form")[0].reset();
-
-            document.querySelectorAll('.slider').forEach((slider) =>
-            {
-                let reset = $(`#${slider.id}`).data('ionRangeSlider');
-                reset.reset();
-            });
-
-            swal("Correcto!","Registrado Correctamente","success");
-        }
-    });
+   $.ajax({
+       url: "controller/estadoacuicultura.php?op=insertestacui",
+       type: "POST",
+       data: formData,
+       contentType: false,
+       processData: false,
+       success: function(datos){
+           $("#estacui_form")[0].reset();
+           swal("correcto!","Registrado Correctamente","success");
+       }
+   });
 }
 
 // creamos la funcion editar para actualizar el formato
@@ -95,7 +89,6 @@ function editar(){
         }
     });
 }
-
 
 
 // funcion con la que capturamos el id que llega por la url
