@@ -116,7 +116,7 @@ function eliminar(id_biocre){
             $.post("controller/biocrecimiento.php?op=eliminar", { id_biocre:id_biocre }, function (data) {
             });
 
-            $('#dt_biometrias').DataTable().ajax.reload();
+            $('#biocrecimiento').DataTable().ajax.reload();
 
             swal({
                 title: "Correcto!",
@@ -156,7 +156,7 @@ function eliminartbal(id_tbl_alim){
             $.post("controller/tblalimentacion.php?op=eliminar", { id_tbl_alim:id_tbl_alim }, function (data) {
             });
 
-            $('#dt_tbl_alim').DataTable().ajax.reload();
+            $('#tblalimentacion').DataTable().ajax.reload();
 
             swal({
                 title: "Correcto!",
@@ -169,16 +169,16 @@ function eliminartbal(id_tbl_alim){
 }
 
 //para ir al formato de estado acuicultura pasando el ID por url segun el boton presionado
-function consultarea(id_est_acui){
-    window.location.href = "estacuicultura?ID="+ id_est_acui +"";
+function consultarestacui(id_est_acui){
+    window.location.href = "estacui?ID="+ id_est_acui +"";
 }
 
-function editarea(id_est_acui){
-    window.location.href = "estacuicultura?ID="+ id_est_acui +"&EDIT=yes";
+function editarestacui(id_est_acui){
+    window.location.href = "estacui?ID="+ id_est_acui +"&EDIT=yes";
 }
 
-//para eliminar un formato de biocrecimiento
-function eliminarea(id_est_acui){
+//para eliminar un formato de estado acuicultura
+function eliminarestacui(id_est_acui){
 
     swal({
         title: "Advertencia",
@@ -196,7 +196,7 @@ function eliminarea(id_est_acui){
             $.post("controller/estadoacuicultura.php?op=eliminar", { id_est_acui:id_est_acui }, function (data) {
             });
 
-            $('#dt_estacuicultura').DataTable().ajax.reload();
+            $('#estadoacuicultura').DataTable().ajax.reload();
 
             swal({
                 title: "Correcto!",
