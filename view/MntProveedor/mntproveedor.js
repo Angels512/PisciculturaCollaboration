@@ -1,3 +1,36 @@
+
+const inputs = document.querySelectorAll('#proveedor_form input');
+const icons = document.querySelectorAll('#proveedor_form i');
+
+const inputsedit = document.querySelectorAll('#proveedor_edit input');
+const iconsedit = document.querySelectorAll('#proveedor_edit i');
+
+const expresiones = {
+	nombre_emp: /^[a-zA-Z0-9\s]{4,50}$/, // Letras, números, y espacios
+	direccion_emp: /^[a-zA-Z0-9\#\-\s]{10,70}$/, // Letras,espacios,otros símbolos y números.
+	correo_emp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+	telefono_emp: /^\d{7,10}$/, // 7 a 10 numeros.
+}
+
+// Por cada input del formulario se realiza la validacion
+inputs.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
+// Por cada input del formulario se realiza la validacion
+inputsedit.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
+
 function init(){
 
     //nos lleva a la funcion guardar una vez se presione guardar en el formulario de nuevo proveedor
@@ -40,15 +73,69 @@ $(document).ready(function() {
     listarSelectProve();
 
     //para ocultar la sección donde se muestra la información del proveedor
-    $("#infoproveedor").hide();
+   $("#infoproveedor").hide();
 
 });
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'nombre_emp':
+            validateData(expresiones.nombre_emp, e.target, 'nombre');
+        break;
+
+        case 'direccion_emp':
+            validateData(expresiones.direccion_emp, e.target, 'direccion');
+        break;
+
+        case 'correo_emp':
+            validateData(expresiones.correo_emp, e.target, 'correo');
+        break;
+
+        case 'telefono_emp':
+            validateData(expresiones.telefono_emp, e.target, 'telefono');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo+'_emp').removeClass('form-control-danger');
+        $('#'+campo+'_icon').removeClass('text-danger');
+        $('#'+campo+'_emp').addClass('form-control-success');
+        $('#'+campo+'_icon').addClass('text-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+
+        $('#'+campo+'_emp1').removeClass('form-control-danger');
+        $('#'+campo+'_icon1').removeClass('text-danger');
+        $('#'+campo+'_emp1').addClass('form-control-success');
+        $('#'+campo+'_icon1').addClass('text-success');
+        $('#'+campo+'_alert1').prop('hidden', true);
+    }else {
+        $('#'+campo+'_emp').addClass('form-control-danger');
+        $('#'+campo+'_icon').addClass('text-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+
+        $('#'+campo+'_emp1').addClass('form-control-danger');
+        $('#'+campo+'_icon1').addClass('text-danger');
+        $('#'+campo+'_alert1').prop('hidden', false);
+    }
+}
+
 
 //para validacion de datos vacios
 function validarDatosReg(e){
     e.preventDefault();
 
-    if($('#nombre_emp').val()=='' || $('#direccion_emp').val()=='' || $('#telefono_emp').val()=='' || $('#correo_emp').val()==''){
+    let valite_nombre_emp = $('#nombre_emp').hasClass('form-control-danger');
+    let valite_direccion_emp = $('#direccion_emp').hasClass('form-control-danger');
+    let valite_telefono_emp = $('#telefono_emp').hasClass('form-control-danger');
+    let valite_correo_emp = $('#correo_emp').hasClass('form-control-danger');
+
+    if ($('#nombre_emp').val()=='' || $('#direccion_emp').val()=='' || $('#telefono_emp').val()=='' || $('#correo_emp').val()=='')
+    {
         swal({
             title: "Advertencia!",
             text: "Campos vacios",
@@ -56,14 +143,33 @@ function validarDatosReg(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
+    }else if (valite_nombre_emp || valite_direccion_emp || valite_telefono_emp || valite_correo_emp) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "OK"
+        });
     }else{
         guardar();
+
+        $('#proveedor_form')[0].reset();
+        //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
+        setTimeout(function(){
+            window.location.reload();
+        }, 2000);
     }
 }
 
 //para validacion de datos vacios
 function validarDatosMod(e){
     e.preventDefault();
+
+    let valite_nombre_emp = $('#nombre_emp1').hasClass('form-control-danger');
+    let valite_direccion_emp = $('#direccion_emp1').hasClass('form-control-danger');
+    let valite_telefono_emp = $('#telefono_emp1').hasClass('form-control-danger');
+    let valite_correo_emp = $('#correo_emp1').hasClass('form-control-danger');
 
     if($('#nombre_emp1').val()=='' || $('#direccion_emp1').val()=='' || $('#telefono_emp1').val()=='' || $('#correo_emp1').val()==''){
         swal({
@@ -73,8 +179,20 @@ function validarDatosMod(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
+    }else if (valite_nombre_emp || valite_direccion_emp || valite_telefono_emp || valite_correo_emp) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "OK"
+        });
     }else{
         editar();
+        //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
+        setTimeout(function(){
+            window.location.reload();
+        }, 2000);
     }
 }
 

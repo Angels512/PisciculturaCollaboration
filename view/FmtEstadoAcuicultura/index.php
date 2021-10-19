@@ -70,9 +70,17 @@
 				<section class="box-typical box-typical-padding">
 					<div>
 						<h5>Consultar Estado de Acuicultura</h5>
-					</div>
+						<section class="box-typical box-typical-padding">
 
-							<div class="col-lg-6">
+
+					<div class="row">
+
+						<form method="post">
+							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
+
+							<input type="hidden" class="form-control" id="num_organ" name="num_organ"  value="2000" readonly>
+
+							<div class="col-lg-12">
 								<fieldset class="form-group">
 									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
 									<div>
@@ -85,15 +93,18 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura" readonly></textarea>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" readonly></textarea>
 								</fieldset>
 							</div>
 
 							<div class="col-lg-12">
 								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
 							</div>
+
 						</form>
+
 					</div>
+				</section>
 				</section>
 			<?php
 				} else if(isset($_GET['ID']) && isset($_GET['EDIT'])) {
@@ -130,14 +141,15 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
+									<label class="form-label semibold" for="obser_gene">Observaciones del Estado General de la Acuicultura</label>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones"></textarea>
 								</fieldset>
 							</div>
+
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
-								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
-							</div>
+										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+										<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+								</div>
 						</form>
 					</div>
 				</section>

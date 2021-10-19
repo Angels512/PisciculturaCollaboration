@@ -116,7 +116,7 @@ function eliminar(id_biocre){
             $.post("controller/biocrecimiento.php?op=eliminar", { id_biocre:id_biocre }, function (data) {
             });
 
-            $('#dt_biometrias').DataTable().ajax.reload();
+            $('#biocrecimiento').DataTable().ajax.reload();
 
             swal({
                 title: "Correcto!",
@@ -156,7 +156,7 @@ function eliminartbal(id_tbl_alim){
             $.post("controller/tblalimentacion.php?op=eliminar", { id_tbl_alim:id_tbl_alim }, function (data) {
             });
 
-            $('#dt_tbl_alim').DataTable().ajax.reload();
+            $('#tblalimentacion').DataTable().ajax.reload();
 
             swal({
                 title: "Correcto!",

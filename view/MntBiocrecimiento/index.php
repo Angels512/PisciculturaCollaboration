@@ -141,11 +141,12 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo</label>
-									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo"></textarea>
+									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="obser_adic_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
-								<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right mt-10">Guardar</button>
+								<button type="submit" name="action" value="add" class="btn btn-inline azul btn-primary float-right mt-10">Guardar</button>
 							</div>
 						</form>
 					</div>
@@ -288,7 +289,7 @@
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline azul btn-secondary float-right mt-10">Atrás</a>
 							</div>
 						</form>
 					</div>
@@ -316,7 +317,7 @@
 								</fieldset>
 							</div>
 
-							<div class="col-md-6">
+							<div class="cokl-md-6">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 									<div class="form-control-wrapper form-control-icon-right">
@@ -430,12 +431,13 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo</label>
-									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo"></textarea>
+									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="obser_adic_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
-								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
+								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline azul btn-secondary float-right mt-10">Atrás</a>
+								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline azul btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
 							</div>
 						</form>
 					</div>

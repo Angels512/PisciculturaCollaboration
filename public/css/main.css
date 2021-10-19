@@ -22,3 +22,8 @@
     border: none;
     color: white;
 }
+
+.azul2{
+    background: rgb(28,60,128)!important;
+    background: linear-gradient(90deg, rgb(28, 80, 128) 0%, rgb(23, 131, 194) 100%)!important;
+}

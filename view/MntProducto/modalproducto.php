@@ -32,7 +32,8 @@
 							<label class="form-label semibold"  for="num_lote">Número de Lote</label>
 							<div class="form-control-wrapper form-control-icon-right">
 								<input type="text" class="form-control" id="num_lote1" name="num_lote" placeholder="Ingrese Número">
-								<i class="glyphicon glyphicon-barcode"></i>
+								<i class="glyphicon glyphicon-barcode" id="num_lote_icon1" aria-hidden="true"></i>
+								<small class="text-muted text-danger alerta" id="num_lote_alert1" hidden>El número de lote debe contener una R y números, máximo 16 caracteres.</small>
 							</div>
 						</div>
 						<div class="form-group">
@@ -43,7 +44,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
-					<button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
+					<button type="submit" name="action" class="btn azul btn-rounded btn-primary">Guardar</button>
 				</div>
 			</form>
         </div>
