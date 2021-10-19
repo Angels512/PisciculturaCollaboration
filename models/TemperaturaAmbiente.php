@@ -9,17 +9,17 @@ class Tempamb extends Conectar
         parent::setNames();
 
         $sql="INSERT INTO  tempambiente (
-            id_temp_amb,  
-            id_cultivo, 
-            id_usu, 
-            num_dia, 
-            grados1, 
-            grados2, 
-            grados3,  
-            fecha, 
-            fecha_elim, 
-            est) 
-            VALUES 
+            id_temp_amb,
+            id_cultivo,
+            id_usu,
+            num_dia,
+            grados1,
+            grados2,
+            grados3,
+            fecha,
+            fecha_elim,
+            est)
+            VALUES
             (NULL,?,?,?,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
@@ -57,7 +57,7 @@ class Tempamb extends Conectar
         return $resultado=$sql->fetchAll();
     }
 
-    // Traemos los datos del Temperatura Ambiente desde base de datos
+    // Traemos los datos de la Temperatura Ambiente desde base de datos
     public function getTempamb_id($id_temp_amb)
     {
         $conectar = parent::Conexion();
@@ -84,7 +84,7 @@ class Tempamb extends Conectar
     }
 
     //Actualizamos el formato en base de datos
-    public function updateTempamb( $id_temp_amb,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3){
+    public function updateTempamb($id_temp_amb,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3 ){
         $conectar= parent::conexion();
         parent::setNames();
         $sql="UPDATE tempambiente set
@@ -93,7 +93,7 @@ class Tempamb extends Conectar
         num_dia=?,
         grados1=?,
         grados2=?,
-        grados3=?,
+        grados3=?
         WHERE
         id_temp_amb = ?;";
         $sql=$conectar->prepare($sql);
@@ -103,14 +103,14 @@ class Tempamb extends Conectar
         $sql->bindValue(4, $grados1);
         $sql->bindValue(5, $grados2);
         $sql->bindValue(6, $grados3);
+        $sql->bindValue(7, $id_temp_amb);
         $sql->execute();
 
         return $resultado=$sql->fetchAll();
     }
 
     //para eliminar un formato en base de datos
-    
-    public function delete_Tempamb($id_temp_amb){
+    public function delete_tempamb($id_temp_amb){
         $conectar= parent::conexion();
         parent::setNames();
         $sql="UPDATE tempambiente SET est=0, fecha_elim=now() where id_temp_amb = ?;";

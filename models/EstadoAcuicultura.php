@@ -1,22 +1,22 @@
 <?php 
 
-class EstAcui extends Conectar
+class Estacuicultura extends Conectar
 {
-    // creamos el metodo insertEstacui para hacer un nuevo registro de Estado de Acuicultura
-    public function insertEstAcui($id_cultivo,$id_usu,$obser_gene)
+    // creamos el metodo insertEstacui para hacer un nuevo registro de Estado Acuicultura
+    public function insertEstacui($id_cultivo,$id_usu,$obser_gene)
     {
         $conectar = parent::Conexion();
         parent::setNames();
 
         $sql="INSERT INTO  estacuicultura (
-            id_est_acui, 
-            id_cultivo, 
-            id_usu, 
-            obser_gene, 
-            fecha, 
-            fecha_elim, 
-            est) 
-            VALUES 
+            id_est_acui,
+            id_cultivo,
+            id_usu,
+            obser_gene,
+            fecha,
+            fecha_elim,
+            est)
+            VALUES
             (NULL,?,?,?,now(),NULL,1);";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
@@ -27,7 +27,7 @@ class EstAcui extends Conectar
         return $resultado=$sql->fetchAll();
     }
 
-    //para traer datos del formulario de Estado de Acuicultura y llenar el Datatable
+    //para traer datos del formulario de Estado Acuicultura y llenar el Datatable
     public function listar_estacui_x_cult($id_cultivo)
     {
         $conectar = parent::Conexion();
@@ -51,7 +51,7 @@ class EstAcui extends Conectar
         return $resultado=$sql->fetchAll();
     }
 
-    // Traemos los datos del Estado de Acuicultura desde base de datos
+    // Traemos los datos del Estado Acuicultura desde base de datos
     public function getEstacui_id($id_est_acui)
     {
         $conectar = parent::Conexion();
@@ -95,7 +95,6 @@ class EstAcui extends Conectar
     }
 
     //para eliminar un formato en base de datos
-
     public function delete_estacui($id_est_acui){
         $conectar= parent::conexion();
         parent::setNames();
