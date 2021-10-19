@@ -76,7 +76,8 @@
 									<label class="form-label semibold"  for="num_lote">Número de Lote</label>
 									<div class="form-control-wrapper form-control-icon-right">
 										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número">
-										<i class="glyphicon glyphicon-barcode"></i>
+										<i class="glyphicon glyphicon-barcode" id="num_lote_icon" aria-hidden="true"></i>
+										<small class="text-muted text-danger alerta" id="num_lote_alert" hidden>El número de lote debe contener una R y números, máximo 16 caracteres.</small>
 									</div>
 								</div>
 								<div class="form-group">
@@ -86,7 +87,7 @@
 								</div>
 
 								<div class="form-group">
-									<button type="submit" name="action" class="btn btn-inline float-right btn-primary">Guardar</button>
+									<button type="submit" name="action" class="btn azul btn-inline float-right btn-primary">Guardar</button>
 								</div>
 
 							</form>
@@ -113,23 +114,44 @@
 							</div>
 
 							<div id="infoproducto">
-								<section class="box-typical col-lg-12">
-									<header class="box-typical-header-sm bordered">Información</header>
-									<div class="box-typical-inner">
-										<ul class="profile-links-list">
-											<li class="nowrap">
-												<p><i class="font-icon-cart" aria-hidden="true"></i><b>&nbsp&nbsp Nombre Producto:</b> <span id="nombreprodu"></span></p>
-											</li>
-											<li class="nowrap">
-												<p><i class="glyphicon glyphicon-calendar" aria-hidden="true"></i><b>&nbsp&nbsp Fecha de Vencimiento:</b> <span id="fechavenc"></span></p>
-											</li>
-											<li class="nowrap">
-												<p><i class="glyphicon glyphicon-barcode"></i><b>&nbsp&nbsp Número de Lote:</b> <span id="numeroLote"></span></p>
-											</li>
-											<li class="nowrap">
-												<p><i class="fa fa-bus"></i><b>&nbsp&nbsp Proveedor:</b> <span id="proveedor"></span></p>
-											</li>
-										</ul>
+								<section class="col-lg-12">
+									<br>
+									<h4 class="box-typical-header-sm bordered">Información</h4>
+									<div class="col-xxl-3 col-md-12">
+										<div class="row">
+											<div class="col-md-3 col-xs-12">
+												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">
+													<div class="widget-simple-sm-icon">
+														<i class="font-icon font-icon-cart"></i>
+													</div>
+													<div class="widget-simple-sm-fill-caption"><b style="font-size: 12pt;">Nombre Producto</b><br><span id="nombreprodu"></span></div>
+												</section>
+											</div><!--.widget-simple-sm-fill-->
+											<div class="col-md-3 col-xs-12">
+												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">
+													<div class="widget-simple-sm-icon">
+														<i class="font-icon glyphicon glyphicon-calendar"></i>
+													</div>
+													<div class="widget-simple-sm-fill-caption"><b style="font-size: 12pt;">Fecha de Vencimiento<br></b><span id="fechavenc"></div>
+												</section>
+											</div><!--.widget-simple-sm-fill-->
+											<div class="col-md-3 col-xs-12">
+												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">
+													<div class="widget-simple-sm-icon">
+														<i class="font-icon glyphicon glyphicon-barcode"></i>
+													</div>
+													<div class="widget-simple-sm-fill-caption"><b style="font-size: 12pt;">Número de Lote</b><br><span id="numeroLote"></span></div>
+												</section><!--.widget-simple-sm-fill-->
+											</div>
+											<div class="col-md-3 col-xs-12">
+												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">
+													<div class="widget-simple-sm-icon">
+														<i class="font-icon fa fa-bus"></i>
+													</div>
+													<div class="widget-simple-sm-fill-caption"><b style="font-size: 12pt;">Proveedor</b><br><span id="proveedor"></span></div>
+												</section><!--.widget-simple-sm-fill-->
+											</div>
+										</div>
 									</div>
 								</section>
 

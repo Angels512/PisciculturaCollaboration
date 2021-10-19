@@ -1,3 +1,9 @@
+const txarea = document.querySelectorAll('#biocre_form textarea');
+
+const expresiones = {
+	obser_adic: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
+}
+
 function init(){
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Biometrias de Crecimiento
     $("#biocre_form").on("submit",function(e)
@@ -57,8 +63,41 @@ $(document).ready(function(){
     }
 });
 
+// Por cada input del formulario se realiza la validacion
+txarea.forEach((textarea) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    textarea.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    textarea.addEventListener('blur', validateForm);
+});
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'obser_adic':
+            validateData(expresiones.obser_adic, e.target, 'obser_adic');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 function validarDatos(e){
     e.preventDefault();
+
+    let valite_obser_adic = $('#obser_adic').hasClass('form-control-danger');
 
     if($('#obser_adic').val()==''){
         swal({
@@ -66,6 +105,14 @@ function validarDatos(e){
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_obser_adic) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{

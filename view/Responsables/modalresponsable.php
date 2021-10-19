@@ -15,7 +15,8 @@
 					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
 					    		<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre">
-                        		<i class="fa fa-user"></i>
+                        		<i class="fa fa-user" id="nombre_icon" aria-hidden="true"></i>
+								<small class="text-muted text-danger alerta" id="nombre_alert" hidden>El nombre debe contener solo letras y espacios, max 25 caracateres.</small>
                         	</div>
 					    </div>
 
@@ -23,13 +24,14 @@
 					    	<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
 					    		<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido">
-                        		<i class="fa fa-user-o"></i>
+                        		<i class="fa fa-user-o" id="apellido_icon" aria-hidden="true"></i>
+								<small class="text-muted text-danger alerta" id="apellido_alert" hidden>El apellido debe contener solo letras y espacios, max 25 caracateres.</small>
                         	</div>
 					    </div>
                 </div>
                <div class="modal-footer">
                    <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
-				   <button type="submit" name="action" class="btn btn-rounded btn-primary">Guardar</button>
+				   <button type="submit" name="action" class="btn azul btn-rounded btn-primary">Guardar</button>
                </div>
            </form>
        </div>

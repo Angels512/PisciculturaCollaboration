@@ -1,3 +1,20 @@
+const inputs = document.querySelectorAll('#responsable_form input');
+const icons = document.querySelectorAll('#responsable_form i');
+
+const expresiones = {
+	nombre_respon: /^[a-zA-Z\s]{3,25}$/, // Letras y espacios
+	apellido_respon: /^[a-zA-Z\s]{3,25}$/, // Letras y espacios
+}
+
+// Por cada input del formulario se realiza la validacion
+inputs.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
 function init(){
     // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del formulario del responsable
     $("#responsable_form").on("submit",function(e){
@@ -11,8 +28,41 @@ $(document).ready(function()
     listarResponsables();
 });
 
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'nombre_respon':
+            validateData(expresiones.nombre_respon, e.target, 'nombre');
+        break;
+
+        case 'apellido_respon':
+            validateData(expresiones.apellido_respon, e.target, 'apellido');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo+'_respon').removeClass('form-control-danger');
+        $('#'+campo+'_icon').removeClass('text-danger');
+        $('#'+campo+'_respon').addClass('form-control-success');
+        $('#'+campo+'_icon').addClass('text-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+
+    }else {
+        $('#'+campo+'_respon').addClass('form-control-danger');
+        $('#'+campo+'_icon').addClass('text-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 function validarDatos(e){
     e.preventDefault();
+
+    let valite_nombre_respon = $('#nombre_respon').hasClass('form-control-danger');
+    let valite_apellido_respon = $('#apellido_respon').hasClass('form-control-danger');
 
     if($('#nombre_respon').val()=='' ||$('#apellido_respon').val()==''){
         swal({
@@ -20,6 +70,14 @@ function validarDatos(e){
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_nombre_respon || valite_apellido_respon) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{

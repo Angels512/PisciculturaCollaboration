@@ -1,3 +1,33 @@
+const inputs = document.querySelectorAll('#product_form input');
+const icons = document.querySelectorAll('#product_form i');
+
+const inputsedit = document.querySelectorAll('#product_edit input');
+const iconsedit = document.querySelectorAll('#product_edit i');
+
+const expresiones = {
+	num_lote: /^[Rr0-9]{9,16}$/, // Solo R min y mayus y números.
+}
+
+// Por cada input del formulario se realiza la validacion
+inputs.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
+// Por cada input del formulario se realiza la validacion
+inputsedit.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
+
+
 function init(){
 
     //nos lleva a la funcion guardar una vez se presione guardar en el formulario de nuevo producto
@@ -98,9 +128,46 @@ $(document).on("click","#elim_produ",function(e){
 
 });
 
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'num_lote':
+            validateData(expresiones.num_lote, e.target, 'num_lote');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo+'_icon').removeClass('text-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_icon').addClass('text-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+
+        $('#'+campo+'1').removeClass('form-control-danger');
+        $('#'+campo+'_icon1').removeClass('text-danger');
+        $('#'+campo+'1').addClass('form-control-success');
+        $('#'+campo+'_icon1').addClass('text-success');
+        $('#'+campo+'_alert1').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_icon').addClass('text-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+
+        $('#'+campo+'1').addClass('form-control-danger');
+        $('#'+campo+'_icon1').addClass('text-danger');
+        $('#'+campo+'_alert1').prop('hidden', false);
+    }
+}
+
 //para validacion de datos vacios
 function validarDatosReg(e){
     e.preventDefault();
+
+    let valite_num_lote = $('#num_lote').hasClass('form-control-danger');
 
     if($('#num_lote').val()==''){
         swal({
@@ -110,14 +177,29 @@ function validarDatosReg(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
+    }else if (valite_num_lote) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
+            confirmButtonText: "OK"
+        });
     }else{
         guardar();
+
+        //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
+        setTimeout(function(){
+            window.location.reload();
+        }, 2000);
     }
 }
 
 //para validacion de datos vacios
 function validarDatosMod(e){
     e.preventDefault();
+
+    let valite_num_lote = $('#num_lote1').hasClass('form-control-danger');
 
     if($('#num_lote1').val()==''){
         swal({
@@ -127,8 +209,21 @@ function validarDatosMod(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
+    }else if (valite_num_lote) {
+            swal({
+                title: "Advertencia!",
+                text: "Los campos son invalidos...",
+                type: "error",
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "OK"
+            });
     }else{
         editar();
+
+        //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
+        setTimeout(function(){
+            window.location.reload();
+        }, 2000);
     }
 }
 

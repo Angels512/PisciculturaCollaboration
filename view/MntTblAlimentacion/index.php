@@ -121,19 +121,21 @@
 								<div class="col-sm-12">
 									<fieldset class="form-group">
 										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
-										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas"></textarea>
+										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas" maxlength="200"></textarea>
+										<small class="text-muted text-danger alerta" id="obser_atmo_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
 								</div>
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
 										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
-										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo"></textarea>
+										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo" maxlength="200"></textarea>
+										<small class="text-muted text-danger alerta" id="obser_gen_cult_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
 								</div>
 
 								<div class="col-lg-12">
-									<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right">Guardar</button>
+									<button type="submit" name="action" value="add" class="btn azul btn-inline btn-primary float-right">Guardar</button>
 								</div>
 							</form>
 						</div>
@@ -365,14 +367,16 @@
 								<div class="col-sm-12">
 									<fieldset class="form-group">
 										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
-										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas"></textarea>
+										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas" maxlength="200"></textarea>
+										<small class="text-muted text-danger alerta" id="obser_atmo_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
 								</div>
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
 										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
-										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo"></textarea>
+										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo" maxlength="200"></textarea>
+										<small class="text-muted text-danger alerta" id="obser_gen_cult_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
 								</div>
 

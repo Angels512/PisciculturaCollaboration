@@ -1,3 +1,10 @@
+const txarea = document.querySelectorAll('#tabla_alim textarea');
+
+const expresiones = {
+	obser_atmo: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
+    obser_gen_cult: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
+}
+
 function init(){
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Biometrias de Crecimiento
     $("#tabla_alim").on("submit",function(e)
@@ -7,7 +14,6 @@ function init(){
 
 }
 
-
 $(document).ready(function() {
 
     /* Para inicializar la funcion del calendario para la hora*/
@@ -16,8 +22,9 @@ $(document).ready(function() {
             horizontal: 'right'
         },
         format: 'LT',
-        debug: false
+        debug: false,
     });
+
 
     /* Esto es para llenar el select del Cultivo */
     $.post("controller/cultivo.php?op=cultivoselect",function(data, status){
@@ -40,15 +47,51 @@ $(document).on("click","#newmortalidad",function(){
     $('#modalmortalidad').modal('show');
 });
 
-
 //para mostrar el modal de novedad una vez se de clic al boton mortandad
 $(document).on("click","#newnovedad",function(){
 
     $('#modalnovedad').modal('show');
 });
 
+txarea.forEach((textarea) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    textarea.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    textarea.addEventListener('blur', validateForm);
+});
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'obser_atmo':
+            validateData(expresiones.obser_atmo, e.target, 'obser_atmo');
+        break;
+
+        case 'obser_gen_cult':
+            validateData(expresiones.obser_gen_cult, e.target, 'obser_gen_cult');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 function validarDatos(e){
     e.preventDefault();
+
+    let valite_obser_atmo = $('#obser_atmo').hasClass('form-control-danger');
+    let valite_obser_gen_cult = $('#obser_gen_cult').hasClass('form-control-danger');
 
     if($('#hora_sum_alim1').val()=='' ||$('#hora_sum_alim2').val()=='' || $('#hora_sum_alim3').val()=='' || $('#obser_atmo').val()=='' || $('#obser_gen_cult').val()==''){
         swal({
@@ -56,6 +99,14 @@ function validarDatos(e){
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_obser_atmo || valite_obser_gen_cult) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{

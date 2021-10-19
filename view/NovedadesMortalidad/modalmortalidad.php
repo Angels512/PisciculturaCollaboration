@@ -9,9 +9,6 @@
                     </button>
                     <h4 class="modal-title" id="mdlTitulo">Nuevo Registro de Mortalidad</h4>
                 </div>
-
-
-
                 <div class="modal-body">
 
                     <div class="form-group">
@@ -25,15 +22,14 @@
                         <label class="form-label" for="reg_mortandad">Registro de Mortalidad</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" id="reg_mortandad" name="reg_mortandad" placeholder="Ingrese la Mortalidad">
-                            <i class="fa fa-anchor"></i>
+                            <i class="fa fa-anchor" id="reg_mortandad_icon" aria-hidden="true"></i>
+                            <small class="text-muted text-danger alerta" id="reg_mortandad_alert" hidden>El registro de mortandad solo debe contener números, min 1 - max 4.</small>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" name="action" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+                    <button type="submit" name="action" value="add" class="btn azul btn-rounded btn-primary">Guardar</button>
                 </div>
             </form>
         </div>

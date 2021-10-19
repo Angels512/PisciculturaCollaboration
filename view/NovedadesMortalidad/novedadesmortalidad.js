@@ -1,14 +1,23 @@
+const inputsm = document.querySelectorAll('#mortalidad_form input');
+const iconsm = document.querySelectorAll('#mortalidad_form i');
+const txan = document.querySelectorAll('#novedad_form textarea');
+
+const expresion = {
+	reg_mortandad: /^\d{1,4}$/, // números
+	medidad_prev: /^.{20,250}$/ // Letras,espacios,otros símbolos y números.
+}
+
 function init(){
 
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del modal de mortalidad
     $("#mortalidad_form").on("submit",function(e){
         validarDatosMort(e);
-    })
+    });
 
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del modal de novedad
     $("#novedad_form").on("submit",function(e){
         validarDatosNov(e);
-    })
+    });
 
 }
 
@@ -128,9 +137,55 @@ $(document).ready(function(){
     }).DataTable();
 });
 
+// Por cada input del formulario se realiza la validacion
+inputsm.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
+// Por cada input del formulario se realiza la validacion
+txan.forEach((textarea) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    textarea.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    textarea.addEventListener('blur', validateForm);
+});
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'reg_mortandad':
+            validateData(expresion.reg_mortandad, e.target, 'reg_mortandad');
+        break;
+
+        case 'medidad_prev':
+            validateData(expresion.medidad_prev, e.target, 'medidad_prev');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 //validar campos vacios
 function validarDatosMort(e){
     e.preventDefault();
+
+    let valite_reg_mortandad = $('#reg_mortandad').hasClass('form-control-danger');
 
     if($('#reg_mortandad').val()==''){
         swal({
@@ -138,6 +193,14 @@ function validarDatosMort(e){
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_reg_mortandad) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{
@@ -149,12 +212,22 @@ function validarDatosMort(e){
 function validarDatosNov(e){
     e.preventDefault();
 
+    let valite_medidad_prev = $('#medidad_prev').hasClass('form-control-danger');
+
     if($('#medidad_prev').val()==''){
         swal({
             title: "Advertencia!",
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_medidad_prev) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{

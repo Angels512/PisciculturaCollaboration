@@ -22,12 +22,13 @@
                     <div class="form-group">
                         <label class="form-label semibold" for="medidad_prev">Medidas Preventivas</label>
                         <textarea rows="4" class="form-control" id="medidad_prev" name="medidad_prev" placeholder="Escriba las medidas preventivas"></textarea>
+                        <small class="text-muted text-danger alerta" id="medidad_prev_alert" hidden>Las medidas de prevención son mínimo de 20 y max de 250 caracteres.</small>
                     </div>
                 </div>
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="submit" name="action1" value="add" class="btn btn-rounded btn-primary">Guardar</button>
+                    <button type="submit" name="action1" value="add" class="btn azul btn-rounded btn-primary">Guardar</button>
                 </div>
             </form>
         </div>
