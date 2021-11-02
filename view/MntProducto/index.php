@@ -103,13 +103,9 @@
 
 							<div class="row">
 								<fieldset>
-									<div class="col-lg-10 form-group">
-										<select id="id_produ" class="form-control">
+									<div class="col-lg-12 form-group">
+										<select id="id_produ" class="form-control" onchange="listarDatos()">
 										</select>
-									</div>
-
-									<div class="col-lg-1 form-group">
-										<button type="button" name="action" id="consul_produ" class="btn btn-inline btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
 									</div>
 								</fieldset>
 							</div>

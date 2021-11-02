@@ -1,9 +1,9 @@
-
 const inputs = document.querySelectorAll('#proveedor_form input');
 const icons = document.querySelectorAll('#proveedor_form i');
 
 const inputsedit = document.querySelectorAll('#proveedor_edit input');
 const iconsedit = document.querySelectorAll('#proveedor_edit i');
+const smallForm = document.querySelectorAll('#proveedor_edit small');
 
 const expresiones = {
 	nombre_emp: /^[a-zA-Z\s]{4,30}$/, // Letras, números, y espacios
@@ -294,6 +294,7 @@ function MostrarDatos()
         $('#correo_emp1').val(data.correo_emp);
     });
 
+    cleanValidation();
     //para mostrar la sección donde se muestra la información del proveedor
     $('#modalproveedor').modal('show');
 }
@@ -330,4 +331,28 @@ function eliminar(id_prove){
         }
     });
 }
+
+//funcion para remover las clases del modal
+function cleanValidation(){
+
+    let inputedit = document.querySelectorAll('#proveedor_edit input');
+    // Esconder borde de inputs
+    inputedit.forEach((input)=>{
+        input.classList.remove('form-control-danger');
+        input.classList.remove('form-control-success');
+    });
+
+    // Esconder color de iconos
+    iconsedit.forEach((icon)=>{
+        icon.classList.remove('text-danger');
+        icon.classList.remove('text-success');
+    });
+
+    // Esconder borde de inputs
+    smallForm.forEach((small)=>{
+        small.hidden=true;
+    });
+
+}
+
 init();
