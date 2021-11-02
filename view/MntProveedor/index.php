@@ -97,11 +97,8 @@
 
 							<div class="row">
 								<fieldset class="form-group">
-									<div class="col-lg-10">
-										<select id="id_prove" class="form-control"></select>
-									</div>
-									<div class="col-lg-1">
-										<button type="button" name="action" id="consul_prove" class="btn btn-inline btn-inline btn-primary-outline btn-sm" style="margin-top: 6px;">Consultar</button>
+									<div class="col-lg-12">
+										<select id="id_prove" class="form-control" onchange="listarDatos()"></select>
 									</div>
 								</fieldset>
 							</div>

@@ -13,11 +13,11 @@
 
              // verificamos si datos es un array y si sus datos no son igual a 0
             if(is_array($datos)==true and count($datos)>0){
-
+                $html.="<option disabled selected>Selecciona una opción</option>";
                 //llenamos el select con un option, por cada fila del arreglo
                 foreach($datos as $row)
                 {
-                    $html.= "<option value='".$row['id_produ']."'>".$row['nombre_clase']." - ".date('d/m/Y', strtotime($row['fech_venc']))."</option>";
+                    $html.= "<option value='".$row['id_produ']."'>".$row['nombre_clase']." - ".date('d-m-Y', strtotime($row['fech_venc']))."</option>";
                 }
                 echo $html;
             }
@@ -28,10 +28,12 @@
 
             // Llamamos el metodo getNombreProveedo del model
             $datos = $producto->getNombreProveedor();
+            $html = '';
 
              // verificamos si datos es un array y si sus datos no son igual a 0
             if(is_array($datos)==true and count($datos)>0){
 
+                $html.="<option disabled selected>Selecciona una opción</option>";
                 //llenamos el select con un option, por cada fila del arreglo
                 foreach($datos as $row)
                 {
@@ -59,7 +61,7 @@
                     $output["id_clase"] = $row["id_clase"];
                     $output["id_prove"] = $row["id_prove"];
                     $output["nombre_clase"] = $row["nombre_clase"];
-                    $output["fech_venc"] = date('Y/m/d', strtotime($row["fech_venc"]));
+                    $output["fech_venc"] = date('d-m-Y', strtotime($row["fech_venc"]));
                     $output["num_lote"] = $row["num_lote"];
                     $output["nombre_emp"] = $row["nombre_emp"];
                 }

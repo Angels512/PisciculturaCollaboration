@@ -1,5 +1,6 @@
 const inputs = document.querySelectorAll('#responsable_form input');
 const icons = document.querySelectorAll('#responsable_form i');
+const smallForm = document.querySelectorAll('#responsable_form small');
 
 const expresiones = {
 	nombre_respon: /^[a-zA-Z\s]{3,25}$/, // Letras y espacios
@@ -150,6 +151,8 @@ function MostrarDatos(id_respon)
 
     });
 
+    cleanValidation();
+
     //para mostrar el modal donde se muestra la información del responsable
     $('#modalresponsable').modal('show');
 }
@@ -182,5 +185,27 @@ function deleteRespon(id_respon)
         }
     });
 };
+
+//funcion para remover las clases del modal
+function cleanValidation(){
+
+    // Esconder borde de inputs
+    inputs.forEach((input)=>{
+        input.classList.remove('form-control-danger');
+        input.classList.remove('form-control-success');
+    });
+
+    // Esconder color de iconos
+    icons.forEach((icon)=>{
+        icon.classList.remove('text-danger');
+        icon.classList.remove('text-success');
+    });
+
+    // Esconder borde de inputs
+    smallForm.forEach((small)=>{
+        small.hidden=true;
+    });
+
+}
 
 init();

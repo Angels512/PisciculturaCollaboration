@@ -3,6 +3,7 @@ const icons = document.querySelectorAll('#product_form i');
 
 const inputsedit = $('#product_edit input');
 const iconsedit = document.querySelectorAll('#product_edit i');
+const smallForm = document.querySelectorAll('#product_edit small');
 
 const expresiones = {
 	num_lote: /^[Rr]{1}[0-9]{10,15}$/, // Solo R min y mayus y números.
@@ -12,7 +13,6 @@ const expresiones = {
 for (let i=0; i < inputs.length; i++)
 {
     let input_id = $(`#${inputs[i].id}`);
-    console.log(input_id);
 
     inputs[i].id == 'fech_venc' ? input_id.change(validateForm) : '';
     input_id.keyup(validateForm);
@@ -22,7 +22,6 @@ for (let i=0; i < inputs.length; i++)
 for (let f=0; f < inputsedit.length; f++)
 {
     let inputs_id = $(`#${inputsedit[f].id}`);
-    console.log(inputs_id);
 
     inputsedit[f].id == 'fech_venc1' ? inputs_id.change(validateForm) : '';
     inputs_id.keyup(validateForm);
@@ -46,11 +45,14 @@ function init(){
 
 $(document).ready(function() {
 
+    let date = new Date();
+    let fecha = (date.getDate() + 1) + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
+
     /* Para inicializar la funcion del calendario para la fecha*/
-      $('.daterange3').daterangepicker({
+    $('.daterange3').daterangepicker({
         singleDatePicker: true,
-         "locale": {
-            "format": "YYYY-MM-DD",
+        "locale": {
+            "format": "DD-MM-YYYY",
             "separator": " - ",
             "daysOfWeek": [
                 "Do",
@@ -76,7 +78,8 @@ $(document).ready(function() {
                 "Diciembre"
             ],
             "firstDay": 1
-        }
+        },
+        "startDate": fecha
     });
 
     /* Esto es para llenar el select del Nombre del Producto */
@@ -105,13 +108,8 @@ $(document).ready(function() {
     //para ocultar la sección donde se muestra la información del producto
     $("#infoproducto").hide();
 
-});
-
-//nos lleva a la funcion listarDatos una vez se de clic en el boton consultar
-$(document).on("click","#consul_produ",function(e){
-
-   listarDatos();
-
+    //Para quitar la validación apenas se ingrese al form
+    $('#fech_venc').removeClass('form-control-success');
 });
 
 //nos lleva a la funcion MostrarDatos una vez se de clic en el boton modificar
@@ -138,13 +136,14 @@ function validateForm(e)
         break;
 
         case 'fech_venc':
-            var date = new Date();
-            var fecha_select = new Date($('#fech_venc').val());
+            let date = new Date();
+            var fech_venc = $('#fech_venc').val().split("-");
+            let fecha_select = new Date(`${fech_venc[2]}-${fech_venc[1]}-${fech_venc[0]}`);
 
             date.setHours(0,0,0,0);
             fecha_select.setHours(0,0,0,0);
 
-            if(date<fecha_select){
+            if(date<=fecha_select){
                 $('#fech_venc').removeClass('form-control-danger');
                 $('#fech_venc').addClass('form-control-success');
                 $('#fech_venc_alert').prop('hidden', true);
@@ -153,12 +152,13 @@ function validateForm(e)
                 $('#fech_venc_alert').prop('hidden', false);
             }
 
-            var fecha_select1 = new Date($('#fech_venc1').val());
+            var fech_venc1 = $('#fech_venc1').val().split("-");
+            let fecha_select1 = new Date(`${fech_venc1[2]}-${fech_venc1[1]}-${fech_venc1[0]}`);
 
             date.setHours(0,0,0,0);
             fecha_select1.setHours(0,0,0,0);
 
-            if(date<fecha_select1){
+            if(date<=fecha_select1){
                 $('#fech_venc1').removeClass('form-control-danger');
                 $('#fech_venc1').addClass('form-control-success');
                 $('#fech_venc_alert1').prop('hidden', true);
@@ -351,6 +351,7 @@ function MostrarDatos()
         $("#id_prove1").val(data.id_prove).trigger('change');
     });
 
+    cleanValidation();
     //para mostrar la sección donde se muestra la información del producto
     $('#modalproduc').modal('show');
 }
@@ -386,6 +387,29 @@ function eliminar(id_produ){
             });
         }
     });
+}
+
+//funcion para remover las clases del modal
+function cleanValidation(){
+
+    let inputedit = document.querySelectorAll('#product_edit input');
+    // Esconder borde de inputs
+    inputedit.forEach((input)=>{
+        input.classList.remove('form-control-danger');
+        input.classList.remove('form-control-success');
+    });
+
+    // Esconder color de iconos
+    iconsedit.forEach((icon)=>{
+        icon.classList.remove('text-danger');
+        icon.classList.remove('text-success');
+    });
+
+    // Esconder borde de inputs
+    smallForm.forEach((small)=>{
+        small.hidden=true;
+    });
+
 }
 
 init();
