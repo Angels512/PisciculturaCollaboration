@@ -48,9 +48,9 @@
                     $output["id_tbl_alim"] = $row["id_tbl_alim"];
                     $output["cant_siembra"] = $row["cant_siembra"];
                     $output["porc_proteina"] = ($row["porc_proteina"]);
-                    $output["hora_sum_alim1"] = $row["hora_sum_alim1"];
-                    $output["hora_sum_alim2"] = $row["hora_sum_alim2"];
-                    $output["hora_sum_alim3"] = $row["hora_sum_alim3"];
+                    $output["hora_sum_alim1"] = date('H:i', strtotime($row["hora_sum_alim1"]));
+                    $output["hora_sum_alim2"] = date('H:i', strtotime($row["hora_sum_alim2"]));
+                    $output["hora_sum_alim3"] = date('H:i', strtotime($row["hora_sum_alim3"]));
                     $output["obser_atmo"] = $row["obser_atmo"];
                     $output["obser_gen_cult"] = $row["obser_gen_cult"];
                     $output["fecha"] = date('d/m/Y', strtotime($row["fecha"]));

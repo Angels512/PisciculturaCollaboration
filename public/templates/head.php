@@ -50,7 +50,7 @@
 
 <!--Reloj y Calendario-->
 <link rel="stylesheet" href="public/css/separate/vendor/bootstrap-datetimepicker.min.css">
-
+<link rel="stylesheet" href="public/css/lib/clockpicker/bootstrap-clockpicker.min.css">
 
 <!--Sliders-->
 <link rel="stylesheet" href="public/css/lib/ion-range-slider/ion.rangeSlider.css">
