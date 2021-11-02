@@ -73,39 +73,42 @@
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" />
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" value="9:15"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim1_alert" hidden>La hora 1 es de 6:00 am a 9:30 am</small>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2"/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:35"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim2_alert" hidden>La hora 2 es de 9:30 am a 1:00 pm.</small>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3"/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="15:35"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim3_alert" hidden>La hora 3 es de 1:00 pm a 6:00 pm.</small>
+									</div>
 								</div>
 
 								<div class="col-lg-12">
@@ -196,39 +199,39 @@
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" readonly />
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" value="9:35" disabled/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" readonly/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:35" disabled/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" readonly/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="15:35" disabled/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+									</div>
 								</div>
 
 								<div class="col-lg-12">
@@ -319,40 +322,44 @@
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" />
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" value="9:15"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim1_alert" hidden>La hora 1 es de 6:00 am a 9:30 am</small>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2"/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:35"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim2_alert" hidden>La hora 2 es de 9:30 am a 1:00 pm.</small>
+									</div>
 								</div>
 
 								<div class="col-md-4">
-									<fieldset class="form-group">
-										<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
-											<div class='input-group date hora'>
-												<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3"/>
-												<span class="input-group-addon">
-													<i class="font-icon font-icon-clock"></i>
-												</span>
-											</div>
-									</fieldset>
+									<div class="form-group">
+									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
+										<div class="input-group clockpicker" data-autoclose="true">
+											<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="15:35"/>
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time font-icon"></span>
+											</span>
+										</div>
+										<small class="text-muted text-danger alerta" id="hora_sum_alim3_alert" hidden>La hora 3 es de 1:00 pm a 6:00 pm.</small>
+									</div>
 								</div>
+
 
 								<div class="col-lg-12">
 									<fieldset class="form-group">

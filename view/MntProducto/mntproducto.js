@@ -130,9 +130,24 @@ $(document).on("click","#elim_produ",function(e){
 
 function validateForm(e)
 {
+    var hoy = new Date();
+    var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+
     switch (e.target.name) {
         case 'num_lote':
             validateData(expresiones.num_lote, e.target, 'num_lote');
+        break;
+
+        case 'fech_venc':
+
+            if($('#fech_venc').val()<fecha){
+                $('#fech_venc').addClass('form-control-danger');
+                $('#fech_venc_alert').prop('hidden', false);
+            }else {
+                $('#fech_venc').removeClass('form-control-danger');
+                $('#fech_venc').addClass('form-control-success');
+                $('#fech_venc_alert').prop('hidden', true);
+            }
         break;
     }
 }
@@ -168,8 +183,9 @@ function validarDatosReg(e){
     e.preventDefault();
 
     let valite_num_lote = $('#num_lote').hasClass('form-control-danger');
+    let valite_fech_venc = $('#fech_venc').hasClass('form-control-danger');
 
-    if($('#num_lote').val()==''){
+    if($('#num_lote').val()=='' || $('#fech_venc').val()==''){
         swal({
             title: "Advertencia!",
             text: "Campos vacios",
@@ -177,7 +193,7 @@ function validarDatosReg(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
-    }else if (valite_num_lote) {
+    }else if (valite_num_lote || valite_fech_venc) {
         swal({
             title: "Advertencia!",
             text: "Los campos son invalidos...",
@@ -189,9 +205,9 @@ function validarDatosReg(e){
         guardar();
 
         //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
-        setTimeout(function(){
+        /* setTimeout(function(){
             window.location.reload();
-        }, 2000);
+        }, 4000); */
     }
 }
 

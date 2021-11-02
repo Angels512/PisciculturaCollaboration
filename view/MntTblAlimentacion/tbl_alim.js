@@ -1,5 +1,7 @@
 const txarea = document.querySelectorAll('#tabla_alim textarea');
 
+const inputs = document.querySelectorAll('#tabla_alim input');
+
 const expresiones = {
 	obser_atmo: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
     obser_gen_cult: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
@@ -15,16 +17,6 @@ function init(){
 }
 
 $(document).ready(function() {
-
-    /* Para inicializar la funcion del calendario para la hora*/
-    $('.hora').datetimepicker({
-        widgetPositioning: {
-            horizontal: 'right'
-        },
-        format: 'LT',
-        debug: false,
-    });
-
 
     /* Esto es para llenar el select del Cultivo */
     $.post("controller/cultivo.php?op=cultivoselect",function(data, status){
@@ -61,6 +53,15 @@ txarea.forEach((textarea) =>
     textarea.addEventListener('blur', validateForm);
 });
 
+// Por cada input del formulario se realiza la validacion
+inputs.forEach((input) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    input.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    input.addEventListener('blur', validateForm);
+});
+
 function validateForm(e)
 {
     switch (e.target.name) {
@@ -70,6 +71,39 @@ function validateForm(e)
 
         case 'obser_gen_cult':
             validateData(expresiones.obser_gen_cult, e.target, 'obser_gen_cult');
+        break;
+
+        case 'hora_sum_alim1':
+            if($('#hora_sum_alim1').val()<'06:00:00' || $('#hora_sum_alim1').val()>'09:30:00' ){
+                $('#hora_sum_alim1').addClass('form-control-danger');
+                $('#hora_sum_alim1_alert').prop('hidden', false);
+            }else {
+                $('#hora_sum_alim1').removeClass('form-control-danger');
+                $('#hora_sum_alim1').addClass('form-control-success');
+                $('#hora_sum_alim1_alert').prop('hidden', true);
+            }
+        break;
+
+        case 'hora_sum_alim2':
+            if($('#hora_sum_alim2').val()<'09:30:00' || $('#hora_sum_alim2').val()>'13:00:00'){
+                $('#hora_sum_alim2').addClass('form-control-danger');
+                $('#hora_sum_alim2_alert').prop('hidden', false);
+            }else {
+                $('#hora_sum_alim2').removeClass('form-control-danger');
+                $('#hora_sum_alim2').addClass('form-control-success');
+                $('#hora_sum_alim2_alert').prop('hidden', true);
+            }
+        break;
+
+        case 'hora_sum_alim3':
+            if($('#hora_sum_alim3').val()<'13:00:00' || $('#hora_sum_alim3').val()>'18:00:00'){
+                $('#hora_sum_alim3').addClass('form-control-danger');
+                $('#hora_sum_alim3_alert').prop('hidden', false);
+            }else {
+                $('#hora_sum_alim3').removeClass('form-control-danger');
+                $('#hora_sum_alim3').addClass('form-control-success');
+                $('#hora_sum_alim3_alert').prop('hidden', true);
+            }
         break;
     }
 }
@@ -92,6 +126,9 @@ function validarDatos(e){
 
     let valite_obser_atmo = $('#obser_atmo').hasClass('form-control-danger');
     let valite_obser_gen_cult = $('#obser_gen_cult').hasClass('form-control-danger');
+    let valite_hora_sum_alim1 = $('#hora_sum_alim1').hasClass('form-control-danger');
+    let valite_hora_sum_alim2 = $('#hora_sum_alim2').hasClass('form-control-danger');
+    let valite_hora_sum_alim3 = $('#hora_sum_alim3').hasClass('form-control-danger');
 
     if($('#hora_sum_alim1').val()=='' ||$('#hora_sum_alim2').val()=='' || $('#hora_sum_alim3').val()=='' || $('#obser_atmo').val()=='' || $('#obser_gen_cult').val()==''){
         swal({
@@ -101,7 +138,7 @@ function validarDatos(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
-    }else if (valite_obser_atmo || valite_obser_gen_cult) {
+    }else if (valite_obser_atmo || valite_obser_gen_cult || valite_hora_sum_alim1 || valite_hora_sum_alim2 || valite_hora_sum_alim3) {
         swal({
             title: "Advertencia!",
             text: "Los campos son invalidos...",

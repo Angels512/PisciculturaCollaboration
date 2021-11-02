@@ -70,6 +70,7 @@
 												<i class="font-icon font-icon-calend"></i>
 											</span>
 										</div>
+										<small class="text-muted text-danger alerta" id="fech_venc_alert" hidden>La fecha de vencimiento debe ser posterior a hoy.</small>
 									</div>
 								</div>
 								<div class="form-group">
@@ -117,7 +118,7 @@
 								<section class="col-lg-12">
 									<br>
 									<h4 class="box-typical-header-sm bordered">Información</h4>
-									<div class="col-xxl-3 col-md-12">
+									<div class="col-md-12">
 										<div class="row">
 											<div class="col-md-3 col-xs-12">
 												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">
