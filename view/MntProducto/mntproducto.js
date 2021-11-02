@@ -1,4 +1,4 @@
-const inputs = document.querySelectorAll('#product_form input');
+const inputs = $('#product_form input');
 const icons = document.querySelectorAll('#product_form i');
 
 const inputsedit = document.querySelectorAll('#product_edit input');
@@ -9,13 +9,13 @@ const expresiones = {
 }
 
 // Por cada input del formulario se realiza la validacion
-inputs.forEach((input) =>
+for (let i=0; i < inputs.length; i++)
 {
-    //keyup para que se realice siempre que se presione una tecla
-    input.addEventListener('keyup', validateForm);
-    //blur para que se realice siempre que se presione fuera del input
-    input.addEventListener('blur', validateForm);
-});
+    let input_id = $(`#${inputs[i].id}`);
+
+    inputs[i].id == 'fech_venc' ? input_id.change(validateForm) : '';
+    input_id.keyup(validateForm);
+}
 
 // Por cada input del formulario se realiza la validacion
 inputsedit.forEach((input) =>
@@ -131,7 +131,7 @@ $(document).on("click","#elim_produ",function(e){
 function validateForm(e)
 {
     var hoy = new Date();
-    var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
+    var fecha_actual = [hoy.getDate(), hoy.getMonth() + 1, hoy.getFullYear()];
 
     switch (e.target.name) {
         case 'num_lote':
@@ -139,15 +139,16 @@ function validateForm(e)
         break;
 
         case 'fech_venc':
+            var fech_venc = $('#fech_venc').val().split("-");
 
-            if($('#fech_venc').val()<fecha){
-                $('#fech_venc').addClass('form-control-danger');
-                $('#fech_venc_alert').prop('hidden', false);
-            }else {
-                $('#fech_venc').removeClass('form-control-danger');
-                $('#fech_venc').addClass('form-control-success');
-                $('#fech_venc_alert').prop('hidden', true);
-            }
+            // if($('#fech_venc').val()<fecha_actual){
+            //     $('#fech_venc').addClass('form-control-danger');
+            //     $('#fech_venc_alert').prop('hidden', false);
+            // }else {
+            //     $('#fech_venc').removeClass('form-control-danger');
+            //     $('#fech_venc').addClass('form-control-success');
+            //     $('#fech_venc_alert').prop('hidden', true);
+            // }
         break;
     }
 }
