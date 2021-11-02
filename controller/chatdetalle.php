@@ -4,6 +4,7 @@
     require_once('../models/ChatDetalle.php');
 
     $chatDetalle = new ChatDetalle();
+    $meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
     switch ($_GET['op'])
     {
@@ -14,8 +15,14 @@
             foreach ($datos as $row) {
             ?>
                 <article class="activity-line-item box-typical">
-                    <div class="activity-line-date">
-                        <?php echo date("d/m/Y", strtotime($row['fecha'])); ?>
+                    <div class="activity-line-date" style="left: -92px; font-weight: bold;">
+                        <?php
+                            $diaFecha = date('d', strtotime($row["fecha"]));
+                            $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                            $yearFecha = date('Y', strtotime($row["fecha"]));
+
+                            echo "$diaFecha/$meses[$mesFecha]/$yearFecha";
+                        ?>
                     </div>
                     <header class="activity-line-item-header">
                         <div class="activity-line-item-user">
@@ -41,7 +48,8 @@
                     </header>
                     <div class="activity-line-action-list">
                         <section class="activity-line-action">
-                            <div class="time"><?php echo date("<b>H:i</b>", strtotime($row['fecha'])); ?></div>
+                            <div class="time"><?php echo date("<b>H:i</b>", strtotime($row['fecha'])); ?>
+                            </div>
                             <div class="cont">
                                 <div class="cont-in">
                                     <p><?php echo $row['desc_chatd'];?></p>
@@ -77,7 +85,12 @@
 
                     $output["estadoChatTexto"] = $row["estado_chat"];
 
-                    $output["fecha"] = date("d/m/Y", strtotime($row["fecha"]));
+                    $diaFecha = date('d', strtotime($row["fecha"]));
+                    $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                    $yearFecha = date('Y', strtotime($row["fecha"]));
+
+                    $output["fecha"] = "$diaFecha/$meses[$mesFecha]/$yearFecha";
+
                     $output["nombre_usu"] = $row["nombre_usu"];
                     $output["apellido_usu"] = $row["apellido_usu"];
                     $output["nombre_cat"] = $row["nombre_cat"];

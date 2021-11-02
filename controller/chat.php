@@ -4,6 +4,7 @@
     require_once('../models/Chat.php');
 
     $chat = new Chat();
+    $meses = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 
     switch ($_GET['op'])
     {
@@ -31,7 +32,12 @@
                 $sub_array[] = '<b>'.$row['id_chat'].'</b>';
                 $sub_array[] = $row['nombre_cat'];
                 $sub_array[] = $row['titulo_chat'];
-                $sub_array[] = date("d/m/Y - <b>H:i:s</b>", strtotime($row['fecha']));
+
+                $diaFecha = date('d', strtotime($row["fecha"]));
+                $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                $yearFecha = date('Y', strtotime($row["fecha"]));
+
+                $sub_array[] = "$diaFecha/$meses[$mesFecha]/$yearFecha";
 
                 if ($row["estado_chat"] == "Abierto")
                 {
@@ -80,7 +86,12 @@
                 $sub_array[] = $row['apellido_usu'];
                 $sub_array[] = $row['titulo_chat'];
                 $sub_array[] = $row['nombre_cat'];
-                $sub_array[] = date("d/m/Y - <b>H:i:s</b>", strtotime($row['fecha']));
+
+                $diaFecha = date('d', strtotime($row["fecha"]));
+                $mesFecha = date('m', strtotime($row["fecha"])) - 1;
+                $yearFecha = date('Y', strtotime($row["fecha"]));
+
+                $sub_array[] = "$diaFecha/$meses[$mesFecha]/$yearFecha";
 
                 if ($row["estado_chat"] == "Abierto")
                 {
