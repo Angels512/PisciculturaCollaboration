@@ -7,23 +7,6 @@ function init()
 
 $(document).ready(function()
 {
-    // Ejecutamos el SummerNote #1 (Textarea con la descripcion)
-    $('#desc_chat').summernote({
-        height: 445, // Tiene un alto de 250px
-        lang: "es-ES", // Esta en Español
-        popover: // Eliminamos unas opciones que trae por defecto
-        {
-            image: [],
-            link: [],
-            air: []
-        }
-    });
-
-    // Desactivamos el SummerNote #1
-    $('#desc_chat').summernote('disable');
-
-
-
     // Ejecutamos el SummerNote #2 (Textarea para responder el mensaje)
     $('#desc_chatd').summernote({
         height: 250, // Tiene un alto de 250px
@@ -44,7 +27,6 @@ $(document).ready(function()
 
     // Llamamos a la funcion listarDetalle para obtener toda la lista de mensajes
     listarDetalle(id_chat);
-
 });
 
 
@@ -151,10 +133,6 @@ function listarDetalle(id_chat)
         $('#nombre_usu').html(data.nombre_usu +' '+ data.apellido_usu);
         $('#estado').html(data.estado_chat);
         $('#fecha').html(data.fecha);
-
-        $('#id_cat').val(data.nombre_cat);
-        $('#titulo_chat').val(data.titulo_chat);
-        $('#desc_chat').summernote('code', data.desc_chat);
 
         if (data.estadoChatTexto == 'Cerrado')
         {

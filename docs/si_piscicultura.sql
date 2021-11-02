@@ -390,7 +390,7 @@ INSERT INTO `responsable` (`id_respon`, `nombre_respon`, `apellido_respon`, `fec
 	(3, 'Miguel Angel', 'Cuellar', NULL, '2021-05-27 18:20:28', 1),
 	(4, 'Sofia', 'Rodriguez', NULL, '2021-06-21 20:06:03', 1),
 	(5, 'Ajelandro', 'Sanabria', NULL, '2021-06-21 20:06:22', 1);
-    
+
 
 
 -- Estanque
@@ -400,7 +400,7 @@ INSERT INTO `estanque` (`id_tanque`, `num_tanque`, `capacidad_tanque`, `desc_tan
 	(3, 3, 2000, 'Otro estanque de prueba', NULL, '2021-05-27 23:04:03', 1),
 	(4, 4, 2000, 'Estanque nuevo', NULL, '2021-06-21 20:21:39', 1),
 	(5, 5, 2000, 'Estanque para revision', NULL, '2021-06-21 20:21:56', 1);
-    
+
 -- Cultivo
 INSERT INTO `cultivo` (`id_cultivo`, `id_respon`, `id_tanque`, `num_lote`, `cant_siembra`, `fecha_cierre`, `fecha`, `est`) VALUES
 	(1, 1, 1, '0001', 2500, '2021-11-21', '2021-05-27 18:21:50', 1),
@@ -445,7 +445,7 @@ INSERT INTO `biocrecimiento` (`id_biocre`, `id_etapa`, `id_cultivo`, `id_usu`, `
 	(3, 3, 1, 2, 1900, 120, 120, 6, 'Naranja-Rojo', 'Limpias', 'Normal', 'Sospechoso', 10, 'Ninguna', '2021-06-21 20:14:37', NULL, 1),
 	(4, 4, 1, 2, 1800, 200, 200, 12, 'Naranja-Rojo', 'Limpias', 'Normal', 'Sospechoso', 22, 'Ninguna', '2021-06-21 20:14:37', NULL, 1),
 	(5, 5, 1, 2, 1950, 460, 460, 16, 'Naranja-Rojo', 'Limpias', 'Normal', 'Sospechoso', 33, 'Ninguna', '2021-06-21 20:14:37', NULL, 1);
-    
+
 -- Temperatura del agua
 INSERT INTO `tempagua` (`id_temp_agua`, `id_cultivo`, `id_usu`, `num_dia`, `grados1`, `grados2`, `grados3`, `fecha`, `fecha_elim`, `est`) VALUES
 	(1, 4, 3, 32, 15, NULL, NULL, '2021-06-23', NULL, 1),
@@ -477,7 +477,7 @@ INSERT INTO `estacuicultura` (`id_est_acui`, `id_cultivo`, `id_usu`, `obser_gene
 	(3, 1, 3, 'Agua estable', '2021-06-21', NULL, 1),
 	(4, 1, 3, 'Agua sucia', '2021-06-21', NULL, 1),
 	(5, 1, 3, 'Ninguna', '2021-06-21', NULL, 1);
-    
+
 -- Clase de Producto
 INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 	(1, 'Mojarra 34%', 'Polvo'),
@@ -488,7 +488,7 @@ INSERT INTO `claseproducto` (`id_clase`, `nombre_clase`, `tipo_clase`) VALUES
 INSERT INTO `proveedor` (`id_prove`, `nombre_emp`, `direccion_emp`, `telefono_emp`, `correo_emp`, `fecha`, `fecha_elim`, `est`) VALUES
 	(1, 'Italcol ', 'km 13 Vio occ Mosquera-Funza', '3164989248', 'contacto@italcol.com', '2021-06-24', NULL, 1),
 	(2, 'Tilapia S.A ', 'calle 67 sur N° 6-11', '3546765', 'tilapiasa@gmail.com', '2021-06-24', NULL, 1);
-    
+
 
 -- Producto
 INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lote`, `fecha`, `fecha_elim`, `est`) VALUES
@@ -497,8 +497,8 @@ INSERT INTO `producto` (`id_produ`, `id_prove`, `id_clase`, `fech_venc`, `num_lo
 	(3, 1, 3, '2022-06-22', 'R08763456', '2021-06-24', NULL, 1),
 	(4, 1, 2, '2022-03-30', 'R05676470', '2021-06-24', NULL, 1),
 	(5, 1, 2, '2022-02-08', 'R09876823', '2021-06-24', NULL, 1);
-    
-    
+
+
 SELECT nombre_clase, num_lote, fech_venc FROM producto INNER JOIN claseproducto on producto.id_clase = claseproducto.id_clase WHERE producto.est = 1;
 
 -- Tabla de Alimentacion
@@ -508,4 +508,13 @@ INSERT INTO `tblalimentacion` (`id_tbl_alim`, `id_produ`, `id_cultivo`, `id_usu`
 	(3, 1, 1, 2, 1990, 36, '06:38:00', '12:00:00', '02:00:00', 'Ideal', 'Peces Sospechosos', '2021-06-24', NULL, 1),
 	(4, 4, 7, 4, 1899, 30, '06:00:00', '12:00:00', '02:00:00', 'Invernadero con una Temperatura Alta', 'Peces Enfermos', '2021-06-24', NULL, 1),
 	(5, 5, 4, 1, 2000, 10, '06:47:00', '12:00:00', '02:00:00', 'Ideal', 'Peces Saludables', '2021-06-24', NULL, 1);
-    
+
+
+
+-- Trigger para agregar chat detalle
+DELIMITER $
+	CREATE TRIGGER add_chat_detalle AFTER INSERT ON chat FOR EACH ROW BEGIN
+		INSERT INTO chatdetalle VALUES (NULL, NEW.id_chat, NEW.id_usu, NEW.desc_chat, NOW(), 1);
+	END
+$
+DELIMITER ;
