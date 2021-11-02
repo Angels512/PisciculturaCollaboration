@@ -65,7 +65,7 @@
 									<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento</label>
 									<div class="form-group">
 										<div class='input-group date'>
-											<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3">
+											<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3" value="2021-11-05">
 											<span class="input-group-addon">
 												<i class="font-icon font-icon-calend"></i>
 											</span>
@@ -76,7 +76,7 @@
 								<div class="form-group">
 									<label class="form-label semibold"  for="num_lote">Número de Lote</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número">
+										<input type="text" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese Número" value="R">
 										<i class="glyphicon glyphicon-barcode" id="num_lote_icon" aria-hidden="true"></i>
 										<small class="text-muted text-danger alerta" id="num_lote_alert" hidden>El número de lote debe contener una R y números, máximo 16 caracteres.</small>
 									</div>

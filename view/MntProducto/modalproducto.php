@@ -26,6 +26,7 @@
 										<i class="font-icon font-icon-calend"></i>
 									</span>
 								</div>
+								<small class="text-muted text-danger alerta" id="fech_venc_alert1" hidden>La fecha de vencimiento debe ser posterior a hoy.</small>
 							</div>
 						</div>
 						<div class="form-group">

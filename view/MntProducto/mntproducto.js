@@ -1,31 +1,32 @@
 const inputs = $('#product_form input');
 const icons = document.querySelectorAll('#product_form i');
 
-const inputsedit = document.querySelectorAll('#product_edit input');
+const inputsedit = $('#product_edit input');
 const iconsedit = document.querySelectorAll('#product_edit i');
 
 const expresiones = {
-	num_lote: /^[Rr0-9]{9,16}$/, // Solo R min y mayus y números.
+	num_lote: /^[Rr]{1}[0-9]{10,15}$/, // Solo R min y mayus y números.
 }
 
 // Por cada input del formulario se realiza la validacion
 for (let i=0; i < inputs.length; i++)
 {
     let input_id = $(`#${inputs[i].id}`);
+    console.log(input_id);
 
     inputs[i].id == 'fech_venc' ? input_id.change(validateForm) : '';
     input_id.keyup(validateForm);
 }
 
 // Por cada input del formulario se realiza la validacion
-inputsedit.forEach((input) =>
+for (let f=0; f < inputsedit.length; f++)
 {
-    //keyup para que se realice siempre que se presione una tecla
-    input.addEventListener('keyup', validateForm);
-    //blur para que se realice siempre que se presione fuera del input
-    input.addEventListener('blur', validateForm);
-});
+    let inputs_id = $(`#${inputsedit[f].id}`);
+    console.log(inputs_id);
 
+    inputsedit[f].id == 'fech_venc1' ? inputs_id.change(validateForm) : '';
+    inputs_id.keyup(validateForm);
+}
 
 
 function init(){
@@ -49,7 +50,7 @@ $(document).ready(function() {
       $('.daterange3').daterangepicker({
         singleDatePicker: true,
          "locale": {
-            "format": "DD-MM-YYYY",
+            "format": "YYYY-MM-DD",
             "separator": " - ",
             "daysOfWeek": [
                 "Do",
@@ -130,8 +131,6 @@ $(document).on("click","#elim_produ",function(e){
 
 function validateForm(e)
 {
-    var hoy = new Date();
-    var fecha_actual = [hoy.getDate(), hoy.getMonth() + 1, hoy.getFullYear()];
 
     switch (e.target.name) {
         case 'num_lote':
@@ -139,16 +138,34 @@ function validateForm(e)
         break;
 
         case 'fech_venc':
-            var fech_venc = $('#fech_venc').val().split("-");
+            var date = new Date();
+            var fecha_select = new Date($('#fech_venc').val());
 
-            // if($('#fech_venc').val()<fecha_actual){
-            //     $('#fech_venc').addClass('form-control-danger');
-            //     $('#fech_venc_alert').prop('hidden', false);
-            // }else {
-            //     $('#fech_venc').removeClass('form-control-danger');
-            //     $('#fech_venc').addClass('form-control-success');
-            //     $('#fech_venc_alert').prop('hidden', true);
-            // }
+            date.setHours(0,0,0,0);
+            fecha_select.setHours(0,0,0,0);
+
+            if(date<fecha_select){
+                $('#fech_venc').removeClass('form-control-danger');
+                $('#fech_venc').addClass('form-control-success');
+                $('#fech_venc_alert').prop('hidden', true);
+            }else {
+                $('#fech_venc').addClass('form-control-danger');
+                $('#fech_venc_alert').prop('hidden', false);
+            }
+
+            var fecha_select1 = new Date($('#fech_venc1').val());
+
+            date.setHours(0,0,0,0);
+            fecha_select1.setHours(0,0,0,0);
+
+            if(date<fecha_select1){
+                $('#fech_venc1').removeClass('form-control-danger');
+                $('#fech_venc1').addClass('form-control-success');
+                $('#fech_venc_alert1').prop('hidden', true);
+            }else {
+                $('#fech_venc1').addClass('form-control-danger');
+                $('#fech_venc_alert1').prop('hidden', false);
+            }
         break;
     }
 }
@@ -217,6 +234,7 @@ function validarDatosMod(e){
     e.preventDefault();
 
     let valite_num_lote = $('#num_lote1').hasClass('form-control-danger');
+    let valite_fech_venc = $('#fech_venc1').hasClass('form-control-danger');
 
     if($('#num_lote1').val()==''){
         swal({
@@ -226,7 +244,7 @@ function validarDatosMod(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
-    }else if (valite_num_lote) {
+    }else if (valite_num_lote || valite_fech_venc) {
             swal({
                 title: "Advertencia!",
                 text: "Los campos son invalidos...",
@@ -238,9 +256,9 @@ function validarDatosMod(e){
         editar();
 
         //función que al pasar dos segundos luego de guardar el nuevo registro, hace que se recargue la pagina
-        setTimeout(function(){
+        /* setTimeout(function(){
             window.location.reload();
-        }, 2000);
+        }, 4000); */
     }
 }
 

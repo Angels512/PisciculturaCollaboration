@@ -6,8 +6,8 @@ const inputsedit = document.querySelectorAll('#proveedor_edit input');
 const iconsedit = document.querySelectorAll('#proveedor_edit i');
 
 const expresiones = {
-	nombre_emp: /^[a-zA-Z0-9\s]{4,50}$/, // Letras, números, y espacios
-	direccion_emp: /^[a-zA-Z0-9\#\-\s]{10,70}$/, // Letras,espacios,otros símbolos y números.
+	nombre_emp: /^[a-zA-Z\s]{4,30}$/, // Letras, números, y espacios
+	direccion_emp: /^[a-zA-Z0-9\#\-\s]{10,50}$/, // Letras,espacios,otros símbolos y números.
 	correo_emp: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	telefono_emp: /^\d{7,10}$/, // 7 a 10 numeros.
 }
