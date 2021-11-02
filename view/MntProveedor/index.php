@@ -57,7 +57,7 @@
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre">
 											<i class="fa fa-user" id="nombre_icon" aria-hidden="true"></i>
-											<small class="text-muted text-danger alerta" id="nombre_alert" hidden>El nombre debe contener letras, números y espacios, máximo 20 caracteres.</small>
+											<small class="text-muted text-danger alerta" id="nombre_alert" hidden>El nombre debe contener letras y espacios, máximo 30 caracteres.</small>
 										</div>
 									</div>
 									<div class="form-group">
