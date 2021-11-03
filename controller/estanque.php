@@ -8,19 +8,19 @@
 
     switch ($_GET['op'])
     {
-        // Con la opcion select vamos a recorrer la tabla Categoria para mostrarla en el chat
+        // Para llenar el select de estanques //
         case 'select':
 
-            // Llamamos el metodo getCategoria del model
+            // Llamamos el metodo getEstanque del model
             $datos = $estanque->getEstanque();
 
-            // Miramos que si hayan datos dentro de la tabla Categoria
+            // verificamos si datos es un array y si sus datos no son igual a 0
             if (is_array($datos) == true AND count($datos)>0)
             {
-                // Llenamos todos los option del select que esta en la vista del chat
+                //llenamos el select con un option, por cada fila del arreglo
                 foreach ($datos as $row)
                 {
-                    $html .= "<option value='".$row['id_tanque']."'>Estanque #".$row['num_tanque']."</option>";
+                    $html .= "<option value='".$row['id_tanque']."'>".$row['num_tanque']." ".$row['capacidad_tanque']."".$row['desc_tanque']."</option>";
                 }
                 echo $html;
             }
@@ -33,45 +33,32 @@
                 $estanque->insertEstanque($_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
             }
             else {
-                $data = $estanque->updateEstanque($_POST["id_tanque"],$_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
-                echo $data;
+                $estanque->updateEstanque($_POST["id_tanque"],$_POST["num_tanque"],$_POST["capacidad_tanque"],$_POST["desc_tanque"]);
             }
         break;
 
         //Para completar la tabla con los datos del estanque
-        case 'listarestanque':
-            $datos = $estanque->listarEstanque();
+        case 'listartanque':
+            $datos = $estanque->listarTanque();
 
             foreach ($datos as $row) {
             ?>
-                <div class="widget-tasks-item">
-                    <div class="user-card-row">
-                        <div class="tbl-row">
-                            <div class="tbl-cell tbl-cell-photo">
-                                <img src="public/img/4.png"  alt="foto estanque">
-                            </div>
-                            <div class="tbl-cell">
-                                <p class="user-card-row-name"><?php echo 'Estanque #' . $row['num_tanque']; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="btn-group widget-menu">
-                        <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="font-icon glyphicon glyphicon-option-vertical"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" onClick="modalEstanque(<?php echo $row['id_tanque']; ?>);" id="<?php echo $row['id_tanque']; ?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Actualizar</a>
-                            <a class="dropdown-item" onClick="deleteEstanque(<?php echo $row['id_tanque']; ?>);" id="<?php echo $row['id_tanque']; ?>"><i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar</a>
-                        </div>
-                    </div>
-                </div>
+					<tr>
+                        <th><img src="public/img/estanque.png"  alt="foto usuario" style="width: 40px; height: 40px;"></th>
+	    				<th><p class="user-card-row-name"><?php echo $row['num_tanque']; ?></p></th>
+						<th><p class="user-card-row-name"><?php echo $row['capacidad_tanque']; ?></p></th>
+						<th><p class="user-card-row-name"><?php echo $row['desc_tanque']; ?></p></th> 
+						<th><button type="button" onClick="modalTanque(<?php echo $row['id_tanque'] ?>);" id="<?php echo $row['id_tanque'] ?>"  class="btn btn-inline btn-warning btn-sm ladda-button" style="margin-right: 10px;"><div><i class="fa fa-edit" style="padding: 0.3rem .45rem;"></i></div></button></th>
+						<th><button type="button" onClick="deleteTanque(<?php echo $row['id_tanque'] ?>);" id="<?php echo $row['id_tanque'] ?>" class="btn btn-inline btn-danger btn-sm ladda-button"><div><i class="fa fa-trash" style="padding: 0.3rem .45rem;"></i></div></button></th>
+					</tr>
+        
             <?php
             }
         break;
 
         // Extrae todos los datos del Estanque para mostrarlos en el modal de modificación
-        case 'listarDatosEstanque':
-            $datos = $estanque->getEstanque_id($_POST['id_tanque']);
+        case 'listarDatosTanque':
+            $datos = $estanque->getTanque_id($_POST['id_tanque']);
 
             if (is_array($datos) == true AND count($datos)>0)
             {
@@ -88,7 +75,7 @@
 
         //para eliminar un estanque por su id
         case "eliminar":
-            $estanque->delete_estanque($_POST["id_tanque"]);
+            $estanque->delete_tanque($_POST["id_tanque"]);
         break;
 
 

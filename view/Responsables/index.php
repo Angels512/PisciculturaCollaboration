@@ -2,7 +2,7 @@
 <html>
 <head lang="es">
         <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Estanques y Responsables - A'ttia</title>
+        <title>Responsables - A'ttia</title>
 </head>
 <body class="with-side-menu">
 
