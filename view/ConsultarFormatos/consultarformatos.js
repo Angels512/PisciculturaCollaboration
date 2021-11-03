@@ -113,8 +113,7 @@ function eliminar(id_biocre){
     function(isConfirm) {
         if (isConfirm) {
 
-            $.post("controller/biocrecimiento.php?op=eliminar", { id_biocre:id_biocre }, function (data) {
-            });
+            $.post("controller/biocrecimiento.php?op=eliminar", { id_biocre:id_biocre }, function (data) {});
 
             $('#biocrecimiento').DataTable().ajax.reload();
 

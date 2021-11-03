@@ -2,7 +2,7 @@
 <html>
 <head lang="es">
         <?php require_once('../../public/templates/head.php'); ?> <!-- HEAD -->
-        <title>Estanques y Responsables - A'ttia</title>
+        <title>Estanques - A'ttia</title>
 </head>
 <body class="with-side-menu">
 
@@ -20,7 +20,7 @@
 								<div class="tbl-cell">
 									<h2>Gestionar Estanques</h2>
 									<ol class="breadcrumb breadcrumb-simple">
-										<li><a href="#">Inicio</a></li>
+										<li><a href="inicio">Inicio</a></li>
 										<li class="active">Estanques</li>
 									</ol>
 								</div>
@@ -33,14 +33,29 @@
 				<section class="widget widget-tasks">
 					<header class="widget-header">
 						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
-							<a id="newestanque" class="btn btn-inline azul" style="color: #fff;"><i class="fa fa-plus-circle"></i> &nbspNuevo Estanque</a>
+							<a id="newtanque" class="btn btn-inline btn-primary azul float-right"><i class="fa fa-plus-circle"></i> &nbspNuevo Estanque</a>
 						</div>
 					</header>
-					<div id="listarestanques" >
-
+					<div>
+					<div role="tabpanel" class="tab-pane fade in active">
+						<table class="display table table-striped table-bordered" id="tanquestable">
+							<thead>
+								<tr>
+                            		<th></th>
+	    							<th>Numero</th>
+									<th>Capacidad</th>
+									<th>Descripción</th> 
+									<th></th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="listarestanques"></tbody>
+						</table>
+					</div>
 					</div>
 				</section>
 			</div>
+
         </div>
     </div>
 
