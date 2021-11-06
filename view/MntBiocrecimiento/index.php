@@ -437,7 +437,7 @@
 							</div>
 							<div class="col-lg-12">
 								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline azul btn-primary float-right mt-10">Guardar</button>
-								<button type="button" class="btn btn-inline azul btn-secondary float-right mt-10" id="btnAtras" style="margin-right: 6px;">Atrás</button>
+								<button type="button" class="btn btn-inline btn-secondary float-right mt-10" id="btnAtras" style="margin-right: 6px;">Atrás</button>
 							</div>
 						</form>
 					</div>

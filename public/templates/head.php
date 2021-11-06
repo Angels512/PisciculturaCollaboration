@@ -38,6 +38,9 @@
 <link rel="stylesheet" href="public/css/lib/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="public/css/main.css">
 
+<!-- Graficas -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+
 
 
 <!--MARIANA-->
