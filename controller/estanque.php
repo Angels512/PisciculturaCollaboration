@@ -20,7 +20,7 @@
                 //llenamos el select con un option, por cada fila del arreglo
                 foreach ($datos as $row)
                 {
-                    $html .= "<option value='".$row['id_tanque']."'>".$row['num_tanque']." ".$row['capacidad_tanque']."".$row['desc_tanque']."</option>";
+                    $html .= "<option value='".$row['id_tanque']."'>#".$row['num_tanque']." - ".$row['capacidad_tanque']." - ".$row['desc_tanque']."</option>";
                 }
                 echo $html;
             }

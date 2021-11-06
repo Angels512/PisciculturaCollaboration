@@ -195,6 +195,13 @@ function editar(){
 
 
 
+$('#btnAtras').on('click', () =>
+{
+    window.location.href = `consultar-formatos?ID=${getUrlParameter('cultivo')}`;
+})
+
+
+
 // funcion con la que capturamos el id que llega por la url
 var getUrlParameter = function getUrlParameter(sParam) {
     var sPageURL = decodeURIComponent(window.location.search.substring(1)),
