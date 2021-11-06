@@ -68,33 +68,13 @@ function listarDatatables(controller)
     }).DataTable();
 }
 
-// $('#list').on('click', (e) => { setTimeout(() => { $('#tblalimentacion').DataTable().responsive.recalc(); }, 200); });
-
-
-
-//funcion con la que capturamos el id que llega por la url
-var getUrlParameter = function getUrlParameter(sParam) {
-    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
-        sURLVariables = sPageURL.split('&'),
-        sParameterName,
-        i;
-
-    for (i = 0; i < sURLVariables.length; i++) {
-        sParameterName = sURLVariables[i].split('=');
-
-        if (sParameterName[0] === sParam) {
-            return sParameterName[1] === undefined ? true : sParameterName[1];
-        }
-    }
-};
-
 //para ir al formato de biocrecimiento pasando el ID por url segun el boton presionado
 function consultar(id_biocre){
-    window.location.href = "biocrecimiento?ID="+ id_biocre +"";
+    window.location.href = `biocrecimiento?ID=${id_biocre}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editar(id_biocre){
-    window.location.href = "biocrecimiento?ID="+ id_biocre +"&EDIT=yes";
+    window.location.href = `biocrecimiento?ID=${id_biocre}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de biocrecimiento
@@ -326,3 +306,21 @@ function eliminarestacui(id_est_acui){
         }
     });
 }
+
+
+
+//funcion con la que capturamos el id que llega por la url
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
