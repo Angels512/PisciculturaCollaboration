@@ -89,6 +89,13 @@
                             <span class="lbl">Usuarios</span>
                         </a>
                     </li>
+
+                    <li class="blue">
+                        <a href="reportes">
+                            <i class="font-icon font-icon-post" aria-hidden="true"></i>
+                            <span class="lbl">Reportes</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         <?php
