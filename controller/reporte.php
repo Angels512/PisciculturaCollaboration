@@ -3,7 +3,8 @@
 
 	$cultivo = $_POST["id_cultivo"];
 	$formato = $_POST["id_formato"];
-	$date = date('d/m/Y');
+	date_default_timezone_set("America/Bogota");
+	$fecha = date("d/m/Y");
 
 	if(empty($cultivo) || empty($formato)){
 		header('Location: error404');exit;
@@ -27,12 +28,12 @@
 		$pdf->Cell(5,10,$cultivo,0,1,'C');
 		$pdf->setXY(79,45);//coordenadas para la fecha
 		$pdf->Cell(20,10,'Fecha: ',0,0,'C');
-		$pdf->Cell(25,10,$date,0,1,'C');
+		$pdf->Cell(25,10,$fecha,0,1,'C');
 
 	//Si el formato es igual a 1(biometrias) realizar el reprote respectivo
 	if($formato==1){
 		$pdf->setXY(73,55); //coordenadas informacion del formato
-		$pdf->Cell(100,10,'Formato: Biometrias de crecimiento',0,0,'C');
+		$pdf->Cell(100,10,utf8_decode('Formato: Biometrías de crecimiento'),0,0,'C');
 
 		require ('../config/cn.php');
 
@@ -72,7 +73,7 @@
 
 			$pdf->SetFont('Arial','',12);
             $pdf->SetTextColor(0, 0, 0);
-            $pdf->Cell(95, 12, 'Numero de organismos', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, utf8_decode('Número de organismos'), '1', 0, 'C',true);
             $pdf->Cell(95, 12, number_format($row['prom_num_org'],0), '1', 1, 'C',true);
 			$pdf->Cell(95, 12, 'Peso de organismos (gm)', '1', 0, 'C',true);
             $pdf->Cell(95, 12,number_format($row['prom_peso_org'],0), '1', 1, 'C',true);
@@ -104,7 +105,7 @@
 
 	}else if($formato==2){
 		$pdf->setXY(73,55); //coordenadas informacion del formato
-		$pdf->Cell(90,10,'Formato: Tabla de Alimentacion',0,0,'C');
+		$pdf->Cell(90,10,utf8_decode('Formato: Tabla de Alimentación'),0,0,'C');
 
 		require ('../config/cn.php');
 
@@ -149,7 +150,7 @@
 
 			$pdf->SetFont('Arial','',12);
             $pdf->SetTextColor(0, 0, 0);
-            $pdf->Cell(95, 12, 'Numero de organismos', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, utf8_decode('Número de organismos'), '1', 0, 'C',true);
             $pdf->Cell(95, 12, number_format($row['prom_cant_siembra'],0), '1', 1, 'C',true);
 		}
 		while ($row = $resultados->fetch_assoc()){
