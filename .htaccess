@@ -111,7 +111,7 @@ RewriteRule ^responsables/?$ view/Responsables/index.php
 
 # REPORTES
 RewriteRule ^reportes/?$ view/Reportes/index.php
-RewriteRule ^reporteprueba/?$ view/Reportes/reporteprueba.php
+RewriteRule ^reporte/?$ controller/reporte.php
 
 
 #JULIAN----------------------------------------------------------------------------------------------------------
