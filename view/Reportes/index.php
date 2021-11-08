@@ -86,7 +86,7 @@
 											<i class="font-icon glyphicon glyphicon-shopping-cart color-purple"></i>
 										</div>
 										<div class="widget-simple-sm-bottom">
-											<a href="#">Productos</a>
+											<a href="reporteprodu">Productos</a>
 										</div>
 									</section>
 								</div>
@@ -96,7 +96,7 @@
 											<i class="font-icon fa fa-bus color-purple"></i>
 										</div>
 										<div class="widget-simple-sm-bottom">
-											<a href="#">Proveedores</a>
+											<a href="reporteprove">Proveedores</a>
 										</div>
 									</section>
 								</div>
