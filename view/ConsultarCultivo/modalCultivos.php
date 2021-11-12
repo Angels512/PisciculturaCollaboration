@@ -18,28 +18,28 @@
                         <input type="hidden" id="id_cultivo" name="id_cultivo" value="">
 
                         <!-- NUMERO DE LOTE -->
-                        <label class="form-label semibold" for="num_lote">Número de lote:</label>
+                        <label class="form-label semibold" for="num_lote">Número de lote <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese el/los nombre(s) del empleado" id="num_lote" name="num_lote">
                             <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
                         </div><br>
 
                         <!-- CANTIDAD DE SIEMBRA -->
-                        <label class="form-label semibold" for="cant_siembra">Cantidad de siembra:</label>
+                        <label class="form-label semibold" for="cant_siembra">Cantidad de siembra <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese los apellido del empleado" id="cant_siembra" name="cant_siembra">
                             <i class="fa fa-check-square-o" aria-hidden="true"></i>
                         </div><br>
 
                         <!-- NUMERO DE ESTANQUE -->
-                        <label class="form-label semibold" for="id_tanque">Número de Estanque:</label>
+                        <label class="form-label semibold" for="id_tanque">Número de Estanque</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <select class="select2 manual select2-no-search-default select2-hidden-accessible" id="id_tanque" name="id_tanque">
                             </select>
                         </div><br>
 
                         <!-- NOMBRE DEL RESPONSABLE -->
-                        <label class="form-label semibold" for="id_respon">Nombre del Responsable:</label>
+                        <label class="form-label semibold" for="id_respon">Nombre del Responsable</label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <select class="select2 manual select2-no-search-default select2-hidden-accessible" id="id_respon" name="id_respon">
                             </select>

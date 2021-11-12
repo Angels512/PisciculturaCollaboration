@@ -22,6 +22,13 @@ function listarCultivos()
     {
         // Este es el section donde se almacenan los articles del ChatDetalle
         $('#pnlCultivo').html(data);
+
+        // Si es empleado no podra editar ni eliminar cultivos
+        if ($('#id_rol_x').val() != 1)
+        {
+            document.querySelectorAll('.editBtn').forEach((editBtn) => { editBtn.remove(); });
+            document.querySelectorAll('.deleBtn').forEach((deleBtn) => { deleBtn.remove(); });
+        }
     });
 }
 

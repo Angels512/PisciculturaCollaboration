@@ -18,7 +18,7 @@
                         <input type="hidden" id="id_usu" name="id_usu" value="">
 
                         <!-- NOMBRE -->
-                        <label class="form-label semibold" for="nombre_usu">Nombre:</label>
+                        <label class="form-label semibold" for="nombre_usu">Nombre <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese el/los nombre(s) del empleado" id="usuNombre" name="nombre_usu">
                             <i class="fa fa-user" id="iconNombre"></i>
@@ -26,7 +26,7 @@
                         </div><br>
 
                         <!-- APELLIDO -->
-                        <label class="form-label semibold" for="apellido_usu">Apellidos:</label>
+                        <label class="form-label semibold" for="apellido_usu">Apellidos <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese los apellidos del empleado" id="usuApellido" name="apellido_usu">
                             <i class="fa fa-user-o" id="iconApellido"></i>
@@ -34,7 +34,7 @@
                         </div><br>
 
                         <!-- DOCUMENTO -->
-                        <label class="form-label semibold" for="documento_usu">Número de documento:</label>
+                        <label class="form-label semibold" for="documento_usu">Número de documento <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" placeholder="Ingrese el numero de documento del empleado" id="usuDocumento" name="documento_usu">
                             <i class="fa fa-address-card" id="iconDocumento" aria-hidden="true"></i>
@@ -43,7 +43,7 @@
 
                         <!-- DIRECCION -->
                         <div id="direccion">
-                            <label class="form-label semibold" for="direccion_usu">Dirección:</label>
+                            <label class="form-label semibold" for="direccion_usu">Dirección <span class="color-red">*</span></label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese la direccion del empleado" id="direccion_usu" name="direccion_usu">
                                 <i class="fa fa-home"></i>
@@ -52,7 +52,7 @@
 
                         <!-- TELEFONO -->
                         <div id="telefono">
-                            <label class="form-label semibold" for="telefono_usu">Teléfono:</label>
+                            <label class="form-label semibold" for="telefono_usu">Teléfono <span class="color-red">*</span></label>
                             <div class="form-control-wrapper form-control-icon-right">
                                 <input type="text" class="form-control" placeholder="Ingrese el telefono del empleado" id="telefono_usu" name="telefono_usu">
                                 <i class="fa fa-phone"></i>
@@ -60,7 +60,7 @@
                         </div>
 
                         <!-- CORREO ELECTRONICO -->
-                        <label class="form-label semibold" for="pass_usu">Correo electrónico:</label>
+                        <label class="form-label semibold" for="pass_usu">Correo electrónico <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="email" class="form-control" placeholder="example@gmail.com" id="usuCorreo" name="correo_usu">
                             <i class="fa fa-envelope" id="iconCorreo" aria-hidden="true"></i>

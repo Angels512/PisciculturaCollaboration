@@ -24,8 +24,8 @@
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <button onClick="verNovedades(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>"><a class="dropdown-item" href="#"><i class="fa fa-tasks" aria-hidden="true"></i> &nbsp Novedades</a></button>
-                                    <button onClick="modalUpdateCultivo(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>"><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp Editar</a></button>
-                                    <button onClick="deleteCultivo(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>"><a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> &nbsp Eliminar</a></button>
+                                    <button onClick="modalUpdateCultivo(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>" class="editBtn"><a class="dropdown-item" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> &nbsp Editar</a></button>
+                                    <button onClick="deleteCultivo(<?php echo $row['id_cultivo']; ?>);" id="<?php echo $row['id_cultivo']; ?>" class="deleBtn"><a class="dropdown-item" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> &nbsp Eliminar</a></button>
                                 </div>
                             </div>
                         </div>

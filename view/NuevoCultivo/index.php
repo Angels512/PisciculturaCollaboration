@@ -40,7 +40,7 @@
                         <form action="" method="post" id="cultivoForm">
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="num_lote">Número de lote</label>
+                                    <label class="form-label semibold" for="num_lote">Número de lote <span class="color-red">*</span></label>
                                     <div class="form-control-wrapper form-control-icon-right">
                                         <input type="number" class="form-control" id="num_lote" name="num_lote" placeholder="Ingrese el numero de lote para el cultivo">
                                         <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <fieldset class="form-group">
-                                    <label class="form-label semibold" for="cant_siembra">Cantidad de siembra</label>
+                                    <label class="form-label semibold" for="cant_siembra">Cantidad de siembra <span class="color-red">*</span></label>
                                     <input id="cant_siembra" name="cant_siembra" type="text" value="0" name="demo_vertical2">
                                 </fieldset>
                             </div>
