@@ -31,32 +31,39 @@
 
 							<div class="col-xl-5">
 								<div class="row">
-									<div class="col-sm-6">
-											<article class="statistic-box red">
-												<div>
-													<div class="number" id="totalUsuarios"></div>
-													<div class="caption"><div>Usuarios totales</div></div>
-												</div>
-											</article>
-									</div><!--.col-->
+									<?php
+										if ($_SESSION['id_rol'] == 1)
+										{
+											?>
+												<div class="col-sm-6">
+														<article class="statistic-box red">
+															<div>
+																<div class="number" id="totalUsuarios"></div>
+																<div class="caption"><div>Usuarios totales</div></div>
+															</div>
+														</article>
+												</div><!--.col-->
 
-									<div class="col-sm-6">
-										<article class="statistic-box purple">
-											<div>
-												<div class="number" id="totalPiscicultores"></div>
-												<div class="caption"><div>Piscicultores totales</div></div>
-											</div>
-										</article>
-									</div><!--.col-->
+												<div class="col-sm-6">
+													<article class="statistic-box purple">
+														<div>
+															<div class="number" id="totalPiscicultores"></div>
+															<div class="caption"><div>Piscicultores totales</div></div>
+														</div>
+													</article>
+												</div><!--.col-->
 
-									<div class="col-sm-6">
-										<article class="statistic-box green">
-											<div>
-												<div class="number" id="totalAcuicultores"></div>
-												<div class="caption"><div>Acuicultores totales</div></div>
-											</div>
-										</article>
-									</div><!--.col-->
+												<div class="col-sm-6">
+													<article class="statistic-box green">
+														<div>
+															<div class="number" id="totalAcuicultores"></div>
+															<div class="caption"><div>Acuicultores totales</div></div>
+														</div>
+													</article>
+												</div><!--.col-->
+											<?php
+										}
+									?>
 
 									<div class="col-sm-6">
 										<article class="statistic-box yellow">
@@ -70,8 +77,8 @@
 									<div class="col-sm-6">
 										<article class="statistic-box purple">
 											<div>
-												<div class="number" id="chatsAbiertos"></div>
-												<div class="caption"><div>Chats abiertos</div></div>
+												<div class="number" id="totalMortandad"></div>
+												<div class="caption"><div>Mortandad total</div></div>
 											</div>
 										</article>
 									</div><!--.col-->
@@ -79,11 +86,27 @@
 									<div class="col-sm-6">
 										<article class="statistic-box red">
 											<div>
-												<div class="number" id="totalMortandad"></div>
-												<div class="caption"><div>Mortandad total</div></div>
+												<div class="number" id="chatsAbiertos"></div>
+												<div class="caption"><div>Chats abiertos</div></div>
 											</div>
 										</article>
 									</div><!--.col-->
+
+									<?php
+										if ($_SESSION['id_rol'] == 2 || $_SESSION['id_rol'] == 3)
+										{
+											?>
+												<div class="col-sm-6">
+													<article class="statistic-box green">
+														<div>
+															<div class="number" id="chatsCerrados"></div>
+															<div class="caption"><div>Chats cerrados</div></div>
+														</div>
+													</article>
+												</div><!--.col-->
+											<?php
+										}
+									?>
 								</div><!--.row-->
 							</div><!--.col-->
 						</div>

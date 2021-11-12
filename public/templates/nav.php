@@ -117,23 +117,18 @@
                             <span class="lbl">Cultivos</span>
                         </a>
                     </li>
-                    <li class="blue-dirty">
-                                    <a href="../../view/ConsultarFormatos/">
-                                        <span class="glyphicon glyphicon-list-alt"></span>
-                                        <span class="lbl">Consultar Formatos</span>
-                                    </a>
-                    </li>
 
                     <li class="magenta with-sub">
-                            <span>
-                                <i class="font-icon font-icon-notebook"></i>
-                                <span class="lbl">Crear Formatos</span>
-                            </span>
-                            <ul>
-                                <li><a href="../MntBiocrecimiento/"><span class="lbl">Biocrecimiento</span></a></li>
-                                <li><a href="../MntTblAlimentacion/"><span class="lbl">Tabla de Alimentación</span></a></li>
-                            </ul>
+                        <span>
+                            <i class="font-icon font-icon-notebook"></i>
+                            <span class="lbl">Formatos</span>
+                        </span>
+                        <ul>
+                            <li><a href="biocrecimiento"><span class="lbl">Biocrecimiento</span></a></li>
+                            <li><a href="tbl-alimentacion"><span class="lbl">Tabla de Alimentación</span></a></li>
+                        </ul>
                     </li>
+
                     <div class="consultarChat">
                         <li class="blue-dirty">
                             <a href="crear-chat">
@@ -168,6 +163,19 @@
                             <i class="fa fa-anchor" aria-hidden="true"></i>
                             <span class="lbl">Cultivos</span>
                         </a>
+                    </li>
+
+                    <li class="magenta with-sub">
+                        <span>
+                            <i class="font-icon font-icon-notebook"></i>
+                            <span class="lbl">Formatos</span>
+                        </span>
+                        <ul>
+                            <li><a href="parafq"><span class="lbl">Parametros FQ</span></a></li>
+                            <li><a href="tempagua"><span class="lbl">Temperatura Agua</span></a></li>
+                            <li><a href="tempamb"><span class="lbl">Temperatura Ambiente</span></a></li>
+                            <li><a href="estacui"><span class="lbl">Estado Acuicultura</span></a></li>
+                        </ul>
                     </li>
 
                     <div class="consultarChat">
