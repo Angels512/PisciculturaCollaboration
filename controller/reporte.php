@@ -174,6 +174,168 @@
 			$pdf->Cell(95, 12, $row['hora_sum_alim3'], '1', 1, 'C',true);
 		}
 		$pdf->Output();
+	}else if($formato==3){
+		$pdf->setXY(73,55); //coordenadas informacion del formato
+		$pdf->Cell(90,10,utf8_decode('Formato: Temperatura del Agua'),0,0,'C');
+
+		require ('../config/cn.php');
+
+		$consulta = "SELECT AVG(grados1) prom_grados1,
+		AVG(grados2) prom_grados2,
+		AVG(grados3) prom_grados3
+		FROM tempagua
+		WHERE id_cultivo = $cultivo;";
+		$resultado = $mysqli->query($consulta);
+		$consulta1 = "SELECT grados1, COUNT(grados1) AS total_grados1 FROM tempagua WHERE id_cultivo = $cultivo GROUP BY grados1 ORDER BY grados1 DESC LIMIT 1;";
+		$consulta2 = "SELECT grados2, COUNT(grados2) AS total_grados2 FROM tempagua WHERE id_cultivo = $cultivo GROUP BY grados2 ORDER BY grados2 DESC LIMIT 1;";
+		$consulta3 = "SELECT grados3, COUNT(grados3) AS total_grados3 FROM tempagua WHERE id_cultivo = $cultivo GROUP BY grados3 ORDER BY grados3 DESC LIMIT 1;";
+		$resultado1 = $mysqli->query($consulta1);
+		$resultado2 = $mysqli->query($consulta2);
+		$resultado3 = $mysqli->query($consulta3);
+
+		//establecer nuevas coordenadas de contenido
+        $pdf->setXY(10,80);
+
+        //fuente para los contenidos con(fuente, tipo(B,I), tamaño)
+        $pdf->SetFont('Arial','B',14);
+        //color de celda formato rgb
+        $pdf->SetFillColor(34, 54, 137);
+        //color de la letra formato rgb
+        $pdf->SetTextColor(255, 255, 255);
+        //agregamos una celda con (ancho,alto,texto,borde(T-B-R-L o 0-1), Ubicacion proxima celda, alineación, si se desea rellenar o no la celda)
+        $pdf->Cell(95,13,'Campo','TBL',0,'C',true);
+        $pdf->Cell(95,13,'Promedio en el cultivo','TBR',1,'C',true);
+        $pdf->SetFillColor(220, 220, 220);
+
+		// Recorre cada una de las filas de la tabla
+		while ($row = $resultado->fetch_assoc()){
+
+			$pdf->SetFont('Arial','',12);
+            $pdf->SetTextColor(0, 0, 0);
+			$pdf->Cell(95, 12, 'Grados 1', '1', 0, 'C',true);
+            $pdf->Cell(95, 12,number_format($row['prom_grados1'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Grados 2', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_grados2'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Grados 3', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_grados3'],0), '1', 1, 'C',true);
+			
+		}
+
+		$pdf->Output();
+
+	}else if($formato==4){
+		$pdf->setXY(73,55); //coordenadas informacion del formato
+		$pdf->Cell(99,10,utf8_decode('Formato: Temperatura del Ambiente'),0,0,'C');
+
+		require ('../config/cn.php');
+
+		$consulta = "SELECT AVG(grados1) prom_grados1,
+		AVG(grados2) prom_grados2,
+		AVG(grados3) prom_grados3
+		FROM tempambiente
+		WHERE id_cultivo = $cultivo;";
+		$resultado = $mysqli->query($consulta);
+		$consulta1 = "SELECT grados1, COUNT(grados1) AS total_grados1 FROM tempambiente WHERE id_cultivo = $cultivo GROUP BY grados1 ORDER BY grados1 DESC LIMIT 1;";
+		$consulta2 = "SELECT grados2, COUNT(grados2) AS total_grados2 FROM tempambiente WHERE id_cultivo = $cultivo GROUP BY grados2 ORDER BY grados2 DESC LIMIT 1;";
+		$consulta3 = "SELECT grados3, COUNT(grados3) AS total_grados3 FROM tempambiente WHERE id_cultivo = $cultivo GROUP BY grados3 ORDER BY grados3 DESC LIMIT 1;";
+		$resultado1 = $mysqli->query($consulta1);
+		$resultado2 = $mysqli->query($consulta2);
+		$resultado3 = $mysqli->query($consulta3);
+
+		//establecer nuevas coordenadas de contenido
+        $pdf->setXY(10,80);
+
+        //fuente para los contenidos con(fuente, tipo(B,I), tamaño)
+        $pdf->SetFont('Arial','B',14);
+        //color de celda formato rgb
+        $pdf->SetFillColor(34, 54, 137);
+        //color de la letra formato rgb
+        $pdf->SetTextColor(255, 255, 255);
+        //agregamos una celda con (ancho,alto,texto,borde(T-B-R-L o 0-1), Ubicacion proxima celda, alineación, si se desea rellenar o no la celda)
+        $pdf->Cell(95,13,'Campo','TBL',0,'C',true);
+        $pdf->Cell(95,13,'Promedio en el cultivo','TBR',1,'C',true);
+        $pdf->SetFillColor(220, 220, 220);
+
+		// Recorre cada una de las filas de la tabla
+		while ($row = $resultado->fetch_assoc()){
+
+			$pdf->SetFont('Arial','',12);
+            $pdf->SetTextColor(0, 0, 0);
+			$pdf->Cell(95, 12, 'Grados 1', '1', 0, 'C',true);
+            $pdf->Cell(95, 12,number_format($row['prom_grados1'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Grados 2', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_grados2'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Grados 3', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_grados3'],0), '1', 1, 'C',true);
+			
+		}
+
+		$pdf->Output();
+
+	}else if($formato==5){
+		$pdf->setXY(73,55); //coordenadas informacion del formato
+		$pdf->Cell(105,10,utf8_decode('Formato: Parametros Fisico-Quimicos'),0,0,'C');
+
+		require ('../config/cn.php');
+
+		$consulta = "SELECT AVG(rango_amonio) prom_rango_amonio,
+		AVG(rango_nitrito) prom_rango_nitrito,
+		AVG(rango_nitrato) prom_rango_nitrato,
+		AVG(rango_ph) prom_rango_ph,
+		AVG(cant_melaza) prom_cant_melaza,
+		AVG(porc_agua) prom_porc_agua
+		FROM parametrosfq
+		WHERE id_cultivo = $cultivo;";
+		$resultado = $mysqli->query($consulta);
+		$consulta1 = "SELECT rango_amonio, COUNT(rango_amonio) AS total_rango_amonio FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY rango_amonio ORDER BY rango_amonio DESC LIMIT 1;";
+		$consulta2 = "SELECT rango_nitrito, COUNT(rango_nitrito) AS total_rango_nitrito FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY rango_nitrito ORDER BY rango_nitrito DESC LIMIT 1;";
+		$consulta3 = "SELECT rango_nitrato, COUNT(rango_nitrato) AS total_rango_nitrato FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY rango_nitrato ORDER BY rango_nitrato DESC LIMIT 1;";
+		$consulta4 = "SELECT rango_ph, COUNT(rango_ph) AS total_rango_ph FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY rango_ph ORDER BY rango_ph DESC LIMIT 1;";
+		$consulta5 = "SELECT cant_melaza, COUNT(cant_melaza) AS total_cant_melaza FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY cant_melaza ORDER BY cant_melaza DESC LIMIT 1;";
+		$consulta6 = "SELECT porc_agua, COUNT(porc_agua) AS total_porc_agua FROM parametrosfq WHERE id_cultivo = $cultivo GROUP BY porc_agua ORDER BY porc_agua DESC LIMIT 1;";
+		$resultado1 = $mysqli->query($consulta1);
+		$resultado2 = $mysqli->query($consulta2);
+		$resultado3 = $mysqli->query($consulta3);
+		$resultado3 = $mysqli->query($consulta4);
+		$resultado3 = $mysqli->query($consulta5);
+		$resultado3 = $mysqli->query($consulta6);
+
+		//establecer nuevas coordenadas de contenido
+        $pdf->setXY(10,80);
+
+        //fuente para los contenidos con(fuente, tipo(B,I), tamaño)
+        $pdf->SetFont('Arial','B',14);
+        //color de celda formato rgb
+        $pdf->SetFillColor(34, 54, 137);
+        //color de la letra formato rgb
+        $pdf->SetTextColor(255, 255, 255);
+        //agregamos una celda con (ancho,alto,texto,borde(T-B-R-L o 0-1), Ubicacion proxima celda, alineación, si se desea rellenar o no la celda)
+        $pdf->Cell(95,13,'Campo','TBL',0,'C',true);
+        $pdf->Cell(95,13,'Promedio en el cultivo','TBR',1,'C',true);
+        $pdf->SetFillColor(220, 220, 220);
+
+		// Recorre cada una de las filas de la tabla
+		while ($row = $resultado->fetch_assoc()){
+
+			$pdf->SetFont('Arial','',12);
+            $pdf->SetTextColor(0, 0, 0);
+			$pdf->Cell(95, 12, 'Rango de Amonio', '1', 0, 'C',true);
+            $pdf->Cell(95, 12,number_format($row['prom_rango_amonio'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Rango de Nitrito', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_rango_nitrito'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Rango de Nitrato', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_rango_nitrato'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Rango de ph', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_rango_ph'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Cant de Melaza', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_cant_melaza'],0), '1', 1, 'C',true);
+			$pdf->Cell(95, 12, 'Porcentaje de Agua', '1', 0, 'C',true);
+            $pdf->Cell(95, 12, number_format($row['prom_porc_agua'],0), '1', 1, 'C',true);
+			
+		}
+
+		$pdf->Output();
+
 	}else{
 		echo 'Reporte no generado';
 	}

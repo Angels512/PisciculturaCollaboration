@@ -58,7 +58,6 @@
 													<option value="3">Temperatura del Agua</option>
 													<option value="4">Temperatura del Ambiente</option>
 													<option value="5">Parámetros Físico Químicos</option>
-													<option value="6">Estado de Acuicultura</option>
 												</select>
 											</div>
 										</fieldset>
