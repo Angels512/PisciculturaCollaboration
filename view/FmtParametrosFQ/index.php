@@ -109,7 +109,8 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="observaciones">Observaciones de los Parámetros</label>
-									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones de los parámetros"></textarea>
+									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones de los parámetros" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="observaciones_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 
@@ -295,7 +296,8 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="observaciones">Observaciones de los Parametros</label>
-									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo" required></textarea>
+									<textarea id="observaciones" name="observaciones" rows="6" class="form-control" placeholder="Añada las observaciones de los parámetros" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="observaciones_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 

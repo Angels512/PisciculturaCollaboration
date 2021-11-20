@@ -1,3 +1,9 @@
+const txarea = document.querySelectorAll('#parafq_form textarea');
+
+const expresiones = {
+	observaciones: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
+}
+
 function init(){
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Parametros FQ
     $("#parafq_form").on("submit",function(e)
@@ -69,8 +75,41 @@ $(document).ready(function(){
 
 });
 
+// Por cada input del formulario se realiza la validacion
+txarea.forEach((textarea) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    textarea.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    textarea.addEventListener('blur', validateForm);
+});
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'observaciones':
+            validateData(expresiones.observaciones, e.target, 'observaciones');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 function validarDatos(e){
     e.preventDefault();
+
+    let valite_observaciones = $('#observaciones').hasClass('form-control-danger');
 
     if($('#rango_amonio').val()=='' ||$('#rango_nitrito').val()=='' || $('#rango_nitrato').val()=='' || $('#rango_ph').val()=='' || $('#cant_melaza').val()=='' || $('#porc_agua').val()=='' || $('#observaciones').val()==''){
         swal({
@@ -78,6 +117,14 @@ function validarDatos(e){
             text: "Campos vacios",
             type: "warning",
             confirmButtonClass: "btn-warning",
+            confirmButtonText: "OK"
+        });
+    }else if (valite_observaciones) {
+        swal({
+            title: "Advertencia!",
+            text: "Los campos son invalidos...",
+            type: "error",
+            confirmButtonClass: "btn-danger",
             confirmButtonText: "OK"
         });
     }else{
