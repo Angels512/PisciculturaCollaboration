@@ -55,7 +55,8 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="obser_gene">Observaciones Generales</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones generales del area de Acuicultura"></textarea>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="obser_gene_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
@@ -142,7 +143,8 @@
 							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="obser_gene">Observaciones del Estado General de la Acuicultura</label>
-									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones"></textarea>
+									<textarea id="obser_gene" name="obser_gene" rows="6" class="form-control" placeholder="Ingrese las observaciones" maxlength="200"></textarea>
+									<small class="text-muted text-danger alerta" id="obser_gene_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
 							</div>
 

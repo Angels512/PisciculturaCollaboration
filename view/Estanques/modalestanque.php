@@ -13,23 +13,25 @@
 					    <div class="form-group">
 					    	<label class="form-label semibold" for="num_tanque">Numero de Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<input type="number" class="form-control" id="num_tanque" name="num_tanque" placeholder="Ingrese el Numero de Estanque" required>
+					    		<input type="number" class="form-control" id="num_tanque" name="num_tanque" placeholder="Ingrese el Numero de Estanque">
                         		<i class="fa fa-user"></i>
+								<small class="text-muted text-danger alerta" id="num_tanque_alert" hidden>El numero debe contener solo numeros, max 2 caracateres.</small>
                         	</div>
 					    </div>
 					    <div class="form-group">
 					    	<label class="form-label semibold" for="capacidad_tanque">Capacidad de Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<input type="number" class="form-control" id="capacidad_tanque" name="capacidad_tanque" placeholder="Ingrese la capacidad del estanque" required>
+					    		<input type="number" class="form-control" id="capacidad_tanque" name="capacidad_tanque" placeholder="Ingrese la capacidad del estanque">
                         		<i class="fa fa-user-o"></i>
+								<small class="text-muted text-danger alerta" id="capacidad_tanque_alert" hidden>La capacidad debe contener solo numeros, max 4 caracateres.</small>
                         	</div>
 					    </div>
 						<div class="form-group">
 					    	<label class="form-label semibold" for="desc_tanque">Descripción del Estanque</label>
 					    	<div class="form-control-wrapper form-control-icon-right">
-					    		<textarea class="form-control" id="desc_tanque" name="desc_tanque" placeholder="Ingrese la descripción" required></textarea>
-                        		<i class="fa fa-user-o"></i>
-                        	</div>
+                        		<textarea id="desc_tanque" name="desc_tanque" rows="6" class="form-control" placeholder="Ingrese la descripción" maxlength="200"></textarea>
+								<i class="fa fa-user-o"></i>
+								<small class="text-muted text-danger alerta" id="desc_tanque_alert" hidden>La descripción es mínimo de 10 y max de 80 caracteres.</small>
 					    </div>
                 </div>
                <div class="modal-footer">

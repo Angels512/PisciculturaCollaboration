@@ -1,6 +1,13 @@
 const inputs = document.querySelectorAll('#estanque_form input');
+const txarea = document.querySelectorAll('#estanque_form textarea');
 const icons = document.querySelectorAll('#estanque_form i');
+const smallForm = document.querySelectorAll('#estanque_form small');
 
+const expresiones = {
+	num_tanque: /^[0-9]{1,2}$/, // Numeros
+	capacidad_tanque: /^[0-9]{1,4}$/, // Numeros
+    desc_tanque: /^.{20,200}$/, // Letras,espacios,otros símbolos y números.
+}
 
 // Por cada input del formulario se realiza la validacion
 inputs.forEach((input) =>
@@ -11,13 +18,43 @@ inputs.forEach((input) =>
     input.addEventListener('blur', validateForm);
 });
 
+// Por cada input del formulario se realiza la validacion
+txarea.forEach((textarea) =>
+{
+    //keyup para que se realice siempre que se presione una tecla
+    textarea.addEventListener('keyup', validateForm);
+    //blur para que se realice siempre que se presione fuera del input
+    textarea.addEventListener('blur', validateForm);
+});
+
+function validateForm(e)
+{
+    switch (e.target.name) {
+        case 'desc_tanque':
+            validateData(expresiones.desc_tanque, e.target, 'desc_tanque');
+        break;
+    }
+}
+
+function validateData(expresion, input, campo)
+{
+    if (expresion.test(input.value))
+    {
+        $('#'+campo).removeClass('form-control-danger');
+        $('#'+campo).addClass('form-control-success');
+        $('#'+campo+'_alert').prop('hidden', true);
+    }else {
+        $('#'+campo).addClass('form-control-danger');
+        $('#'+campo+'_alert').prop('hidden', false);
+    }
+}
+
 function init(){
     // Nos dirige a la funcion guardaryeditar una vez se le de clic al boton guardar del formulario del estanque
     $("#estanque_form").on("submit",function(e){
         validarDatos(e);
     });
 }
-
 
 $(document).ready(function()
 {
@@ -59,8 +96,9 @@ function validarDatos(e){
 
     let valite_num_tanque = $('#num_tanque').hasClass('form-control-danger');
     let valite_capacidad_tanque = $('#capacidad_tanque').hasClass('form-control-danger');
+    let valite_desc_tanque = $('#desc_tanque').hasClass('form-control-danger');
 
-    if($('#num_tanque').val()=='' ||$('#capacidad_tanque').val()==''){
+    if($('#num_tanque').val()=='' || $('#capacidad_tanque').val()=='' || $('#desc_tanque').val()==''){
         swal({
             title: "Advertencia!",
             text: "Campos vacios",
@@ -68,7 +106,7 @@ function validarDatos(e){
             confirmButtonClass: "btn-warning",
             confirmButtonText: "OK"
         });
-    }else if (valite_num_tanque || valite_capacidad_tanque) {
+    }else if (valite_num_tanque || valite_capacidad_tanque || valite_desc_tanque) {
         swal({
             title: "Advertencia!",
             text: "Los campos son invalidos...",
