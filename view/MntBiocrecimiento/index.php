@@ -26,7 +26,6 @@
 				</div>
 			</header>
 
-
 			<?php
 				if (!isset($_GET['ID']) && !isset($_GET['EDIT'])){
 			?>
@@ -40,13 +39,13 @@
 
 							<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
 
-							<input type="hidden" class="form-control" id="num_organ" name="num_organ"  value="2000" readonly>
+							<input type="hidden" class="form-control" id="num_organ" name="num_organ" value="0">
 
 							<div class="col-lg-6">
 								<fieldset class="form-group">
 									<label for="id_cultivo" class="form-label semibold">Cultivo</label>
 									<div>
-										<select id="id_cultivo" name="id_cultivo" class="form-control">
+										<select id="id_cultivo" name="id_cultivo" class="form-control"  onchange="atributos_derv(this.value)">
 										</select>
 									</div>
 								</fieldset>
@@ -71,22 +70,8 @@
 								</fieldset>
 							</div>
 
-							<div class="col-md-6">
-								<fieldset class="form-group">
-									<label for="peso_biomasa" class="form-label semibold">Peso Biomasa(gm):</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="peso_biomasa" name="peso_biomasa" value=""/>
-									</div>
-								</fieldset>
-							</div>
-							<div class="col-md-6">
-								<fieldset class="form-group">
-									<label for="edad_organ" class="form-label semibold">Edad Organismos(Semanas):</label>
-									<div class="form-group range-slider-green">
-										<input type="text" class="slider" id="edad_organ" name="edad_organ" value=""/>
-									</div>
-								</fieldset>
-							</div>
+							<input type="hidden" id="peso_biomasa" name="peso_biomasa" value="">
+							<input type="hidden" id="edad_organ" name="edad_organ" value="">
 
 							<div class="col-sm-6">
 								<fieldset class="form-group">
@@ -129,7 +114,7 @@
 								</fieldset>
 							</div>
 
-							<div class="col-md-12">
+							<div class="col-sm-12">
 								<fieldset class="form-group">
 									<label for="crecimiento_organ" class="form-label semibold">Crecimiento/Talla Organismo(cm):</label>
 									<div class="form-group range-slider-orange">
@@ -317,7 +302,7 @@
 								</fieldset>
 							</div>
 
-							<div class="cokl-md-6">
+							<div class="col-md-6">
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="fecha">Fecha de Creación</label>
 									<div class="form-control-wrapper form-control-icon-right">
@@ -361,7 +346,7 @@
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="peso_biomasa">Peso Biomasa(gm):</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="peso_biomasa" name="peso_biomasa">
+										<input type="text" class="form-control" id="peso_biomasa" name="peso_biomasa" readonly>
 										<i class="font-icon font-icon-notebook-bird"></i>
 									</div>
 								</fieldset>
@@ -371,7 +356,7 @@
 								<fieldset class="form-group">
 									<label class="form-label semibold" for="edad_organ">Edad Organismos(Semanas):</label>
 									<div class="form-control-wrapper form-control-icon-right">
-										<input type="text" class="form-control" id="edad_organ" name="edad_organ">
+										<input type="text" class="form-control" id="edad_organ" name="edad_organ" readonly>
 										<i class="font-icon glyphicon glyphicon-hourglass"></i>
 									</div>
 								</fieldset>

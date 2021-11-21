@@ -31,6 +31,8 @@ $(document).ready(function() {
     // Condición para saber si se va a consultar o modificar segun informacion que llegue de la url
     getUrlParameter('ID') || getUrlParameter('EDIT') ? listarDatos() : console.log('Ok');
 
+    atributos_derv(1);
+
 });
 
 //para mostrar el modal de mortalidad una vez se de clic al boton mortandad
@@ -237,5 +239,21 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+//funcion para obtener el número de organismos de ese dia
+function atributos_derv(id_cultivo)
+{
+
+    let cultivo= id_cultivo;
+
+    $.post('controller/tblalimentacion.php?op=atributo_cant_siembra', {id_cultivo:cultivo}, function(data)
+    {
+       data = JSON.parse(data);
+
+        let num_siembra = data.num_siembra-data.reg_mortanda;
+
+       $('#cant_siembra').val(num_siembra);
+    });
+}
 
 init();

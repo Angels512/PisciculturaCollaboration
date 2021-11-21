@@ -5,6 +5,7 @@ const expresiones = {
 }
 
 function init(){
+
     // Nos dirige a la funcion guardar una vez se le de clic al boton guardar del formato de Biometrias de Crecimiento
     $("#biocre_form").on("submit",function(e)
     {
@@ -37,22 +38,6 @@ $(document).ready(function(){
             hide_min_max: true
         });
 
-        $("#peso_biomasa").ionRangeSlider({
-            min: 1,
-            max: 500,
-            from: 0,
-            grid: true,
-            hide_min_max: true
-        });
-
-        $("#edad_organ").ionRangeSlider({
-            min: 1,
-            max: 24,
-            from: 0,
-            grid: true,
-            hide_min_max: true
-        });
-
         $("#crecimiento_organ").ionRangeSlider({
             min: 1,
             max: 35,
@@ -61,6 +46,9 @@ $(document).ready(function(){
             hide_min_max: true
         });
     }
+
+    atributos_derv(1);
+
 });
 
 // Por cada input del formulario se realiza la validacion
@@ -149,6 +137,12 @@ function listarDatos()
 
 // creamos la funcion guardar para insertar una nueva biometria y vaciar los campos del formulario
 function guardar(){
+
+    /* Antes de ir al controlador se le asigna el mismo valor del peso_organ al peso_biomasa */
+    let peso_biomas = $('#peso_organ').val();
+    $('#peso_biomasa').val(peso_biomas);
+
+
     var formData = new FormData($('#biocre_form')[0]);
 
     $.ajax({
@@ -174,6 +168,11 @@ function guardar(){
 
 // creamos la funcion editar para actualizar el formato
 function editar(){
+
+    /* Antes de ir al controlador se le asigna el mismo valor del peso_organ al peso_biomasa */
+    let peso_biomas = $('#peso_organ').val();
+    $('#peso_biomasa').val(peso_biomas);
+
     var formData = new FormData($("#biocre_form")[0]);
 
     $.ajax({
@@ -217,5 +216,30 @@ var getUrlParameter = function getUrlParameter(sParam) {
         }
     }
 };
+
+//funcion para obtener el número de organismos de ese dia
+function atributos_derv(id_cultivo)
+{
+
+    let cultivo= id_cultivo;
+
+    $.post('controller/biocrecimiento.php?op=atributo_num_organismos', {id_cultivo:cultivo}, function(data)
+    {
+       data = JSON.parse(data);
+
+        let num_organismos = data.cant_siembra-data.reg_mortandad;
+
+       $('#num_organ').val(num_organismos);
+    });
+
+    $.post('controller/biocrecimiento.php?op=atributo_edad_organismos', {id_cultivo:cultivo}, function(data)
+    {
+        data = JSON.parse(data);
+
+        let total_forms = parseInt(data.cant_fomatos)+1;
+        let edad_organismos = total_forms*2;
+        $('#edad_organ').val(edad_organismos);
+    });
+}
 
 init();

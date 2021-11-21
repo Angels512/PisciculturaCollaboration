@@ -46,13 +46,13 @@
 						<div class="row">
 							<form method="post" id="tabla_alim">
 								<input type="hidden" id="id_usu" name="id_usu" value="<?php echo $_SESSION["id_usu"]; ?>">
-								<input type="hidden" class="form-control" id="cant_siembra" name="cant_siembra"  value="2000">
+								<input type="hidden" class="form-control" id="cant_siembra" name="cant_siembra"  value=""/>
 
 								<div class="col-lg-6">
 									<fieldset class="form-group">
 										<label for="id_cultivo" class="form-label semibold">Cultivo</label>
 										<div>
-											<select id="id_cultivo" name="id_cultivo" class="form-control">
+											<select id="id_cultivo" name="id_cultivo" class="form-control" onchange="atributos_derv(this.value)">
 											</select>
 										</div>
 									</fieldset>
@@ -67,6 +67,16 @@
 												<option value="24%">24%</option>
 												<option value="30%">30%</option>
 												<option value="36%">36%</option>
+											</select>
+										</div>
+									</fieldset>
+								</div>
+
+								<div class="col-lg-12">
+									<fieldset class="form-group">
+										<label for="id_cultivo" class="form-label semibold">Producto Suministrado</label>
+										<div>
+											<select id="id_produ" name="id_produ" class="form-control">
 											</select>
 										</div>
 									</fieldset>
@@ -111,15 +121,6 @@
 									</div>
 								</div>
 
-								<div class="col-lg-12">
-									<fieldset class="form-group">
-										<label for="id_produ" class="form-label semibold">Producto Suministrado</label>
-										<div>
-											<select id="id_produ" name="id_produ" class="form-control">
-											</select>
-										</div>
-									</fieldset>
-								</div>
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
