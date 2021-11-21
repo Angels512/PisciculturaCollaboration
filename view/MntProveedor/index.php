@@ -22,7 +22,7 @@
 						<div class="tbl-cell">
 							<h2>Gestionar Proveedores</h2>
 							<ol class="breadcrumb breadcrumb-simple">
-								<li><a href="#">Inicio</a></li>
+								<li><a href="inicio">Inicio</a></li>
 								<li class="active">Proveedores</li>
 							</ol>
 						</div>
