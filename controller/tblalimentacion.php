@@ -72,6 +72,21 @@
             $tblalim->delete_tblalm($_POST["id_tbl_alim"]);
         break;
 
+        // Extrae el cultivo del formato antes de enviarlo para calcular el númrero de organismos
+        case 'atributo_cant_siembra':
+            $datos = $tblalim->atri_deri($_POST['id_cultivo']);
+
+            if (is_array($datos) == true AND count($datos)>0)
+            {
+                foreach ($datos as $row)
+                {
+                    $output["num_siembra"] = $row["num_siembra"];
+                    $output["reg_mortanda"] = $row["reg_mortanda"];
+                }
+                echo json_encode($output);
+            }
+        break;
+
     }
 
 ?>

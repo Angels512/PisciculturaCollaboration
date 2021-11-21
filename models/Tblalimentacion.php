@@ -138,6 +138,19 @@ class Tblalimentacion extends Conectar
         $sql->execute();
         return $resultado=$sql->fetchAll();
     }
+
+    //se consultan los atributos de los que sacaremos el numero de organismos para tblalimentacion
+    public function atri_deri($id_cultivo){
+        $conectar= parent::conexion();
+        parent::setNames();
+        $sql="SELECT (SELECT SUM(reg_mortandad) FROM mortalidad WHERE id_cultivo=?) reg_mortanda,
+        (SELECT cant_siembra FROM cultivo WHERE id_cultivo=?) num_siembra;";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
+        $sql->bindValue(2, $id_cultivo);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
 }
 
 ?>

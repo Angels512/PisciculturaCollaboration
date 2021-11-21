@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Biocrecimiento extends Conectar
 {
@@ -152,6 +152,32 @@ class Biocrecimiento extends Conectar
         $sql="UPDATE biocrecimiento SET est=0, fecha_elim=now() where id_biocre = ?;";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_biocre);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
+
+    //se consultan los atributos de los que sacaremos el numero de organismos para biocrecimiento
+    public function atri_derivado1($id_cultivo){
+        $conectar= parent::conexion();
+        parent::setNames();
+        $sql="SELECT (SELECT SUM(reg_mortandad) FROM mortalidad WHERE id_cultivo=?) reg_mortandad,
+        (SELECT cant_siembra FROM cultivo WHERE id_cultivo=?) cant_siembra;";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
+        $sql->bindValue(2, $id_cultivo);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
+
+    //se consultan los atributos de los que sacaremos la edad de los organismos para biocrecimiento
+    public function atri_derivado2($id_cultivo){
+        $conectar= parent::conexion();
+        parent::setNames();
+        $sql="SELECT COUNT(id_biocre) cant_fomatos
+        FROM biocrecimiento
+        WHERE id_cultivo=?;";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
         $sql->execute();
         return $resultado=$sql->fetchAll();
     }

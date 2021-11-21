@@ -75,6 +75,36 @@
             $biocre->delete_biocre($_POST["id_biocre"]);
         break;
 
+        // Extrae el cultivo del formato antes de enviarlo para calcular el númrero de organismos
+        case 'atributo_num_organismos':
+            $datos = $biocre->atri_derivado1($_POST['id_cultivo']);
+
+            if (is_array($datos) == true AND count($datos)>0)
+            {
+                foreach ($datos as $row)
+                {
+                    $output["cant_siembra"] = $row["cant_siembra"];
+                    $output["reg_mortandad"] = $row["reg_mortandad"];
+                }
+                echo json_encode($output);
+            }
+        break;
+
+        // Extrae el cultivo para luego calcular la edad de los organismos
+        case 'atributo_edad_organismos':
+            $datos = $biocre->atri_derivado2($_POST['id_cultivo']);
+
+            if (is_array($datos) == true AND count($datos)>0)
+            {
+                foreach ($datos as $row)
+                {
+                    $output["cant_fomatos"] = $row["cant_fomatos"];
+                }
+                echo json_encode($output);
+            }
+
+        break;
+
     }
 
 ?>
