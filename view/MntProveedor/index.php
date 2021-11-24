@@ -106,7 +106,7 @@
 							<div id="infoproveedor">
 								<br>
 								<h4 class="box-typical-header-sm bordered">Información</h4>
-								<div class="col-xxl-3 col-md-12">
+								<div class="col-md-12">
 									<div class="row">
 											<div class="col-md-3 col-xs-12">
 												<section class="widget widget-simple-sm-fill azul2" style="width: 90%;">

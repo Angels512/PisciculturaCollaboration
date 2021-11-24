@@ -8,7 +8,7 @@ class Proveedor extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO proveedor (id_prove, nombre_emp, direccion_emp, telefono_emp, correo_emp, fecha, fecha_elim, est) VALUES (NULL,?,?,?,?,now(),NULL,'1');";
+        $sql="CALL sp_insertProveedor(?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $nombre_emp);
             $sql->bindValue(2, $direccion_emp);
@@ -37,13 +37,7 @@ class Proveedor extends Conectar
     public function updateProveedor( $id_prove , $nombre_emp ,$direccion_emp, $telefono_emp, $correo_emp){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE proveedor set
-        nombre_emp = ?,
-        direccion_emp = ?,
-        telefono_emp = ?,
-        correo_emp =?
-        WHERE
-        id_prove = ?;";
+        $sql="CALL sp_updateProveedor(?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $nombre_emp);
         $sql->bindValue(2, $direccion_emp);
@@ -59,7 +53,7 @@ class Proveedor extends Conectar
     public function delete_proveedor($id_prove){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE proveedor SET est='0', fecha_elim=now() where id_prove = ?;";
+        $sql="CALL sp_delete_proveedor(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_prove);
         $sql->execute();

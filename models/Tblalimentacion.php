@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Tblalimentacion extends Conectar
 {
@@ -8,22 +8,7 @@ class Tblalimentacion extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO tblalimentacion (
-            id_tbl_alim,
-            id_produ,
-            id_cultivo,
-            id_usu,
-            cant_siembra,
-            porc_proteina,
-            hora_sum_alim1,
-            hora_sum_alim2,
-            hora_sum_alim3,
-            obser_atmo,
-            obser_gen_cult,
-            fecha,
-            fecha_elim,
-            est) VALUES
-            (NULL,?,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertTblalim(?,?,?,?,?,?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_produ);
             $sql->bindValue(2, $id_cultivo);
@@ -98,19 +83,7 @@ class Tblalimentacion extends Conectar
     public function updateTblAlim($id_tbl_alim, $id_produ ,$id_cultivo, $id_usu, $cant_siembra, $porc_proteina, $hora_sum_alim1, $hora_sum_alim2,$hora_sum_alim3, $obser_atmo, $obser_gen_cult ){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tblalimentacion set
-        id_produ=?,
-        id_cultivo=?,
-        id_usu=?,
-        cant_siembra=?,
-        porc_proteina=?,
-        hora_sum_alim1=?,
-        hora_sum_alim2=?,
-        hora_sum_alim3=?,
-        obser_atmo=?,
-        obser_gen_cult=?
-        WHERE
-        id_tbl_alim = ?;";
+        $sql="CALL sp_updateTblAlim(?,?,?,?,?,?,?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_produ);
         $sql->bindValue(2, $id_cultivo);
@@ -132,7 +105,7 @@ class Tblalimentacion extends Conectar
     public function delete_tblalm($id_tbl_alim){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tblalimentacion SET est=0, fecha_elim=now() where id_tbl_alim = ?;";
+        $sql="CALL sp_delete_tblalm(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_tbl_alim);
         $sql->execute();

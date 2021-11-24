@@ -1,4 +1,4 @@
-<?php 
+<?php
 
     class Producto extends Conectar{
 
@@ -62,7 +62,7 @@
             $conectar= parent::Conexion();
             parent::setnames();
 
-            $sql="INSERT INTO producto (id_produ, id_prove, id_clase, fech_venc, num_lote, fecha, fecha_elim, est) VALUES (NULL,?,?,?,?,now(),NULL,'1');";
+            $sql="CALL sp_insertProducts(?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_prove);
             $sql->bindValue(2, $id_clase);
@@ -76,19 +76,13 @@
         public function updateProducto( $id_produ , $id_clase ,$fech_venc, $num_lote, $id_prove){
             $conectar= parent::conexion();
             parent::setNames();
-            $sql="UPDATE producto set
-            id_clase = ?,
-            fech_venc = ?,
-            num_lote = ?,
-            id_prove =? 
-            WHERE
-            id_produ = ?;";
+            $sql="CALL sp_updateProducto(?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_clase);
             $sql->bindValue(2, $fech_venc);
             $sql->bindValue(3, $num_lote);
-            $sql->bindValue(4, $id_prove); 
-            $sql->bindValue(5, $id_produ); 
+            $sql->bindValue(4, $id_prove);
+            $sql->bindValue(5, $id_produ);
             $sql->execute();
 
             return $resultado=$sql->fetchAll();
@@ -98,7 +92,7 @@
         public function delete_producto($id_produ){
             $conectar= parent::conexion();
             parent::setNames();
-            $sql="UPDATE producto SET est=0, fecha_elim=now() where id_produ = ?;";
+            $sql="CALL sp_delete_producto(?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_produ);
             $sql->execute();

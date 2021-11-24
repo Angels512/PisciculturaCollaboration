@@ -8,26 +8,7 @@ class Biocrecimiento extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO  biocrecimiento (
-            id_biocre,
-            id_etapa,
-            id_cultivo,
-            id_usu,
-            num_organ,
-            peso_organ,
-            peso_biomasa,
-            edad_organ,
-            color_organ,
-            escamas_organ,
-            ojos_organ,
-            compor_organ,
-            crecimiento_organ,
-            obser_adic,
-            fecha,
-            fecha_elim,
-            est)
-            VALUES
-            (NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertBiocre(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_etapa);
             $sql->bindValue(2, $id_cultivo);
@@ -41,9 +22,9 @@ class Biocrecimiento extends Conectar
             $sql->bindValue(10, $ojos_organ);
             $sql->bindValue(11, $compor_organ);
             $sql->bindValue(12, $crecimiento_organ);
-            $sql->bindValue(13, $obser_adic); 
+            $sql->bindValue(13, $obser_adic);
             $sql->execute();
-        
+
         return $resultado=$sql->fetchAll();
     }
 
@@ -109,22 +90,7 @@ class Biocrecimiento extends Conectar
     public function updateBiocre( $id_biocre,$id_etapa,$id_cultivo,$id_usu,$num_organ,$peso_organ,$peso_biomasa,$edad_organ,$color_organ,$escamas_organ,$ojos_organ,$compor_organ,$crecimiento_organ,$obser_adic){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE biocrecimiento set
-        id_etapa=?,
-        id_cultivo=?,
-        id_usu=?,
-        num_organ=?,
-        peso_organ=?,
-        peso_biomasa=?,
-        edad_organ=?,
-        color_organ=?,
-        escamas_organ=?,
-        ojos_organ=?,
-        compor_organ=?,
-        crecimiento_organ=?,
-        obser_adic=?
-        WHERE
-        id_biocre = ?;";
+        $sql="CALL sp_updateBiocre(?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_etapa);
         $sql->bindValue(2, $id_cultivo);
@@ -149,7 +115,7 @@ class Biocrecimiento extends Conectar
     public function delete_biocre($id_biocre){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE biocrecimiento SET est=0, fecha_elim=now() where id_biocre = ?;";
+        $sql="CALL sp_delete_biocre(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_biocre);
         $sql->execute();

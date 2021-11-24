@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Mortalidad extends Conectar
 {
@@ -8,7 +8,7 @@ class Mortalidad extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO mortalidad (id_mortalidad, id_cultivo, reg_mortandad, fecha) VALUES (NULL,?,?,now());";
+        $sql="CALL sp_insertMortalidad(?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $reg_mortandad);
