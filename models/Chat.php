@@ -8,7 +8,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "INSERT INTO chat (id_chat, id_usu, id_cat, titulo_chat, desc_chat, estado_chat, fecha, est) VALUES (NULL, ?, ?, ?, ?, 'Abierto', now(), 1);";
+            $sql = "CALL createChat(?, ?, ?, ?);";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_usu);
             $sql->bindValue(2, $id_cat);

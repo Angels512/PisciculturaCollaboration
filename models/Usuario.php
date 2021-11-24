@@ -20,7 +20,7 @@
                     header("Location: login?m=2");
                     exit();
                 }else{
-                    $sql = "SELECT * FROM usuario WHERE documento_usu=? AND pass_usu=? AND est=1";
+                    $sql = "CALL login(?, ?);";
                     $statement = $conectar->prepare($sql);
                     $statement->bindValue(1, $documento_usu);
                     $statement->bindValue(2, hash('sha512', $pass_usu));
@@ -53,7 +53,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'SELECT * FROM usuario WHERE documento_usu=? OR correo_usu=? AND est=1';
+            $sql = 'CALL seletUserReset(?, ?);';
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $documento_usu);
             $sql->bindValue(2, $correo_usu);
@@ -104,7 +104,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'SELECT * FROM password_rest WHERE id_usu=? AND codigo=? AND token=?;';
+            $sql = 'CALL verifyToken(?, ?, ?)';
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_usu);
             $sql->bindValue(2, $codigo);
@@ -120,7 +120,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "UPDATE usuario SET pass_usu=? WHERE id_usu=?;";
+            $sql = "CALL restPassword(?, ?)";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, hash('sha512', $pass_usu));
             $sql->bindValue(2, $id_usu);
@@ -140,7 +140,7 @@
             $asunto = 'BIENVENIDO A PROYECTOS COLOMBIANOS DEL CAMPO BOLIVAR';
             $password = hash('sha512', rand(1000, 9999));
 
-            $sql = "INSERT INTO usuario (id_usu, id_rol, nombre_usu, apellido_usu, direccion_usu, telefono_usu, documento_usu, correo_usu, pass_usu, fecha, est) VALUES (NULL, ?, ?, ?, ?, ?, ?, ?, ?, now(), 1);";
+            $sql = "CALL createUser(?, ?, ?, ?, ?, ?, ?, ?);";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_rol);
             $sql->bindValue(2, $nombre_usu);
@@ -174,7 +174,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "UPDATE usuario SET direccion_usu=?, telefono_usu=?, pass_usu=? WHERE documento_usu=?;";
+            $sql = "CALL addDataUser(?, ?, ?, ?);";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $direccion_usu);
             $sql->bindValue(2, $telefono_usu);
@@ -194,16 +194,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "UPDATE usuario SET
-                    id_rol=?,
-                    nombre_usu=?,
-                    apellido_usu=?,
-                    direccion_usu=?,
-                    telefono_usu=?,
-                    documento_usu=?,
-                    correo_usu=?,
-                    fecha_edit=now()
-                    WHERE id_usu=?;";
+            $sql = "CALL updateUser(?, ?, ?, ?, ?, ?, ?, ?);";
 
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_rol);
@@ -269,12 +260,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "UPDATE usuario SET
-                    direccion_usu=?,
-                    telefono_usu=?,
-                    pass_usu=?,
-                    fecha_edit=now()
-                    WHERE id_usu=?;";
+            $sql = "CALL updatePerfil(?, ?, ?, ?);";
 
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $direccion_usu);
@@ -292,12 +278,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "UPDATE usuario SET
-                    direccion_usu=?,
-                    telefono_usu=?,
-                    pass_usu=?,
-                    fecha_edit=now()
-                    WHERE id_usu=?;";
+            $sql = "CALL updatePasswordPerfil(?, ?, ?, ?);";
 
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $direccion_usu);

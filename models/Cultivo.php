@@ -47,7 +47,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'INSERT INTO cultivo(id_cultivo, id_respon, id_tanque, num_lote, cant_siembra, fecha_cierre, fecha, est) VALUES (NULL, ?, ?, ?, ?, ?, now(), 1);';
+            $sql = 'CALL createCultivo(?, ?, ?, ?, ?);';
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_respon);
             $sql->bindValue(2, $id_tanque);
@@ -65,7 +65,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = 'UPDATE cultivo SET id_respon=?, id_tanque=?, num_lote=?, cant_siembra=? WHERE id_cultivo=?';
+            $sql = 'CALL updateCultivo(?, ?, ?, ?, ?);';
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_respon);
             $sql->bindValue(2, $id_tanque);

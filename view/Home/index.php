@@ -21,7 +21,7 @@
 							<div class="col-xl-7" style="margin-top: 10px;">
 								<div class="box-typical box-typical-padding">
 									<header class="card-header">
-											Grafico Estadistico
+											Gráfico - Cantidad de formatos registrados.
 									</header>
 									<div class="card-block">
 											<div id="grafico"></div>

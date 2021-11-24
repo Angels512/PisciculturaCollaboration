@@ -10,6 +10,9 @@
             {
                 // Esta dentro de un Try por si hay algun error, esta es la cadena de conexion.
                 $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=si_piscicultura", "root", "");
+
+                // Hosting
+                //$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=qvwjuxcx_piscicultura", "qvwjuxcx_piscicultura", "kJ#[OcoD=Sxq");
                 return $conectar;
             } catch (Exception $e) {
                 // En caso de algun error lo mostrara en pantalla.

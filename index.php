@@ -362,7 +362,7 @@
 
 									<div class="row" style="margin-top: 20px;">
 										<div class="col-lg-12">
-											<button type="button" class="btn-main-md" style="background-color: #fff; border: none; padding: 6px 38px; font-weight: 400; font-size: 1rem; float: right; margin: 15px 0 -70px;">Enviar</button>
+											<button type="button" class="btn-main-md" style="background-color: #fff; border: none; padding: 6px 38px; font-weight: 400; font-size: 1rem; float: right; margin: 15px 0 0;">Enviar</button>
 										</div>
 									</div>
 								</div>
