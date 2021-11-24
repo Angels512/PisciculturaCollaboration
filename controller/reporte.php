@@ -218,7 +218,6 @@
             $pdf->Cell(95, 12, number_format($row['prom_grados2'],0), '1', 1, 'C',true);
 			$pdf->Cell(95, 12, 'Grados 3', '1', 0, 'C',true);
             $pdf->Cell(95, 12, number_format($row['prom_grados3'],0), '1', 1, 'C',true);
-			
 		}
 
 		$pdf->Output();
@@ -267,7 +266,6 @@
             $pdf->Cell(95, 12, number_format($row['prom_grados2'],0), '1', 1, 'C',true);
 			$pdf->Cell(95, 12, 'Grados 3', '1', 0, 'C',true);
             $pdf->Cell(95, 12, number_format($row['prom_grados3'],0), '1', 1, 'C',true);
-			
 		}
 
 		$pdf->Output();
@@ -331,7 +329,6 @@
             $pdf->Cell(95, 12, number_format($row['prom_cant_melaza'],0), '1', 1, 'C',true);
 			$pdf->Cell(95, 12, 'Porcentaje de Agua', '1', 0, 'C',true);
             $pdf->Cell(95, 12, number_format($row['prom_porc_agua'],0), '1', 1, 'C',true);
-			
 		}
 
 		$pdf->Output();

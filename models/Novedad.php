@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class Novedad extends Conectar
 {
@@ -8,7 +8,7 @@ class Novedad extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO novedad (id_novedad, id_cultivo, medidad_prev, fecha) VALUES (NULL,?,?,now());";
+        $sql="CALL sp_insertNovedad(?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $medidad_prev);

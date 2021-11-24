@@ -21,7 +21,7 @@
             $conectar= parent::Conexion();
             parent::setnames();
 
-            $sql="INSERT INTO responsable (id_respon, nombre_respon, apellido_respon, fecha_elim, fecha, est) VALUES (NULL,?,?,NULL,now(),'1');";
+            $sql="CALL sp_insertResponsable(?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $nombre_respon);
             $sql->bindValue(2, $apellido_respon);
@@ -62,11 +62,7 @@
         public function updateResponsable($id_respon,$nombre_respon,$apellido_respon){
             $conectar= parent::conexion();
             parent::setNames();
-            $sql="UPDATE responsable set
-            nombre_respon = ?,
-            apellido_respon = ?
-            WHERE
-            id_respon = ?;";
+            $sql="CALL sp_updateResponsable(?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $nombre_respon);
             $sql->bindValue(2, $apellido_respon);
@@ -81,7 +77,7 @@
             $conectar= parent::conexion();
             parent::setNames();
 
-            $sql="UPDATE responsable SET est=0, fecha_elim=now() where id_respon = ?;";
+            $sql="CALL sp_delete_respon(?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_respon);
             $sql->execute();
