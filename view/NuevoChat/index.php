@@ -65,7 +65,7 @@
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
-                                <button type="submit" name="action" value="add" class="btn btn-rounded btn-inline btn-primary">Crear</button>
+                                <button type="submit" name="action" value="add" class="btn btn-inline btn-primary azul float-right" style="padding-left: 35px; padding-right: 35px;">Crear</button>
                             </div>
                         </form>
 

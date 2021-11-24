@@ -48,7 +48,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "INSERT INTO chatdetalle (id_chatd, id_chat, id_usu, desc_chatd, fecha, est) VALUES (NULL, ?, ?, ?, now(), 1);";
+            $sql = "CALL createChatDetalle(?, ?, ?);";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_chat);
             $sql->bindValue(2, $id_usu);
@@ -64,7 +64,7 @@
             $conectar = parent::Conexion();
             parent::setNames();
 
-            $sql = "INSERT INTO chatdetalle (id_chatd, id_chat, id_usu, desc_chatd, fecha, est) VALUES (NULL, ?, ?, '<b>¡Esta conversación ha finalizado!</b>', now(), 1);";
+            $sql = "CALL createChatDetalleCerrado(?, ?);";
             $sql = $conectar->prepare($sql);
             $sql->bindValue(1, $id_chat);
             $sql->bindValue(2, $id_usu);
