@@ -1,6 +1,6 @@
 <?php
 
-    class Email
+    class Email extends Conectar
     {
         public function createUser($nombre_usu, $documento_usu, $correo_usu, $pass_usu)
         {
@@ -11,7 +11,7 @@
             $mensaje = str_replace('lblNom', $nombre_usu, $mensaje);
             $mensaje = str_replace('lblDocumento', $documento_usu, $mensaje);
 
-            $url = "http://localhost/PisciculturaProject/new-user?token=$pass_usu&user=$documento_usu";
+            $url = Conectar::ruta()."/new-user?token=$pass_usu&user=$documento_usu";
 
             $mensaje = str_replace('lblUrl', $url, $mensaje);
 
