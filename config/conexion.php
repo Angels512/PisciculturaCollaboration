@@ -6,10 +6,14 @@
 
         protected function Conexion() // Creamos el metodo de conexion dentro de la clase Conectar.
         {
+            $database = "si_piscicultura";
+            $username = "root";
+            $password = "";
+
             try
             {
                 // Esta dentro de un Try por si hay algun error, esta es la cadena de conexion.
-                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=si_piscicultura", "root", "");
+                $conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=$database", "$username", "$password");
 
                 // Hosting
                 //$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=qvwjuxcx_piscicultura", "qvwjuxcx_piscicultura", "kJ#[OcoD=Sxq");
@@ -30,7 +34,7 @@
         // Validamos la ruta donde tenemos guardado nuestro proyecto
         public static function ruta()
         {
-            return "http://localhost/pisciculturaProject/";
+            return "http://localhost/PisciculturaProject";
         }
     }
 

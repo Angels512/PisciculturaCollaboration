@@ -88,7 +88,7 @@
             $mensaje = str_replace('lblNom', $nombre_usu. ' ' .$apellido_usu, $mensaje);
             $mensaje = str_replace('lblCode', $codigo, $mensaje);
 
-            $url = "http://localhost/PisciculturaProject/cod-reset?token=$token_final&user=$id_usu";
+            $url = Conectar::ruta()."/cod-reset?token=$token_final&user=$id_usu";
 
             $mensaje = str_replace('lblUrl', $url, $mensaje);
 
