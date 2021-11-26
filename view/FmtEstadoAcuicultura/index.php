@@ -60,7 +60,7 @@
 								</fieldset>
 							</div>
 							<div class="col-lg-12">
-								<button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right mt-10">Guardar</button>
+								<button type="submit" name="action" value="add" class="btn azul btn-inline btn-primary float-right mt-10">Guardar</button>
 							</div>
 						</form>
 					</div>
@@ -99,7 +99,7 @@
 							</div>
 
 							<div class="col-lg-12">
-								<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
+								<button type="button" class="btn azul btn-inline btn-secondary float-right mt-10" id="btnAtras" style="margin-right: 6px;">Atrás</button>
 							</div>
 
 						</form>
@@ -149,9 +149,9 @@
 							</div>
 
 							<div class="col-lg-12">
-										<a href="/PisciculturaProject/consultar-cultivo" class="btn btn-inline btn-secondary float-right mt-10">Atrás</a>
-										<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline btn-primary float-right mt-10" style="margin-right: 6px;">Guardar</button>
-								</div>
+								<button type="submit" name="action" value="add" id="guardar" class="btn btn-inline azul btn-primary float-right mt-10">Guardar</button>
+								<button type="button" class="btn btn-inline btn-secondary float-right mt-10" id="btnAtras" style="margin-right: 6px;">Atrás</button>
+							</div>
 						</form>
 					</div>
 				</section>

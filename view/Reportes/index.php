@@ -52,7 +52,6 @@
 											<label for="id_formato" class="form-label semibold">Formato</label>
 											<div>
 												<select id="id_formato" name="id_formato" class="form-control">
-													<option disabled selected>Selecciona una opción</option>
 													<option value="1">Biometrías de crecimiento</option>
 													<option value="2">Tabla de Alimentación</option>
 													<option value="3">Temperatura del Agua</option>
@@ -63,7 +62,7 @@
 										</fieldset>
 									</div>
 									<div class="col-lg-12">
-										<input type="submit" value="Generar" class="btn btn-inline azul float-right mt-10">
+										<input type="submit" value="Generar" class="btn btn-inline azul float-right mt-10" formtarget="_blank">
 									</div>
 								</form>
 							</div>

@@ -6,10 +6,6 @@
 	date_default_timezone_set("America/Bogota");
 	$fecha = date("d/m/Y");
 
-	if(empty($cultivo) || empty($formato)){
-		header('Location: error404');exit;
-	}
-
 	$pdf = new FPDF();
 	$pdf->Addpage();
 

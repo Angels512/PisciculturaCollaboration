@@ -107,13 +107,13 @@ function eliminar(id_biocre){
     });
 }
 
-//para ir al formato de tabla de alimentacion pasando el ID por url segun el boton presionado
+//para ir al formato de tblalim pasando el ID por url segun el boton presionado
 function consultartbal(id_tbl_alim){
-    window.location.href = "tbl-alimentacion?ID="+ id_tbl_alim +"";
+    window.location.href = `tbl-alimentacion?ID=${id_tbl_alim}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editartbal(id_tbl_alim){
-    window.location.href = "tbl-alimentacion?ID="+ id_tbl_alim +"&EDIT=yes";
+    window.location.href = `tbl-alimentacion?ID=${id_tbl_alim}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de tbl alimentacion
@@ -149,11 +149,11 @@ function eliminartbal(id_tbl_alim){
 
 //para ir al formato de parametros fq pasando el ID por url segun el boton presionado
 function consultarparafq(id_par_fq){
-    window.location.href = "parafq?ID="+ id_par_fq +"";
+    window.location.href = `parafq?ID=${id_par_fq}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editarparafq(id_par_fq){
-    window.location.href = "parafq?ID="+ id_par_fq +"&EDIT=yes";
+    window.location.href = `parafq?ID=${id_par_fq}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de parametros fq
@@ -189,11 +189,11 @@ function eliminarparafq(id_par_fq){
 
 //para ir al formato de temperatura agua pasando el ID por url segun el boton presionado
 function consultartempagua(id_temp_agua){
-    window.location.href = "tempagua?ID="+ id_temp_agua +"";
+    window.location.href = `tempagua?ID=${id_temp_agua}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editartempagua(id_temp_agua){
-    window.location.href = "tempagua?ID="+ id_temp_agua +"&EDIT=yes";
+    window.location.href = `tempagua?ID=${id_temp_agua}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de temperatura agua
@@ -229,11 +229,11 @@ function eliminartempagua(id_temp_agua){
 
 //para ir al formato de temperatura ambiente pasando el ID por url segun el boton presionado
 function consultartempamb(id_temp_amb){
-    window.location.href = "tempamb?ID="+ id_temp_amb +"";
+    window.location.href = `tempamb?ID=${id_temp_amb}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editartempamb(id_temp_amb){
-    window.location.href = "tempamb?ID="+ id_temp_amb +"&EDIT=yes";
+    window.location.href = `tempamb?ID=${id_temp_amb}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de temperatura ambiente
@@ -269,11 +269,11 @@ function eliminartempamb(id_temp_amb){
 
 //para ir al formato de estado acuicultura pasando el ID por url segun el boton presionado
 function consultarestacui(id_est_acui){
-    window.location.href = "estacui?ID="+ id_est_acui +"";
+    window.location.href = `estacui?ID=${id_est_acui}&cultivo=${getUrlParameter('ID')}`;
 }
 
 function editarestacui(id_est_acui){
-    window.location.href = "estacui?ID="+ id_est_acui +"&EDIT=yes";
+    window.location.href = `estacui?ID=${id_est_acui}&cultivo=${getUrlParameter('ID')}&EDIT=yes`;
 }
 
 //para eliminar un formato de estado acuicultura
