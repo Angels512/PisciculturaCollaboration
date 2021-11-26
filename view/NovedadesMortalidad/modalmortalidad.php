@@ -19,7 +19,7 @@
 						</div>
                     </div>
                    <div class="form-group">
-                        <label class="form-label" for="reg_mortandad">Registro de Mortalidad</label>
+                        <label class="form-label" for="reg_mortandad">Registro de Mortalidad <span class="color-red">*</span></label>
                         <div class="form-control-wrapper form-control-icon-right">
                             <input type="text" class="form-control" id="reg_mortandad" name="reg_mortandad" placeholder="Ingrese la Mortalidad">
                             <i class="fa fa-anchor" id="reg_mortandad_icon" aria-hidden="true"></i>

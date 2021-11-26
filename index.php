@@ -221,9 +221,6 @@
 		<!--====  End of Services  ====-->
 
 
-		<!--=================================
-		=            Video Promo            =
-		==================================-->
 		<section class="video-promo section bg-1" id="advantage">
 			<div class="container">
 				<div class="row">
@@ -231,30 +228,45 @@
 						<div class="content-block" style="width: 90%">
 							<!-- Heading -->
 							<h2>Ventajas del Sistema</h2>
-							<!-- Promotional Speech -->
+							<br>
 
-							<ul style="display: flex; justify-content: space-between; align-items:center;">
-								<div class="elements">
-									<li type="disc" class="lis">El sistema guardará toda la información de la empresa, de forma segura y efectiva permitiendo el acceso a ella en cualquier momento.</li>
-
-									<li type="disc" class="lis">El almacenamiento de información que brinda la página, ayudará a que el trabajo en la empresa sea más eficaz y de facil manejo.</li>
-
-									<li type="disc" class="lis">El uso del sistema evita en un mayor porcentaje posibles pérdidas de información, desde la más trivial hasta la más importante.</li>
+							<div class="row align-items-center">
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>El sistema guardará toda la información de la empresa, de forma segura y efectiva permitiendo el acceso a ella en cualquier momento.</p>
+									</div>
 								</div>
-								<div class="elements">
-									<li type="disc" class="lis">La implementación del chat aumenta la velocidad de comunicación entre los usuarios, y así mismo, puede ayudar a dinamizar el trabajo.</li>
-
-									<li type="disc" class="lis">Mejora el ambiente de trabajo, pues no requiere de tanto espacio físico para almacenar la información, todo queda en la nube.</li>
-
-									<li type="disc" class="lis">El contar con un sistema de búsquedas en la página, hace que encontrar cualquier tipo de datos o un formato en específico sea más sencillo.</li>
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>El almacenamiento de información que brinda la página, ayudará a que el trabajo en la empresa sea más eficaz y de facil manejo.</p>
+									</div>
 								</div>
-							</ul>
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>El uso del sistema evita en un mayor porcentaje posibles pérdidas de información, desde la más trivial hasta la más importante.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>La implementación del chat aumenta la velocidad de comunicación entre los usuarios, y así mismo, puede ayudar a dinamizar el trabajo.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>Mejora el ambiente de trabajo, pues no requiere de tanto espacio físico para almacenar la información, todo queda en la nube.</p>
+									</div>
+								</div>
+								<div class="col-md-6 col-xs-12">
+									<div class="">
+										<p>El contar con un sistema de búsquedas en la página, hace que encontrar cualquier tipo de datos o un formato en específico sea más sencillo.</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!--====  End of Video Promo  ====-->
 
 		<!--=================================
 		=            Testimonial            =

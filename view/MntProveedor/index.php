@@ -53,7 +53,7 @@
 						<section class="box-typical box-typical-padding">
 							<form method="post" id="proveedor_form">
 									<div class="form-group">
-										<label  class="form-label semibold" for="nombre_emp">Nombre Proveedor</label>
+										<label  class="form-label semibold" for="nombre_emp">Nombre Proveedor <span class="color-red">*</span></label>
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="nombre_emp" name="nombre_emp" placeholder="Ingrese Nombre">
 											<i class="fa fa-user" id="nombre_icon" aria-hidden="true"></i>
@@ -61,7 +61,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="form-label semibold" for="direccion_emp">Dirección Proveedor</label>
+										<label class="form-label semibold" for="direccion_emp">Dirección Proveedor <span class="color-red">*</span></label>
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="direccion_emp" name="direccion_emp" placeholder="Ingrese Dirección">
 											<i class="fa fa-home" id="direccion_icon" aria-hidden="true"></i>
@@ -69,7 +69,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="form-label semibold" for="telefono_emp">Teléfono Proveedor</label>
+										<label class="form-label semibold" for="telefono_emp">Teléfono Proveedor <span class="color-red">*</span></label>
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="telefono_emp" name="telefono_emp" placeholder="Ingrese Teléfono">
 											<i class="fa fa-phone" id="telefono_icon" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="form-label semibold" for="correo_emp">Correo Proveedor</label>
+										<label class="form-label semibold" for="correo_emp">Correo Proveedor <span class="color-red">*</span></label>
 										<div class="form-control-wrapper form-control-icon-right">
 											<input type="text" class="form-control" id="correo_emp" name="correo_emp" placeholder="Ingrese Correo">
 											<i class="fa fa-envelope" id="correo_icon" aria-hidden="true"></i>

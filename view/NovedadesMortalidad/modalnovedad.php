@@ -20,7 +20,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="form-label semibold" for="medidad_prev">Medidas Preventivas</label>
+                        <label class="form-label semibold" for="medidad_prev">Medidas Preventivas <span class="color-red">*</span></label>
                         <textarea rows="4" class="form-control" id="medidad_prev" name="medidad_prev" placeholder="Escriba las medidas preventivas"></textarea>
                         <small class="text-muted text-danger alerta" id="medidad_prev_alert" hidden>Las medidas de prevención son mínimo de 20 y max de 250 caracteres.</small>
                     </div>

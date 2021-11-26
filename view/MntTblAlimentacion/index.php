@@ -74,7 +74,7 @@
 
 								<div class="col-lg-12">
 									<fieldset class="form-group">
-										<label for="id_cultivo" class="form-label semibold">Producto Suministrado</label>
+										<label for="id_cultivo" class="form-label semibold">Producto Suministrado <span class="color-red">*</span></label>
 										<div>
 											<select id="id_produ" name="id_produ" class="form-control">
 											</select>
@@ -84,7 +84,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
+									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" value="9:15"/>
 											<span class="input-group-addon">
@@ -97,7 +97,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
+									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:35"/>
 											<span class="input-group-addon">
@@ -110,7 +110,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
+									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="15:35"/>
 											<span class="input-group-addon">
@@ -124,7 +124,7 @@
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
-										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
+										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica <span class="color-red">*</span></label>
 										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas" maxlength="200"></textarea>
 										<small class="text-muted text-danger alerta" id="obser_atmo_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
@@ -132,7 +132,7 @@
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
-										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
+										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo <span class="color-red">*</span></label>
 										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo" maxlength="200"></textarea>
 										<small class="text-muted text-danger alerta" id="obser_gen_cult_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
@@ -324,7 +324,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1</label>
+									<label for="hora_sum_alim1" class="form-label semibold">Hora Suministro Alimento #1 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim1" name="hora_sum_alim1" value="9:15"/>
 											<span class="input-group-addon">
@@ -337,7 +337,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2</label>
+									<label for="hora_sum_alim2" class="form-label semibold">Hora Suministro Alimento #2 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim2" name="hora_sum_alim2" value="12:35"/>
 											<span class="input-group-addon">
@@ -350,7 +350,7 @@
 
 								<div class="col-md-4">
 									<div class="form-group">
-									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3</label>
+									<label for="hora_sum_alim3" class="form-label semibold">Hora Suministro Alimento #3 <span class="color-red">*</span></label>
 										<div class="input-group clockpicker" data-autoclose="true">
 											<input type='text' class="form-control" id="hora_sum_alim3" name="hora_sum_alim3" value="15:35"/>
 											<span class="input-group-addon">
@@ -364,7 +364,7 @@
 
 								<div class="col-lg-12">
 									<fieldset class="form-group">
-										<label for="id_produ" class="form-label semibold">Producto Suministrado</label>
+										<label for="id_produ" class="form-label semibold">Producto Suministrado <span class="color-red">*</span></label>
 										<div>
 											<select id="id_produ" name="id_produ" class="form-control">
 											</select>
@@ -374,7 +374,7 @@
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
-										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica</label>
+										<label for="obser_atmo" class="form-label semibold">Observaciones Atmosférica <span class="color-red">*</span></label>
 										<textarea rows="6" id="obser_atmo" name="obser_atmo" class="form-control" placeholder="Ingrese las observaciones atmosféricas" maxlength="200"></textarea>
 										<small class="text-muted text-danger alerta" id="obser_atmo_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
@@ -382,7 +382,7 @@
 
 								<div class="col-sm-12">
 									<fieldset class="form-group">
-										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo</label>
+										<label class="form-label semibold" for="obser_gen_cult">Observaciones Generales del Cultivo <span class="color-red">*</span></label>
 										<textarea rows="6" class="form-control" id="obser_gen_cult" name="obser_gen_cult" placeholder="Ingrese las observaciones generales del cultivo" maxlength="200"></textarea>
 										<small class="text-muted text-danger alerta" id="obser_gen_cult_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 									</fieldset>
