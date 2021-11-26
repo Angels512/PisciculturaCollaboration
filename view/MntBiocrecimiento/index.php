@@ -63,7 +63,7 @@
 
 							<div class="col-md-12">
 								<fieldset class="form-group">
-									<label for="peso_organ" class="form-label semibold">Peso del Organismo(g):</label>
+									<label for="peso_organ" class="form-label semibold">Peso del Organismo(g)</label>
 									<div class="form-group">
 										<input type="text" class="slider" id="peso_organ" name="peso_organ" value=""/>
 									</div>
@@ -116,7 +116,7 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label for="crecimiento_organ" class="form-label semibold">Crecimiento/Talla Organismo(cm):</label>
+									<label for="crecimiento_organ" class="form-label semibold">Crecimiento/Talla Organismo(cm)</label>
 									<div class="form-group range-slider-orange">
 										<input type="text" class="slider" id="crecimiento_organ" name="crecimiento_organ" value=""/>
 									</div>
@@ -125,7 +125,7 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo</label>
+									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo <span class="color-red">*</span></label>
 									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo" maxlength="200"></textarea>
 									<small class="text-muted text-danger alerta" id="obser_adic_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>
@@ -344,7 +344,7 @@
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="peso_biomasa">Peso Biomasa(gm):</label>
+									<label class="form-label semibold" for="peso_biomasa">Peso Biomasa(gm)</label>
 									<div class="form-control-wrapper form-control-icon-right">
 										<input type="text" class="form-control" id="peso_biomasa" name="peso_biomasa" readonly>
 										<i class="font-icon font-icon-notebook-bird"></i>
@@ -354,7 +354,7 @@
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="edad_organ">Edad Organismos(Semanas):</label>
+									<label class="form-label semibold" for="edad_organ">Edad Organismos(Semanas)</label>
 									<div class="form-control-wrapper form-control-icon-right">
 										<input type="text" class="form-control" id="edad_organ" name="edad_organ" readonly>
 										<i class="font-icon glyphicon glyphicon-hourglass"></i>
@@ -405,7 +405,7 @@
 
 							<div class="col-md-6">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="crecimiento_organ">Crecimiento/Talla Organismo(cm):</label>
+									<label class="form-label semibold" for="crecimiento_organ">Crecimiento/Talla Organismo(cm)</label>
 									<div class="form-control-wrapper form-control-icon-right">
 										<input type="text" class="form-control" id="crecimiento_organ" name="crecimiento_organ">
 										<i class="font-icon font-icon-pencil"></i>
@@ -415,7 +415,7 @@
 
 							<div class="col-sm-12">
 								<fieldset class="form-group">
-									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo</label>
+									<label class="form-label semibold" for="obser_adic">Observaciones adicionales cultivo <span class="color-red">*</span></label>
 									<textarea id="obser_adic" name="obser_adic" rows="6" class="form-control" placeholder="Ingrese las observaciones adicionales del cultivo" maxlength="200"></textarea>
 									<small class="text-muted text-danger alerta" id="obser_adic_alert" hidden>Las observaciones son mínimo de 20 y max de 200 caracteres.</small>
 								</fieldset>

@@ -12,13 +12,13 @@
 						<input type="hidden" class="form-control" id="id_produ1" name="id_produ">
 
 						<div class="form-group">
-							<label class="form-label semibold" for="id_clase">Nombre Porducto</label>
+							<label class="form-label semibold" for="id_clase">Nombre Porducto <span class="color-red">*</span></label>
 							<select id="id_clase1" name="id_clase" class="form-control">
 							</select>
 						</div>
 
 						<div class="form-group">
-							<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento</label>
+							<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento <span class="color-red">*</span></label>
 							<div class="form-group">
 								<div class='input-group date'>
 									<input id="fech_venc1" name="fech_venc" type="text" class="form-control daterange3">
@@ -30,7 +30,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="form-label semibold"  for="num_lote">Número de Lote</label>
+							<label class="form-label semibold"  for="num_lote">Número de Lote <span class="color-red">*</span></label>
 							<div class="form-control-wrapper form-control-icon-right">
 								<input type="text" class="form-control" id="num_lote1" name="num_lote" placeholder="Ingrese Número">
 								<i class="glyphicon glyphicon-barcode" id="num_lote_icon1" aria-hidden="true"></i>
@@ -38,7 +38,7 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<label class="form-label semibold"  for="id_prove">Proveedor</label>
+							<label class="form-label semibold"  for="id_prove">Proveedor <span class="color-red">*</span></label>
 							<select id="id_prove1" name="id_prove" class="form-control">
 							</select>
 						</div>

@@ -12,7 +12,7 @@
                <div class="modal-body">
 						<input type="hidden" name="id_respon" id="id_respon">
 					    <div class="form-group">
-					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable</label>
+					    	<label class="form-label semibold" for="nombre_respon">Nombre Responsable <span class="color-red">*</span></label>
 					    	<div class="form-control-wrapper form-control-icon-right">
 					    		<input type="text" class="form-control" id="nombre_respon" name="nombre_respon" placeholder="Ingrese Nombre">
                         		<i class="fa fa-user" id="nombre_icon" aria-hidden="true"></i>
@@ -21,7 +21,7 @@
 					    </div>
 
 					    <div class="form-group">
-					    	<label class="form-label semibold" for="apellido_respon">Apellido Responsable</label>
+					    	<label class="form-label semibold" for="apellido_respon">Apellido Responsable <span class="color-red">*</span></label>
 					    	<div class="form-control-wrapper form-control-icon-right">
 					    		<input type="text" class="form-control" id="apellido_respon" name="apellido_respon" placeholder="Ingrese Apellido">
                         		<i class="fa fa-user-o" id="apellido_icon" aria-hidden="true"></i>
