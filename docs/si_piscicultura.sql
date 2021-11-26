@@ -1,18 +1,8 @@
-CREATE DATABASE IF NOT EXISTS `si_piscicultura`;
-USE `si_piscicultura`;
-SET SQL_SAFE_UPDATES = 0;
+-- CREATE DATABASE IF NOT EXISTS `si_piscicultura`;
+-- USE `si_piscicultura`;
+-- SET SQL_SAFE_UPDATES = 0;
 
 -- ///// CREATE TABLES /////
-
-select*from tempagua;
-select*from tempambiente;
-select*from parametrosfq;
-select*from estanque;
-select*from biocrecimiento;
-select*from tblalimentacion;
-select*from producto;
-select*from estacuicultura;
-select*from tempagua;
 
 CREATE TABLE IF NOT EXISTS `rol` (
   `id_rol` int(11) NOT NULL AUTO_INCREMENT,
