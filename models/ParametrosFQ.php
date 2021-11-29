@@ -8,22 +8,7 @@ class Parametrosfq extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO  parametrosfq (
-            id_par_fq,
-            id_cultivo,
-            id_usu,
-            rango_amonio,
-            rango_nitrito,
-            rango_nitrato,
-            rango_ph,
-            cant_melaza,
-            porc_agua,
-            observaciones,
-            fecha,
-            fecha_elim,
-            est)
-            VALUES
-            (NULL,?,?,?,?,?,?,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertParafq(?,?,?,?,?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $id_usu);
@@ -96,18 +81,7 @@ class Parametrosfq extends Conectar
     public function updateParafq($id_par_fq,$id_cultivo,$id_usu,$rango_amonio,$rango_nitrito,$rango_nitrato,$rango_ph,$cant_melaza,$porc_agua,$observaciones ){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE parametrosfq set
-        id_cultivo=?,
-        id_usu=?,
-        rango_amonio=?,
-        rango_nitrito=?,
-        rango_nitrato=?,
-        rango_ph=?,
-        cant_melaza=?,
-        porc_agua=?,
-        observaciones=?
-        WHERE
-        id_par_fq = ?;";
+        $sql="CALL sp_updateParafq(?,?,?,?,?,?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->bindValue(2, $id_usu);
@@ -128,7 +102,7 @@ class Parametrosfq extends Conectar
     public function delete_parafq($id_par_fq){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE parametrosfq SET est=0, fecha_elim=now() where id_par_fq = ?;";
+        $sql="CALL sp_delete_parafq(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_par_fq);
         $sql->execute();

@@ -21,7 +21,7 @@
             $conectar= parent::Conexion();
             parent::setnames();
 
-            $sql="INSERT INTO estanque (id_tanque, num_tanque, capacidad_tanque, desc_tanque, fehca_elim, fecha, est) VALUES (NULL,?,?,?,NULL,now(),'1');";
+            $sql="CALL sp_insertEstanque(?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $num_tanque);
             $sql->bindValue(2, $capacidad_tanque);
@@ -63,12 +63,7 @@
         public function updateEstanque($id_tanque,$num_tanque,$capacidad_tanque,$desc_tanque){
             $conectar= parent::conexion();
             parent::setNames();
-            $sql="UPDATE estanque set
-            num_tanque = ?,
-            capacidad_tanque = ?,
-            desc_tanque = ?
-            WHERE
-            id_tanque = ?;";
+            $sql="CALL sp_updateEstanque(?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $num_tanque);
             $sql->bindValue(2, $capacidad_tanque);
@@ -84,11 +79,25 @@
             $conectar= parent::conexion();
             parent::setNames();
 
-            $sql="UPDATE estanque SET est=0, fehca_elim=now() where id_tanque = ?;";
+            $sql="CALL sp_delete_estanque(?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_tanque);
             $sql->execute();
             return $resultado=$sql->fetchAll();
+        }
+
+        // Verifica que no se repita el numero de tanque
+        public function validarNum($id_tanque)
+        {
+            $conectar = parent::Conexion();
+            parent::setNames();
+
+            $sql = 'SELECT * FROM estanque WHERE num_tanque=? AND est=1;';
+            $sql = $conectar->prepare($sql);
+            $sql->bindValue(1, $id_tanque);
+            $sql->execute();
+
+            return $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         }
 
     }

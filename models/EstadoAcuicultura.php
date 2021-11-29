@@ -8,16 +8,7 @@ class Estacuicultura extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO  estacuicultura (
-            id_est_acui,
-            id_cultivo,
-            id_usu,
-            obser_gene,
-            fecha,
-            fecha_elim,
-            est)
-            VALUES
-            (NULL,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertEstacui(?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $id_usu);
@@ -78,12 +69,7 @@ class Estacuicultura extends Conectar
     public function updateEstacui( $id_est_acui,$id_cultivo,$id_usu,$obser_gene){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE estacuicultura set
-        id_cultivo=?,
-        id_usu=?,
-        obser_gene=?
-        WHERE
-        id_est_acui = ?;";
+        $sql="CALL sp_updateEstacui(?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->bindValue(2, $id_usu);
@@ -98,7 +84,7 @@ class Estacuicultura extends Conectar
     public function delete_estacui($id_est_acui){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE estacuicultura SET est=0, fecha_elim=now() where id_est_acui = ?;";
+        $sql="CALL sp_delete_estacui(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_est_acui);
         $sql->execute();

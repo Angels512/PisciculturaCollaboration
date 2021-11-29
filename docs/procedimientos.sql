@@ -192,7 +192,7 @@ DELIMITER ;
 
 
 -- Biocrecimiento
-drop procedure if exists sp_insertBiocre
+drop procedure if exists sp_insertBiocre;
 delimiter //
  create procedure sp_insertBiocre(
    in id_etapa int(11),
@@ -217,7 +217,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_updateBiocre
+drop procedure if exists sp_updateBiocre;
 delimiter //
  create procedure sp_updateBiocre(
    in vid_etapa int(11),
@@ -243,7 +243,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_delete_biocre
+drop procedure if exists sp_delete_biocre;
 delimiter //
  create procedure sp_delete_biocre(
    in vid_biocre int(11))
@@ -254,7 +254,7 @@ delimiter //
 
 
 -- Mortalidad
-drop procedure if exists sp_insertMortalidad
+drop procedure if exists sp_insertMortalidad;
 delimiter //
  create procedure sp_insertMortalidad(
    in id_cultivo int(11),
@@ -262,11 +262,11 @@ delimiter //
  begin
    INSERT INTO mortalidad (id_mortalidad, id_cultivo, reg_mortandad, fecha) VALUES (NULL,id_cultivo,reg_mortandad,now());
  end //
- delimiter;
+ delimiter ;
 
 
 -- Novedad
-drop procedure if exists sp_insertNovedad
+drop procedure if exists sp_insertNovedad;
 delimiter //
  create procedure sp_insertNovedad(
    in id_cultivo int(11),
@@ -278,7 +278,7 @@ delimiter //
 
 
 -- Productos
-drop procedure if exists sp_insertProducts
+drop procedure if exists sp_insertProducts;
 delimiter //
  create procedure sp_insertProducts(
    in id_prove int(11),
@@ -292,7 +292,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_updateProducto
+drop procedure if exists sp_updateProducto;
 delimiter //
  create procedure sp_updateProducto(
    in vid_clase int(11),
@@ -307,7 +307,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_delete_producto
+drop procedure if exists sp_delete_producto;
 delimiter //
  create procedure sp_delete_producto(
    in vid_produ int(11))
@@ -318,7 +318,7 @@ delimiter //
 
 
 -- Proveedor
-drop procedure if exists sp_insertProveedor
+drop procedure if exists sp_insertProveedor;
 delimiter //
  create procedure sp_insertProveedor(
    in nombre_emp varchar(50),
@@ -332,7 +332,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_updateProveedor
+drop procedure if exists sp_updateProveedor;
 delimiter //
  create procedure sp_updateProveedor(
    in vnombre_emp varchar(50),
@@ -347,7 +347,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_delete_proveedor
+drop procedure if exists sp_delete_proveedor;
 delimiter //
  create procedure sp_delete_proveedor(
    in vid_prove int(11))
@@ -358,7 +358,7 @@ delimiter //
 
 
  -- Responsable
-drop procedure if exists sp_insertResponsable
+drop procedure if exists sp_insertResponsable;
 delimiter //
  create procedure sp_insertResponsable(
    in nombre_respon text,
@@ -370,7 +370,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_updateResponsable
+drop procedure if exists sp_updateResponsable;
 delimiter //
  create procedure sp_updateResponsable(
    in vnombre_respon text,
@@ -383,7 +383,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_delete_respon
+drop procedure if exists sp_delete_respon;
 delimiter //
  create procedure sp_delete_respon(
    in vid_respon int(11))
@@ -394,7 +394,7 @@ delimiter //
 
 
 -- Tabla de alimentacion
-drop procedure if exists sp_insertTblalim
+drop procedure if exists sp_insertTblalim;
 delimiter //
  create procedure sp_insertTblalim(
    in id_produ int(11),
@@ -416,7 +416,7 @@ delimiter //
  delimiter ;
 
 
- drop procedure if exists sp_updateTblAlim
+ drop procedure if exists sp_updateTblAlim;
 delimiter //
  create procedure sp_updateTblAlim(
    in vid_produ int(11),
@@ -438,7 +438,7 @@ delimiter //
  delimiter ;
 
 
-drop procedure if exists sp_delete_tblalm
+drop procedure if exists sp_delete_tblalm;
 delimiter //
  create procedure sp_delete_tblalm(
    in vid_tbl_alim int(11))
@@ -446,7 +446,217 @@ delimiter //
    UPDATE tblalimentacion SET est=0, fecha_elim=now() where id_tbl_alim = vid_tbl_alim;
  end //
  delimiter ;
+ 
+ 
+ -- Parametros Fisico-Quimicos
+ drop procedure if exists sp_insertParafq;
+delimiter //
+ create procedure sp_insertParafq(
+   in id_cultivo int(11),
+   in id_usu int(11),
+   in rango_amonio int(11),
+   in rango_nitrito int(11),
+   in rango_nitrato int(11),
+   in rango_ph int(11),
+   in cant_melaza varchar(100),
+   in porc_agua varchar(100),
+   in observaciones varchar(200))
+ begin
+   INSERT INTO  parametrosfq (id_par_fq, id_cultivo, id_usu, rango_amonio, rango_nitrito, rango_nitrato, rango_ph, cant_melaza, porc_agua, observaciones, fecha, fecha_elim, est)
+   VALUES  (NULL,id_cultivo, id_usu, rango_amonio, rango_nitrito, rango_nitrato, rango_ph, cant_melaza, porc_agua, observaciones,now(),NULL,1);
+ end //
+ delimiter ;
 
 
+drop procedure if exists sp_updateParafq;
+delimiter //
+ create procedure sp_updateParafq(
+   in vid_cultivo int(11),
+   in vid_usu int(11),
+   in vrango_amonio int(11),
+   in vrango_nitrito int(11),
+   in vrango_nitrato int(11),
+   in vrango_ph int(11),
+   in vcant_melaza varchar(100),
+   in vporc_agua varchar(100),
+   in vobservaciones varchar(200),
+   in vid_par_fq int(11))
+ begin
+   UPDATE parametrosfq SET id_cultivo=vid_cultivo,id_usu=vid_usu,rango_amonio=vrango_amonio,rango_nitrito=vrango_nitrito,
+   rango_nitrato=vrango_nitrato,rango_ph=vrango_ph,cant_melaza=vcant_melaza,porc_agua=vporc_agua,observaciones=vobservaciones
+        WHERE id_par_fq = vid_par_fq;
+ end //
+ delimiter ;
 
 
+drop procedure if exists sp_delete_parafq;
+delimiter //
+ create procedure sp_delete_parafq(
+   in vid_par_fq int(11))
+ begin
+   UPDATE parametrosfq SET est=0, fecha_elim=now() where id_par_fq = vid_par_fq;
+ end //
+ delimiter ;
+
+
+-- Temperatura Agua
+drop procedure if exists sp_insertTempagua;
+delimiter //
+ create procedure sp_insertTempagua(
+   in id_cultivo int(11),
+   in id_usu int(11),
+   in num_dia int(11),
+   in grados1 int(11),
+   in grados2 int(11),
+   in grados3 int(11))
+ begin
+   INSERT INTO  tempagua (id_temp_agua, id_cultivo, id_usu, num_dia, grados1, grados2, grados3, fecha, fecha_elim, est)
+   VALUES  (NULL,id_cultivo, id_usu, num_dia, grados1, grados2, grados3,now(),NULL,1);
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_updateTempagua;
+delimiter //
+ create procedure sp_updateTempagua(
+   in vid_cultivo int(11),
+   in vid_usu int(11),
+   in vnum_dia int(11),
+   in vgrados1 int(11),
+   in vgrados2 int(11),
+   in vgrados3 int(11),
+   in vid_temp_agua int(11))
+ begin
+   UPDATE tempagua SET id_cultivo=vid_cultivo,id_usu=vid_usu,num_dia=vnum_dia,grados1=vgrados1,grados2=vgrados2,grados3=vgrados3
+        WHERE id_temp_agua = vid_temp_agua;
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_delete_tempagua;
+delimiter //
+ create procedure sp_delete_tempagua(
+   in vid_temp_agua int(11))
+ begin
+   UPDATE tempagua SET est=0, fecha_elim=now() where id_temp_agua = vid_temp_agua;
+ end //
+ delimiter ;
+ 
+ -- Temperatura Ambiente
+ drop procedure if exists sp_insertTempamb;
+delimiter //
+ create procedure sp_insertTempamb(
+   in id_cultivo int(11),
+   in id_usu int(11),
+   in num_dia int(11),
+   in grados1 int(11),
+   in grados2 int(11),
+   in grados3 int(11))
+ begin
+   INSERT INTO  tempambiente (id_temp_amb, id_cultivo, id_usu, num_dia, grados1, grados2, grados3, fecha, fecha_elim, est)
+   VALUES  (NULL,id_cultivo, id_usu, num_dia, grados1, grados2, grados3,now(),NULL,1);
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_updateTempamb;
+delimiter //
+ create procedure sp_updateTempamb(
+   in vid_cultivo int(11),
+   in vid_usu int(11),
+   in vnum_dia int(11),
+   in vgrados1 int(11),
+   in vgrados2 int(11),
+   in vgrados3 int(11),
+   in vid_temp_amb int(11))
+ begin
+   UPDATE tempambiente SET id_cultivo=vid_cultivo,id_usu=vid_usu,num_dia=vnum_dia,grados1=vgrados1,grados2=vgrados2,grados3=vgrados3
+        WHERE id_temp_amb = vid_temp_amb;
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_delete_tempamb;
+delimiter //
+ create procedure sp_delete_tempamb(
+   in vid_temp_amb int(11))
+ begin
+   UPDATE tempambiente SET est=0, fecha_elim=now() where id_temp_amb = vid_temp_amb;
+ end //
+ delimiter ;
+ 
+ 
+ -- Estado Acuicultura
+  drop procedure if exists sp_insertEstacui;
+delimiter //
+ create procedure sp_insertEstacui(
+   in id_cultivo int(11),
+   in id_usu int(11),
+   in obser_gene varchar(200))
+ begin
+   INSERT INTO  estacuicultura (id_est_acui, id_cultivo, id_usu, obser_gene, fecha, fecha_elim, est)
+   VALUES  (NULL,id_cultivo, id_usu, obser_gene,now(),NULL,1);
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_updateEstacui;
+delimiter //
+ create procedure sp_updateEstacui(
+   in vid_cultivo int(11),
+   in vid_usu int(11),
+   in vobser_gene varchar(200),
+   in vid_est_acui int(11))
+ begin
+   UPDATE estacuicultura SET id_cultivo=vid_cultivo,id_usu=vid_usu,obser_gene=vobser_gene
+        WHERE id_est_acui = vid_est_acui;
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_delete_estacui;
+delimiter //
+ create procedure sp_delete_estacui(
+   in vid_est_acui int(11))
+ begin
+   UPDATE estacuicultura SET est=0, fecha_elim=now() where id_est_acui = vid_est_acui;
+ end //
+ delimiter ;
+
+
+ -- Estanques
+  drop procedure if exists sp_insertEstanque;
+delimiter //
+ create procedure sp_insertEstanque(
+   in num_tanque int(11),
+   in capacidad_tanque int(11),
+   in desc_tanque varchar(200))
+ begin
+   INSERT INTO  estanque (id_tanque, num_tanque, capacidad_tanque, desc_tanque, fecha, fehca_elim, est)
+   VALUES  (NULL, num_tanque, capacidad_tanque, desc_tanque,now(),NULL,1);
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_updateEstanque;
+delimiter //
+ create procedure sp_updateEstanque(
+   in vnum_tanque int(11),
+   in vcapacidad_tanque int(11),
+   in vdesc_tanque varchar(200),
+   in vid_tanque int(11))
+ begin
+   UPDATE estanque SET num_tanque=vnum_tanque,capacidad_tanque=capacidad_tanque,desc_tanque=vdesc_tanque
+        WHERE id_tanque = vid_tanque;
+ end //
+ delimiter ;
+
+
+drop procedure if exists sp_delete_estanque;
+delimiter //
+ create procedure sp_delete_estanque(
+   in vid_tanque int(11))
+ begin
+   UPDATE estanque SET est=0, fehca_elim=now() where id_tanque = vid_tanque;
+ end //
+ delimiter ;
