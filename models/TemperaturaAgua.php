@@ -8,19 +8,7 @@ class Tempagua extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO  tempagua (
-            id_temp_agua,
-            id_cultivo,
-            id_usu,
-            num_dia,
-            grados1,
-            grados2,
-            grados3,
-            fecha,
-            fecha_elim,
-            est)
-            VALUES
-            (NULL,?,?,?,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertTempagua(?,?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $id_usu);
@@ -87,15 +75,7 @@ class Tempagua extends Conectar
     public function updateTempagua($id_temp_agua,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3 ){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tempagua set
-        id_cultivo=?,
-        id_usu=?,
-        num_dia=?,
-        grados1=?,
-        grados2=?,
-        grados3=?
-        WHERE
-        id_temp_agua = ?;";
+        $sql="CALL sp_updateTempagua(?,?,?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->bindValue(2, $id_usu);
@@ -113,9 +93,20 @@ class Tempagua extends Conectar
     public function delete_tempagua($id_temp_agua){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tempagua SET est=0, fecha_elim=now() where id_temp_agua = ?;";
+        $sql="CALL sp_delete_tempagua(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_temp_agua);
+        $sql->execute();
+        return $resultado=$sql->fetchAll();
+    }
+
+    //se consultan los atributos de los que sacaremos el numero de organismos para biocrecimiento
+    public function atri_derivado1($id_cultivo){
+        $conectar= parent::conexion();
+        parent::setNames();
+        $sql="SELECT fecha FROM cultivo WHERE id_cultivo=?;";
+        $sql=$conectar->prepare($sql);
+        $sql->bindValue(1, $id_cultivo);
         $sql->execute();
         return $resultado=$sql->fetchAll();
     }

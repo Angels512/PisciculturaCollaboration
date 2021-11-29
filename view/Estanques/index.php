@@ -29,33 +29,29 @@
 					</header>
 				</div>
 			</div>
-			<div>
-				<section class="widget widget-tasks">
+			<div>		
+				<section class="box-typical box-typical-padding">
 					<header class="widget-header">
 						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
 							<a id="newtanque" class="btn btn-inline btn-primary azul float-right"><i class="fa fa-plus-circle"></i> &nbspNuevo Estanque</a>
 						</div>
+						<br>
 					</header>
-					<div>
-					<div role="tabpanel" class="tab-pane fade in active">
-						<table class="display table table-striped table-bordered" id="tanquestable">
-							<thead>
-								<tr>
-                            		<th></th>
-	    							<th>Numero</th>
-									<th>Capacidad</th>
-									<th>Descripción</th> 
-									<th></th>
-									<th></th>
-								</tr>
-							</thead>
-							<tbody id="listarestanques"></tbody>
-						</table>
-					</div>
-					</div>
+							<table class="display table table-striped table-bordered" id="tanquestable">
+								<thead>
+									<tr>
+                            			<th></th>
+	    								<th>Numero</th>
+										<th>Capacidad</th>
+										<th>Descripción</th> 
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody id="listarestanques"></tbody>
+							</table>
 				</section>
 			</div>
-
         </div>
     </div>
 

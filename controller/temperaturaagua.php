@@ -67,6 +67,20 @@
             $tempagua->delete_tempagua($_POST["id_temp_agua"]);
         break;
 
+        // Extrae el cultivo del formato antes de enviarlo para calcular el númrero de dia
+        case 'atributo_num_dia':
+            $datos = $tempagua->atri_derivado1($_POST['id_cultivo']);
+
+            if (is_array($datos))
+            {
+                foreach ($datos as $row)
+                {
+                    $output["fecha"] = date('m-d-Y', strtotime($row["fecha"]));
+                }
+                echo json_encode($output);
+            }
+        break;
+
     }
 
 ?>

@@ -78,6 +78,11 @@
             $estanque->delete_tanque($_POST["id_tanque"]);
         break;
 
+        case 'tanqueExistente':
+            $data = $estanque->validarNum($_POST['num_tanque']);
+            echo json_encode($data);
+        break;
+
 
     }
 

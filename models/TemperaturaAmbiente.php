@@ -8,19 +8,7 @@ class Tempamb extends Conectar
         $conectar = parent::Conexion();
         parent::setNames();
 
-        $sql="INSERT INTO  tempambiente (
-            id_temp_amb,
-            id_cultivo,
-            id_usu,
-            num_dia,
-            grados1,
-            grados2,
-            grados3,
-            fecha,
-            fecha_elim,
-            est)
-            VALUES
-            (NULL,?,?,?,?,?,?,now(),NULL,1);";
+        $sql="CALL sp_insertTempamb(?,?,?,?,?,?)";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $id_cultivo);
             $sql->bindValue(2, $id_usu);
@@ -87,15 +75,7 @@ class Tempamb extends Conectar
     public function updateTempamb($id_temp_amb,$id_cultivo,$id_usu,$num_dia,$grados1,$grados2,$grados3 ){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tempambiente set
-        id_cultivo=?,
-        id_usu=?,
-        num_dia=?,
-        grados1=?,
-        grados2=?,
-        grados3=?
-        WHERE
-        id_temp_amb = ?;";
+        $sql="CALL sp_updateTempamb(?,?,?,?,?,?,?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_cultivo);
         $sql->bindValue(2, $id_usu);
@@ -113,7 +93,7 @@ class Tempamb extends Conectar
     public function delete_tempamb($id_temp_amb){
         $conectar= parent::conexion();
         parent::setNames();
-        $sql="UPDATE tempambiente SET est=0, fecha_elim=now() where id_temp_amb = ?;";
+        $sql="CALL sp_delete_tempamb(?)";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $id_temp_amb);
         $sql->execute();
