@@ -73,7 +73,7 @@
                                 </fieldset>
                             </div>
                             <div class="col-lg-12">
-                                <button type="submit" name="action" value="add" class="btn btn-inline btn-primary float-right mg-top">Agregar Cultivo</button>
+                                <button type="submit" name="action" value="add" class="btn azul btn-inline btn-primary float-right mg-top">Agregar Cultivo</button>
                             </div>
                         </form>
 
