@@ -49,7 +49,7 @@ $(document).ready(function() {
     let fecha = (date.getDate() + 1) + '-' + (date.getMonth() + 1) + '-' + date.getFullYear();
 
     /* Para inicializar la funcion del calendario para la fecha*/
-    $('.daterange3').daterangepicker({
+    $('.daterange').daterangepicker({
         singleDatePicker: true,
         "locale": {
             "format": "DD-MM-YYYY",
@@ -79,7 +79,7 @@ $(document).ready(function() {
             ],
             "firstDay": 1
         },
-        "startDate": fecha
+        /* "startDate": fecha */
     });
 
     /* Esto es para llenar el select del Nombre del Producto */
