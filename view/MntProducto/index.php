@@ -65,7 +65,7 @@
 									<label  class="form-label semibold" for="fech_venc">Fecha de Vencimiento <span class="color-red">*</span></label>
 									<div class="form-group">
 										<div class='input-group date'>
-											<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange3" value="2021-11-05">
+											<input id="fech_venc" name="fech_venc" type="text" class="form-control daterange" value="15-12-2021">
 											<span class="input-group-addon">
 												<i class="font-icon font-icon-calend"></i>
 											</span>
