@@ -123,9 +123,9 @@ function validarDatos(e){
 function guardaryeditar(){
 
     var formData = new FormData($('#estanque_form')[0]);
+    var num_tanque = $('#num_tanque').val();
 
     var idtanque = $('#id_tanque').val();
-    console.log(idtanque);
 
     if ($('#capacidad_tanque').val() == '' || $('#desc_tanque').val() == '0')
     {
@@ -139,33 +139,52 @@ function guardaryeditar(){
     }else {
         $.post('controller/estanque.php?op=tanqueExistente', {num_tanque:num_tanque}, (data) =>
         {
-            
             data = JSON.parse(data);
 
             if (data.length > 0)
             {
-                swal({
-                    title: "Advertencia!",
-                    text: "El número de lote ya se asigno a otro cultivo.",
-                    type: "error",
-                    confirmButtonClass: "btn-danger",
-                    confirmButtonText: "OK"
-                })
-            }else {
-                $.ajax({
-                 url: "controller/estanque.php?op=guardaryeditar",
+
+                if (num_tanque != data[0].num_tanque)
+                {
+                    swal({
+                        title: "Advertencia!",
+                        text: "El número de lote ya se asigno a otro cultivo.",
+                        type: "error",
+                        confirmButtonClass: "btn-danger",
+                        confirmButtonText: "OK"
+                    })
+
+                    return;
+                }else {
+                    $.ajax({
+                        url: "controller/estanque.php?op=guardaryeditar",
+                            type: "POST",
+                            data: formData,
+                            contentType: false,
+                            processData: false,
+                        success: function(datos){
+                            $("#modalestanque").modal('hide');
+                            listarEstanques();
+                            swal("Correcto!","Registrado Correctamente","success");
+                        }
+                    });
+
+                    return;
+                }
+            }
+
+            $.ajax({
+                url: "controller/estanque.php?op=guardaryeditar",
                     type: "POST",
                     data: formData,
                     contentType: false,
                     processData: false,
-                   success: function(datos){
-                     $("#modalestanque").modal('hide');
-
-                         listarEstanques();
-                         swal("Correcto!","Registrado Correctamente","success");
-                    }
-                });
-            }
+                success: function(datos){
+                    $("#modalestanque").modal('hide');
+                    listarEstanques();
+                    swal("Correcto!","Registrado Correctamente","success");
+                }
+            });
         });
     }
 

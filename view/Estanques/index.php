@@ -29,7 +29,7 @@
 					</header>
 				</div>
 			</div>
-			<div>		
+			<div>
 				<section class="box-typical box-typical-padding">
 					<header class="widget-header">
 						<div class="tbl-cell tbl-cell-action" style="display: flex; justify-content: flex-end;">
@@ -37,15 +37,15 @@
 						</div>
 						<br>
 					</header>
-							<table class="display table table-striped table-bordered" id="tanquestable">
+							<table class="display table table-striped table-bordered" style="text-align: center;" id="tanquestable">
 								<thead>
 									<tr>
-                            			<th></th>
-	    								<th>Numero</th>
-										<th>Capacidad</th>
-										<th>Descripción</th> 
-										<th></th>
-										<th></th>
+                            	<th style="width: 5%;"></th>
+	    								<th style="width: 17%;">Numero</th>
+										<th style="width: 17%;">Capacidad</th>
+										<th style="width: 50%;">Descripción</th>
+										<th style="width: 5%;"></th>
+										<th style="width: 5%;"></th>
 									</tr>
 								</thead>
 								<tbody id="listarestanques"></tbody>
